@@ -56,7 +56,9 @@ def test_article_chunks_splits_long_articles_and_repeats_header(articles):
     assert len(chunks) > 1014
     assert all(len(c.text) <= 1000 + 60 for c in chunks)  # header allowance
     pieces = [c for c in chunks if c.labels == ["94"]]  # a long article (>1000 chars)
-    assert len(pieces) >= 2 and all(p.text.startswith("第二章 配線及保護 / 第五節 接地及搭接 / 第 94 條") for p in pieces)
+    assert len(pieces) >= 2 and all(
+        p.text.startswith("第二章 配線及保護 / 第五節 接地及搭接 / 第 94 條") for p in pieces
+    )
 
 
 def test_fixed_chunks_respect_size_and_overlap():

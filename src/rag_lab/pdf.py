@@ -29,7 +29,9 @@ def table_to_text(path: Path | str) -> str:
     Some attachments draw a formula above the title; the title is the first line starting with 表.
     """
     with pdfplumber.open(str(path)) as pdf:
-        lines = [ln.strip() for page in pdf.pages for ln in (page.extract_text() or "").splitlines()]
+        lines = [
+            ln.strip() for page in pdf.pages for ln in (page.extract_text() or "").splitlines()
+        ]
     lines = [ln for ln in lines if ln]
     title_at = next((i for i, ln in enumerate(lines) if ln.startswith("表")), 0)
     body = [lines[title_at]] + lines[:title_at] + lines[title_at + 1 :]

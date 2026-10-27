@@ -151,7 +151,14 @@ def table_row_chunks(tables: dict[str, str]) -> list[Chunk]:
     out: list[Chunk] = []
     for tid, text in tables.items():
         lines = text.splitlines()
-        first = next((i for i, ln in enumerate(lines) if all(_NUMERIC.match(t) for t in ln.split()) and len(ln.split()) >= 2), None)
+        first = next(
+            (
+                i
+                for i, ln in enumerate(lines)
+                if all(_NUMERIC.match(t) for t in ln.split()) and len(ln.split()) >= 2
+            ),
+            None,
+        )
         if first is None:
             first = next((i for i, ln in enumerate(lines) if _is_row(ln)), len(lines))
         header = "\n".join(lines[:first])
@@ -174,4 +181,6 @@ def table_flat_fixed_chunks(
         spans.append((pos, pos + len(text), tid))
         parts.append(text)
         pos += len(text) + 2
-    return fixed_chunks("\n\n".join(parts), size=size, overlap=overlap, separators=separators, spans=spans)
+    return fixed_chunks(
+        "\n\n".join(parts), size=size, overlap=overlap, separators=separators, spans=spans
+    )

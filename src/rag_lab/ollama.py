@@ -44,7 +44,9 @@ def embed(texts: list[str], *, model: str, batch: int = 64) -> list[list[float]]
     """One vector per input text, in order. Batched so long lists do not time out."""
     out: list[list[float]] = []
     for i in range(0, len(texts), batch):
-        out.extend(_post("/api/embed", {"model": model, "input": texts[i : i + batch]})["embeddings"])
+        out.extend(
+            _post("/api/embed", {"model": model, "input": texts[i : i + batch]})["embeddings"]
+        )
     logger.debug("embedded", extra={"ctx": {"model": model, "n": len(texts)}})
     return out
 

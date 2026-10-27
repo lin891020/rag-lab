@@ -56,11 +56,12 @@ def main() -> int:
             urllib.request.urlretrieve(FILE_URL.format(fid=fid), pdf)
         text = table_to_text(pdf)
         if not text.startswith(table_id):
-            logger.warning("title mismatch", extra={"ctx": {"fid": fid, "want": title, "got": text[:40]}})
+            logger.warning(
+                "title mismatch", extra={"ctx": {"fid": fid, "want": title, "got": text[:40]}}
+            )
         (TABLES_DIR / f"{table_id}.txt").write_text(text, encoding="utf-8")
     sha = hashlib.sha256((HERE / "corpus/law.pdf").read_bytes()).hexdigest()
     logger.info("done", extra={"ctx": {"tables_written": len(items), "law_sha256": sha}})
-    print(f"law.pdf sha256 {sha}")
     return 0
 
 
