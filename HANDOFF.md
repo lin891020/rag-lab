@@ -6,7 +6,7 @@
 
 專案剛開。設計文件 `docs/superpowers/specs/2026-10-28-rag-lab-design.md` 是 Mike 在 ~/Projects 根目錄的
 對話裡逐題談定的（九題：產出、範圍、結構、資料、模型、收尾、repo、節奏），**Mike 尚未整份核准**。
-一個審稿 subagent 正在以「要照它開工的人」的角度讀，可能回來一輪問題。
+審稿 subagent 已讀完，問題列在下面那節；還沒 origin，第一次 push 前要 Mike 決定公開與否。
 
 還沒有任何實驗。模型（bge-m3、qwen3:8b）還沒拉，Mike 說等計畫核准再拉。
 
