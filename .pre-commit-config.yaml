@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: pyright
+        name: pyright
+        entry: uv run pyright
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: guard-silent-errors
+        name: guard-silent-errors
+        entry: sh -c 'exec python3 "$HOME/.claude/hooks/guard_silent_errors.py" --files "$@"' guard
+        language: system
+        types: [python]
