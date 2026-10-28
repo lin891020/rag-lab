@@ -50,30 +50,58 @@ def main(models: list[str]) -> int:
     setup_logging("rag_lab")
     arts = {str(a.num): a.body for a in parse_articles(extract_text(HERE / "corpus/law.pdf"))}
     tabs = {p.stem: p.read_text(encoding="utf-8") for p in (HERE / "corpus/tables").glob("*.txt")}
-    qs = [json.loads(ln) for ln in (HERE / "questions.jsonl").read_text(encoding="utf-8").splitlines() if ln.strip()]
+    qs = [
+        json.loads(ln)
+        for ln in (HERE / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+        if ln.strip()
+    ]
     for model in models:
         rows = []
         for q in qs:
             src = arts if q["type"] == "article" else tabs
             gold = "\n\n".join(f"【{g}】\n{src[g]}" for g in q["gold"])
-            label = "、".join(("第 " + g + " 條") if q["type"] == "article" else g for g in q["gold"])
+            label = "、".join(
+                ("第 " + g + " 條") if q["type"] == "article" else g for g in q["gold"]
+            )
             try:
-                verdict = ollama.chat_json(PROMPT.format(question=q["question"], label=label, gold=gold), model=model, system=SYSTEM)
+                verdict = ollama.chat_json(
+                    PROMPT.format(question=q["question"], label=label, gold=gold),
+                    model=model,
+                    system=SYSTEM,
+                )
             except (json.JSONDecodeError, KeyError, OSError):
-                logger.exception("judge call failed", extra={"ctx": {"model": model, "qid": q["id"]}})
-                verdict = {"answerable": None, "answer": "", "natural": None, "copied_wording": None, "comment": "call failed"}
-            rows.append({"qid": q["id"], "type": q["type"], "model": model, **verdict, "why": q["why"]})
+                logger.exception(
+                    "judge call failed", extra={"ctx": {"model": model, "qid": q["id"]}}
+                )
+                verdict = {
+                    "answerable": None,
+                    "answer": "",
+                    "natural": None,
+                    "copied_wording": None,
+                    "comment": "call failed",
+                }
+            rows.append(
+                {"qid": q["id"], "type": q["type"], "model": model, **verdict, "why": q["why"]}
+            )
         out = HERE / "results" / f"judge-{model.replace(':', '-')}.jsonl"
-        out.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
+        out.write_text(
+            "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8"
+        )
         ok = [r for r in rows if r["answerable"] is not None]
         logger.info(
             "judge done",
-            extra={"ctx": {
-                "model": model, "n": len(rows), "failed": len(rows) - len(ok),
-                "answerable": sum(bool(r["answerable"]) for r in ok),
-                "copied": sum(bool(r["copied_wording"]) for r in ok),
-                "natural_mean": round(sum(float(r["natural"] or 0) for r in ok) / max(1, len(ok)), 2),
-            }},
+            extra={
+                "ctx": {
+                    "model": model,
+                    "n": len(rows),
+                    "failed": len(rows) - len(ok),
+                    "answerable": sum(bool(r["answerable"]) for r in ok),
+                    "copied": sum(bool(r["copied_wording"]) for r in ok),
+                    "natural_mean": round(
+                        sum(float(r["natural"] or 0) for r in ok) / max(1, len(ok)), 2
+                    ),
+                }
+            },
         )
     return 0
 
