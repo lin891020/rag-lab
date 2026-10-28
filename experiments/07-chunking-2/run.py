@@ -8,7 +8,7 @@ table-whole (01's winner for tables). Text conditions:
   article-noprefix the same chunks without that header line                        (title chain)
   article+context  article + one LLM-written sentence (context.py) in front        (contextual)
   page             one chunk per PDF page                                           (NVIDIA)
-  small-to-big     index fixed-269 pieces, return the whole article they sit in    (parent-child)
+  small-to-big     index <=269-char pieces cut inside each 條 / table, return the whole parent
 Retrievers: dense (bge-m3), bm25 (char bigrams), hybrid (RRF of both), random (noise floor).
 """
 
@@ -37,7 +37,6 @@ sys.path.insert(0, str(Path(__file__).parent))
 from chunkers import (  # noqa: E402
     Chunk,
     article_chunks,
-    fixed_chunks,
     page_chunks,
     parse_articles,
     small_to_big,
@@ -120,11 +119,9 @@ def load_questions() -> list[dict]:
 def build_conditions(text: str, pages: list[str], tables: dict[str, str], contexts: dict[str, str]):
     """name -> (index chunks, searched chunks, owner map or None)."""
     articles = parse_articles(text)
-    spans = [(a.start, a.end, str(a.num)) for a in articles]
     art = article_chunks(articles, max_len=1000)
     tw = table_whole_chunks(tables)
-    small = fixed_chunks(text, size=SMALL, overlap=0, separators=SEPS, spans=spans)
-    _, owner = small_to_big(small, art)
+    small, owner = small_to_big(art + tw, size=SMALL)
     conds: dict[str, tuple[list[Chunk], list[Chunk], list[int] | None]] = {
         "article": (art + tw, art + tw, None),
         "article-noprefix": (strip_prefix(art) + tw, strip_prefix(art) + tw, None),
@@ -135,7 +132,7 @@ def build_conditions(text: str, pages: list[str], tables: dict[str, str], contex
         ),
         "page": (page_chunks(pages, articles) + tw, page_chunks(pages, articles) + tw, None),
         # children are indexed; tables are their own parents, appended after the articles
-        "small-to-big": (small + tw, art + tw, owner + [len(art) + j for j in range(len(tw))]),
+        "small-to-big": (small, art + tw, owner),
     }
     stats = {
         name: {"n": len(idx), "mean_len": round(statistics.mean(len(c.text) for c in idx))}

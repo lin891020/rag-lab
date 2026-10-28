@@ -1,0 +1,800 @@
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221"], ["表二三六"], ["表七二八～一"], ["214"], ["79"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["214"], ["216"], ["807"], ["40"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～六"], ["417"], ["435"], ["79"], ["表二五～五"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["67"], ["表三一三"], ["19"], ["表九三～一"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["114"], ["295"], ["965"], ["415"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["388"], ["370"], ["339"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["33"], ["936"], ["31"], ["43"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["29"], ["1011"], ["18"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["173"], ["172"], ["42"], ["表九四八～二"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表三六"], ["表五二"], ["53"], ["55"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["60"], ["49"], ["表八六○"], ["表四○"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a16", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["40"], ["179"], ["115"], ["表四○"], ["50"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["42"], ["45"], ["49"], ["46"], ["44"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["821"], ["89"], ["48"], ["610"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["60"], ["56"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["911"], ["66"], ["172"], ["912"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["911"], ["68"], ["912"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["42"], ["221"], ["表八八～一"], ["44"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["920"], ["76"], ["表九三九"], ["113"], ["49"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a26", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["79"], ["表二三六"], ["221"], ["表六六五"], ["83"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["919"], ["89"], ["918"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["表八六～一"], ["732"], ["6"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["707"], ["45"], ["835"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["829"], ["表八八～一"], ["835"], ["575"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表九三～一"], ["93"], ["102"], ["表三一三"], ["表四○"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["134"], ["367"], ["108"], ["59"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["102"], ["93"], ["表九三～一"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a35", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101"], ["709"], ["965"], ["911"], ["93"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["94"], ["373"], ["103"], ["881"], ["589"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["865"], ["105"], ["341"], ["456"], ["370"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表二五～二"], ["表二五～三"], ["表二五～四"], ["表七二八～一"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["59"], ["60"], ["68"], ["426"], ["999"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["333"], ["350"], ["437"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["44"], ["221"], ["41"], ["59"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["表四○"], ["113"], ["89"], ["40"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["38"], ["55"], ["56"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["255"], ["795"], ["802"], ["94"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["101"], ["100"], ["31"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["98"], ["101"]]}
+{"exp": "article", "chunking": "article", "retriever": "dense", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["303"], ["799"], ["99"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a01", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["19"], ["728"], ["214"], ["40"], ["202"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["50"], ["853"], ["38"], ["807"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a03", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表二五～六"], ["25"], ["表七二八～一"], ["435"], ["表六六五"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表九三～一"], ["313"], ["表七二八～一"], ["726"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a07", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["664"], ["335"], ["349"], ["616"], ["343"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["911"], ["198"], ["289"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["115"], ["82"], ["671"], ["262"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["917"], ["1002"], ["336"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["776"], ["42"], ["801"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表五二"], ["449"], ["945"], ["53"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["45"], ["46"], ["618"], ["36"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221"], ["734"], ["6"], ["920"], ["115"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["46"], ["42"], ["55"], ["89"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["618"], ["99"], ["617"], ["467"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表五五"], ["55"], ["45"], ["表五六"], ["37"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["303"], ["68"], ["70"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["294"], ["78"], ["70"], ["65"], ["66"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["220"], ["表二二○"], ["221"], ["240"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["76"], ["表九三九"], ["79"], ["920"], ["74"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表九三九"], ["表二六七"], ["表二三六"], ["743"], ["733"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["451"], ["219"], ["203"], ["221"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["6"], ["表八六～一"], ["867"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["88"], ["813"], ["835"], ["6"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["88"], ["表八八～一"], ["6"], ["584"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["93"], ["表九三～一"], ["101"], ["102"], ["表九二"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["869"], ["90"], ["112"], ["68"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["103"], ["100"], ["99"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["171"], ["78"], ["7"], ["428"], ["420"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["105"], ["457"], ["109"], ["664"], ["153"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["894"], ["373"], ["460"], ["6"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表九○八～六"], ["表六六五"], ["表三六八"], ["表九○八～四"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a05", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["651"], ["661"], ["671"], ["59"], ["25"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["336"], ["403"], ["298"], ["418"], ["476"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["59"], ["90"], ["671"], ["936"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["45"], ["618"], ["617"], ["37"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["853"], ["57"], ["54"], ["191"], ["60"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["28"], ["897"], ["974"], ["724"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["108"], ["93"], ["103"], ["115"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["526"], ["336"]]}
+{"exp": "article", "chunking": "article", "retriever": "bm25", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["100"], ["99"], ["102"], ["884"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a01", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["221"], ["214"], ["728"], ["19"], ["79"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["807"], ["216"], ["40"], ["50"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a03", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表二五～六"], ["435"], ["417"], ["25"], ["表二五～二"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表九三～一"], ["19"], ["表七二八～一"], ["171"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["339"], ["808"], ["290"], ["419"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["16"], ["921"], ["339"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["936"], ["31"], ["59"], ["115"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["874"], ["288"], ["543"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["42"], ["173"], ["776"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表五二"], ["53"], ["表三六"], ["55"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["49"], ["36"], ["60"], ["表四○"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["115"], ["6"], ["734"], ["87"], ["74"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["42"], ["46"], ["49"], ["55"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["42"], ["821"], ["48"], ["45"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["表五六"], ["45"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["68"], ["66"], ["303"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["68"], ["70"], ["69"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["221"], ["表二二○"], ["表八八～一"], ["42"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["76"], ["920"], ["表九三九"], ["79"], ["74"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表二六七"], ["表九三九"], ["868"], ["表六六五"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["451"], ["221"], ["993"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["表八六～一"], ["6"], ["表一○"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["835"], ["829"], ["88"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["表八八～一"], ["575"], ["829"], ["813"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表九三～一"], ["93"], ["102"], ["101"], ["表九二"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["90"], ["869"], ["108"], ["30"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["102"], ["103"], ["93"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表八一六"], ["66"], ["911"], ["701"], ["171"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["109"], ["105"], ["114"], ["589"], ["108"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["373"], ["865"], ["288"], ["873"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表六六五"], ["表三六二～一"], ["表三六二～二"], ["表二五～二"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["59"], ["426"], ["表二五～六"], ["999"], ["417"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["437"], ["336"], ["319"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["59"], ["936"], ["41"], ["115"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["179"], ["37"], ["617"], ["89"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["54"], ["56"], ["38"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["94"], ["表九二"], ["28"], ["989"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["101"], ["115"], ["93"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["101"], ["23"]]}
+{"exp": "article", "chunking": "article", "retriever": "hybrid", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["99"], ["100"], ["102"]]}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a02", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a06", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a07", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a08", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a10", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a11", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a13", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a14", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a15", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a16", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a17", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a18", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a20", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a22", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a23", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a24", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a25", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a26", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a27", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a28", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a29", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a30", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a31", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a32", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a34", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a09", "hit@5": 0.01, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a12", "hit@5": 0.015, "hit@1000": 0.015, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a19", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a21", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a33", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a36", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a37", "hit@5": 0.01, "hit@1000": 0.01, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article", "retriever": "random", "qid": "a40", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["221"], ["807"], ["214"], ["217"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["807"], ["214"], ["216"], ["952"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～六"], ["417"], ["655"], ["435"], ["79"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["67"], ["表三一三"], ["19"], ["表九三～一"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["114"], ["23"], ["24"], ["290"], ["419"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["695"], ["16"], ["921"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["33"], ["936"], ["94"], ["31"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["29"], ["18"], ["16"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["173"], ["172"], ["42"], ["表九四八～二"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表三六"], ["表五二"], ["53"], ["55"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["60"], ["49"], ["表八六○"], ["表四○"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a16", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["40"], ["179"], ["115"], ["表四○"], ["116"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["42"], ["45"], ["44"], ["89"], ["373"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["821"], ["89"], ["48"], ["42"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["60"], ["56"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["172"], ["66"], ["911"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["709"], ["912"], ["69"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["42"], ["459"], ["表八八～一"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["920"], ["76"], ["113"], ["表九三九"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a26", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["79"], ["表二三六"], ["表六六五"], ["表二六七"], ["83"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["919"], ["451"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["732"], ["表八六～一"], ["6"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["707"], ["118"], ["45"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["835"], ["表八八～一"], ["829"], ["575"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表九三～一"], ["93"], ["102"], ["表三一三"], ["表四○"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["134"], ["94"], ["367"], ["62"], ["108"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["102"], ["93"], ["表九三～一"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a35", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["709"], ["101"], ["965"], ["966"], ["911"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["94"], ["114"], ["105"], ["134"], ["589"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["105"], ["341"], ["145"], ["370"], ["388"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表二五～二"], ["表二五～三"], ["表二五～四"], ["表七二八～一"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["59"], ["60"], ["999"], ["68"], ["426"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["63"], ["297"], ["350"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["115"], ["41"], ["44"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["表四○"], ["40"], ["113"], ["89"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["38"], ["55"], ["60"], ["56"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["255"], ["795"], ["94"], ["800"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["101"], ["31"], ["115"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["306"], ["91"], ["98"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "dense", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["303"], ["922"], ["101"], ["589"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a01", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["19"], ["728"], ["214"], ["40"], ["202"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["853"], ["50"], ["38"], ["182"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a03", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表二五～六"], ["25"], ["表七二八～一"], ["655"], ["435"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表九三～一"], ["表七二八～一"], ["726"], ["313"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a07", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["664"], ["335"], ["349"], ["616"], ["343"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["198"], ["911"], ["289"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["115"], ["82"], ["671"], ["262"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["917"], ["336"], ["1002"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["776"], ["42"], ["801"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["945"], ["449"], ["表五二"], ["53"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["46"], ["45"], ["36"], ["618"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221"], ["734"], ["920"], ["115"], ["6"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["42"], ["46"], ["89"], ["55"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["99"], ["618"], ["617"], ["467"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表五五"], ["55"], ["45"], ["表五六"], ["37"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["303"], ["68"], ["123"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a23", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["294"], ["78"], ["70"], ["65"], ["76"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["220"], ["表二二○"], ["221"], ["240"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["76"], ["表九三九"], ["920"], ["79"], ["74"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表九三九"], ["表二六七"], ["表二三六"], ["743"], ["733"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["451"], ["219"], ["203"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["6"], ["表八六～一"], ["731"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["88"], ["813"], ["835"], ["650"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["88"], ["表八八～一"], ["584"], ["575"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["93"], ["表九三～一"], ["101"], ["表九二"], ["102"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a32", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["94"], ["869"], ["90"], ["112"], ["68"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["103"], ["100"], ["99"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["171"], ["78"], ["7"], ["428"], ["764"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["105"], ["457"], ["109"], ["664"], ["153"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["894"], ["373"], ["460"], ["6"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表九○八～六"], ["表六六五"], ["999"], ["表三六八"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["651"], ["661"], ["59"], ["671"], ["900"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["336"], ["403"], ["476"], ["418"], ["298"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["90"], ["115"], ["59"], ["671"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["45"], ["618"], ["617"], ["835"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["853"], ["57"], ["191"], ["54"], ["223"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["28"], ["897"], ["724"], ["530"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["108"], ["975"], ["115"], ["103"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["526"], ["336"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "bm25", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["100"], ["99"], ["102"], ["884"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["214"], ["221"], ["728"], ["202"], ["40"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["807"], ["216"], ["214"], ["218"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表二五～六"], ["655"], ["435"], ["417"], ["426"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表九三～一"], ["表七二八～一"], ["19"], ["171"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["339"], ["290"], ["419"], ["808"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["16"], ["921"], ["696"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["936"], ["115"], ["31"], ["82"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["874"], ["288"], ["18"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["42"], ["173"], ["94"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表五二"], ["53"], ["表三六"], ["55"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["49"], ["36"], ["60"], ["表五三"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["115"], ["734"], ["6"], ["920"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["42"], ["45"], ["89"], ["46"], ["49"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["42"], ["821"], ["48"], ["617"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["表五六"], ["60"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["68"], ["66"], ["303"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["66"], ["912"], ["70"], ["68"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["221"], ["表二二○"], ["表八八～一"], ["42"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["76"], ["920"], ["表九三九"], ["79"], ["221"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表二六七"], ["表九三九"], ["868"], ["223"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["451"], ["221"], ["993"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["6"], ["表八六～一"], ["表一○"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["88"], ["835"], ["650"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["表八八～一"], ["584"], ["575"], ["88"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表九三～一"], ["93"], ["102"], ["101"], ["表九二"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a32", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["94"], ["90"], ["108"], ["30"], ["869"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["102"], ["103"], ["93"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["701"], ["911"], ["表八一六"], ["709"], ["130"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["105"], ["114"], ["109"], ["219"], ["589"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["373"], ["865"], ["197"], ["290"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表六六五"], ["表三六二～一"], ["表三六二～二"], ["表九○八～六"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["59"], ["426"], ["417"], ["表二五～六"], ["999"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["298"], ["319"], ["336"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["115"], ["41"], ["936"], ["59"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["179"], ["45"], ["657"], ["42"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["56"], ["38"], ["853"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["94"], ["28"], ["表九二"], ["9"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["115"], ["101"], ["93"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["101"], ["102"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "hybrid", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["99"], ["102"], ["799"]]}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a02", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a06", "hit@5": 0.005, "hit@1000": 0.01, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a07", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a08", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a10", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a11", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a13", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a14", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a15", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a16", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a17", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a18", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a20", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a22", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a23", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a24", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a25", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a26", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a27", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a28", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a29", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a30", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a31", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a32", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a34", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a09", "hit@5": 0.01, "hit@1000": 0.01, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a12", "hit@5": 0.015, "hit@1000": 0.015, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a19", "hit@5": 0.01, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a21", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a33", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a36", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a37", "hit@5": 0.01, "hit@1000": 0.01, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article-noprefix", "retriever": "random", "qid": "a40", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["214"], ["221"], ["表二三六"], ["表七二八～一"], ["216"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["216"], ["214"], ["218"], ["44"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a03", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表二五～六"], ["435"], ["25"], ["79"], ["表二五～五"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表三一三"], ["19"], ["表九三～一"], ["表三三五～一"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["114"], ["301"], ["415"], ["24"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["921"], ["339"], ["388"], ["808"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["33"], ["94"], ["31"], ["936"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["16"], ["27"], ["149"], ["766"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["173"], ["35"], ["172"], ["表九四八～二"], ["866"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表三六"], ["表五二"], ["53"], ["55"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["60"], ["表八六○"], ["49"], ["57"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a16", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["40"], ["179"], ["74"], ["6"], ["表四○"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["42"], ["89"], ["49"], ["44"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["821"], ["89"], ["42"], ["610"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["60"], ["表五二"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["66"], ["911"], ["172"], ["168"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["911"], ["912"], ["68"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["42"], ["表八八～一"], ["89"], ["221"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["920"], ["76"], ["113"], ["表九三九"], ["74"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a26", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["79"], ["表二三六"], ["表六六五"], ["221"], ["表二六七"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["221"], ["221"], ["189"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["表八六～一"], ["6"], ["732"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["89"], ["813"], ["612"], ["707"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["829"], ["表八八～一"], ["835"], ["813"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表九三～一"], ["93"], ["表三一三"], ["102"], ["表四○"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["62"], ["134"], ["30"], ["108"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["102"], ["表九三～一"], ["93"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a35", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101"], ["965"], ["709"], ["966"], ["93"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["94"], ["881"], ["873"], ["876"], ["373"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a39", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["105"], ["872"], ["106"], ["865"], ["876"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表二五～二"], ["表二五～三"], ["表二五～四"], ["表七二八～一"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["59"], ["60"], ["68"], ["999"], ["33"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["350"], ["333"], ["430"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["221"], ["41"], ["44"], ["115"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["表四○"], ["40"], ["113"], ["179"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["38"], ["56"], ["55"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["795"], ["790"], ["802"], ["94"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["101"], ["100"], ["31"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["306"], ["91"], ["98"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "dense", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["303"], ["101"], ["100"], ["99"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a01", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["19"], ["223"], ["728"], ["214"], ["952"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["807"], ["50"], ["853"], ["38"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a03", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表二五～六"], ["25"], ["表七二八～一"], ["435"], ["表六六五"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表七二八～一"], ["表九三～一"], ["313"], ["107"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a07", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["664"], ["335"], ["349"], ["328"], ["343"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["198"], ["911"], ["289"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["82"], ["31"], ["115"], ["671"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["917"], ["1008"], ["1002"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["776"], ["172"], ["42"], ["801"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["53"], ["449"], ["表五二"], ["945"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["45"], ["46"], ["49"], ["618"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["240"], ["221"], ["49"], ["80"], ["734"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["46"], ["42"], ["691"], ["374"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["691"], ["374"], ["395"], ["617"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["57"], ["37"], ["45"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["68"], ["303"], ["69"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a23", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["78"], ["294"], ["70"], ["65"], ["66"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["220"], ["表二二○"], ["221"], ["240"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["76"], ["920"], ["表九三九"], ["79"], ["401"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表九三九"], ["表二六七"], ["表二三六"], ["743"], ["733"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["451"], ["203"], ["221"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["6"], ["表八六～一"], ["867"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["620"], ["88"], ["835"], ["813"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["88"], ["表八八～一"], ["6"], ["584"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["93"], ["表九三～一"], ["101"], ["102"], ["表九二"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["68"], ["869"], ["112"], ["90"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["103"], ["100"], ["99"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["78"], ["198"], ["171"], ["7"], ["428"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["105"], ["134"], ["109"], ["62"], ["664"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["134"], ["949"], ["894"], ["308"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表九○八～六"], ["表六六五"], ["表三六八"], ["表九○八～四"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a05", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["651"], ["661"], ["59"], ["671"], ["25"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["336"], ["608"], ["403"], ["538"], ["298"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["59"], ["766"], ["90"], ["671"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["45"], ["618"], ["617"], ["835"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["853"], ["54"], ["191"], ["51"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["56"], ["28"], ["756"], ["967"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["108"], ["103"], ["93"], ["884"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["102"], ["91"], ["26"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "bm25", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["99"], ["100"], ["102"], ["884"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a01", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["214"], ["19"], ["216"], ["39"], ["728"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["216"], ["218"], ["40"], ["807"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a03", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表二五～六"], ["25"], ["435"], ["表二五～五"], ["表二五～四"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表九三～一"], ["表七二八～一"], ["19"], ["319"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["339"], ["114"], ["290"], ["808"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["339"], ["921"], ["696"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["31"], ["936"], ["82"], ["59"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["27"], ["874"], ["608"], ["93"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["776"], ["42"], ["173"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["53"], ["表五二"], ["表三六"], ["55"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["49"], ["60"], ["表五三"], ["表四○"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["6"], ["74"], ["83"], ["49"], ["734"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["42"], ["46"], ["89"], ["49"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["42"], ["617"], ["821"], ["45"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["57"], ["60"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["68"], ["69"], ["66"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["70"], ["68"], ["69"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["表八八～一"], ["表二二○"], ["221"], ["89"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["920"], ["76"], ["表九三九"], ["74"], ["79"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表九三九"], ["表二六七"], ["表六六五"], ["223"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["221"], ["451"], ["189"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["表八六～一"], ["6"], ["88"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["612"], ["835"], ["89"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["表八八～一"], ["88"], ["813"], ["575"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表九三～一"], ["93"], ["102"], ["937"], ["表九二"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["30"], ["108"], ["62"], ["1001"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["102"], ["103"], ["100"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表八一六"], ["78"], ["66"], ["911"], ["171"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["105"], ["114"], ["109"], ["134"], ["34"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["373"], ["865"], ["872"], ["197"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表三六二～一"], ["表六六五"], ["表三六二～二"], ["表二五～二"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["59"], ["33"], ["82"], ["表二五～六"], ["999"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["419"], ["443"], ["430"], ["102"], ["608"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["59"], ["41"], ["115"], ["936"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["179"], ["376"], ["45"], ["617"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["54"], ["56"], ["38"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["989"], ["94"], ["28"], ["756"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["101"], ["115"], ["93"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["102"], ["24"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "hybrid", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["99"], ["100"], ["101"], ["102"]]}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a02", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a06", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a07", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a08", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a10", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a11", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a13", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a14", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a15", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a16", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a17", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a18", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a20", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a22", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a23", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a24", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a25", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a26", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a27", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a28", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a29", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a30", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a31", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a32", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a34", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a09", "hit@5": 0.01, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a12", "hit@5": 0.015, "hit@1000": 0.015, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a19", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a21", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a33", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a36", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a37", "hit@5": 0.01, "hit@1000": 0.01, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "article+context", "retriever": "random", "qid": "a40", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表七二八～一"], ["214", "215", "216"], ["表四○"], ["78", "79", "80", "81", "82"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["38", "39", "40", "41", "42", "43"], ["216", "217", "218", "219", "220"], ["214", "215", "216"], ["78", "79", "80", "81", "82"], ["221", "222"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～六"], ["表二五～五"], ["表二五～四"], ["表二五～二"], ["表二五～三"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a06", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表三一三"], ["表九三～一"], ["66", "67", "68", "69", "70", "71", "72"], ["表三三五～一"], ["表七二八～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a07", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["294", "295", "296", "297", "298", "299"], ["418", "419", "420", "421", "422"], ["21", "22", "23", "24"], ["290", "291", "292", "293", "294"], ["413", "414", "415", "416", "417", "418"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["15", "16", "17", "18", "19", "20", "21"], ["286", "287", "288", "289", "290"], ["697", "698", "699", "700", "701", "702", "703", "704"], ["94", "95"], ["515", "516", "517", "518", "519", "520", "521"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a10", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["931", "932", "933", "934", "935", "936", "937"], ["822"], ["25", "26", "27", "28", "29"], ["21", "22", "23", "24"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["15", "16", "17", "18", "19", "20", "21"], ["873", "874", "875"], ["286", "287", "288", "289", "290"], ["167", "168", "169", "170", "171"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a13", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["171", "172", "173", "174", "175", "176", "177", "178", "179"], ["表九四八～二"], ["29", "30", "31", "32", "33", "34", "35"], ["864", "865", "866", "867"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a14", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["表三六"], ["表五二"], ["55", "56", "57", "58", "59", "60"], ["43", "44", "45", "46"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a15", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["表八六○"], ["55", "56", "57", "58", "59", "60"], ["表四○"], ["46", "47", "48", "49"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a16", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["38", "39", "40", "41", "42", "43"], ["表四○"], ["86", "87", "88"], ["49", "50", "51", "52", "53", "54", "55"], ["82", "83", "84", "85", "86"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a17", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["43", "44", "45", "46"], ["55", "56", "57", "58", "59", "60"], ["46", "47", "48", "49"], ["38", "39", "40", "41", "42", "43"], ["88", "89", "90"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46", "47", "48", "49"], ["821", "822"], ["88", "89", "90"], ["825", "826", "827", "828"], ["43", "44", "45", "46"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a20", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表五五"], ["55", "56", "57", "58", "59", "60"], ["表六○"], ["表五二"], ["表三六"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a22", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["171", "172", "173", "174", "175", "176", "177", "178", "179"], ["167", "168", "169", "170", "171"], ["46", "47", "48", "49"], ["66", "67", "68", "69", "70", "71", "72"], ["138", "139", "140", "141", "142", "143"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66", "67", "68", "69", "70", "71", "72"], ["909", "910", "911", "912", "913", "914"], ["60", "61", "62", "63", "64", "65", "66"], ["167", "168", "169", "170", "171"], ["171", "172", "173", "174", "175", "176", "177", "178", "179"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a24", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["86", "87", "88"], ["表八八～一"], ["88", "89", "90"], ["表二二○"], ["220", "221"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["72", "73", "74", "75", "76", "77", "78"], ["220", "221"], ["表九三九"], ["179", "180", "181", "182"], ["88", "89", "90"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a26", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表二三六"], ["78", "79", "80", "81", "82"], ["表六六五"], ["表二六七"], ["82", "83", "84", "85", "86"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["82", "83", "84", "85", "86"], ["195", "196", "197", "198"], ["78", "79", "80", "81", "82"], ["88", "89", "90"], ["917", "918", "919", "920", "921", "922"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86", "87", "88"], ["表八六～三"], ["82", "83", "84", "85", "86"], ["表八六～一"], ["表一○"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86", "87", "88"], ["88", "89", "90"], ["608", "609", "610", "611", "612", "613", "614"], ["115", "116", "117", "118", "119", "120"], ["43", "44", "45", "46"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["88", "89", "90"], ["表八八～一"], ["608", "609", "610", "611", "612", "613", "614"], ["表八八～二"], ["825", "826", "827", "828"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a31", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表九三～一"], ["101", "102", "103", "104"], ["29", "30", "31", "32", "33", "34", "35"], ["表三一三"], ["表四○"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a32", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["94", "95"], ["618", "619", "620"], ["90", "91", "92", "93", "94"], ["6"], ["993", "994"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98", "99", "100", "101"], ["101", "102", "103", "104"], ["表九三～一"], ["95", "96", "97", "98"], ["表九○五"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a35", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98", "99", "100", "101"], ["101", "102", "103", "104"], ["815", "816", "817", "818", "819", "820", "821"], ["表八一六"], ["720", "721", "722"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a38", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["875", "876", "877", "878"], ["104", "105", "106", "107", "108", "109", "110"], ["536", "537"], ["537", "538"], ["90", "91", "92", "93", "94"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a39", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["104", "105", "106", "107", "108", "109", "110"], ["875", "876", "877", "878"], ["635", "636", "637"], ["15", "16", "17", "18", "19", "20", "21"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～二"], ["表二五～三"], ["表二五～四"], ["表七二八～一"], ["表二五～五"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a05", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25", "26", "27", "28", "29"], ["6"], ["表九三～一"], ["表二五八～三"], ["60", "61", "62", "63", "64", "65", "66"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["294", "295", "296", "297", "298", "299"], ["436", "437", "438", "439", "440", "441", "442", "443"], ["319", "320", "321", "322", "323", "324", "325"], ["334", "335", "336", "337", "338", "339", "340"], ["325", "326", "327", "328", "329", "330"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["38", "39", "40", "41", "42", "43"], ["43", "44", "45", "46"], ["表九三～一"], ["82", "83", "84", "85", "86"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a19", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表四○"], ["49", "50", "51", "52", "53", "54", "55"], ["46", "47", "48", "49"], ["179", "180", "181", "182"], ["88", "89", "90"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55", "56", "57", "58", "59", "60"], ["49", "50", "51", "52", "53", "54", "55"], ["35", "36", "37", "38"], ["43", "44", "45", "46"], ["60", "61", "62", "63", "64", "65", "66"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["94", "95"], ["95", "96", "97", "98"], ["252", "253", "254", "255", "256", "257", "258", "259"], ["796", "797", "798", "799", "800", "801"], ["801", "802", "803", "804", "805", "806"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101", "102", "103", "104"], ["98", "99", "100", "101"], ["90", "91", "92", "93", "94"], ["480", "481", "482", "483", "484"], ["表九三～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["90", "91", "92", "93", "94"], ["101", "102", "103", "104"], ["98", "99", "100", "101"], ["822"], ["94", "95"]]}
+{"exp": "article", "chunking": "page", "retriever": "dense", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98", "99", "100", "101"], ["303", "304", "305", "306", "307", "308"], ["95", "96", "97", "98"], ["922", "923", "924", "925"], ["101", "102", "103", "104"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a01", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["15", "16", "17", "18", "19", "20", "21"], ["202", "203", "204", "205", "206"], ["842", "843"], ["221", "222"], ["242", "243", "244", "245", "246", "247"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["38", "39", "40", "41", "42", "43"], ["49", "50", "51", "52", "53", "54", "55"], ["849", "850", "851", "852", "853", "854", "855"], ["179", "180", "181", "182"], ["216", "217", "218", "219", "220"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a03", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表二五～六"], ["表七二八～一"], ["25", "26", "27", "28", "29"], ["表六六五"], ["429", "430", "431", "432", "433", "434", "435", "436"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a06", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表七二八～一"], ["21", "22", "23", "24"], ["表九三～一"], ["308", "309", "310", "311", "312", "313", "314", "315"], ["316", "317", "318", "319"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a07", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["334", "335", "336", "337", "338", "339", "340"], ["6"], ["661", "662", "663", "664", "665"], ["6"], ["348", "349", "350", "351", "352", "353", "354"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["15", "16", "17", "18", "19", "20", "21"], ["806", "807", "808", "809", "810", "811", "812"], ["88", "89", "90"], ["697", "698", "699", "700", "701", "702", "703", "704"], ["195", "196", "197", "198"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25", "26", "27", "28", "29"], ["671", "672"], ["659", "660", "661"], ["6"], ["55", "56", "57", "58", "59", "60"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a11", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["6"], ["29", "30", "31", "32", "33", "34", "35"], ["25", "26", "27", "28", "29"], ["645", "646", "647"], ["873", "874", "875"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["758", "759", "760", "761", "762"], ["796", "797", "798", "799", "800", "801"], ["171", "172", "173", "174", "175", "176", "177", "178", "179"], ["35", "36", "37", "38"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a14", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["443", "444", "445", "446", "447", "448", "449"], ["944", "945", "946", "947", "948"], ["表五二"], ["46", "47", "48", "49"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a15", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["46", "47", "48", "49"], ["616", "617", "618"], ["43", "44", "45", "46"], ["625", "626", "627"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221", "222"], ["6"], ["86", "87", "88"], ["730", "731", "732", "733", "734", "735"], ["78", "79", "80", "81", "82"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a17", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["43", "44", "45", "46"], ["55", "56", "57", "58", "59", "60"], ["38", "39", "40", "41", "42", "43"], ["88", "89", "90"], ["46", "47", "48", "49"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a18", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["618", "619", "620"], ["46", "47", "48", "49"], ["616", "617", "618"], ["43", "44", "45", "46"], ["567", "568", "569", "570", "571"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a20", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表五五"], ["表五六"], ["43", "44", "45", "46"], ["55", "56", "57", "58", "59", "60"], ["49", "50", "51", "52", "53", "54", "55"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["60", "61", "62", "63", "64", "65", "66"], ["303", "304", "305", "306", "307", "308"], ["66", "67", "68", "69", "70", "71", "72"], ["909", "910", "911", "912", "913", "914"], ["1", "2", "3", "4", "5", "6"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a23", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["72", "73", "74", "75", "76", "77", "78"], ["60", "61", "62", "63", "64", "65", "66"], ["66", "67", "68", "69", "70", "71", "72"], ["917", "918", "919", "920", "921", "922"], ["表九三～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a24", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["220", "221"], ["表二二○"], ["221", "222"], ["66", "67", "68", "69", "70", "71", "72"], ["表八八～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["72", "73", "74", "75", "76", "77", "78"], ["表九三九"], ["78", "79", "80", "81", "82"], ["917", "918", "919", "920", "921", "922"], ["993", "994"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表九三九"], ["表二六七"], ["742", "743", "744", "745", "746"], ["998", "999", "1000", "1001"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["82", "83", "84", "85", "86"], ["449", "450", "451", "452", "453"], ["202", "203", "204", "205", "206"], ["216", "217", "218", "219", "220"], ["6"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["82", "83", "84", "85", "86"], ["表八六～三"], ["86", "87", "88"], ["6"], ["730", "731", "732", "733", "734", "735"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86", "87", "88"], ["6"], ["35", "36", "37", "38"], ["608", "609", "610", "611", "612", "613", "614"], ["88", "89", "90"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a30", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["86", "87", "88"], ["88", "89", "90"], ["表八八～一"], ["6"], ["707", "708", "709", "710", "711"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a31", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101", "102", "103", "104"], ["90", "91", "92", "93", "94"], ["表九三～一"], ["表九二"], ["931", "932", "933", "934", "935", "936", "937"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a32", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["90", "91", "92", "93", "94"], ["104", "105", "106", "107", "108", "109", "110"], ["110", "111", "112", "113", "114", "115"], ["表九二"], ["869", "870", "871"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98", "99", "100", "101"], ["101", "102", "103", "104"], ["882", "883", "884", "885", "886", "887"], ["90", "91", "92", "93", "94"], ["925", "926", "927", "928", "929"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["167", "168", "169", "170", "171"], ["925", "926", "927", "928", "929"], ["362", "363", "364", "365", "366", "367"], ["72", "73", "74", "75", "76", "77", "78"], ["418", "419", "420", "421", "422"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["104", "105", "106", "107", "108", "109", "110"], ["475", "476"], ["671", "672"], ["661", "662", "663", "664", "665"], ["129", "130", "131", "132", "133"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a39", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["104", "105", "106", "107", "108", "109", "110"], ["475", "476"], ["887", "888", "889", "890", "891", "892", "893", "894"], ["6"], ["499", "500", "501", "502", "503"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表九○八～六"], ["表六六五"], ["表三六二～一"], ["表三六八"], ["表九○八～四"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a05", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["659", "660", "661"], ["671", "672"], ["648", "649", "650", "651", "652", "653"], ["25", "26", "27", "28", "29"], ["55", "56", "57", "58", "59", "60"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a09", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["418", "419", "420", "421", "422"], ["6"], ["901", "902", "903", "904"], ["24", "25"], ["334", "335", "336", "337", "338", "339", "340"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25", "26", "27", "28", "29"], ["659", "660", "661"], ["88", "89", "90"], ["55", "56", "57", "58", "59", "60"], ["671", "672"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46", "47", "48", "49"], ["618", "619", "620"], ["43", "44", "45", "46"], ["616", "617", "618"], ["645", "646", "647"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a21", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["849", "850", "851", "852", "853", "854", "855"], ["49", "50", "51", "52", "53", "54", "55"], ["55", "56", "57", "58", "59", "60"], ["620", "621", "622", "623"], ["953", "954", "955", "956"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["94", "95"], ["758", "759", "760", "761", "762"], ["25", "26", "27", "28", "29"], ["896", "897", "898"], ["781", "782", "783", "784", "785"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101", "102", "103", "104"], ["960", "961", "962", "963", "964", "965", "966", "967"], ["104", "105", "106", "107", "108", "109", "110"], ["90", "91", "92", "93", "94"], ["882", "883", "884", "885", "886", "887"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101", "102", "103", "104"], ["110", "111", "112", "113", "114", "115"], ["90", "91", "92", "93", "94"], ["21", "22", "23", "24"], ["536", "537"]]}
+{"exp": "article", "chunking": "page", "retriever": "bm25", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95", "96", "97", "98"], ["98", "99", "100", "101"], ["101", "102", "103", "104"], ["960", "961", "962", "963", "964", "965", "966", "967"], ["104", "105", "106", "107", "108", "109", "110"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["214", "215", "216"], ["78", "79", "80", "81", "82"], ["221", "222"], ["216", "217", "218", "219", "220"], ["202", "203", "204", "205", "206"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["38", "39", "40", "41", "42", "43"], ["216", "217", "218", "219", "220"], ["214", "215", "216"], ["179", "180", "181", "182"], ["78", "79", "80", "81", "82"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～六"], ["表二五～二"], ["表二五～五"], ["表二五～四"], ["表二五～三"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a06", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表九三～一"], ["表七二八～一"], ["21", "22", "23", "24"], ["15", "16", "17", "18", "19", "20", "21"], ["671", "672"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["21", "22", "23", "24"], ["325", "326", "327", "328", "329", "330"], ["334", "335", "336", "337", "338", "339", "340"], ["348", "349", "350", "351", "352", "353", "354"], ["319", "320", "321", "322", "323", "324", "325"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["15", "16", "17", "18", "19", "20", "21"], ["697", "698", "699", "700", "701", "702", "703", "704"], ["286", "287", "288", "289", "290"], ["94", "95"], ["表三○三"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25", "26", "27", "28", "29"], ["671", "672"], ["931", "932", "933", "934", "935", "936", "937"], ["6"], ["29", "30", "31", "32", "33", "34", "35"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["873", "874", "875"], ["25", "26", "27", "28", "29"], ["822"], ["645", "646", "647"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29", "30", "31", "32", "33", "34", "35"], ["35", "36", "37", "38"], ["171", "172", "173", "174", "175", "176", "177", "178", "179"], ["635", "636", "637"], ["88", "89", "90"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a14", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["表五二"], ["表三六"], ["43", "44", "45", "46"], ["55", "56", "57", "58", "59", "60"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a15", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["35", "36", "37", "38"], ["46", "47", "48", "49"], ["表四○"], ["618", "619", "620"], ["55", "56", "57", "58", "59", "60"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["86", "87", "88"], ["6"], ["82", "83", "84", "85", "86"], ["72", "73", "74", "75", "76", "77", "78"], ["220", "221"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a17", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["43", "44", "45", "46"], ["55", "56", "57", "58", "59", "60"], ["38", "39", "40", "41", "42", "43"], ["46", "47", "48", "49"], ["88", "89", "90"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46", "47", "48", "49"], ["618", "619", "620"], ["43", "44", "45", "46"], ["821", "822"], ["616", "617", "618"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a20", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表五五"], ["55", "56", "57", "58", "59", "60"], ["表五六"], ["表六○"], ["43", "44", "45", "46"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["60", "61", "62", "63", "64", "65", "66"], ["66", "67", "68", "69", "70", "71", "72"], ["303", "304", "305", "306", "307", "308"], ["909", "910", "911", "912", "913", "914"], ["表九三～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66", "67", "68", "69", "70", "71", "72"], ["60", "61", "62", "63", "64", "65", "66"], ["909", "910", "911", "912", "913", "914"], ["表九三～一"], ["281", "282", "283", "284", "285", "286"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a24", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["220", "221"], ["表二二○"], ["表八八～一"], ["88", "89", "90"], ["86", "87", "88"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["72", "73", "74", "75", "76", "77", "78"], ["表九三九"], ["78", "79", "80", "81", "82"], ["220", "221"], ["993", "994"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表二六七"], ["表九三九"], ["表六六五"], ["82", "83", "84", "85", "86"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["82", "83", "84", "85", "86"], ["221", "222"], ["917", "918", "919", "920", "921", "922"], ["78", "79", "80", "81", "82"], ["187", "188", "189", "190", "191"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86", "87", "88"], ["82", "83", "84", "85", "86"], ["表八六～三"], ["表八六～一"], ["6"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86", "87", "88"], ["88", "89", "90"], ["608", "609", "610", "611", "612", "613", "614"], ["35", "36", "37", "38"], ["82", "83", "84", "85", "86"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["88", "89", "90"], ["表八八～一"], ["86", "87", "88"], ["表八八～二"], ["825", "826", "827", "828"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a31", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["101", "102", "103", "104"], ["表九三～一"], ["表九二"], ["98", "99", "100", "101"], ["90", "91", "92", "93", "94"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a32", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["90", "91", "92", "93", "94"], ["110", "111", "112", "113", "114", "115"], ["表九二"], ["974", "975", "976", "977", "978", "979"], ["表九三～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98", "99", "100", "101"], ["101", "102", "103", "104"], ["95", "96", "97", "98"], ["表九三～一"], ["90", "91", "92", "93", "94"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表八一六"], ["720", "721", "722"], ["167", "168", "169", "170", "171"], ["480", "481", "482", "483", "484"], ["925", "926", "927", "928", "929"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["104", "105", "106", "107", "108", "109", "110"], ["875", "876", "877", "878"], ["822"], ["286", "287", "288", "289", "290"], ["917", "918", "919", "920", "921", "922"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a39", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["104", "105", "106", "107", "108", "109", "110"], ["367", "368", "369", "370", "371", "372", "373", "374"], ["72", "73", "74", "75", "76", "77", "78"], ["286", "287", "288", "289", "290"], ["195", "196", "197", "198"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表三六二～一"], ["表二五～二"], ["表六六五"], ["表三六二～二"], ["表九○八～六"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a05", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25", "26", "27", "28", "29"], ["表二五～六"], ["671", "672"], ["6"], ["表七二八～一"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a09", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["294", "295", "296", "297", "298", "299"], ["418", "419", "420", "421", "422"], ["334", "335", "336", "337", "338", "339", "340"], ["24", "25"], ["436", "437", "438", "439", "440", "441", "442", "443"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a12", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["671", "672"], ["38", "39", "40", "41", "42", "43"], ["998", "999", "1000", "1001"], ["43", "44", "45", "46"], ["6"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46", "47", "48", "49"], ["43", "44", "45", "46"], ["616", "617", "618"], ["179", "180", "181", "182"], ["38", "39", "40", "41", "42", "43"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55", "56", "57", "58", "59", "60"], ["49", "50", "51", "52", "53", "54", "55"], ["849", "850", "851", "852", "853", "854", "855"], ["43", "44", "45", "46"], ["191", "192", "193", "194", "195"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["94", "95"], ["758", "759", "760", "761", "762"], ["753", "754", "755", "756", "757", "758"], ["表九二"], ["781", "782", "783", "784", "785"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101", "102", "103", "104"], ["90", "91", "92", "93", "94"], ["表九三～一"], ["98", "99", "100", "101"], ["931", "932", "933", "934", "935", "936", "937"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101", "102", "103", "104"], ["90", "91", "92", "93", "94"], ["21", "22", "23", "24"], ["524", "525", "526", "527", "528", "529", "530"], ["98", "99", "100", "101"]]}
+{"exp": "article", "chunking": "page", "retriever": "hybrid", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98", "99", "100", "101"], ["95", "96", "97", "98"], ["101", "102", "103", "104"], ["882", "883", "884", "885", "886", "887"], ["303", "304", "305", "306", "307", "308"]]}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a01", "hit@5": 0.02, "hit@1000": 0.01, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a02", "hit@5": 0.015, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a03", "hit@5": 0.04, "hit@1000": 0.0, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a06", "hit@5": 0.03, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a07", "hit@5": 0.03, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a08", "hit@5": 0.02, "hit@1000": 0.01, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a10", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a11", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a13", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a14", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a15", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a16", "hit@5": 0.015, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a17", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a18", "hit@5": 0.01, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a20", "hit@5": 0.035, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a22", "hit@5": 0.02, "hit@1000": 0.01, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a23", "hit@5": 0.035, "hit@1000": 0.01, "hit@2000": 0.025, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a24", "hit@5": 0.015, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a25", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a26", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a27", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a28", "hit@5": 0.035, "hit@1000": 0.005, "hit@2000": 0.025, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a29", "hit@5": 0.025, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a30", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a31", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a32", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a34", "hit@5": 0.04, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a35", "hit@5": 0.03, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a38", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a39", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a04", "hit@5": 0.04, "hit@1000": 0.0, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a05", "hit@5": 0.04, "hit@1000": 0.0, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a09", "hit@5": 0.06, "hit@1000": 0.005, "hit@2000": 0.03, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a12", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a19", "hit@5": 0.03, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a21", "hit@5": 0.015, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a33", "hit@5": 0.015, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a36", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a37", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "page", "retriever": "random", "qid": "a40", "hit@5": 0.04, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221"], ["表二三六"], ["214"], ["221"], ["79"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["214"], ["216"], ["221"], ["807"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～六"], ["表七二八～一"], ["417"], ["435"], ["189"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["67"], ["19"], ["表九三～一"], ["表三一三"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["114"], ["214"], ["301"], ["295"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["214"], ["388"], ["370"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["33"], ["936"], ["94"], ["568"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["646"], ["27"], ["214"], ["651"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["173"], ["172"], ["42"], ["表八"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表三六"], ["表五二"], ["53"], ["55"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["60"], ["49"], ["36"], ["表八六○"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a16", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["40"], ["179"], ["115"], ["表四○"], ["714"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["42"], ["44"], ["49"], ["60"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["821"], ["89"], ["48"], ["610"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["56"], ["60"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["911"], ["66"], ["172"], ["912"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["911"], ["68"], ["912"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["42"], ["88"], ["44"], ["表八八～一"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["920"], ["表二六七"], ["76"], ["79"], ["220"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a26", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["79"], ["表二三六"], ["221"], ["表六六五"], ["236"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["919"], ["918"], ["451"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["6"], ["表八六～三"], ["表八六～一"], ["732"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["707"], ["89"], ["835"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["829"], ["表八八～一"], ["835"], ["707"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["93"], ["表九三～一"], ["102"], ["表九三～二"], ["884"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["134"], ["367"], ["833"], ["108"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["884"], ["102"], ["93"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a35", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["101"], ["709"], ["965"], ["911"], ["564"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["373"], ["103"], ["94"], ["881"], ["374"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["865"], ["105"], ["456"], ["370"], ["872"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a04", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表七二八～一"], ["25"], ["表三六二～二"], ["表九○八～七"], ["表二五～二"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["651"], ["59"], ["999"], ["60"], ["68"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["333"], ["350"], ["437"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["651"], ["671"], ["44"], ["676"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["表四○"], ["89"], ["113"], ["40"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["38"], ["55"], ["56"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["255"], ["795"], ["802"], ["94"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["101"], ["100"], ["31"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["98"], ["965"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "dense", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["303"], ["799"], ["381"], ["99"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a01", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["19"], ["221"], ["40"], ["728"], ["202"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["50"], ["853"], ["38"], ["807"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a03", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["表二五～六"], ["表七二八～一"], ["25"], ["表二五～二"], ["表二五～四"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表七二八～一"], ["22"], ["表九三～一"], ["313"], ["734"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a07", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["6"], ["132"], ["664"], ["848"], ["343"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["911"], ["198"], ["90"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["115"], ["900"], ["112"], ["6"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["6"], ["646"], ["874"], ["1002"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["776"], ["127"], ["42"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["449"], ["945"], ["表五二"], ["55"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["46"], ["626"], ["6"], ["617"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221"], ["734"], ["916"], ["115"], ["79"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["46"], ["42"], ["55"], ["89"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["570"], ["587"], ["617"], ["898"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["表五五"], ["55"], ["表五六"], ["45"], ["37"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["303"], ["912"], ["68"], ["70"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["294"], ["70"], ["66"], ["65"], ["68"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["220"], ["221"], ["240"], ["表二二○"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["76"], ["表九三九"], ["920"], ["79"], ["74"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表九三九"], ["表二六七"], ["表二三六"], ["743"], ["733"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["203"], ["83"], ["219"], ["451"], ["994"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["表八六～三"], ["6"], ["表八六～一"], ["916"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["88"], ["35"], ["813"], ["6"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["6"], ["表八八～一"], ["88"], ["828"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["93"], ["表九三～一"], ["101"], ["102"], ["表九二"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["90"], ["表九二"], ["93"], ["68"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a34", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["101"], ["98"], ["103"], ["100"], ["884"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["171"], ["78"], ["7"], ["428"], ["821"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["105"], ["457"], ["109"], ["664"], ["319"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["236"], ["846"], ["894"], ["373"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["536"], ["555"], ["表三六二～一"], ["表九○八～六"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["661"], ["651"], ["671"], ["59"], ["900"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["336"], ["403"], ["902"], ["6"], ["477"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["90"], ["195"], ["6"], ["59"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["618"], ["45"], ["6"], ["179"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["853"], ["54"], ["191"], ["表五二"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["28"], ["95"], ["897"], ["94"], ["974"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["108"], ["884"], ["6"], ["115"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["526"], ["507"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "bm25", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["100"], ["99"], ["102"], ["101"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a01", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["221"], ["221"], ["214"], ["19"], ["40"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a02", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["39"], ["807"], ["50"], ["40"], ["221"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a03", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二五～六"], ["表七二八～一"], ["表二五～二"], ["25"], ["435"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a06", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["22"], ["表九三～一"], ["19"], ["171"], ["671"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a07", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["23"], ["339"], ["419"], ["808"], ["114"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a08", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["18"], ["808"], ["16"], ["921"], ["696"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a10", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["27"], ["6"], ["936"], ["31"], ["671"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a11", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["32"], ["874"], ["27"], ["646"], ["288"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a13", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["35"], ["172"], ["42"], ["94"], ["173"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a14", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["36"], ["表五二"], ["55"], ["53"], ["表三六"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a15", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["37"], ["49"], ["36"], ["617"], ["60"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a16", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["115"], ["734"], ["714"], ["221"], ["74"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a17", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["45"], ["42"], ["46"], ["89"], ["49"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a18", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["46"], ["821"], ["42"], ["45"], ["48"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a20", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["55"], ["表五五"], ["表六○"], ["45"], ["60"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a22", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["65"], ["912"], ["68"], ["303"], ["66"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a23", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["66"], ["65"], ["68"], ["70"], ["69"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a24", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["71"], ["220"], ["表八八～一"], ["表二二○"], ["42"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a25", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["920"], ["76"], ["表九三九"], ["79"], ["表二六七"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a26", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["表二三六"], ["表二六七"], ["236"], ["表九三九"], ["867"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a27", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["83"], ["219"], ["451"], ["994"], ["221"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a28", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["86"], ["6"], ["表八六～三"], ["表八六～一"], ["916"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a29", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["87"], ["813"], ["707"], ["835"], ["88"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a30", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["89"], ["表八八～一"], ["6"], ["829"], ["707"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a31", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["93"], ["表九三～一"], ["102"], ["884"], ["表九二"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a32", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 1.0, "top": [["94"], ["表九二"], ["108"], ["112"], ["30"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a34", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["101"], ["884"], ["102"], ["103"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["821"], ["564"], ["911"], ["66"], ["表八一六"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a38", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["109"], ["105"], ["114"], ["288"], ["457"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["105"], ["373"], ["865"], ["589"], ["197"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a04", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["25"], ["表三六二～一"], ["表二五～二"], ["表二五～三"], ["表六六五"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a05", "hit@5": 1.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["651"], ["59"], ["671"], ["661"], ["25"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a09", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": [["443"], ["419"], ["336"], ["437"], ["541"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a12", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["29"], ["671"], ["59"], ["651"], ["41"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a19", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["49"], ["179"], ["37"], ["89"], ["45"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a21", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["57"], ["60"], ["54"], ["56"], ["38"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a33", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["95"], ["94"], ["表九二"], ["28"], ["989"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a36", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["102"], ["103"], ["884"], ["115"], ["101"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a37", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["103"], ["114"], ["91"], ["102"], ["23"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "hybrid", "qid": "a40", "hit@5": 1.0, "hit@1000": 1.0, "hit@2000": 1.0, "top": [["98"], ["99"], ["100"], ["102"], ["101"]]}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a01", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a02", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a03", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a06", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a07", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a08", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a10", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a11", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a13", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a14", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a15", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a16", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a17", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a18", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a20", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a22", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a23", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a24", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a25", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a26", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a27", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a28", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a29", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a30", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a31", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a32", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.01, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a34", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a35", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a38", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a39", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a04", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a05", "hit@5": 0.0, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a09", "hit@5": 0.01, "hit@1000": 0.005, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a12", "hit@5": 0.015, "hit@1000": 0.015, "hit@2000": 0.02, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a19", "hit@5": 0.01, "hit@1000": 0.0, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a21", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a33", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.005, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a36", "hit@5": 0.005, "hit@1000": 0.0, "hit@2000": 0.0, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a37", "hit@5": 0.01, "hit@1000": 0.01, "hit@2000": 0.015, "top": []}
+{"exp": "article", "chunking": "small-to-big", "retriever": "random", "qid": "a40", "hit@5": 0.005, "hit@1000": 0.005, "hit@2000": 0.005, "top": []}

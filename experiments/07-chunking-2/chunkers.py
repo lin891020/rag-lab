@@ -223,17 +223,29 @@ def page_chunks(pages: list[str], articles: list[Article]) -> list[Chunk]:
     return out
 
 
-def small_to_big(children: list[Chunk], parents: list[Chunk]) -> tuple[list[Chunk], list[int]]:
-    """Map every child (a fixed-size piece) to the parent article chunk that contains its start.
-    Returns the children (unchanged) and parent index per child. Children outside any parent
-    (chapter headings) map to -1."""
-    starts = sorted((p.start, p.end, j) for j, p in enumerate(parents))
-    owner = []
-    for c in children:
-        hit = -1
-        for s, e, j in starts:
-            if s <= c.start < e:
-                hit = j
-                break
-        owner.append(hit)
+def small_to_big(parents: list[Chunk], *, size: int) -> tuple[list[Chunk], list[int]]:
+    """Parent-child the way LlamaIndex's hierarchical parser does it: every child is cut from
+    inside one parent (line boundaries, then hard cuts), so no child straddles two 條.
+    Returns the children and the parent index of each child."""
+    children: list[Chunk] = []
+    owner: list[int] = []
+    for j, p in enumerate(parents):
+        pieces: list[str] = []
+        buf: list[str] = []
+        for ln in p.text.splitlines():
+            while len(ln) > size:  # a single line longer than the child size
+                if buf:
+                    pieces.append("\n".join(buf))
+                    buf = []
+                pieces.append(ln[:size])
+                ln = ln[size:]
+            if buf and sum(len(x) + 1 for x in buf) + len(ln) > size:
+                pieces.append("\n".join(buf))
+                buf = []
+            buf.append(ln)
+        if buf:
+            pieces.append("\n".join(buf))
+        for piece in pieces:
+            children.append(Chunk(piece, list(p.labels), p.start, p.end, {"parent": j}))
+            owner.append(j)
     return children, owner

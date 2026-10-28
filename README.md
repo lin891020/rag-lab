@@ -12,6 +12,7 @@
 | [04-table-lookup](experiments/04-table-lookup/README.md) | 範圍展開成上下限、只餵問到的列，救得了剩下的讀表錯嗎？ | 救不了：四個配對差距區間都含 0，合用在 gpt-oss 反而 −.09；真正的誘餌是表註裡的數字和寬表的欄 |
 | [05-cross-page](experiments/05-cross-page/README.md) | 跨頁表格續頁沒表頭：逐頁讀、每頁一塊並排、規則接回，差多少？ | 損失只在「要靠欄名定位」的 6 題出現，接回表頭也沒救（那是 04 的範圍列問題）；分得出的是「每頁一塊並排」比只餵續頁差 −.13；偵測規則 4/4 真跨頁、108 鄰表 0 誤接 |
 | [06-ocr-source](experiments/06-ocr-source/README.md) | 同一張表從 300 dpi 頁圖 OCR 回來，模型讀表掉多少？哪條本地 OCR 能用？ | glm-ocr（0.9B，提示尾加換行）跟文字層分不出（.73 vs .79、.88 vs .93）；提示照抄就掉 .10；Apple Vision 掉 .35–.43、tesseract chi_tra 等於閉卷 |
+| [07-chunking-2](experiments/07-chunking-2/README.md) | 標題鏈前綴、LLM 脈絡句、頁級、父子、混合檢索，哪個讓條文找得更準？ | 一條一塊之後全都動不了：前綴 0、脈絡句 +.03、父子 0、混合 −.05～+.03（區間含 0）；頁級 −.28 分得出，輸在塞不進預算 |
 
 ## 怎麼跑
 

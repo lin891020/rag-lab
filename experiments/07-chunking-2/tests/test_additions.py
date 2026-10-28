@@ -40,12 +40,14 @@ def test_page_chunks_carry_the_running_article_over_the_page_break():
     assert ps[2].meta["page"] == 3
 
 
-def test_small_to_big_maps_children_to_the_parent_that_contains_their_start():
-    parents = article_chunks(_arts())
-    children = [Chunk("a", [], 0, 5), Chunk("b", [], 12, 15), Chunk("c", [], 25, 30)]
-    _, owner = small_to_big(children, parents)
-    assert owner == [0, 1, -1]
+def test_small_to_big_cuts_children_inside_their_parent():
+    parents = [Chunk("第 1 條\n甲甲甲\n乙乙乙\n丙丙丙", ["1"]), Chunk("第 2 條\n丁", ["2"])]
+    children, owner = small_to_big(parents, size=9)
+    assert [c.text for c in children] == ["第 1 條\n甲甲甲", "乙乙乙\n丙丙丙", "第 2 條\n丁"]
+    assert owner == [0, 0, 1] and children[1].labels == ["1"]
     assert parent_rank([2, 1, 1, 0], owner) == [1, 0]
+    long_line, _ = small_to_big([Chunk("x" * 25, ["9"])], size=10)
+    assert [len(c.text) for c in long_line] == [10, 10, 5]
 
 
 def test_rrf_prefers_items_high_in_both_lists():
