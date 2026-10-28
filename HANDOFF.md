@@ -4,25 +4,24 @@
 
 ## 現在在哪一步
 
-實驗 02（JSON 固定輸出）做完，README 五節寫滿：`experiments/02-json-output/README.md`。
-01 也完成（Mike 2026-10-28 抽查五題 OK）。spec 已核准。02 的計畫在 `~/.claude/plans/jazzy-riding-harbor.md`（本機）。
-
-GitHub：`lin891020/rag-lab`（2026-10-28 建）。
+三個實驗做完：01 切分與檢索、02 JSON 固定輸出、03 表格格式，README 五節都寫滿。
+GitHub：`lin891020/rag-lab`（公開，2026-10-28 建）。spec 已核准；03 的計畫在 `~/.claude/plans/jazzy-riding-harbor.md`（本機）。
 
 ## 已驗證
 
-- `uv run pytest tests experiments/01-chunking experiments/02-json-output`：57 passed（2026-10-28 mini，兩種順序都綠）
+- `uv run pytest tests experiments/01-chunking experiments/02-json-output experiments/03-table-format`：88 passed（2026-10-28 mini，兩種順序都綠）
 - `uv run pre-commit run --all-files` 綠
-- 02 `run.py` 528 次呼叫約 31 分鐘；漂移探針 16/16 逐字相同；`score.py`、`report.py` 產出 `results/`
-- 02 題庫：Mike 2026-10-28 抽查 a01b、a18c、a26b、t09b、t13b，加看模型答錯的 t15、a31a、t14b，正解都對。
-- 02 數字：三個開卷條件 parse/schema 全 1.0，value_ok qwen3 .88 [.80, .95]、gpt-oss .95 [.89, 1.0]，配對差距全 +.00；閉卷 .05–.08。全部在 README 第 3 節。
-- 01 數字：article − fixed1000 = +.23 [+.07, +.40]，article − fixed269 = +.00；見 01 README。
-- 探針（記在 02 README 第 2 節）：gpt-oss:20b 在 ollama 0.40.2 無視 `think:false`，開 schema 會回空字串，要 `think:"low"`。
+- 03 `run.py` 820 次呼叫約 51 分鐘；漂移探針 18/20（差的 2 次都是 gpt-oss t01）；`score.py`、`report.py` 產出 `results/`
+- 03 數字：value_ok qwen3 flat .67 → markdown .79、kv .84；gpt-oss flat .73 → markdown .95、kv .87；markdown − flat 與 kv − flat 兩個模型都分得出；html − flat 分不出。全部在 03 README 第 3 節。
+- 03 語料：17 張表的 markdown 我逐張對過 PDF 原圖；表九二 文字列曾被誤拆，已修並加測試。
+- 02、01 的數字見各自 README；01、02 題庫 Mike 都抽查過。
 
 ## 只是寫了、還沒驗證
 
+- 03 題庫 82 題：22 題照抄 02，60 題新出、正解對 PDF 原圖標；**Mike 還沒抽查**，名單 n03、n17、n39、n44、n53（2026-10-28 session 已給他）。
 - 01 README 第 5 節「正解模糊」兩題（a01→214、a03→表二五～六）只看了 dense 的 miss，沒逐題重審。
 
 ## 下一步
 
-1. 03 OCR，或先做 02 的續集：表格餵 markdown 再量 value_ok（02 README 第 5 節第二點）。開新 session、plan mode。
+1. Mike 抽查 03 的 5 題；要改就改 `questions.jsonl` 後重跑 `run.py`（可續跑）→ `score.py` → `report.py`。
+2. 下一個實驗二選一：04 OCR（spec 原定），或 03 的續集「範圍列展開、寬表只餵一列」（03 README 第 5 節前兩點）。開新 session、plan mode。
