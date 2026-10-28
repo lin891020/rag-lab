@@ -144,6 +144,15 @@ def build_conditions(text: str, pages: list[str], tables: dict[str, str], contex
     return conds, stats
 
 
+def _parent_search(
+    fn: Callable[[str, int], list[int]], owner: list[int]
+) -> Callable[[str, int], list[int]]:
+    def rank(q: str, k: int) -> list[int]:
+        return parent_rank(fn(q, 200), owner)[:k]
+
+    return rank
+
+
 def drift_probe(cache: EmbedCache, chunks: list[Chunk], *, n: int = 20) -> float:
     sample = [c.text for c in chunks[:: max(1, len(chunks) // n)]][:n]
     fresh = np.asarray(ollama.embed(sample, model=EMBED_MODEL), dtype=np.float32)
@@ -247,13 +256,7 @@ def main() -> int:
         searchers = {"dense": dense.search, "bm25": bm25.search, "hybrid": hybrid.search}
         per = {}
         for ret, fn in searchers.items():
-            if owner is None:
-                rank = fn
-            else:
-
-                def rank(q: str, k: int, fn=fn) -> list[int]:
-                    return parent_rank(fn(q, 200), owner)[:k]
-
+            rank = fn if owner is None else _parent_search(fn, owner)
             per[ret] = evaluate(out_chunks, rank, questions, k=K, budgets=BUDGETS)
         per["random"] = evaluate_random(
             out_chunks, questions, k=K, budgets=BUDGETS, draws=RANDOM_DRAWS, seed=0

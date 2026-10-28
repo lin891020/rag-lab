@@ -25,7 +25,7 @@ def test_conditions_on_the_real_pdf():
     ctx, _, _ = conds["article+context"]
     assert sum(c.text.startswith("馬達分路導線\n") for c in ctx) == 1
     small, parents, owner = conds["small-to-big"]
-    assert len(owner) == len(small) and parents is not None
+    assert owner is not None and len(owner) == len(small) and len(parents) == len(art)
     assert sum(o >= 0 for o in owner) > 0.95 * len(small)  # almost every piece sits in a 條
     # a page chunk carries the article running over from the previous page
     page_chunks, _, _ = conds["page"]
