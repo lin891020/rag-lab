@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-29",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "pdfplumber": "0.11.10",
+  "conditions": {
+    "closed-book": null,
+    "page": "page",
+    "pages": "pages",
+    "merged": "merged"
+  },
+  "mean_evidence_chars": {
+    "page": 925,
+    "pages": 2514,
+    "merged": 2672
+  },
+  "n_questions": {
+    "total": 38,
+    "ctrl": 13,
+    "cont": 25
+  },
+  "drift": {
+    "same": 14,
+    "n": 16,
+    "rows": [
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "k01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "page",
+        "qid": "k01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "page",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "pages",
+        "qid": "k01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "pages",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "merged",
+        "qid": "k01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "merged",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "k01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "page",
+        "qid": "k01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "page",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "pages",
+        "qid": "k01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "pages",
+        "qid": "k02",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "merged",
+        "qid": "k01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "merged",
+        "qid": "k02",
+        "same": true
+      }
+    ]
+  }
+}
