@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-28",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "pdfplumber": "0.11.10",
+  "conditions": {
+    "closed-book": null,
+    "md": [
+      false,
+      false
+    ],
+    "md+range": [
+      true,
+      false
+    ],
+    "md+rows": [
+      false,
+      true
+    ],
+    "md+range+rows": [
+      true,
+      true
+    ]
+  },
+  "top_k": 3,
+  "mean_evidence_chars": {
+    "md": 590,
+    "md+range": 679,
+    "md+rows": 294,
+    "md+range+rows": 332
+  },
+  "n_questions": {
+    "total": 82,
+    "range": 39,
+    "wide": 19,
+    "range+wide": 6,
+    "plain": 18
+  },
+  "drift": {
+    "same": 19,
+    "n": 20,
+    "rows": [
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md+range",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md+range",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md+rows",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md+rows",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md+range+rows",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "md+range+rows",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md+range",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md+range",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md+rows",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md+rows",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md+range+rows",
+        "qid": "t01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "md+range+rows",
+        "qid": "t02a",
+        "same": true
+      }
+    ]
+  }
+}

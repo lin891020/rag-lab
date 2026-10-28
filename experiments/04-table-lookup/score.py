@@ -29,11 +29,11 @@ RESULTS = HERE / "results"
 TOL = 1e-6
 METRICS = ["parse_ok", "schema_ok", "value_ok", "value_only_ok"]
 FORMATS = [
-    "markdown",
-    "html",
-    "kv",
-    "flat",
-]  # diffs: every pair, flat last so "x − flat" reads naturally
+    "md+range+rows",
+    "md+range",
+    "md+rows",
+    "md",
+]  # every pair; md last so "x − md" reads naturally
 
 # canonical unit -> spellings a model may use (compared after normalize_unit on both sides)
 UNIT_ALIASES: dict[str, list[str]] = {

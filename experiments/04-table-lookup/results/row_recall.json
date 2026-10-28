@@ -1,0 +1,6 @@
+{
+ "qwen3:8b/md+rows": 0.9512,
+ "qwen3:8b/md+range+rows": 0.9512,
+ "gpt-oss:20b/md+rows": 0.9512,
+ "gpt-oss:20b/md+range+rows": 0.9512
+}
