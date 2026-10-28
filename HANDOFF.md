@@ -7,9 +7,7 @@
 實驗 02（JSON 固定輸出）做完，README 五節寫滿：`experiments/02-json-output/README.md`。
 01 也完成（Mike 2026-10-28 抽查五題 OK）。spec 已核准。02 的計畫在 `~/.claude/plans/jazzy-riding-harbor.md`（本機）。
 
-**還沒推上 GitHub**：Mike 2026-10-28 選「先不建 repo」，之後同意公開但說先繼續做實驗。
-清完
-`gh repo create lin891020/rag-lab --public --source . --push`。
+GitHub：`lin891020/rag-lab`（2026-10-28 建）。
 
 ## 已驗證
 
@@ -28,5 +26,5 @@
 ## 下一步
 
 1. Mike 抽查 02 的 5 題；要改就改 `questions.jsonl` 後重跑 `run.py`（可續跑）→ `score.py` → `report.py`。
-2. 建公開 repo、push（見上）。
+2. 確認 GitHub 上的 repo 可見性與歷史（見本次 session 回報）。
 3. 03 OCR，或先做 02 的續集：表格餵 markdown 再量 value_ok（02 README 第 5 節第二點）。開新 session、plan mode。
