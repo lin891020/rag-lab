@@ -31,14 +31,25 @@ vision 與 tesseract **不重建欄**：同一列的片段依 x 排，但沒有�
 | ollama | 0.40.2 |
 | qwen3:8b digest | `sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41` |
 | gpt-oss:20b digest | `sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe` |
-| glm-ocr | GLM_DIGEST_PLACEHOLDER |
+| glm-ocr | `89d735dd9c07`（glm4 0.89B F16，ollama library） |
 | tesseract／chi_tra | 5.5.3／tessdata（legacy+LSTM）2026-10-28 下載 |
 | ocrmac | 1.0.x（macOS 26.6.2 Vision） |
 | Python／pdfplumber | 3.12.15／0.11.10 |
 
 ## 3. 數字
 
-STRUCTURE_PLACEHOLDER
+**結構層**（`results/structure.csv`，17 張表平均；clean 全 1.0 是自我檢查）：
+
+| 路線 | 格子召回 | 數字格召回 | 列召回 | 文字召回 | 18 頁耗時 |
+|---|---|---|---|---|---|
+| glm-ocr | .57 | .59 | .52 | **.97** | 7 分（約 23 秒/頁，M4） |
+| vision | **.71** | **.79** | .39 | .73 | 5 秒 |
+| tesseract | .15 | .16 | .00 | .22 | 20 秒 |
+
+- **glm-ocr 是兩極的**：9 張小的、有框線的表幾乎全對（表九三～一／二、表二五～六／七、表五五、表五六、表八八～二、表六一 格子召回 ≥ .96，列召回 .9–1.0；表八六～三 多層表頭也對了 .96），**8 張它根本不回表格**——表二五～一／二／四／五（7 欄寬表、資料列沒畫線）、表三六、表九二（長文字格）、表四○（轉置表）只回純文字，字都在（文字召回 .97）但欄列全丟。它回的格式也不固定：markdown、TSV（表二五～六）、純文字三種。
+- **Apple Vision 字對、框對，但整欄孤立的數字會被當成直排文字一起丟掉或合成一「行」**（表五五 需量因數 整欄只剩最後一格；表二五～二 安培容量 大半不見），所以列召回只有 .39；文字召回 .73 代表這些數字連文字層都沒有，不是聚類的錯。
+- **tesseract chi_tra 不能用**：字間插空白、把表格列讀成「#238 80 ﹣ 200 ˍ 固 ˍ」這種東西，資料格幾乎全丟。
+
 
 RESULTS_PLACEHOLDER
 

@@ -5,7 +5,7 @@
 Ground truth = 04's corpus/tables.json (pdfplumber grid, checked against the PDF images in 03).
 Per table and route:
   cell_recall     share of non-empty ground-truth data cells that appear as a whole cell
-                  (|-delimited) somewhere in the OCR markdown, after norm()
+                  (|- or tab-delimited) somewhere in the OCR markdown, after norm()
   num_recall      the same, restricted to cells that are numbers (the ones questions ask for)
   row_recall      share of ground-truth rows whose cells all appear, in order, inside one OCR row
   text_recall     share of ground-truth cells whose text appears anywhere in the OCR text
@@ -33,10 +33,13 @@ _NUM = re.compile(r"^[\d.,\-–~～以上下超過至\s]+$")
 
 
 def ocr_rows(md: str) -> list[list[str]]:
+    """A row is a markdown table line or a tab-separated line (glm-ocr sometimes answers TSV)."""
     rows = []
     for ln in md.splitlines():
-        if ln.startswith("|") and not ln.startswith("|---"):
+        if ln.startswith("|") and not ln.startswith("|---") and not ln.startswith("| :--"):
             rows.append([norm(c) for c in ln.strip("|").split("|")])
+        elif "\t" in ln:
+            rows.append([norm(c) for c in ln.split("\t")])
     return rows
 
 

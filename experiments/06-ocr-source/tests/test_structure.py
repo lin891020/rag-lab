@@ -12,3 +12,7 @@ def test_compare_counts_cells_rows_and_text():
 
 def test_ocr_rows_skips_separator_and_prose():
     assert ocr_rows("title\n| a | b |\n|---|---|\n| 1 | 2 |\nnote") == [["a", "b"], ["1", "2"]]
+
+
+def test_ocr_rows_reads_tab_separated_lines_too():
+    assert ocr_rows("a\tb\n| :--- | :--- |\n1\t2") == [["a", "b"], ["1", "2"]]
