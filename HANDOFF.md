@@ -14,17 +14,15 @@ GitHub：`lin891020/rag-lab`（2026-10-28 建）。
 - `uv run pytest tests experiments/01-chunking experiments/02-json-output`：57 passed（2026-10-28 mini，兩種順序都綠）
 - `uv run pre-commit run --all-files` 綠
 - 02 `run.py` 528 次呼叫約 31 分鐘；漂移探針 16/16 逐字相同；`score.py`、`report.py` 產出 `results/`
+- 02 題庫：Mike 2026-10-28 抽查 a01b、a18c、a26b、t09b、t13b，加看模型答錯的 t15、a31a、t14b，正解都對。
 - 02 數字：三個開卷條件 parse/schema 全 1.0，value_ok qwen3 .88 [.80, .95]、gpt-oss .95 [.89, 1.0]，配對差距全 +.00；閉卷 .05–.08。全部在 README 第 3 節。
 - 01 數字：article − fixed1000 = +.23 [+.07, +.40]，article − fixed269 = +.00；見 01 README。
 - 探針（記在 02 README 第 2 節）：gpt-oss:20b 在 ollama 0.40.2 無視 `think:false`，開 schema 會回空字串，要 `think:"low"`。
 
 ## 只是寫了、還沒驗證
 
-- 02 題庫 66 題是 Claude 從 01 的題拆出來的，**Mike 還沒抽查**：名單 a01b、a18c、a26b、t09b、t13b（2026-10-28 session 已給他）。
 - 01 README 第 5 節「正解模糊」兩題（a01→214、a03→表二五～六）只看了 dense 的 miss，沒逐題重審。
 
 ## 下一步
 
-1. Mike 抽查 02 的 5 題；要改就改 `questions.jsonl` 後重跑 `run.py`（可續跑）→ `score.py` → `report.py`。
-2. 確認 GitHub 上的 repo 可見性與歷史（見本次 session 回報）。
-3. 03 OCR，或先做 02 的續集：表格餵 markdown 再量 value_ok（02 README 第 5 節第二點）。開新 session、plan mode。
+1. 03 OCR，或先做 02 的續集：表格餵 markdown 再量 value_ok（02 README 第 5 節第二點）。開新 session、plan mode。
