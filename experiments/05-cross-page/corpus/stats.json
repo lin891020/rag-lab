@@ -1,0 +1,61 @@
+{
+ "表五六": {
+  "pages_merged": [
+   0,
+   1
+  ],
+  "merged_chars": 1213,
+  "merged_rows": 30,
+  "pages": {
+   "0": {
+    "chars": 721,
+    "rows": 26
+   },
+   "1": {
+    "chars": 530,
+    "rows": 4
+   }
+  }
+ },
+ "表五八七～一": {
+  "pages_merged": [
+   0,
+   1
+  ],
+  "merged_chars": 1352,
+  "merged_rows": 19,
+  "pages": {
+   "0": {
+    "chars": 1044,
+    "rows": 14
+   },
+   "1": {
+    "chars": 319,
+    "rows": 4
+   }
+  }
+ },
+ "表五八七～三": {
+  "pages_merged": [
+   0,
+   1,
+   2
+  ],
+  "merged_chars": 3928,
+  "merged_rows": 44,
+  "pages": {
+   "0": {
+    "chars": 1331,
+    "rows": 15
+   },
+   "1": {
+    "chars": 972,
+    "rows": 13
+   },
+   "2": {
+    "chars": 1240,
+    "rows": 15
+   }
+  }
+ }
+}

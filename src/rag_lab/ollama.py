@@ -70,6 +70,7 @@ def chat(
     format: str | dict | None = None,
     think: bool | str = False,
     options: dict | None = None,
+    images: list[str] | None = None,
     timeout: float = 300,
 ) -> dict:
     """One-turn /api/chat. Returns the raw reply, not parsed:
@@ -78,10 +79,12 @@ def chat(
     `format`: None (free text), "json" (JSON mode) or a JSON-schema dict (constrained decoding).
     `think`: False/True, or a level string ("low") for models whose thinking cannot be turned off
     (gpt-oss ignores False and keeps thinking; under a schema that empties the content).
+    `images`: base64-encoded images attached to the user turn (vision models).
     """
-    msgs = ([{"role": "system", "content": system}] if system else []) + [
-        {"role": "user", "content": prompt}
-    ]
+    user: dict = {"role": "user", "content": prompt}
+    if images:
+        user["images"] = images
+    msgs = ([{"role": "system", "content": system}] if system else []) + [user]
     body: dict = {
         "model": model,
         "messages": msgs,
@@ -108,6 +111,7 @@ def chat(
                 "format": "schema" if isinstance(format, dict) else format,
                 "think": think,
                 "prompt_len": len(prompt),
+                "images": len(images or []),
                 "reply_len": len(out["content"]),
                 "thinking_len": len(out["thinking"]),
                 "eval_count": out["eval_count"],

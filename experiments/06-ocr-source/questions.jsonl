@@ -1,0 +1,82 @@
+{"id": "t01", "type": "table", "gold": ["表二五～二"], "question": "60 度 PVC 導線走金屬管，3 條載流導線，22 平方的安培容量是多少？", "expect": {"value": 65, "unit": "A", "alt": []}, "src": "02:t01"}
+{"id": "t02a", "type": "table", "gold": ["表二五～四"], "question": "90 度絕緣的 38 平方絞線走金屬管，4 條載流導線，可以載幾安培？", "expect": {"value": 117, "unit": "A", "alt": []}, "src": "02:t02a"}
+{"id": "t02b", "type": "table", "gold": ["表二五～四"], "question": "90 度絕緣的 22 平方絞線走金屬管，3 條載流導線，安培容量多少？", "expect": {"value": 93, "unit": "A", "alt": []}, "src": "02:t02b"}
+{"id": "t03", "type": "table", "gold": ["表二五～五"], "question": "PVC 管配線，14 平方絞線，載流導線 3 條以下，安培容量多少？", "expect": {"value": 50, "unit": "A", "alt": []}, "src": "02:t03"}
+{"id": "t04", "type": "table", "gold": ["表二五～六"], "question": "同一條管裡有 15 條載流導線，安培容量的修正係數是百分之幾？", "expect": {"value": 50, "unit": "%", "alt": [{"value": 0.5, "unit": ""}, {"value": 0.5, "unit": "倍"}]}, "src": "02:t04"}
+{"id": "t05", "type": "table", "gold": ["表二五～七"], "question": "周圍溫度 42 度、導線絕緣 75 度，安培容量要乘多少？", "expect": {"value": 0.87, "unit": "", "alt": [{"value": 87, "unit": "%"}]}, "src": "02:t05"}
+{"id": "t06", "type": "table", "gold": ["表二五～一"], "question": "交連 PE 導線的絕緣最高可以耐幾度？", "expect": {"value": 90, "unit": "℃", "alt": []}, "src": "02:t06"}
+{"id": "t07", "type": "table", "gold": ["表三六"], "question": "辦公廳的一般照明單位負載是每平方米幾伏安？", "expect": {"value": 30, "unit": "VA", "alt": [{"value": 30, "unit": "VA/m²"}]}, "src": "02:t07"}
+{"id": "t08", "type": "table", "gold": ["表四○"], "question": "30 安培分路用 PVC 導線，絞線最小要幾平方毫米？", "expect": {"value": 8, "unit": "mm²", "alt": []}, "src": "02:t08"}
+{"id": "t09a", "type": "table", "gold": ["表五二"], "question": "住宅照明負載 50,000 瓦，幹線需量因數是百分之幾？", "expect": {"value": 35, "unit": "%", "alt": [{"value": 0.35, "unit": ""}, {"value": 0.35, "unit": "倍"}]}, "src": "02:t09a"}
+{"id": "t09b", "type": "table", "gold": ["表五二"], "question": "醫院照明負載 60,000 瓦，超過 50,000 瓦的部分需量因數是百分之幾？", "expect": {"value": 20, "unit": "%", "alt": [{"value": 0.2, "unit": ""}, {"value": 0.2, "unit": "倍"}]}, "src": "02:t09b"}
+{"id": "t10", "type": "table", "gold": ["表五五"], "question": "一棟住宅有 8 台乾衣機，幹線需量因數百分之幾？", "expect": {"value": 60, "unit": "%", "alt": [{"value": 0.6, "unit": ""}, {"value": 0.6, "unit": "倍"}]}, "src": "02:t10"}
+{"id": "t11", "type": "table", "gold": ["表五六"], "question": "12 具額定 10 kW 的電爐，幹線最大需量是幾 kW？", "expect": {"value": 27, "unit": "kW", "alt": [{"value": 27000, "unit": "W"}]}, "src": "02:t11"}
+{"id": "t12a", "type": "table", "gold": ["表六一"], "question": "集合住宅 20 戶，進屋線負載的需量因數是百分之幾？", "expect": {"value": 50, "unit": "%", "alt": [{"value": 0.5, "unit": ""}, {"value": 0.5, "unit": "倍"}]}, "src": "02:t12a"}
+{"id": "t12b", "type": "table", "gold": ["表六一"], "question": "集合住宅 10 戶，進屋線負載的需量因數是百分之幾？", "expect": {"value": 60, "unit": "%", "alt": [{"value": 0.6, "unit": ""}, {"value": 0.6, "unit": "倍"}]}, "src": "02:t12b"}
+{"id": "t13a", "type": "table", "gold": ["表八六～三"], "question": "單相 220V 用戶主保護器 150 安培，裝在用戶總開關箱，斷路器 Icu 最低要幾 kA？", "expect": {"value": 20, "unit": "kA", "alt": [{"value": 20000, "unit": "A"}]}, "src": "02:t13a"}
+{"id": "t13b", "type": "table", "gold": ["表八六～三"], "question": "三相 380V 用戶主保護器 200 安培，裝在集中表箱，斷路器 Icu 最低要幾 kA？", "expect": {"value": 25, "unit": "kA", "alt": [{"value": 25000, "unit": "A"}]}, "src": "02:t13b"}
+{"id": "t14a", "type": "table", "gold": ["表八八～二"], "question": "漏電斷路器靈敏度 100 mA，裝在潮濕場所，接地電阻最大幾歐姆？", "expect": {"value": 250, "unit": "Ω", "alt": []}, "src": "02:t14a"}
+{"id": "t14b", "type": "table", "gold": ["表八八～二"], "question": "漏電斷路器靈敏度 200 mA，裝在非潮濕的一般場所，接地電阻最大幾歐姆？", "expect": {"value": 250, "unit": "Ω", "alt": []}, "src": "02:t14b"}
+{"id": "t15", "type": "table", "gold": ["表九二"], "question": "第三種接地，設備對地電壓 220V，接地電阻要幾歐姆以下？", "expect": {"value": 50, "unit": "Ω", "alt": []}, "src": "02:t15"}
+{"id": "t16", "type": "table", "gold": ["表九三～二"], "question": "過電流保護 100 安培的設備接地導線，絞線最小幾平方毫米？", "expect": {"value": 8, "unit": "mm²", "alt": []}, "src": "02:t16"}
+{"id": "t17", "type": "table", "gold": ["表九三～一"], "question": "進屋線 100 平方，內線系統接地的接地電極導線要幾平方毫米？", "expect": {"value": 30, "unit": "mm²", "alt": []}, "src": "02:t17"}
+{"id": "n01", "type": "table", "gold": ["表二五～二"], "question": "60 度絕緣的 2.0 mm 單線走金屬管，3 條載流導線，安培容量多少？", "expect": {"value": 18, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n02", "type": "table", "gold": ["表二五～二"], "question": "60 度絕緣的 8 平方絞線走金屬管，6 條載流導線，安培容量多少？", "expect": {"value": 29, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n03", "type": "table", "gold": ["表二五～二"], "question": "60 度絕緣的 100 平方絞線走金屬管，8 條載流導線，安培容量多少？", "expect": {"value": 121, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n04", "type": "table", "gold": ["表二五～二"], "question": "60 度絕緣的 250 平方絞線走金屬管，4 條載流導線，安培容量多少？", "expect": {"value": 263, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n05", "type": "table", "gold": ["表二五～四"], "question": "90 度絕緣的 2.6 mm 單線走金屬管，3 條載流導線，安培容量多少？", "expect": {"value": 39, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n06", "type": "table", "gold": ["表二五～四"], "question": "90 度絕緣的 60 平方絞線走金屬管，5 條載流導線，安培容量多少？", "expect": {"value": 141, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n07", "type": "table", "gold": ["表二五～四"], "question": "90 度絕緣的 325 平方絞線走金屬管，4 條載流導線，安培容量多少？", "expect": {"value": 422, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n08", "type": "table", "gold": ["表二五～五"], "question": "PVC 管配線，50 平方絞線，9 條載流導線，安培容量多少？", "expect": {"value": 65, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n09", "type": "table", "gold": ["表二五～五"], "question": "PVC 管配線，200 平方絞線，6 條載流導線，安培容量多少？", "expect": {"value": 200, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n10", "type": "table", "gold": ["表二五～五"], "question": "PVC 管配線，1.6 mm 單線，4 條載流導線，安培容量多少？", "expect": {"value": 12, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n11", "type": "table", "gold": ["表二五～六"], "question": "同一條管裡有 5 條載流導線，安培容量的修正係數是百分之幾？", "expect": {"value": 80, "unit": "%", "alt": [{"value": 0.8, "unit": ""}, {"value": 0.8, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n12", "type": "table", "gold": ["表二五～六"], "question": "同一條管裡有 25 條載流導線，安培容量的修正係數是百分之幾？", "expect": {"value": 45, "unit": "%", "alt": [{"value": 0.45, "unit": ""}, {"value": 0.45, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n13", "type": "table", "gold": ["表二五～六"], "question": "同一條管裡有 45 條載流導線，安培容量的修正係數是百分之幾？", "expect": {"value": 35, "unit": "%", "alt": [{"value": 0.35, "unit": ""}, {"value": 0.35, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n14", "type": "table", "gold": ["表二五～七"], "question": "周圍溫度 18 度、導線絕緣 90 度，安培容量要乘多少？", "expect": {"value": 1.13, "unit": "", "alt": [{"value": 113, "unit": "%"}]}, "src": "03:new"}
+{"id": "n15", "type": "table", "gold": ["表二五～七"], "question": "周圍溫度 52 度、導線絕緣 60 度，安培容量要乘多少？", "expect": {"value": 0.45, "unit": "", "alt": [{"value": 45, "unit": "%"}]}, "src": "03:new"}
+{"id": "n16", "type": "table", "gold": ["表二五～七"], "question": "周圍溫度 68 度、導線絕緣 75 度，安培容量要乘多少？", "expect": {"value": 0.35, "unit": "", "alt": [{"value": 35, "unit": "%"}]}, "src": "03:new"}
+{"id": "n17", "type": "table", "gold": ["表二五～七"], "question": "周圍溫度 80 度、導線絕緣 90 度，安培容量要乘多少？", "expect": {"value": 0.43, "unit": "", "alt": [{"value": 43, "unit": "%"}]}, "src": "03:new"}
+{"id": "n18", "type": "table", "gold": ["表二五～一"], "question": "RB 導線的絕緣最高可以耐幾度？", "expect": {"value": 60, "unit": "℃", "alt": []}, "src": "03:new"}
+{"id": "n19", "type": "table", "gold": ["表二五～一"], "question": "EP 橡膠導線的絕緣最高可以耐幾度？", "expect": {"value": 90, "unit": "℃", "alt": []}, "src": "03:new"}
+{"id": "n20", "type": "table", "gold": ["表二五～一"], "question": "PE 導線的絕緣最高可以耐幾度？", "expect": {"value": 75, "unit": "℃", "alt": []}, "src": "03:new"}
+{"id": "n21", "type": "table", "gold": ["表三六"], "question": "工廠的一般照明單位負載是每平方米幾伏安？", "expect": {"value": 10, "unit": "VA", "alt": [{"value": 10, "unit": "VA/m²"}]}, "src": "03:new"}
+{"id": "n22", "type": "table", "gold": ["表三六"], "question": "旅館的一般照明單位負載是每平方米幾伏安？", "expect": {"value": 20, "unit": "VA", "alt": [{"value": 20, "unit": "VA/m²"}]}, "src": "03:new"}
+{"id": "n23", "type": "table", "gold": ["表三六"], "question": "走廊的一般照明單位負載是每平方米幾伏安？", "expect": {"value": 5, "unit": "VA", "alt": [{"value": 5, "unit": "VA/m²"}]}, "src": "03:new"}
+{"id": "n24", "type": "table", "gold": ["表四○"], "question": "20 安培分路用 PVC 導線，絞線最小要幾平方毫米？", "expect": {"value": 5.5, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n25", "type": "table", "gold": ["表四○"], "question": "40 安培分路用 PVC 導線，絞線最小要幾平方毫米？", "expect": {"value": 14, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n26", "type": "table", "gold": ["表四○"], "question": "15 安培分路的插座額定最大幾安培？", "expect": {"value": 15, "unit": "A", "alt": []}, "src": "03:new"}
+{"id": "n27", "type": "table", "gold": ["表四○"], "question": "20 安培分路的分接導線最小幾毫米？", "expect": {"value": 1.6, "unit": "mm", "alt": []}, "src": "03:new"}
+{"id": "n28", "type": "table", "gold": ["表五二"], "question": "住宅照明負載 200,000 瓦，超過 120,000 瓦的部分需量因數是百分之幾？", "expect": {"value": 25, "unit": "%", "alt": [{"value": 0.25, "unit": ""}, {"value": 0.25, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n29", "type": "table", "gold": ["表五二"], "question": "飯店照明負載 50,000 瓦，落在 20,001 至 100,000 瓦那段的需量因數是百分之幾？", "expect": {"value": 40, "unit": "%", "alt": [{"value": 0.4, "unit": ""}, {"value": 0.4, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n30", "type": "table", "gold": ["表五二"], "question": "大賣場照明負載 10,000 瓦，需量因數是百分之幾？", "expect": {"value": 100, "unit": "%", "alt": [{"value": 1.0, "unit": ""}, {"value": 1.0, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n31", "type": "table", "gold": ["表五二"], "question": "醫院照明負載 30,000 瓦，需量因數是百分之幾？", "expect": {"value": 40, "unit": "%", "alt": [{"value": 0.4, "unit": ""}, {"value": 0.4, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n32", "type": "table", "gold": ["表五五"], "question": "一棟住宅有 6 台乾衣機，幹線需量因數百分之幾？", "expect": {"value": 70, "unit": "%", "alt": [{"value": 0.7, "unit": ""}, {"value": 0.7, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n33", "type": "table", "gold": ["表五五"], "question": "一棟住宅有 15 台乾衣機，幹線需量因數百分之幾？", "expect": {"value": 40, "unit": "%", "alt": [{"value": 0.4, "unit": ""}, {"value": 0.4, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n34", "type": "table", "gold": ["表五五"], "question": "一棟住宅有 27 台乾衣機，幹線需量因數百分之幾？", "expect": {"value": 32.5, "unit": "%", "alt": [{"value": 0.325, "unit": ""}, {"value": 0.325, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n35", "type": "table", "gold": ["表五六"], "question": "5 具額定 10 kW 的電爐，幹線最大需量是幾 kW？", "expect": {"value": 20, "unit": "kW", "alt": [{"value": 20000, "unit": "W"}]}, "src": "03:new"}
+{"id": "n36", "type": "table", "gold": ["表五六"], "question": "20 具額定 10 kW 的電爐，幹線最大需量是幾 kW？", "expect": {"value": 35, "unit": "kW", "alt": [{"value": 35000, "unit": "W"}]}, "src": "03:new"}
+{"id": "n37", "type": "table", "gold": ["表五六"], "question": "8 具額定 3 kW 的烹飪用電器具（B 行），需量因數是百分之幾？", "expect": {"value": 53, "unit": "%", "alt": [{"value": 0.53, "unit": ""}, {"value": 0.53, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n38", "type": "table", "gold": ["表五六"], "question": "16 具額定 5 kW 的烹飪用電器具（C 行），需量因數是百分之幾？", "expect": {"value": 28, "unit": "%", "alt": [{"value": 0.28, "unit": ""}, {"value": 0.28, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n39", "type": "table", "gold": ["表五六"], "question": "24 具額定 10 kW 的電爐，幹線最大需量是幾 kW？", "expect": {"value": 39, "unit": "kW", "alt": [{"value": 39000, "unit": "W"}]}, "src": "03:new"}
+{"id": "n40", "type": "table", "gold": ["表六一"], "question": "集合住宅 5 戶，進屋線負載的需量因數是百分之幾？", "expect": {"value": 65, "unit": "%", "alt": [{"value": 0.65, "unit": ""}, {"value": 0.65, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n41", "type": "table", "gold": ["表六一"], "question": "集合住宅 30 戶，進屋線負載的需量因數是百分之幾？", "expect": {"value": 45, "unit": "%", "alt": [{"value": 0.45, "unit": ""}, {"value": 0.45, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n42", "type": "table", "gold": ["表六一"], "question": "集合住宅 40 戶，進屋線負載的需量因數是百分之幾？", "expect": {"value": 35, "unit": "%", "alt": [{"value": 0.35, "unit": ""}, {"value": 0.35, "unit": "倍"}]}, "src": "03:new"}
+{"id": "n43", "type": "table", "gold": ["表八六～三"], "question": "三相 220V 用戶主保護器 75 安培以下，裝在受電箱，斷路器 Icu 最低要幾 kA？", "expect": {"value": 35, "unit": "kA", "alt": [{"value": 35000, "unit": "A"}]}, "src": "03:new"}
+{"id": "n44", "type": "table", "gold": ["表八六～三"], "question": "三相 220V 用戶主保護器超過 200 安培，裝在用戶總開關箱，斷路器 Icu 最低要幾 kA？", "expect": {"value": 20, "unit": "kA", "alt": [{"value": 20000, "unit": "A"}]}, "src": "03:new"}
+{"id": "n45", "type": "table", "gold": ["表八六～三"], "question": "單相 110V 用戶主保護器 75 安培以下，裝在集中表箱，斷路器 Icu 最低要幾 kA？", "expect": {"value": 20, "unit": "kA", "alt": [{"value": 20000, "unit": "A"}]}, "src": "03:new"}
+{"id": "n46", "type": "table", "gold": ["表八六～三"], "question": "三相 380V 用戶主保護器 75 安培以下，裝在用戶總開關箱，斷路器 Icu 最低要幾 kA？", "expect": {"value": 15, "unit": "kA", "alt": [{"value": 15000, "unit": "A"}]}, "src": "03:new"}
+{"id": "n47", "type": "table", "gold": ["表八八～二"], "question": "漏電斷路器靈敏度 30 mA，裝在潮濕場所，接地電阻最大幾歐姆？", "expect": {"value": 500, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n48", "type": "table", "gold": ["表八八～二"], "question": "漏電斷路器靈敏度 500 mA，裝在非潮濕的一般場所，接地電阻最大幾歐姆？", "expect": {"value": 100, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n49", "type": "table", "gold": ["表八八～二"], "question": "漏電斷路器靈敏度 150 mA，裝在潮濕場所，接地電阻最大幾歐姆？", "expect": {"value": 166, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n50", "type": "table", "gold": ["表八八～二"], "question": "漏電斷路器靈敏度 1,000 mA，裝在非潮濕的一般場所，接地電阻最大幾歐姆？", "expect": {"value": 50, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n51", "type": "table", "gold": ["表九二"], "question": "第一種接地的接地電阻要幾歐姆以下？", "expect": {"value": 25, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n52", "type": "table", "gold": ["表九二"], "question": "第三種接地，設備對地電壓 110V，接地電阻要幾歐姆以下？", "expect": {"value": 100, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n53", "type": "table", "gold": ["表九二"], "question": "第三種接地，設備對地電壓 380V，接地電阻要幾歐姆以下？", "expect": {"value": 10, "unit": "Ω", "alt": []}, "src": "03:new"}
+{"id": "n54", "type": "table", "gold": ["表九三～一"], "question": "進屋線 50 平方，內線系統接地的接地電極導線要幾平方毫米？", "expect": {"value": 14, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n55", "type": "table", "gold": ["表九三～一"], "question": "進屋線 325 平方，內線系統接地的接地電極導線要幾平方毫米？", "expect": {"value": 50, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n56", "type": "table", "gold": ["表九三～一"], "question": "進屋線 22 平方，內線系統接地的接地電極導線要幾平方毫米？", "expect": {"value": 8, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n57", "type": "table", "gold": ["表九三～二"], "question": "過電流保護 30 安培的設備接地導線，單線最小幾毫米？", "expect": {"value": 2.0, "unit": "mm", "alt": []}, "src": "03:new"}
+{"id": "n58", "type": "table", "gold": ["表九三～二"], "question": "過電流保護 400 安培的設備接地導線，絞線最小幾平方毫米？", "expect": {"value": 22, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n59", "type": "table", "gold": ["表九三～二"], "question": "過電流保護 2,000 安培的設備接地導線，絞線最小幾平方毫米？", "expect": {"value": 125, "unit": "mm²", "alt": []}, "src": "03:new"}
+{"id": "n60", "type": "table", "gold": ["表九三～二"], "question": "過電流保護 20 安培的設備接地導線，絞線最小幾平方毫米？", "expect": {"value": 2.0, "unit": "mm²", "alt": []}, "src": "03:new"}
