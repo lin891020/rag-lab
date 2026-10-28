@@ -21,6 +21,9 @@ LOCAL = {
     "retrievers",
     "fetch_corpus",
     "judge",
+    "tables",
+    "select_rows",
+    "build_corpus",
 }
 
 
