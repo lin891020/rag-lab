@@ -6,6 +6,7 @@ import pytest
 from ocr import (
     Seg,
     cluster_rows,
+    glm_to_markdown,
     html_to_markdown,
     norm,
     rows_to_markdown,
@@ -60,3 +61,9 @@ def test_vision_reads_the_range_table():
     assert md.startswith("表九三～一")
     assert "| 38 - 50 | 14 |" in md and "| 超過 325 - 500 | 60 |" in md
     assert md.splitlines()[-1].startswith("註")
+
+
+def test_glm_to_markdown_keeps_markdown_and_expands_html():
+    md = "表一 x\n\n| a | b |\n| :--- | :--- |\n| 1 | 2 |"
+    assert glm_to_markdown(md + "\n") == md
+    assert glm_to_markdown("<table><tr><td>1</td></tr></table>") == "| 1 |\n|---|"

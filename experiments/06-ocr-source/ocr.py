@@ -2,7 +2,8 @@
 
   vision     macOS Vision (ocrmac): line segments with boxes -> rows by y, cells by x
   tesseract  tesseract chi_tra+eng, --psm 6, TSV words -> segments by gap -> same clustering
-  glm        glm-ocr via the host ollama: "Table Recognition:" -> HTML -> markdown
+  glm        glm-ocr via the host ollama: "Table Recognition:" -> markdown (or HTML, or plain
+             text when it finds no table) -> markdown
 
 The first two recover no column structure beyond "what sits on the same line"; glm-ocr returns
 an HTML table with spans. All three keep the title line and the 註 lines.
@@ -251,6 +252,14 @@ def html_to_markdown(html: str) -> str:
     if other and not title:
         out.append(other)
     return "\n".join(out)
+
+
+def glm_to_markdown(raw: str) -> str:
+    """glm-ocr through ollama answers in markdown; HTML gets expanded, anything else is kept
+    as it came (plain text means the model saw no table -- that is the result, not a bug)."""
+    if "<table" in raw:
+        return html_to_markdown(raw)
+    return raw.strip()
 
 
 def norm(s: str) -> str:
