@@ -62,22 +62,64 @@ def model_digest(model: str) -> str:
     raise KeyError(f"model {model!r} not in ollama; run `ollama pull {model}`")
 
 
-def chat_json(prompt: str, *, model: str, system: str = "", timeout: float = 300) -> dict:
-    """One-turn chat forced to JSON output (format=json, thinking off). Returns the parsed object."""
+def chat(
+    prompt: str,
+    *,
+    model: str,
+    system: str = "",
+    format: str | dict | None = None,
+    think: bool | str = False,
+    options: dict | None = None,
+    timeout: float = 300,
+) -> dict:
+    """One-turn /api/chat. Returns the raw reply, not parsed:
+    {"content", "thinking", "eval_count", "duration", "done_reason"} (duration in seconds).
+
+    `format`: None (free text), "json" (JSON mode) or a JSON-schema dict (constrained decoding).
+    `think`: False/True, or a level string ("low") for models whose thinking cannot be turned off
+    (gpt-oss ignores False and keeps thinking; under a schema that empties the content).
+    """
     msgs = ([{"role": "system", "content": system}] if system else []) + [
         {"role": "user", "content": prompt}
     ]
-    body = {
+    body: dict = {
         "model": model,
         "messages": msgs,
         "stream": False,
-        "format": "json",
-        "think": False,
-        "options": {"temperature": 0},
+        "think": think,
+        "options": {"temperature": 0, **(options or {})},
     }
-    content = _post("/api/chat", body, timeout=timeout)["message"]["content"]
+    if format is not None:
+        body["format"] = format
+    resp = _post("/api/chat", body, timeout=timeout)
+    msg = resp.get("message", {})
+    out = {
+        "content": msg.get("content", "") or "",
+        "thinking": msg.get("thinking", "") or "",
+        "eval_count": int(resp.get("eval_count", 0)),
+        "duration": float(resp.get("total_duration", 0)) / 1e9,
+        "done_reason": resp.get("done_reason", ""),
+    }
     logger.debug(
-        "chat_json",
-        extra={"ctx": {"model": model, "prompt_len": len(prompt), "reply_len": len(content)}},
+        "chat",
+        extra={
+            "ctx": {
+                "model": model,
+                "format": "schema" if isinstance(format, dict) else format,
+                "think": think,
+                "prompt_len": len(prompt),
+                "reply_len": len(out["content"]),
+                "thinking_len": len(out["thinking"]),
+                "eval_count": out["eval_count"],
+                "done_reason": out["done_reason"],
+            }
+        },
     )
-    return json.loads(content)
+    return out
+
+
+def chat_json(prompt: str, *, model: str, system: str = "", timeout: float = 300) -> dict:
+    """One-turn chat in JSON mode with thinking off. Returns the parsed object."""
+    return json.loads(
+        chat(prompt, model=model, system=system, format="json", timeout=timeout)["content"]
+    )
