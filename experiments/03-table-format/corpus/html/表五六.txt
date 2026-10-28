@@ -1,0 +1,36 @@
+<table>
+<caption>表五六 電爐、嵌入式蒸烤箱及其他烹飪用電器具之幹線需量因數</caption>
+<tr><th rowspan="2">用電器具之數量(具)</th><th>最大需量(kW)</th><th colspan="2">需量因數註3(%)</th></tr>
+<tr><th>A行額定超過8 kW且在l2 kW以下</th><th>B行額定超過l.75 kW且未滿3.5 kW</th><th>C行額定在3.5 kW至8.75 kW</th></tr>
+<tr><td>1</td><td>8</td><td>80</td><td>80</td></tr>
+<tr><td>2</td><td>11</td><td>75</td><td>65</td></tr>
+<tr><td>3</td><td>14</td><td>70</td><td>55</td></tr>
+<tr><td>4</td><td>17</td><td>66</td><td>50</td></tr>
+<tr><td>5</td><td>20</td><td>62</td><td>45</td></tr>
+<tr><td>6</td><td>21</td><td>59</td><td>43</td></tr>
+<tr><td>7</td><td>22</td><td>56</td><td>40</td></tr>
+<tr><td>8</td><td>23</td><td>53</td><td>36</td></tr>
+<tr><td>9</td><td>24</td><td>51</td><td>35</td></tr>
+<tr><td>10</td><td>25</td><td>49</td><td>34</td></tr>
+<tr><td>11</td><td>26</td><td>47</td><td>32</td></tr>
+<tr><td>12</td><td>27</td><td>45</td><td>32</td></tr>
+<tr><td>13</td><td>28</td><td>43</td><td>32</td></tr>
+<tr><td>14</td><td>29</td><td>41</td><td>32</td></tr>
+<tr><td>15</td><td>30</td><td>40</td><td>32</td></tr>
+<tr><td>16</td><td>31</td><td>39</td><td>28</td></tr>
+<tr><td>17</td><td>32</td><td>38</td><td>28</td></tr>
+<tr><td>18</td><td>33</td><td>37</td><td>28</td></tr>
+<tr><td>19</td><td>34</td><td>36</td><td>28</td></tr>
+<tr><td>20</td><td>35</td><td>35</td><td>28</td></tr>
+<tr><td>21</td><td>36</td><td>34</td><td>26</td></tr>
+<tr><td>22</td><td>37</td><td>33</td><td>26</td></tr>
+<tr><td>23</td><td>38</td><td>32</td><td>26</td></tr>
+<tr><td>24</td><td>39</td><td>31</td><td>26</td></tr>
+<tr><td>25</td><td>44</td><td>30</td><td>26</td></tr>
+<tr><td>26 - 30</td><td rowspan="2">15 ＋電爐數 × 1</td><td>30</td><td>24</td></tr>
+<tr><td>31 - 40</td><td>30</td><td>22</td></tr>
+<tr><td>41 - 50</td><td rowspan="3">25 ＋電爐數 × 0.75</td><td>30</td><td>20</td></tr>
+<tr><td>51 - 60</td><td>30</td><td>18</td></tr>
+<tr><td>61以上</td><td>30</td><td>16</td></tr>
+</table>
+<p>註：1.相同額定之電爐，個別額定超過l2 kW且未滿27 kW者：最大需量計算應將超過l2 kW部分，每超過l kW，A行之最大需量再加5 %。2.不同額定之電爐，個別額定超過l2 kW且未滿27 kW者：每個電爐平均額定(各具額定容量之總和除以電爐數)每超過l kW，A行之最大需量再加5%。12 kW以下之電爐應以l2 kW計算。3.烹飪用電器具個別額定超過l.75 kW，且在8.75 kW以下者：最大需量計算以所有負載銘牌標示額定之總和，再乘以B行或C行之相對應(即同數量)需量因數。4.分路負載之計算：分路僅供電給一具電爐者，其分路負載得依照本表計算；供電給一具嵌入式蒸烤箱或一具櫃檯式烹飪用電器具者，其分路負載應為該用電器具銘牌標示之額定。</p>

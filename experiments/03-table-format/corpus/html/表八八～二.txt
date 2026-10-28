@@ -1,0 +1,14 @@
+<table>
+<caption>表八八～二 漏電保護接地電阻</caption>
+<tr><th rowspan="2">漏電斷路器額定靈敏度動作電流(mA)</th><th colspan="2">接地電阻(Ω)</th></tr>
+<tr><th>潮濕場所</th><th>其他場所</th></tr>
+<tr><td>30</td><td>500</td><td>500</td></tr>
+<tr><td>50</td><td>500</td><td>500</td></tr>
+<tr><td>75</td><td>333</td><td>500</td></tr>
+<tr><td>100</td><td>250</td><td>500</td></tr>
+<tr><td>150</td><td>166</td><td>333</td></tr>
+<tr><td>200</td><td>125</td><td>250</td></tr>
+<tr><td>300</td><td>83</td><td>166</td></tr>
+<tr><td>500</td><td>50</td><td>100</td></tr>
+<tr><td>1,000</td><td>25</td><td>50</td></tr>
+</table>

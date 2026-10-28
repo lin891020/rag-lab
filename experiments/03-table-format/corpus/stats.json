@@ -1,0 +1,138 @@
+{
+ "表二五～一": {
+  "header_rows": 1,
+  "rows": 9,
+  "cols": 3,
+  "markdown": 474,
+  "html": 726,
+  "kv": 588
+ },
+ "表二五～二": {
+  "header_rows": 3,
+  "rows": 21,
+  "cols": 7,
+  "markdown": 1151,
+  "html": 2114,
+  "kv": 3354
+ },
+ "表二五～四": {
+  "header_rows": 3,
+  "rows": 21,
+  "cols": 7,
+  "markdown": 1105,
+  "html": 2068,
+  "kv": 3308
+ },
+ "表二五～五": {
+  "header_rows": 3,
+  "rows": 21,
+  "cols": 7,
+  "markdown": 1113,
+  "html": 2073,
+  "kv": 3384
+ },
+ "表二五～六": {
+  "header_rows": 1,
+  "rows": 7,
+  "cols": 2,
+  "markdown": 247,
+  "html": 440,
+  "kv": 291
+ },
+ "表二五～七": {
+  "header_rows": 2,
+  "rows": 16,
+  "cols": 4,
+  "markdown": 602,
+  "html": 1176,
+  "kv": 1173
+ },
+ "表三六": {
+  "header_rows": 1,
+  "rows": 4,
+  "cols": 2,
+  "markdown": 191,
+  "html": 317,
+  "kv": 208
+ },
+ "表四○": {
+  "header_rows": 1,
+  "rows": 7,
+  "cols": 9,
+  "markdown": 624,
+  "html": 919,
+  "kv": 740
+ },
+ "表五二": {
+  "header_rows": 1,
+  "rows": 11,
+  "cols": 3,
+  "markdown": 501,
+  "html": 760,
+  "kv": 671
+ },
+ "表五五": {
+  "header_rows": 1,
+  "rows": 14,
+  "cols": 2,
+  "markdown": 253,
+  "html": 579,
+  "kv": 374
+ },
+ "表五六": {
+  "header_rows": 2,
+  "rows": 30,
+  "cols": 4,
+  "markdown": 1213,
+  "html": 2228,
+  "kv": 3872
+ },
+ "表六一": {
+  "header_rows": 1,
+  "rows": 7,
+  "cols": 2,
+  "markdown": 162,
+  "html": 348,
+  "kv": 200
+ },
+ "表八六～三": {
+  "header_rows": 2,
+  "rows": 3,
+  "cols": 10,
+  "markdown": 519,
+  "html": 802,
+  "kv": 731
+ },
+ "表八八～二": {
+  "header_rows": 2,
+  "rows": 9,
+  "cols": 3,
+  "markdown": 256,
+  "html": 572,
+  "kv": 522
+ },
+ "表九二": {
+  "header_rows": 1,
+  "rows": 4,
+  "cols": 3,
+  "markdown": 381,
+  "html": 540,
+  "kv": 375
+ },
+ "表九三～一": {
+  "header_rows": 1,
+  "rows": 6,
+  "cols": 2,
+  "markdown": 337,
+  "html": 510,
+  "kv": 480
+ },
+ "表九三～二": {
+  "header_rows": 2,
+  "rows": 17,
+  "cols": 3,
+  "markdown": 526,
+  "html": 1059,
+  "kv": 1056
+ }
+}
