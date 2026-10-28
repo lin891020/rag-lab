@@ -11,7 +11,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 EXPERIMENTS = ROOT / "experiments"
-LOCAL = {"run", "report", "score", "prompts", "chunkers", "metrics", "retrievers", "fetch_corpus", "judge"}
+LOCAL = {
+    "run",
+    "report",
+    "score",
+    "prompts",
+    "chunkers",
+    "metrics",
+    "retrievers",
+    "fetch_corpus",
+    "judge",
+}
 
 
 def pytest_pycollect_makemodule(module_path, parent):  # noqa: ANN001

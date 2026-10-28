@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-28",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "conditions": {
+    "closed-book": "json",
+    "prompt-only": null,
+    "json-mode": "json",
+    "schema": "schema"
+  },
+  "n_questions": {
+    "total": 66,
+    "article": 44,
+    "table": 22
+  },
+  "drift": {
+    "same": 16,
+    "n": 16,
+    "rows": [
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "prompt-only",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "prompt-only",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "json-mode",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "json-mode",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "schema",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "schema",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "prompt-only",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "prompt-only",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "json-mode",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "json-mode",
+        "qid": "a01b",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "schema",
+        "qid": "a01a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "schema",
+        "qid": "a01b",
+        "same": true
+      }
+    ]
+  }
+}

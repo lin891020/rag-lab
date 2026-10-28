@@ -51,7 +51,7 @@ UNIT_ALIASES: dict[str, list[str]] = {
     ],
     "m²": ["m²", "m2", "m^2", "平方米", "平方公尺", "sqm"],
     "V": ["v", "伏特", "伏", "volt", "volts"],
-    "VA": ["va", "伏安", "volt-ampere", "voltampere", "伏特安培"],
+    "VA": ["va", "v·a", "v.a", "v-a", "伏安", "volt-ampere", "voltampere", "伏特安培"],
     "VA/m²": ["va/m²", "va/m2", "va/m^2", "伏安/平方米", "伏安每平方米", "va/㎡", "va每平方米"],
     "kVA": ["kva", "千伏安"],
     "A": ["a", "安培", "安", "amp", "amps", "ampere", "amperes"],

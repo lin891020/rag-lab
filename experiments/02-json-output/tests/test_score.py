@@ -13,6 +13,7 @@ PCT = {
 def test_normalize_unit_folds_spelling_variants():
     assert normalize_unit("mm^2") == normalize_unit("mm²") == normalize_unit("平方毫米") == "mm²"
     assert normalize_unit(" A ") == normalize_unit("安培") == "A"
+    assert normalize_unit("V·A") == "VA"  # qwen3 wrote the SI dot form
     assert normalize_unit("％") == "%"
     assert normalize_unit("") == ""
     assert normalize_unit("furlong") == "furlong"  # unknown units pass through
