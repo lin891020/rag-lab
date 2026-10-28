@@ -24,7 +24,9 @@ def test_copied_from_03_verbatim(questions):
 
 
 def test_every_gold_table_exists_in_the_built_routes(questions):
-    routes = [p.name for p in (HERE / "corpus").iterdir() if p.is_dir() and p.name != "glm-raw"]
+    routes = [
+        p.name for p in (HERE / "corpus").iterdir() if p.is_dir() and not p.name.endswith("-raw")
+    ]
     assert "clean" in routes and "vision" in routes
     for q in questions:
         for g in q["gold"]:

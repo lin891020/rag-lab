@@ -1,8 +1,9 @@
 """run.py bookkeeping: the grid, resume-from-raw, and the drift sample."""
 
 import json
+from pathlib import Path
 
-from run import done_keys, drift_sample, grid
+from run import done_keys, drift_sample, evidence_for, grid, load_tables
 
 
 def test_grid_is_models_x_conditions_x_questions():
@@ -25,11 +26,6 @@ def test_drift_sample_is_deterministic_and_small():
 
 
 def test_evidence_for_records_row_hit_and_cuts_rows():
-    import json
-    from pathlib import Path
-
-    from run import evidence_for, load_tables
-
     here = Path(__file__).parents[1]
     tables = load_tables()
     q = next(

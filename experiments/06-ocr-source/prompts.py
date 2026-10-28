@@ -22,7 +22,8 @@ SCHEMA: dict = {
 CONDITIONS: dict[str, str | None] = {
     "closed-book": None,  # noise floor
     "clean": "clean",  # blind baseline: 04's markdown from the PDF text layer
-    "glm": "glm",  # glm-ocr (0.9B VLM) -> HTML -> markdown
+    "glm": "glm",  # glm-ocr (0.9B VLM), prompt "Table Recognition:" -> markdown/plain text
+    "glm2": "glm2",  # same, prompt with a trailing newline -> HTML with spans -> markdown
     "vision": "vision",  # macOS Vision line boxes -> rows by y, cells by x
     "tesseract": "tesseract",  # tesseract chi_tra+eng --psm 6 -> same clustering
 }

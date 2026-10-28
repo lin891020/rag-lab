@@ -2,7 +2,7 @@
 render.py); this script runs the OCR routes and writes corpus/<route>/<表號>.txt, plus
 corpus/clean/<表號>.txt copied from 04's markdown (the pdfplumber reading = ground truth).
 
-    uv run python experiments/06-ocr-source/build_corpus.py [--routes vision,tesseract,glm] [--from-raw]
+    uv run python experiments/06-ocr-source/build_corpus.py [--routes vision,tesseract,glm,glm2] [--from-raw]
 
 The glm route talks to the host ollama (glm-ocr); the other two are local CPU.
 """
@@ -25,6 +25,8 @@ FOUR = HERE.parent / "04-table-lookup"
 CORPUS = HERE / "corpus"
 sys.path.insert(0, str(HERE))
 from ocr import (  # noqa: E402
+    GLM_PROMPT,
+    GLM_PROMPT_NL,
     glm_ocr,
     glm_to_markdown,
     segments_to_markdown,
@@ -33,7 +35,7 @@ from ocr import (  # noqa: E402
 )
 
 logger = logging.getLogger(__name__)
-ROUTES = ("vision", "tesseract", "glm")
+ROUTES = ("vision", "tesseract", "glm", "glm2")
 
 
 def table_ids() -> list[str]:
@@ -54,11 +56,11 @@ def run_route(route: str, tid: str, *, from_raw: bool = False) -> tuple[str, dic
         elif route == "tesseract":
             parts.append(segments_to_markdown(tesseract_segments(png)))
         else:
-            cached = CORPUS / "glm-raw" / f"{png.stem}.html"
+            cached = CORPUS / f"{route}-raw" / f"{png.stem}.html"
             if from_raw and cached.exists():
                 raw = cached.read_text("utf-8")
             else:
-                raw = glm_ocr(png)
+                raw = glm_ocr(png, prompt=GLM_PROMPT_NL if route == "glm2" else GLM_PROMPT)
                 cached.parent.mkdir(parents=True, exist_ok=True)
                 cached.write_text(raw, encoding="utf-8")
             parts.append(glm_to_markdown(raw))

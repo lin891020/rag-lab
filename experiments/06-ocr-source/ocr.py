@@ -4,6 +4,7 @@
   tesseract  tesseract chi_tra+eng, --psm 6, TSV words -> segments by gap -> same clustering
   glm        glm-ocr via the host ollama: "Table Recognition:" -> markdown (or HTML, or plain
              text when it finds no table) -> markdown
+  glm2       the same model and prompt with one trailing newline -> HTML with spans -> markdown
 
 The first two recover no column structure beyond "what sits on the same line"; glm-ocr returns
 an HTML table with spans. All three keep the title line and the 註 lines.
@@ -32,7 +33,8 @@ logger = logging.getLogger(__name__)
 _TITLE = re.compile(r"^表[^\s]+")
 _NOTE = re.compile(r"^\s*註")
 GLM_MODEL = "glm-ocr"
-GLM_PROMPT = "Table Recognition:"
+GLM_PROMPT = "Table Recognition:"  # as the ollama page shows it
+GLM_PROMPT_NL = "Table Recognition:\n"  # one trailing newline: the model then answers in HTML
 
 
 @dataclass
@@ -163,11 +165,13 @@ def segments_to_markdown(segs: list[Seg]) -> str:
 # -- glm-ocr ------------------------------------------------------------------------------------
 
 
-def glm_ocr(png: Path | str, *, model: str = GLM_MODEL, timeout: int = 600) -> str:
-    """Raw reply of glm-ocr's table-recognition prompt (HTML expected)."""
+def glm_ocr(
+    png: Path | str, *, prompt: str = GLM_PROMPT, model: str = GLM_MODEL, timeout: int = 600
+) -> str:
+    """Raw reply of glm-ocr's table-recognition prompt (HTML, markdown or plain text)."""
     b64 = base64.b64encode(Path(png).read_bytes()).decode()
     r = ollama.chat(
-        GLM_PROMPT,
+        prompt,
         model=model,
         images=[b64],
         options={"temperature": 0, "seed": 0, "num_ctx": 8192, "num_predict": 4096},

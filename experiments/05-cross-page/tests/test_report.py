@@ -1,4 +1,4 @@
-from report import render_diffs, render_summary
+from report import render_by_category, render_diffs, render_summary
 
 
 def test_summary_table_one_row_per_model_condition():
@@ -53,8 +53,6 @@ def test_diff_table_marks_separable():
 
 
 def test_by_category_table():
-    from report import render_by_category
-
     rows = [
         {
             "model": "m",

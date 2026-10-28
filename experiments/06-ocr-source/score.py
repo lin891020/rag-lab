@@ -28,12 +28,7 @@ HERE = Path(__file__).parent
 RESULTS = HERE / "results"
 TOL = 1e-6
 METRICS = ["parse_ok", "schema_ok", "value_ok", "value_only_ok"]
-FORMATS = [
-    "clean",
-    "glm",
-    "vision",
-    "tesseract",
-]  # every pair; clean first so "ocr − clean" reads naturally
+FORMATS = ["clean", "glm2", "glm", "vision", "tesseract"]  # every pair; clean first
 
 # canonical unit -> spellings a model may use (compared after normalize_unit on both sides)
 UNIT_ALIASES: dict[str, list[str]] = {

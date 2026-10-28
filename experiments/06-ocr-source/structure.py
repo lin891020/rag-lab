@@ -76,7 +76,9 @@ def main() -> int:
     setup_logging("rag_lab")
     gt = json.loads((FOUR / "corpus/tables.json").read_text("utf-8"))
     out = []
-    for route in sorted(p.name for p in CORPUS.iterdir() if p.is_dir() and p.name != "glm-raw"):
+    for route in sorted(
+        p.name for p in CORPUS.iterdir() if p.is_dir() and not p.name.endswith("-raw")
+    ):
         for tid in sorted(gt):
             p = CORPUS / route / f"{tid}.txt"
             if not p.exists():

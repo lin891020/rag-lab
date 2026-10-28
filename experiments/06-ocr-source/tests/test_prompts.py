@@ -6,7 +6,7 @@ from prompts import CONDITIONS, SCHEMA, SYSTEM, user_prompt
 
 
 def test_conditions():
-    assert list(CONDITIONS) == ["closed-book", "clean", "glm", "vision", "tesseract"]
+    assert list(CONDITIONS) == ["closed-book", "clean", "glm", "glm2", "vision", "tesseract"]
     assert CONDITIONS["closed-book"] is None
     assert list(SCHEMA["properties"]) == ["quote", "value", "unit"]
     assert SYSTEM
