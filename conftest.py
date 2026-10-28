@@ -24,6 +24,12 @@ LOCAL = {
     "tables",
     "select_rows",
     "build_corpus",
+    "degrade",
+    "labels",
+    "doc_health",
+    "run_text",
+    "run_table",
+    "structure",
 }
 
 

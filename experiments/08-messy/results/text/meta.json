@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-29",
+  "host": "mini.local",
+  "python": "3.12.15",
+  "ollama": "0.40.2",
+  "embed_model": "bge-m3",
+  "embed_model_digest": "sha256:7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+  "pypdf": "6.21.3",
+  "pdfplumber": "0.11.10",
+  "pymupdf": "2.0",
+  "law_pdf_sha256": "b7337fc06c2c6142eb12dc22ce35891f67ea09d2b97709dbe886945204694651",
+  "build": {
+    "law_pdf_sha256": "b7337fc06c2c6142eb12dc22ce35891f67ea09d2b97709dbe886945204694651",
+    "clean": {
+      "chars": 255199,
+      "pages": 283
+    },
+    "header-footer": {
+      "pages": 283,
+      "title": "用戶用電設備裝置規則",
+      "date": "修正日期：民國 114 年 5 月 9 日",
+      "size": 9.0,
+      "chars": 268958
+    },
+    "two-column": {
+      "lines_in": 9383,
+      "lines_out": 14669,
+      "chars_pypdf": 260485,
+      "chars_plumber": 258337,
+      "pages": 157
+    },
+    "concat": {
+      "pages": 330,
+      "pages_a": 283,
+      "pages_b": 47,
+      "chars": 321197,
+      "distractor_lines": 1520
+    }
+  },
+  "n_questions": 40,
+  "k": 5,
+  "budgets": [
+    1000,
+    2000
+  ],
+  "random_draws": 200,
+  "variants": {
+    "clean": {
+      "articles_parsed": 1014,
+      "chars": 255199,
+      "article": {
+        "n": 1050,
+        "mean_len": 269,
+        "unlabelled": 0,
+        "parse_labels_agree": 1.0
+      },
+      "fixed-1000": {
+        "n": 260,
+        "mean_len": 980,
+        "unlabelled": 0,
+        "parse_labels_agree": 0.888
+      }
+    },
+    "header-footer": {
+      "articles_parsed": 1014,
+      "chars": 268958,
+      "article": {
+        "n": 1051,
+        "mean_len": 282,
+        "unlabelled": 0,
+        "parse_labels_agree": 1.0
+      },
+      "fixed-1000": {
+        "n": 274,
+        "mean_len": 980,
+        "unlabelled": 0,
+        "parse_labels_agree": 0.865
+      }
+    },
+    "two-column/pypdf": {
+      "articles_parsed": 1014,
+      "chars": 260485,
+      "article": {
+        "n": 1051,
+        "mean_len": 274,
+        "unlabelled": 0,
+        "parse_labels_agree": 1.0
+      },
+      "fixed-1000": {
+        "n": 264,
+        "mean_len": 986,
+        "unlabelled": 0,
+        "parse_labels_agree": 0.89
+      }
+    },
+    "two-column/plumber": {
+      "articles_parsed": 1,
+      "chars": 258337,
+      "article": {
+        "n": 1,
+        "mean_len": 146,
+        "unlabelled": 0,
+        "parse_labels_agree": 0.0
+      },
+      "fixed-1000": {
+        "n": 264,
+        "mean_len": 978,
+        "unlabelled": 0,
+        "parse_labels_agree": 0.004
+      }
+    },
+    "concat": {
+      "articles_parsed": 1300,
+      "chars": 321197,
+      "article": {
+        "n": 1347,
+        "mean_len": 264,
+        "unlabelled": 294,
+        "parse_labels_agree": 0.78
+      },
+      "fixed-1000": {
+        "n": 327,
+        "mean_len": 981,
+        "unlabelled": 64,
+        "parse_labels_agree": 0.703
+      }
+    }
+  },
+  "drift_probe_min_cosine": 1.0,
+  "drift_probe_pass": true
+}
