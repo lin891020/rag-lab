@@ -23,3 +23,10 @@ def test_embed_empty_input_returns_empty_list():
 def test_model_digest_is_sha256_hex():
     d = model_digest("bge-m3")
     assert d.startswith("sha256:") and len(d) == len("sha256:") + 64
+
+
+def test_chat_json_returns_parsed_object():
+    from rag_lab.ollama import chat_json
+
+    out = chat_json('回答 JSON：{"n": 2 加 3 的結果}', model="qwen3:8b")
+    assert isinstance(out, dict) and int(out.get("n", -1)) == 5

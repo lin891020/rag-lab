@@ -25,7 +25,9 @@ def hit_at_budget(ranked: list[Chunk], gold: list[str], *, budget: int) -> bool:
     return False
 
 
-def bootstrap_ci(values: list[float], *, n: int = 2000, seed: int = 0) -> tuple[float, float, float]:
+def bootstrap_ci(
+    values: list[float], *, n: int = 2000, seed: int = 0
+) -> tuple[float, float, float]:
     """(mean, lo95, hi95) by resampling the questions."""
     x = np.asarray(values, dtype=np.float64)
     rng = np.random.default_rng(seed)
@@ -33,7 +35,9 @@ def bootstrap_ci(values: list[float], *, n: int = 2000, seed: int = 0) -> tuple[
     return float(x.mean()), float(np.percentile(means, 2.5)), float(np.percentile(means, 97.5))
 
 
-def paired_diff_ci(a: list[float], b: list[float], *, n: int = 2000, seed: int = 0) -> tuple[float, float, float]:
+def paired_diff_ci(
+    a: list[float], b: list[float], *, n: int = 2000, seed: int = 0
+) -> tuple[float, float, float]:
     """(mean(a-b), lo95, hi95): the same resampled questions are used for both arms."""
     d = [float(x) - float(y) for x, y in zip(a, b, strict=True)]
     return bootstrap_ci(d, n=n, seed=seed)

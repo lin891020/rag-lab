@@ -60,3 +60,24 @@ def model_digest(model: str) -> str:
         if m["name"] == want:
             return "sha256:" + m["digest"]
     raise KeyError(f"model {model!r} not in ollama; run `ollama pull {model}`")
+
+
+def chat_json(prompt: str, *, model: str, system: str = "", timeout: float = 300) -> dict:
+    """One-turn chat forced to JSON output (format=json, thinking off). Returns the parsed object."""
+    msgs = ([{"role": "system", "content": system}] if system else []) + [
+        {"role": "user", "content": prompt}
+    ]
+    body = {
+        "model": model,
+        "messages": msgs,
+        "stream": False,
+        "format": "json",
+        "think": False,
+        "options": {"temperature": 0},
+    }
+    content = _post("/api/chat", body, timeout=timeout)["message"]["content"]
+    logger.debug(
+        "chat_json",
+        extra={"ctx": {"model": model, "prompt_len": len(prompt), "reply_len": len(content)}},
+    )
+    return json.loads(content)

@@ -80,7 +80,9 @@ def evaluate_random(
 ) -> list[dict]:
     """Noise floor: the same metrics averaged over `draws` random rankings."""
     depth = max(k, 50)
-    rankings = random_rankings(n_chunks=len(chunks), k=min(depth, len(chunks)), draws=draws, seed=seed)
+    rankings = random_rankings(
+        n_chunks=len(chunks), k=min(depth, len(chunks)), draws=draws, seed=seed
+    )
     rows = []
     for q in questions:
         acc = {f"hit@{k}": 0.0, **{f"hit@{b}": 0.0 for b in budgets}}
@@ -101,12 +103,16 @@ def build_conditions(text: str, tables: dict[str, str]) -> tuple[dict, dict, dic
     text_strats = {
         "fixed1000": fixed_chunks(text, size=1000, overlap=200, separators=SEPS, spans=spans),
         "article": art,
-        f"fixed{size_match}": fixed_chunks(text, size=size_match, overlap=0, separators=SEPS, spans=spans),
+        f"fixed{size_match}": fixed_chunks(
+            text, size=size_match, overlap=0, separators=SEPS, spans=spans
+        ),
     }
     table_strats = {
         "table-whole": table_whole_chunks(tables),
         "table-row": table_row_chunks(tables),
-        "table-flat-fixed": table_flat_fixed_chunks(tables, size=1000, overlap=200, separators=SEPS),
+        "table-flat-fixed": table_flat_fixed_chunks(
+            tables, size=1000, overlap=200, separators=SEPS
+        ),
     }
     conditions = {
         "article": {name: cs + table_strats["table-whole"] for name, cs in text_strats.items()},
@@ -137,7 +143,18 @@ def summarize(raw: list[dict], metrics: list[str]) -> tuple[list[dict], list[dic
     for (exp, ch, ret), rows in sorted(by.items()):
         for m in metrics:
             mean, lo, hi = bootstrap_ci([r[m] for r in rows])
-            summary.append({"exp": exp, "chunking": ch, "retriever": ret, "metric": m, "n": len(rows), "mean": round(mean, 3), "lo": round(lo, 3), "hi": round(hi, 3)})
+            summary.append(
+                {
+                    "exp": exp,
+                    "chunking": ch,
+                    "retriever": ret,
+                    "metric": m,
+                    "n": len(rows),
+                    "mean": round(mean, 3),
+                    "lo": round(lo, 3),
+                    "hi": round(hi, 3),
+                }
+            )
     diffs = []
     for (exp, ch_a, ret), rows_a in sorted(by.items()):
         for (exp_b, ch_b, ret_b), rows_b in sorted(by.items()):
@@ -147,7 +164,19 @@ def summarize(raw: list[dict], metrics: list[str]) -> tuple[list[dict], list[dic
                 a = [r[m] for r in sorted(rows_a, key=lambda r: r["qid"])]
                 b = [r[m] for r in sorted(rows_b, key=lambda r: r["qid"])]
                 d, lo, hi = paired_diff_ci(a, b)
-                diffs.append({"exp": exp, "retriever": ret, "metric": m, "a": ch_a, "b": ch_b, "diff": round(d, 3), "lo": round(lo, 3), "hi": round(hi, 3), "separable": lo > 0 or hi < 0})
+                diffs.append(
+                    {
+                        "exp": exp,
+                        "retriever": ret,
+                        "metric": m,
+                        "a": ch_a,
+                        "b": ch_b,
+                        "diff": round(d, 3),
+                        "lo": round(lo, 3),
+                        "hi": round(hi, 3),
+                        "separable": lo > 0 or hi < 0,
+                    }
+                )
     return summary, diffs
 
 
@@ -156,8 +185,15 @@ def main() -> int:
     RESULTS.mkdir(exist_ok=True)
     law_pdf = HERE / "corpus/law.pdf"
     text = extract_text(law_pdf)
-    tables = {p.stem: p.read_text(encoding="utf-8") for p in sorted((HERE / "corpus/tables").glob("*.txt"))}
-    questions = [json.loads(ln) for ln in (HERE / "questions.jsonl").read_text(encoding="utf-8").splitlines() if ln.strip()]
+    tables = {
+        p.stem: p.read_text(encoding="utf-8")
+        for p in sorted((HERE / "corpus/tables").glob("*.txt"))
+    }
+    questions = [
+        json.loads(ln)
+        for ln in (HERE / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+        if ln.strip()
+    ]
     conditions, stats, extra = build_conditions(text, tables)
     logger.info("conditions built", extra={"ctx": {k: v["n"] for k, v in stats.items()}})
 
@@ -176,11 +212,22 @@ def main() -> int:
             per = {
                 "dense": evaluate(chunks, dense.search, qs, k=K, budgets=BUDGETS),
                 "bm25": evaluate(chunks, bm25.search, qs, k=K, budgets=BUDGETS),
-                "random": evaluate_random(chunks, qs, k=K, budgets=BUDGETS, draws=RANDOM_DRAWS, seed=0),
+                "random": evaluate_random(
+                    chunks, qs, k=K, budgets=BUDGETS, draws=RANDOM_DRAWS, seed=0
+                ),
             }
             for ret, rows in per.items():
                 raw.extend({"exp": exp, "chunking": name, "retriever": ret, **r} for r in rows)
-            logger.info("condition done", extra={"ctx": {"exp": exp, "chunking": name, "dense_hit5": statistics.mean(r[f"hit@{K}"] for r in per["dense"])}})
+            logger.info(
+                "condition done",
+                extra={
+                    "ctx": {
+                        "exp": exp,
+                        "chunking": name,
+                        "dense_hit5": statistics.mean(r[f"hit@{K}"] for r in per["dense"]),
+                    }
+                },
+            )
 
     summary, diffs = summarize(raw, metrics)
     min_cos = drift_probe(cache, conditions["article"]["article"])
@@ -194,7 +241,10 @@ def main() -> int:
         "pypdf": pkg_version("pypdf"),
         "pdfplumber": pkg_version("pdfplumber"),
         "law_pdf_sha256": hashlib.sha256(law_pdf.read_bytes()).hexdigest(),
-        "n_questions": {"article": sum(q["type"] == "article" for q in questions), "table": sum(q["type"] == "table" for q in questions)},
+        "n_questions": {
+            "article": sum(q["type"] == "article" for q in questions),
+            "table": sum(q["type"] == "table" for q in questions),
+        },
         "k": K,
         "budgets": BUDGETS,
         "random_draws": RANDOM_DRAWS,
@@ -203,14 +253,28 @@ def main() -> int:
         "drift_probe_pass": min_cos >= 0.9999,
         **extra,
     }
-    (RESULTS / "raw.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in raw), encoding="utf-8")
+    (RESULTS / "raw.jsonl").write_text(
+        "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in raw), encoding="utf-8"
+    )
     for name, rows in (("summary.csv", summary), ("diffs.csv", diffs)):
         with (RESULTS / name).open("w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(rows[0]))
             w.writeheader()
             w.writerows(rows)
-    (RESULTS / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-    logger.info("written", extra={"ctx": {"raw": len(raw), "summary": len(summary), "diffs": len(diffs), "drift_min_cos": min_cos}})
+    (RESULTS / "meta.json").write_text(
+        json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    logger.info(
+        "written",
+        extra={
+            "ctx": {
+                "raw": len(raw),
+                "summary": len(summary),
+                "diffs": len(diffs),
+                "drift_min_cos": min_cos,
+            }
+        },
+    )
     return 0
 
 

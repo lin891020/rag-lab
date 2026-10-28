@@ -1,6 +1,6 @@
 """results/summary.csv + diffs.csv -> results/report.md (the tables pasted into README section 3).
 
-    uv run python experiments/01-chunking/report.py
+uv run python experiments/01-chunking/report.py
 """
 
 from __future__ import annotations
@@ -46,7 +46,9 @@ def render_diffs(rows: list[dict], *, exp: str, retriever: str, metric: str) -> 
         if (r["exp"], r["retriever"], r["metric"]) != (exp, retriever, metric):
             continue
         sep = "分得出" if str(r["separable"]) == "True" else "分不出"
-        out.append(f"| {r['a']} − {r['b']} | {_signed(r['diff'])} [{_signed(r['lo'])}, {_signed(r['hi'])}] | {sep} |")
+        out.append(
+            f"| {r['a']} − {r['b']} | {_signed(r['diff'])} [{_signed(r['lo'])}, {_signed(r['hi'])}] | {sep} |"
+        )
     return "\n".join(out)
 
 
@@ -58,7 +60,9 @@ def main() -> int:
     parts = []
     for exp, title in (("article", "條文題"), ("table", "表格題")):
         n = meta["n_questions"][exp]
-        parts.append(f"### {title}（{n} 題）\n\n{render_summary(summary, exp=exp, metrics=metrics)}\n")
+        parts.append(
+            f"### {title}（{n} 題）\n\n{render_summary(summary, exp=exp, metrics=metrics)}\n"
+        )
         head = f"hit@{meta['budgets'][0]}"
         for ret in ("dense", "bm25"):
             table = render_diffs(diffs, exp=exp, retriever=ret, metric=head)
