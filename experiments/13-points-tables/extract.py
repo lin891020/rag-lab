@@ -4,7 +4,7 @@ a new rows route for table-only notices).
   base   01's pipeline untouched: pypdf page texts joined (the blind baseline)
   ocr    pages the health check flags (no text layer, or a (cid:N) garbage layer) replaced by
          glm-ocr's plain-text reading of the page image; every other page as base
-  rows   every page where pdfplumber's lines strategy finds a table is replaced by one line per
+  rows   every page where PyMuPDF finds a table is replaced by one line per
          data row, each cell written 表頭：值 and cells joined with ｜ (03's key-value shape, the
          one that beat flattened text); other pages as ocr. Only table-type documents get it.
 
@@ -20,6 +20,7 @@ import sys
 from pathlib import Path
 
 import pdfplumber
+import pymupdf
 from pypdf import PdfReader
 
 from rag_lab.log import setup_logging
@@ -29,7 +30,7 @@ ROOT = HERE.parents[1]
 CORPUS = HERE / "corpus"
 DATA = ROOT / "data/13-points-tables"
 sys.path.insert(0, str(HERE))
-from doc_health import GARBAGE_PAGE, MIN_TEXT_CHARS, garbage_share, is_rotated  # noqa: E402
+from doc_health import GARBAGE_PAGE, MIN_TEXT_CHARS, garbage_share  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
@@ -110,17 +111,17 @@ def _clean(cell: object) -> str:
 
 
 def rows_lines(pdf: Path | str, page_no: int) -> list[str]:
-    """Data rows of every ruled table on the page as 表頭：值｜表頭：值 lines; the first row of
-    each table is its header, blank header cells inherit the cell to their left (merged header)."""
+    """Data rows of every table PyMuPDF finds on the page as 表頭：值｜表頭：值 lines; the first
+    row of each table is its header, blank header cells inherit the cell to their left (merged
+    header). PyMuPDF, not pdfplumber: it reads rotated pages and rotated text the right way up
+    (09 had to skip those; here half the table documents are landscape 附表)."""
     out: list[str] = []
-    with pdfplumber.open(pdf) as doc:
-        page = doc.pages[page_no]
-        if is_rotated(page):
-            return []
-        for table in page.extract_tables(
-            {"vertical_strategy": "lines", "horizontal_strategy": "lines"}
-        ):
-            rows = [[_clean(c) for c in r] for r in table if r and any(_clean(c) for c in r)]
+    with pymupdf.open(pdf) as doc:
+        page = doc[page_no]
+        for table in page.find_tables().tables:
+            rows = [
+                [_clean(c) for c in r] for r in table.extract() if r and any(_clean(c) for c in r)
+            ]
             if len(rows) < 2:
                 continue
             header: list[str] = []
