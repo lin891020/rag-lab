@@ -13,7 +13,7 @@
 - 09 `extract.py` 三路線跑完：OCR 42 頁（glm-ocr，快取在 `data/09-messy-real/ocr`）、對照表 rows 在 15 份草案的 7 份找到三欄表。
 - 09 `run_retrieval.py`：72 格 × 160 題，random .00–.01，向量 cache cosine 1.0000；base／article .00（160/160 切不出）、ocr／article-cn+pre dense hit@2000 .89 [.83, .93]；修法配對差距：中文條號 +.55、前言留塊 +.23、OCR +.11 分得出，fixed −.03、rows +.01、前綴 +.01 分不出（hit@5 +.04 分得出）。`attribute.py` 錯因在 `results/attribution.csv`。
 - 09 `run_read.py`：160 題 × 5 條件 × 2 模型 = 1,620 次 141 分鐘 0 錯誤、漂移 19/20；base 等於閉卷（.05／.04，差距含 0），fixed .48／.42，all .71／.64，oracle .84／.82；fixed − base +.43／+.39、all − fixed +.23／+.21 都分得出。
-- `uv run pytest tests experiments/0*/tests` 與 `pre-commit run --all-files`：見本次 commit 訊息的數字（2026-10-29 13:40 mini）。
+- `uv run pytest tests experiments/*/tests` 與 `pre-commit run --all-files`：見本次 commit 訊息的數字（2026-10-29 13:40 mini）。
 - 09 題庫抽查 15 題（seed 9 名單）：Mike 太累改由一個沒看過題目的 agent 從頁面截圖獨立作答再比對，15/15 答案對、0 錯；它指出 q037 與 q144 的 quote 撐不滿答案（同句在別處先出現／只涵蓋 7 條裡 5 條）、q067 的附表條次要不要算沒寫明，答案本身都對，quote 沒改（改了會動檢索命中）。
 - 01–08 見各自 README；HANDOFF-2026-10-28 的「已驗證」照舊。
 

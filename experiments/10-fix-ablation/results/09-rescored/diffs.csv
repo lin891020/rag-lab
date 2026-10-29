@@ -1,0 +1,5 @@
+model,group,metric,a,b,diff,lo,hi,separable
+gpt-oss:20b,anchor,value_ok,fixed,closed-book,0.4,0.325,0.475,True
+gpt-oss:20b,anchor,value_lenient,fixed,closed-book,0.46875,0.3875,0.54375,True
+qwen3:8b,anchor,value_ok,fixed,closed-book,0.44375,0.36875,0.525,True
+qwen3:8b,anchor,value_lenient,fixed,closed-book,0.44375,0.36875,0.525,True

@@ -20,7 +20,7 @@
 
 ```bash
 uv sync
-uv run pytest tests experiments/0*/tests                       # 全部實驗
+uv run pytest tests experiments/*/tests                       # 全部實驗
 uv run python experiments/01-chunking/run.py     # 需要本機 ollama 有 bge-m3
 uv run python experiments/02-json-output/run.py  # 需要 qwen3:8b、gpt-oss:20b；之後 score.py、report.py
 uv run python experiments/03-table-format/run.py # 同上；語料已在 corpus/，重建要 01 的附件 PDF
