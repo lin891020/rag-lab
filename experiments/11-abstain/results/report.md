@@ -16,6 +16,15 @@
 | qwen3:8b | P0 | .68 [.60, .76] | .56 [.47, .65] | .00 [.00, .00] | .83 [.67, 1.0] | .38 [.34, .43] |
 | qwen3:8b | P1 | .09 [.04, .14] | .00 [.00, .00] | .00 [.00, .00] | .44 [.22, .67] | .05 [.03, .07] |
 
+### unanswerable：兩層濾網後硬答率
+
+| 模型 | 提示 | same-doc（114） | other-doc（107） | none（160） | real（18） | all（399） |
+|---|---|---|---|---|---|---|
+| gpt-oss:20b | P0 | .20 [.13, .27] | .06 [.02, .10] | .00 [.00, .00] | .50 [.28, .72] | .10 [.07, .13] |
+| gpt-oss:20b | P1 | .11 [.06, .18] | .02 [.00, .05] | .00 [.00, .00] | .28 [.06, .50] | .05 [.03, .08] |
+| qwen3:8b | P0 | .36 [.27, .45] | .38 [.29, .48] | .00 [.00, .00] | .56 [.33, .78] | .23 [.19, .27] |
+| qwen3:8b | P1 | .08 [.04, .13] | .00 [.00, .00] | .00 [.00, .00] | .39 [.17, .61] | .04 [.02, .06] |
+
 ### unanswerable：沒根據的對
 
 | 模型 | 提示 | same-doc（114） | other-doc（107） | none（160） | real（18） | all（399） |
@@ -70,6 +79,15 @@ unanswerable 按題型（硬答率）：
 | qwen3:8b | P0 | .72 [.65, .79] | .87 [.81, .92] | .79 [.74, .83] |
 | qwen3:8b | P1 | .69 [.61, .76] | .87 [.81, .92] | .77 [.72, .82] |
 
+### answerable：兩層濾網後答對
+
+| 模型 | 提示 | gold（160） | real（132） | all（292） |
+|---|---|---|---|---|
+| gpt-oss:20b | P0 | .61 [.53, .68] | .77 [.69, .84] | .68 [.62, .73] |
+| gpt-oss:20b | P1 | .61 [.54, .69] | .77 [.69, .83] | .68 [.63, .73] |
+| qwen3:8b | P0 | .68 [.61, .75] | .86 [.80, .92] | .76 [.71, .81] |
+| qwen3:8b | P1 | .64 [.57, .72] | .85 [.79, .91] | .74 [.68, .79] |
+
 ### answerable：硬答率
 
 | 模型 | 提示 | gold（160） | real（132） | all（292） |
@@ -106,14 +124,18 @@ answerable 按題型（答對（嚴格））：
 | unanswerable | 引句在依據裡 | P1 − P0 | −.07 [−.09, −.04] | 分得出 |
 | unanswerable | parse_ok | P1 − P0 | +.00 [−.01, +.01] | 分不出 |
 | unanswerable | 濾網後硬答率 | filtered − unfiltered（P0） | −.76 [−.80, −.72] | 分得出 |
+| unanswerable | 兩層濾網後硬答率 | filtered − unfiltered（P0） | −.77 [−.81, −.73] | 分得出 |
 | unanswerable | 濾網後硬答率 | filtered − unfiltered（P1） | −.39 [−.44, −.35] | 分得出 |
+| unanswerable | 兩層濾網後硬答率 | filtered − unfiltered（P1） | −.39 [−.44, −.35] | 分得出 |
 | answerable | 硬答率 | P1 − P0 | −.02 [−.04, −.01] | 分得出 |
 | answerable | 答對（嚴格） | P1 − P0 | −.00 [−.03, +.02] | 分不出 |
 | answerable | 答對（寬鬆） | P1 − P0 | −.01 [−.04, +.01] | 分不出 |
 | answerable | 引句在依據裡 | P1 − P0 | −.01 [−.04, +.03] | 分不出 |
 | answerable | parse_ok | P1 − P0 | −.00 [−.01, +.00] | 分不出 |
 | answerable | 濾網後答對 | filtered − unfiltered（P0） | −.05 [−.08, −.02] | 分得出 |
+| answerable | 兩層濾網後答對 | filtered − unfiltered（P0） | −.07 [−.10, −.04] | 分得出 |
 | answerable | 濾網後答對 | filtered − unfiltered（P1） | −.04 [−.07, −.02] | 分得出 |
+| answerable | 兩層濾網後答對 | filtered − unfiltered（P1） | −.06 [−.09, −.03] | 分得出 |
 
 ### 配對差距，qwen3:8b
 
@@ -124,11 +146,15 @@ answerable 按題型（答對（嚴格））：
 | unanswerable | 引句在依據裡 | P1 − P0 | −.39 [−.44, −.34] | 分得出 |
 | unanswerable | parse_ok | P1 − P0 | −.00 [−.01, +.00] | 分不出 |
 | unanswerable | 濾網後硬答率 | filtered − unfiltered（P0） | −.53 [−.57, −.48] | 分得出 |
+| unanswerable | 兩層濾網後硬答率 | filtered − unfiltered（P0） | −.68 [−.72, −.63] | 分得出 |
 | unanswerable | 濾網後硬答率 | filtered − unfiltered（P1） | −.27 [−.31, −.23] | 分得出 |
+| unanswerable | 兩層濾網後硬答率 | filtered − unfiltered（P1） | −.28 [−.32, −.24] | 分得出 |
 | answerable | 硬答率 | P1 − P0 | −.02 [−.04, −.01] | 分得出 |
 | answerable | 答對（嚴格） | P1 − P0 | −.01 [−.04, +.02] | 分不出 |
 | answerable | 答對（寬鬆） | P1 − P0 | +.00 [−.03, +.02] | 分不出 |
 | answerable | 引句在依據裡 | P1 − P0 | −.02 [−.05, +.01] | 分不出 |
 | answerable | parse_ok | P1 − P0 | +.00 [+.00, +.00] | 分不出 |
 | answerable | 濾網後答對 | filtered − unfiltered（P0） | −.04 [−.06, −.02] | 分得出 |
+| answerable | 兩層濾網後答對 | filtered − unfiltered（P0） | −.07 [−.10, −.04] | 分得出 |
 | answerable | 濾網後答對 | filtered − unfiltered（P1） | −.04 [−.07, −.02] | 分得出 |
+| answerable | 兩層濾網後答對 | filtered − unfiltered（P1） | −.08 [−.11, −.05] | 分得出 |

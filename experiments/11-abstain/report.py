@@ -15,11 +15,14 @@ KINDS = ["gold", "same-doc", "other-doc", "none", "real", "all"]
 HEAD = {
     "answered": "硬答率",
     "answered_f": "濾網後硬答率",
+    "answered_f2": "兩層濾網後硬答率",
     "lucky": "沒根據的對",
     "grounded": "引句在依據裡",
     "value_ok": "答對（嚴格）",
     "value_lenient": "答對（寬鬆）",
     "value_ok_f": "濾網後答對",
+    "value_ok_f2": "兩層濾網後答對",
+    "supported": "引句含答的數字",
 }
 
 
@@ -94,8 +97,11 @@ def main() -> int:
         return 0
     s = _read(rd / "summary.csv")
     for group, metrics in (
-        ("unanswerable", ["answered", "answered_f", "lucky", "grounded"]),
-        ("answerable", ["value_ok", "value_lenient", "value_ok_f", "answered", "grounded"]),
+        ("unanswerable", ["answered", "answered_f", "answered_f2", "lucky", "grounded"]),
+        (
+            "answerable",
+            ["value_ok", "value_lenient", "value_ok_f", "value_ok_f2", "answered", "grounded"],
+        ),
     ):
         for m in metrics:
             parts.append(f"### {group}：{HEAD[m]}\n\n{render_group(s, group=group, metric=m)}\n")

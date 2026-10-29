@@ -1,4 +1,4 @@
-from score import abstained, grounded, score_rows, summarize
+from score import abstained, grounded, score_rows, summarize, supported
 
 
 def test_p1_abstains_through_the_found_flag():
@@ -140,3 +140,40 @@ def test_score_rows_drops_unbuilt_windows_and_leak_checks_real_rows():
     summary, _ = summarize(rows)
     assert all(r["n"] == 1 for r in summary if r["group"] == "unanswerable")
     assert any(r["metric"] == "parse_ok" for r in summary)
+
+
+def test_second_filter_needs_the_answered_number_inside_the_quote():
+    # qwen3's way of bluffing: a real sentence from the evidence that does not hold the number
+    ev = "申請人應於三十日內補正。逾期未補正者，駁回其申請。每案補助新臺幣 5,000 元整。"
+    assert supported({"quote": "每案補助新臺幣5,000元整", "value": 5000, "unit": "元"}, "value", ev)
+    assert supported({"quote": "應於三十日內補正", "value": 30, "unit": ""}, "value", ev)
+    assert not supported(
+        {"quote": "逾期未補正者，駁回其申請", "value": 30, "unit": "日"}, "value", ev
+    )
+    assert not supported({"quote": "應於三十日內補正", "value": 15, "unit": "日"}, "value", ev)
+    assert not supported(
+        {"quote": "應於三十日內補正", "value": 3, "unit": "日"}, "value", ev
+    )  # tail
+    # articles / which: only the first layer exists (no number to check)
+    assert supported({"quote": "應於三十日內補正", "articles": ["5"]}, "articles", ev)
+    assert not supported({"quote": "不在依據裡的句子", "law": "x"}, "which", ev)
+
+
+def test_score_rows_carries_the_second_filter():
+    rows = score_rows(
+        [
+            _raw("P0", "gold", "q1", RIGHT, has_gold=True),
+            _raw(
+                "P0",
+                "same-doc",
+                "q1",
+                '{"quote": "每案補助新臺幣", "value": 5000, "unit": "元"}',
+                has_gold=False,
+                ev_text="每案補助新臺幣另定之。",
+            ),
+        ],
+        Q,
+    )
+    r_gold, r_same = rows
+    assert r_gold["supported"] and r_gold["value_ok_f2"]
+    assert r_same["answered_f"] and not r_same["supported"] and not r_same["answered_f2"]

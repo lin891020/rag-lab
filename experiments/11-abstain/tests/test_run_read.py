@@ -72,3 +72,10 @@ def test_ask_skips_the_model_when_a_window_cannot_be_built():
         and row["content"] == ""
         and row["evidence_chars"] == 0
     )
+
+
+def test_leak_without_a_unit_does_not_take_the_head_of_a_longer_number():
+    assert not leak("百分之三十以上", "value", {"value": 3, "unit": "%"})
+    assert leak("百分之三十以上", "value", {"value": 30, "unit": "%"})
+    assert not leak("占 3.5% 者", "value", {"value": 3, "unit": "%"})
+    assert leak("每二年一次", "value", {"value": 2, "unit": "年"})  # a unit keeps the old behaviour

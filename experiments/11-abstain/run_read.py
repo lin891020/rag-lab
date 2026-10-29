@@ -214,9 +214,12 @@ def leak(window: str | None, qtype: str, expect: dict) -> bool:
 
         # the number must not be the tail of a longer one (五日 inside 十五日, 二年 inside 一百十二年,
         # 000 inside 5,000); NFKC turns … into ... so the digit class alone guards Chinese forms
+        # … and with no unit to anchor on, not the head of one either (三 inside 三十, 3 in 3.5)
+        tail = f"(?![{_NUM_CHARS}點.])" if not unit else ""
+
         def hit(f: str) -> bool:
             guard = f"(?<![{_NUM_CHARS},.])" if f[0].isdigit() else f"(?<![{_NUM_CHARS}])"
-            return re.search(guard + re.escape(f) + re.escape(unit), w) is not None
+            return re.search(guard + re.escape(f) + re.escape(unit) + tail, w) is not None
 
         return any(hit(f) for f in forms)
     if qtype == "articles":

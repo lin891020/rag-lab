@@ -11,6 +11,10 @@
   grounded    the model's quote (≥ 4 chars, whitespace removed, NFKC) occurs in the evidence
   answered_f / value_ok_f   after the program filter: an answer whose quote is not grounded
                             is turned into an abstention
+  supported   grounded, and (value questions) the number the model answered occurs in its own
+              quote: a real sentence that does not hold the number is qwen3's way of bluffing.
+              articles / which have no number to check: supported == grounded
+  answered_f2 / value_ok_f2   after both layers
   lucky       right answer without the gold in the evidence (knowledge or guess, not reading)
 Rows are grouped: answerable = gold, or real with has_gold; unanswerable = same-doc, other-doc,
 none, or real without has_gold. Leaks (an answer-free window that does hold the answer) are
@@ -44,8 +48,16 @@ TYPES = ["value", "articles", "which"]
 PROMPTS = ["P0", "P1"]
 KINDS = ["gold", "same-doc", "other-doc", "none", "real"]
 GROUP_METRICS = {
-    "unanswerable": ["answered", "answered_f", "lucky", "grounded", "parse_ok"],
-    "answerable": ["answered", "value_ok", "value_lenient", "value_ok_f", "grounded", "parse_ok"],
+    "unanswerable": ["answered", "answered_f", "answered_f2", "lucky", "grounded", "parse_ok"],
+    "answerable": [
+        "answered",
+        "value_ok",
+        "value_lenient",
+        "value_ok_f",
+        "value_ok_f2",
+        "grounded",
+        "parse_ok",
+    ],
 }
 # whole refusal phrases only: a lone 無／未 is everywhere in legal text (無工作能力, 未滿四十歲)
 _REFUSE = re.compile(
@@ -325,6 +337,22 @@ def grounded(quote: object, evidence: str | None) -> bool:
     return len(q) >= 4 and q in _norm(evidence)
 
 
+def supported(obj: dict, qtype: str, evidence: str | None) -> bool:
+    """Second layer: the quote is grounded and, for value questions, holds the answered number
+    (either script, commas allowed, not the tail of a longer number; 百分之 forms when the unit
+    is %). Reuses run_read.leak with the model's own answer as the thing to look for."""
+    quote = obj.get("quote")
+    if not grounded(quote, evidence):
+        return False
+    if qtype != "value":
+        return True
+    v = _to_float(obj.get("value"))
+    if v is None:
+        return False
+    unit = "%" if normalize_unit(str(obj.get("unit") or "")) == "%" else ""
+    return leak(quote, "value", {"value": v, "unit": unit})
+
+
 def group_of(evidence: str, has_gold: bool) -> str:
     if evidence == "gold" or (evidence == "real" and has_gold):
         return "answerable"
@@ -354,6 +382,7 @@ def score_rows(raw: list[dict], questions: dict[str, dict]) -> list[dict]:
         obj = obj if isinstance(obj, dict) else {}
         answered = bool(obj) and not abstained(obj, q["type"], r["prompt"])
         g = grounded(obj.get("quote"), r.get("evidence_text"))
+        g2 = supported(obj, q["type"], r.get("evidence_text"))
         group = group_of(r["evidence"], bool(r.get("has_gold")))
         value_ok = flags["value_ok"] and answered
         value_lenient = flags["value_lenient"] and answered
@@ -369,6 +398,9 @@ def score_rows(raw: list[dict], questions: dict[str, dict]) -> list[dict]:
                 "grounded": g,
                 "answered_f": answered and g,
                 "value_ok_f": value_ok and g,
+                "supported": g2,
+                "answered_f2": answered and g2,
+                "value_ok_f2": value_ok and g2,
                 "lucky": value_ok and group == "unanswerable",
             }
         )
@@ -418,7 +450,7 @@ def summarize(scored: list[dict]) -> tuple[list[dict], list[dict]]:
                 qb = {(r["evidence"], r["qid"]): r for r in b}
                 common = sorted(set(qa) & set(qb))
                 for m in metrics:
-                    if m.endswith("_f"):
+                    if "_f" in m:
                         continue
                     d, lo, hi = paired_diff_ci(
                         [float(qa[k][m]) for k in common], [float(qb[k][m]) for k in common]
@@ -429,9 +461,9 @@ def summarize(scored: list[dict]) -> tuple[list[dict], list[dict]]:
                 if not rows:
                     continue
                 for m in metrics:
-                    if not m.endswith("_f"):
+                    if "_f" not in m:
                         continue
-                    base = m[:-2]
+                    base = m[: m.rfind("_f")]
                     d, lo, hi = paired_diff_ci(
                         [float(r[m]) for r in rows], [float(r[base]) for r in rows]
                     )
