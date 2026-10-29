@@ -49,5 +49,5 @@ def test_quote_position_sees_the_front_matter():
     assert quote_position(text, "不在裡面", "article-cn") == (False, False)
     assert quote_position(text, "本規則依法訂定之", "article") == (
         True,
-        True,
-    )  # 01's parser: no articles, all front matter
+        False,
+    )  # 01's parser finds no article: nothing was dropped, so it is not "before the first article"
