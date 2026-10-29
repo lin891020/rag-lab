@@ -1,5 +1,5 @@
 from chunkers import Chunk
-from run_rerank import CELLS, RERANKERS, metrics_for
+from run_rerank import CELLS, RERANK_TOP, RERANKERS, metrics_for, rerank_one
 from run_read import budget_evidence
 
 
@@ -30,3 +30,23 @@ def test_grid_constants():
     assert list(CELLS) == ["full", "fixed"]
     assert CELLS["full"] == ("ocrrows", "article-cn+pre", True)
     assert RERANKERS == ["none", "bm25", "bge", "qwen3-rr", "listwise"]
+
+
+class _Cell:
+    def __init__(self, n):
+        self.chunks = [_c(f"塊{i}", "A") for i in range(n)]
+
+    def candidates(self, question):
+        return list(range(len(self.chunks)))
+
+
+class _Reverse:
+    def rerank(self, question, chunks):
+        return list(range(len(chunks)))[::-1], 0.5
+
+
+def test_rerankers_only_reorder_the_top_window_and_keep_the_tail():
+    ids, seconds = rerank_one(_Cell(50), "bge", _Reverse(), {"question": "q"})
+    assert ids[:RERANK_TOP] == list(range(RERANK_TOP))[::-1]
+    assert ids[RERANK_TOP:] == list(range(RERANK_TOP, 50)) and seconds == 0.5
+    assert rerank_one(_Cell(50), "none", None, {"question": "q"})[0] == list(range(50))

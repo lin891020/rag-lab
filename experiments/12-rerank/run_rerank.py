@@ -1,4 +1,4 @@
-"""Retrieval track: dense top-50 -> each reranker -> rank/budget metrics per question.
+"""Retrieval track: dense top-50 -> each reranker over the top 20 -> rank/budget metrics per question.
 
     uv run --group rerank python experiments/12-rerank/run_rerank.py [--cells full,fixed]
         [--rerankers none,bm25,bge,qwen3-rr,listwise] [--limit N]
@@ -45,6 +45,7 @@ CELLS: dict[str, tuple[str, str, bool]] = {
     "fixed": ("ocrrows", "fixed-1000", True),
 }
 RERANKERS = ["none", "bm25", "bge", "qwen3-rr", "listwise"]
+RERANK_TOP = 20  # rerankers see the dense top 20 (the usual window); 21–50 keep the dense order
 BGE = "BAAI/bge-reranker-v2-m3"
 LISTWISE_MODEL = "qwen3:8b"
 METRICS = ["hit@1", "mrr", "hit@5", "hit@1000", "hit@2000", "budget_has_gold"]
@@ -118,8 +119,9 @@ def rerank_one(cell: Cell, reranker: str, rr, q: dict) -> tuple[list[int], float
     cand = cell.candidates(q["question"])
     if reranker == "none" or rr is None:
         return cand, 0.0
-    order, seconds = rr.rerank(q["question"], [cell.chunks[i] for i in cand])
-    return [cand[i] for i in order], seconds
+    head, tail = cand[:RERANK_TOP], cand[RERANK_TOP:]
+    order, seconds = rr.rerank(q["question"], [cell.chunks[i] for i in head])
+    return [head[i] for i in order] + tail, seconds
 
 
 def summarize(rows: list[dict]) -> tuple[list[dict], list[dict]]:
