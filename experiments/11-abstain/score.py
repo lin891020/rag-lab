@@ -43,14 +43,15 @@ TYPES = ["value", "articles", "which"]
 PROMPTS = ["P0", "P1"]
 KINDS = ["gold", "same-doc", "other-doc", "none", "real"]
 GROUP_METRICS = {
-    "unanswerable": ["answered", "answered_f", "lucky", "grounded"],
-    "answerable": ["answered", "value_ok", "value_lenient", "value_ok_f", "grounded"],
+    "unanswerable": ["answered", "answered_f", "lucky", "grounded", "parse_ok"],
+    "answerable": ["answered", "value_ok", "value_lenient", "value_ok_f", "grounded", "parse_ok"],
 }
 # whole refusal phrases only: a lone 無／未 is everywhere in legal text (無工作能力, 未滿四十歲)
 _REFUSE = re.compile(
-    r"無明確|無相關|無資料|無此|無規定|沒有(?:提|規定|說明|相關|答案|資料|明確)|未(?:提及|載明|規定|說明)"
-    r"|找不到|不適用|無法(?:判斷|確定|找到|回答|得知)|資料不足|依據(?:中|裡)?(?:沒有|無)"
+    r"無明確|無相關|無資料|無此|沒有(?:提|規定|說明|相關|答案|資料|明確)|未(?:提及|載明)"
+    r"|找不到|無法(?:判斷|確定|找到|回答|得知)|資料不足|依據(?:中|裡)?(?:沒有|無|未)|不足以"
 )
+_EMPTY_LAW = {"", "無", "不詳", "n/a", "na", "none", "null", "未知", "不明"}
 
 UNIT_ALIASES: dict[str, list[str]] = {
     "": ["", "無", "none", "無單位", "係數", "factor", "-", "倍", "x", "×", "ratio"],
@@ -298,17 +299,18 @@ def paired_diff_ci(
 
 def abstained(obj: dict, qtype: str, prompt: str) -> bool:
     """P1: the found flag. P0 (no flag): an empty / zero answer or a refusing quote."""
-    if prompt == "P1":
-        return obj.get("found") is not True
-    quote = obj.get("quote")
-    if isinstance(quote, str) and _REFUSE.search(quote):
+    if prompt == "P1" and obj.get("found") is not True:
         return True
-    if qtype == "value":
+    quote = obj.get("quote")
+    if prompt == "P0" and isinstance(quote, str) and _REFUSE.search(quote):
+        return True
+    if qtype == "value":  # found=true with an empty payload is still no answer
         v = obj.get("value")
         return v is None or (_is_number(v) and float(v) == 0)
     if qtype == "articles":
         return not obj.get("articles")
-    return not (isinstance(obj.get("law"), str) and obj["law"].strip())
+    law = obj.get("law")
+    return not (isinstance(law, str) and law.strip().lower() not in _EMPTY_LAW)
 
 
 def _norm(s: str) -> str:
@@ -329,9 +331,24 @@ def group_of(evidence: str, has_gold: bool) -> str:
 
 
 def score_rows(raw: list[dict], questions: dict[str, dict]) -> list[dict]:
+    """Rows whose window could not be built are dropped (no model call was made); `real` rows
+    without the gold get the same leak check as the distractor windows (recomputed here from
+    the stored evidence text, so a better `leak` applies to finished runs)."""
+    from run_read import leak
+
     out = []
     for r in raw:
+        if r.get("done_reason") == "not_constructible":
+            continue
         q = questions[r["qid"]]
+        if r["evidence"] in ("same-doc", "other-doc") or (
+            r["evidence"] == "real" and not r.get("has_gold")
+        ):
+            r = {
+                **r,
+                "leak": bool(r.get("leak"))
+                or leak(r.get("evidence_text", ""), q["type"], q["expect"]),
+            }
         content = r.get("content", "") or ""
         flags = judge(content, q["type"], q["expect"])
         obj, _, _ = _parse(content)

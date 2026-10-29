@@ -44,3 +44,33 @@ def test_other_doc_chunk_is_the_best_ranked_chunk_from_another_document():
     text, doc = other_doc_chunk(ranked, "A", budget=1000)
     assert doc == "B" and len(text) == 1000 and set(text) == {"乙"}
     assert other_doc_chunk([_c("甲", "A")], "A", budget=1000) == (None, None)
+
+
+def test_leak_handles_gazette_number_styles_and_percentages():
+    assert leak("診斷書（一般用） 一○○～五○○元", "value", {"value": 500, "unit": "元"})
+    assert leak("補助比率為核定計畫金額之百分之十", "value", {"value": 10, "unit": "%"})
+    assert leak("汞：○．四ppm", "value", {"value": 0.4, "unit": "ppm"})
+    assert leak("修正第四點、第九點", "articles", {"articles": ["4", "9"]})
+    assert leak("總額新臺幣 5,000 元", "value", {"value": 5000, "unit": "元"})
+
+
+def test_leak_does_not_fire_on_dates_that_merely_end_with_the_number():
+    assert not leak("應於十五日內申請", "value", {"value": 5, "unit": "日"})
+    assert not leak("中華民國一百十二年四月", "value", {"value": 2, "unit": "年"})
+    assert leak("應於五日內申請", "value", {"value": 5, "unit": "日"})
+
+
+def test_ask_skips_the_model_when_a_window_cannot_be_built():
+    from run_read import ask
+
+    class _Ev:
+        def for_question(self, kind, q):
+            return {"text": None, "label": "", "has_gold": False, "leak": False, "source": ""}
+
+    q = {"id": "q1", "type": "value", "question": "多少？", "doc": "A", "quote": "x", "expect": {}}
+    row = ask("qwen3:8b", "P0", "same-doc", q, _Ev())
+    assert (
+        row["done_reason"] == "not_constructible"
+        and row["content"] == ""
+        and row["evidence_chars"] == 0
+    )

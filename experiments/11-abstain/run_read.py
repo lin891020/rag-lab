@@ -152,17 +152,34 @@ def budget_evidence(ranked: list[Chunk], gold: dict, *, budget: int = BUDGET) ->
     return text, any(is_gold(c, gold) for c in kept)
 
 
+_DIGIT_CN = str.maketrans("0123456789", "○一二三四五六七八九")
+
+
 def _number_forms(v: float) -> list[str]:
-    forms = {f"{v:g}"}
+    forms = {f"{v:g}", f"{v:f}".rstrip("0").rstrip(".")}
     if v == int(v):
-        forms.add(f"{int(v):,}")
-        if 0 < int(v) < 1000:
-            forms.add(int_to_cn(int(v)))
-        if 1000 <= int(v) < 100_000_000:
-            cn = _cn_large(int(v))
+        n = int(v)
+        forms |= {str(n), f"{n:,}", str(n).translate(_DIGIT_CN)}  # 1200 / 1,200 / 一二○○
+        if 0 < n < 1000:
+            cn = int_to_cn(n)
+            forms.add(cn)
+            if 110 <= n < 120 or (n >= 100 and (n // 10) % 10 == 1):
+                forms.add(cn.replace("一十", "十"))  # 一百一十三 is written 一百十三 in gazettes
+        if 1000 <= n < 100_000_000:
+            cn = _cn_large(n)
             forms.add(cn)
             forms.add(cn.replace("萬", "萬零"))  # 三萬六百 is also written 三萬零六百
+    else:
+        ip, fp = f"{v:f}".rstrip("0").split(".")
+        if ip.isdigit() and fp:
+            cn_i = "零" if ip == "0" else int_to_cn(int(ip)) if int(ip) < 1000 else ""
+            if cn_i:
+                forms.add(cn_i + "點" + fp.translate(_DIGIT_CN).replace("○", "零"))
+                forms.add(("○" if ip == "0" else cn_i) + "．" + fp.translate(_DIGIT_CN))
     return [f for f in forms if f]
+
+
+_NUM_CHARS = "0-9０-９零〇○一二三四五六七八九十百千萬"
 
 
 def _cn_large(n: int) -> str:
@@ -190,7 +207,18 @@ def leak(window: str | None, qtype: str, expect: dict) -> bool:
     w = norm(window)
     if qtype == "value":
         unit = norm(expect["unit"])
-        return any(norm(f) + unit in w for f in _number_forms(float(expect["value"])))
+        forms = [norm(f) for f in _number_forms(float(expect["value"]))]
+        if unit == "%":
+            forms += ["百分之" + f for f in forms]
+            unit = ""
+
+        # the number must not be the tail of a longer one (五日 inside 十五日, 二年 inside 一百十二年,
+        # 000 inside 5,000); NFKC turns … into ... so the digit class alone guards Chinese forms
+        def hit(f: str) -> bool:
+            guard = f"(?<![{_NUM_CHARS},.])" if f[0].isdigit() else f"(?<![{_NUM_CHARS}])"
+            return re.search(guard + re.escape(f) + re.escape(unit), w) is not None
+
+        return any(hit(f) for f in forms)
     if qtype == "articles":
         return all(_article_forms(a) & _article_mentions(w) for a in expect["articles"])
     name = norm(expect["law"])
@@ -199,13 +227,13 @@ def leak(window: str | None, qtype: str, expect: dict) -> bool:
 
 def _article_forms(label: str) -> set[str]:
     n, _, sub = label.partition("-")
-    base = {f"第{int_to_cn(int(n))}條", f"第{n}條"}
+    base = {f"第{int_to_cn(int(n))}{u}" for u in "條點"} | {f"第{n}{u}" for u in "條點"}
     if sub:
         base = {f"{b}之{int_to_cn(int(sub))}" for b in base} | {f"{b}之{sub}" for b in base}
     return base
 
 
-_ART = re.compile(r"第[零〇一二三四五六七八九十百0-9]+條(?:之[零〇一二三四五六七八九十0-9]+)?")
+_ART = re.compile(r"第[零〇一二三四五六七八九十百0-9]+[條點](?:之[零〇一二三四五六七八九十0-9]+)?")
 
 
 def _article_mentions(w: str) -> set[str]:
@@ -269,7 +297,7 @@ class Evidence:
             return out | {
                 "text": text,
                 "label": "檢索到的段落，可能來自不同法規",
-                "leak": leak(text, q["type"], q["expect"]),
+                "leak": leak(text, q["type"], q["expect"]) or leak(law, q["type"], q["expect"]),
                 "source": doc,
             }
         src = self._source_text(q)
@@ -283,7 +311,7 @@ class Evidence:
             return out
         return out | {
             "text": win,
-            "label": f"《{law}》公告原文節錄",
+            "label": "公告原文節錄",  # no law name: it would answer every `which` question
             "leak": leak(win, q["type"], q["expect"]),
             "source": q["doc"],
         }
@@ -295,6 +323,28 @@ def ask(model: str, prompt: str, kind: str, q: dict, ev: Evidence) -> dict:
     user = user_prompt(
         q["question"], qtype=q["type"], evidence=text, label=e["label"], prompt=prompt
     )
+    if (
+        kind != "none" and text is None
+    ):  # window not constructible: never send the closed-book prompt
+        return {
+            "model": model,
+            "prompt": prompt,
+            "evidence": kind,
+            "qid": q["id"],
+            "type": q["type"],
+            "has_gold": False,
+            "leak": False,
+            "source": "",
+            "evidence_chars": 0,
+            "evidence_text": "",
+            "prompt_len": 0,
+            "content": "",
+            "thinking_len": 0,
+            "eval_count": 0,
+            "duration": 0.0,
+            "done_reason": "not_constructible",
+            "error": "",
+        }
     row = {
         "model": model,
         "prompt": prompt,

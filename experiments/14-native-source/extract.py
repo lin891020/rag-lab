@@ -5,7 +5,8 @@ the law-system HTML stripped to text (Tika-style: tags off, one paragraph per li
   pdf       corpus text of 13 (or 09) for the same sysid, copied
   html      corpus/native/<sysid>.html -> text
   html+att  html text + every attachment that converts (.odt via odfpy, .docx via python-docx,
-            .pdf via pypdf); .doc (binary Word) and anything else is recorded as unavailable
+            .pdf via pypdf) and is not a repeat of text already kept (the systems attach the gazette
+            PDF itself and older versions); .doc (binary Word) and the rest are unavailable
 
     uv run --group office python experiments/14-native-source/extract.py
 """
@@ -166,6 +167,21 @@ def _pdf_text(path: Path) -> str:
     return "\n".join((p.extract_text() or "") for p in PdfReader(str(path)).pages)
 
 
+def _shingles(text: str, k: int = 30) -> set[str]:
+    t = re.sub(r"\s+", "", text)
+    return {t[i : i + k] for i in range(0, max(1, len(t) - k + 1), 7)}
+
+
+def is_novel(text: str, seen: set[str], *, k: int = 30, threshold: float = 0.5) -> bool:
+    """An attachment that mostly repeats text already in the corpus (the gazette PDF attached
+    again, an older version of the same table) is not added, else the gold would be indexed
+    several times and every hit rate would inflate."""
+    mine = _shingles(text, k)
+    if not mine:
+        return False
+    return sum(1 for sh in mine if sh in seen) / len(mine) < threshold
+
+
 def attachment_text(path: Path | str) -> tuple[str, bool]:
     """(text, available). .doc and unknown types are unavailable without LibreOffice."""
     path = Path(path)
@@ -194,11 +210,16 @@ def main() -> int:
         texts = {"pdf": pdf_src.read_text("utf-8")}
         texts["html"] = html_text((NATIVE / f"{sysid}.html").read_text("utf-8"))
         parts, att = [texts["html"]], []
+        # repeats of the page body OR of the gazette PDF are not new content (the systems attach
+        # the gazette itself and the 修正對照表 that restates the amended text)
+        seen = _shingles(texts["html"]) | _shingles(texts["pdf"])
         for a in d.get("attachments", []):
             text, ok = attachment_text(NATIVE / a["file"])
-            att.append({**a, "available": ok, "chars": len(text)})
-            if ok and text.strip():
+            novel = ok and bool(text.strip()) and is_novel(text, seen)
+            att.append({**a, "available": ok, "chars": len(text), "kept": novel})
+            if novel:
                 parts.append(f"【附件 {a['name']}】\n{text}")
+                seen |= _shingles(text)
         texts["html+att"] = "\n".join(parts)
         for route, text in texts.items():
             (CORPUS / "text" / f"{sysid}.{route}.txt").write_text(text, "utf-8")

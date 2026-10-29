@@ -24,7 +24,7 @@ def test_parse_points_finds_top_level_points_only():
     pts = parse_points(TEXT)
     assert [p.label for p in pts] == ["1", "2", "3", "4", "11"]
     assert "（一）本府各單位" in pts[1].body and "2.非第二點" in pts[1].body  # 款 and 目 kept
-    assert pts[2].body.startswith("本會置委員七人至十一人")
+    assert pts[2].body.startswith("三、本會置委員七人至十一人")  # marker kept: quotes start with it
     assert "由本府就下列人員遴聘" in pts[2].body  # continuation line joined
     assert pts[0].start < pts[1].start < pts[4].end <= len(TEXT)
 
@@ -37,7 +37,7 @@ def test_points_chunks_keep_the_front_matter_and_label_points():
     )
     pts = [c for c in chunks if c.labels != ["pre"]]
     assert [c.labels for c in pts] == [["1"], ["2"], ["3"], ["4"], ["11"]]
-    assert pts[3].text.startswith("第 4 點\n提撥上限")
+    assert pts[3].text.startswith("第 4 點\n四、提撥上限")
 
 
 def test_long_points_split_at_款_and_repeat_the_header():

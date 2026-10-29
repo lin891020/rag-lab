@@ -28,7 +28,8 @@
     "file": "E2421778-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 6130
+    "chars": 6130,
+    "kept": true
    }
   ]
  },
@@ -36,7 +37,7 @@
   "chars": {
    "pdf": 9089,
    "html": 1434,
-   "html+att": 19425
+   "html+att": 10317
   },
   "attachments": [
    {
@@ -45,7 +46,8 @@
     "file": "E2421751-att-1.odt",
     "ext": ".odt",
     "available": true,
-    "chars": 1293
+    "chars": 1293,
+    "kept": true
    },
    {
     "name": "行政院公報電子檔.pdf",
@@ -53,7 +55,8 @@
     "file": "E2421751-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 9089
+    "chars": 9089,
+    "kept": false
    },
    {
     "name": "第六點附件一及第十一點附件二修正規定.pdf",
@@ -61,7 +64,8 @@
     "file": "E2421751-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 7521
+    "chars": 7521,
+    "kept": true
    }
   ]
  },
@@ -69,7 +73,7 @@
   "chars": {
    "pdf": 6074,
    "html": 2022,
-   "html+att": 12721
+   "html+att": 6624
   },
   "attachments": [
    {
@@ -78,7 +82,8 @@
     "file": "E2423169-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 6074
+    "chars": 6074,
+    "kept": false
    },
    {
     "name": "1130927遠洋漁船經營者提供船員通訊設備使用補助作業要點修正規定_含附件.odt",
@@ -86,7 +91,8 @@
     "file": "E2423169-att-2.odt",
     "ext": ".odt",
     "available": true,
-    "chars": 4553
+    "chars": 4553,
+    "kept": true
    }
   ]
  },
@@ -94,7 +100,7 @@
   "chars": {
    "pdf": 3101,
    "html": 193,
-   "html+att": 27383
+   "html+att": 16016
   },
   "attachments": [
    {
@@ -103,7 +109,8 @@
     "file": "E2428884-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 5515
+    "chars": 5515,
+    "kept": true
    },
    {
     "name": "行政院公報電子檔.pdf",
@@ -111,7 +118,8 @@
     "file": "E2428884-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 3101
+    "chars": 3101,
+    "kept": false
    },
    {
     "name": "1131211實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -119,7 +127,8 @@
     "file": "E2428884-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2512
+    "chars": 2512,
+    "kept": true
    },
    {
     "name": "112.10.16-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -127,7 +136,8 @@
     "file": "E2428884-att-4.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2471
+    "chars": 2471,
+    "kept": true
    },
    {
     "name": "112.3.31-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -135,7 +145,8 @@
     "file": "E2428884-att-5.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2681
+    "chars": 2681,
+    "kept": false
    },
    {
     "name": "111.08.10-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -143,7 +154,8 @@
     "file": "E2428884-att-6.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2877
+    "chars": 2877,
+    "kept": false
    },
    {
     "name": "110.12.24-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -151,7 +163,8 @@
     "file": "E2428884-att-7.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2537
+    "chars": 2537,
+    "kept": false
    },
    {
     "name": "110.07.16-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -159,7 +172,8 @@
     "file": "E2428884-att-8.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2643
+    "chars": 2643,
+    "kept": true
    },
    {
     "name": "109.12.28-訂定-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
@@ -167,7 +181,8 @@
     "file": "E2428884-att-9.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2427
+    "chars": 2427,
+    "kept": true
    }
   ]
  },
@@ -184,7 +199,8 @@
     "file": "E2423850-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 221
+    "chars": 221,
+    "kept": true
    },
    {
     "name": "1131014修正對照表.pdf",
@@ -192,7 +208,8 @@
     "file": "E2423850-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 1891
+    "chars": 1891,
+    "kept": true
    }
   ]
  },
@@ -217,7 +234,8 @@
     "file": "E2416980-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 473
+    "chars": 473,
+    "kept": true
    },
    {
     "name": "附件二、電力調度費率計算公式.pdf",
@@ -225,7 +243,8 @@
     "file": "E2416980-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 888
+    "chars": 888,
+    "kept": true
    },
    {
     "name": "附件三、轉供輸電費率計算公式.pdf",
@@ -233,7 +252,8 @@
     "file": "E2416980-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 687
+    "chars": 687,
+    "kept": true
    },
    {
     "name": "附件四、轉供配電費率計算公式.pdf",
@@ -241,7 +261,8 @@
     "file": "E2416980-att-4.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 681
+    "chars": 681,
+    "kept": true
    },
    {
     "name": "附件五輸配電業各項費率計算公式各項科目說明.pdf",
@@ -249,7 +270,8 @@
     "file": "E2416980-att-5.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 642
+    "chars": 642,
+    "kept": true
    }
   ]
  },
@@ -266,7 +288,8 @@
     "file": "E2420688-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 496
+    "chars": 496,
+    "kept": true
    },
    {
     "name": "1130822-條文對照表.pdf",
@@ -274,7 +297,8 @@
     "file": "E2420688-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 6177
+    "chars": 6177,
+    "kept": true
    },
    {
     "name": "109.08.26修正總對.pdf",
@@ -282,7 +306,8 @@
     "file": "E2420688-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 3858
+    "chars": 3858,
+    "kept": true
    }
   ]
  },
@@ -299,7 +324,8 @@
     "file": "E2418038-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 12353
+    "chars": 12353,
+    "kept": true
    },
    {
     "name": "第15-1附表1之1.pdf",
@@ -307,7 +333,8 @@
     "file": "E2418038-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 1721
+    "chars": 1721,
+    "kept": true
    },
    {
     "name": "第28條附表2.pdf",
@@ -315,7 +342,8 @@
     "file": "E2418038-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 706
+    "chars": 706,
+    "kept": true
    },
    {
     "name": "附表一.pdf",
@@ -323,7 +351,8 @@
     "file": "E2418038-att-4.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 2844
+    "chars": 2844,
+    "kept": true
    },
    {
     "name": "附表三.pdf",
@@ -331,7 +360,8 @@
     "file": "E2418038-att-5.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 315
+    "chars": 315,
+    "kept": true
    },
    {
     "name": "附表四.pdf",
@@ -339,7 +369,8 @@
     "file": "E2418038-att-6.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 599
+    "chars": 599,
+    "kept": true
    },
    {
     "name": "附表五.pdf",
@@ -347,7 +378,8 @@
     "file": "E2418038-att-7.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 6317
+    "chars": 6317,
+    "kept": true
    },
    {
     "name": "第15-1條完整條文.pdf",
@@ -355,7 +387,8 @@
     "file": "E2418038-att-8.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 1146
+    "chars": 1146,
+    "kept": true
    },
    {
     "name": "第21條第2款_表.pdf",
@@ -363,7 +396,8 @@
     "file": "E2418038-att-9.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 19
+    "chars": 19,
+    "kept": true
    },
    {
     "name": "第25條第2款_表.pdf",
@@ -371,7 +405,8 @@
     "file": "E2418038-att-10.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 226
+    "chars": 226,
+    "kept": true
    },
    {
     "name": "第30條第4款及第5款_表.pdf",
@@ -379,7 +414,8 @@
     "file": "E2418038-att-11.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 25
+    "chars": 25,
+    "kept": true
    },
    {
     "name": "第30條第8款_表.pdf",
@@ -387,7 +423,8 @@
     "file": "E2418038-att-12.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 19
+    "chars": 19,
+    "kept": true
    },
    {
     "name": "第31條完整條文.PDF",
@@ -395,7 +432,8 @@
     "file": "E2418038-att-13.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 330
+    "chars": 330,
+    "kept": true
    },
    {
     "name": "第32條完整條文.PDF",
@@ -403,7 +441,8 @@
     "file": "E2418038-att-14.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 359
+    "chars": 359,
+    "kept": true
    },
    {
     "name": "第39條第2款_表.pdf",
@@ -411,7 +450,8 @@
     "file": "E2418038-att-15.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 19
+    "chars": 19,
+    "kept": true
    },
    {
     "name": "第66條_表.pdf",
@@ -419,7 +459,8 @@
     "file": "E2418038-att-16.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 14
+    "chars": 14,
+    "kept": true
    },
    {
     "name": "第67條第1項_表.pdf",
@@ -427,7 +468,8 @@
     "file": "E2418038-att-17.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 19
+    "chars": 19,
+    "kept": true
    },
    {
     "name": "第67條第2項_表.pdf",
@@ -435,7 +477,8 @@
     "file": "E2418038-att-18.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 17
+    "chars": 17,
+    "kept": true
    },
    {
     "name": "第68條完整條文.PDF",
@@ -443,7 +486,8 @@
     "file": "E2418038-att-19.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 470
+    "chars": 470,
+    "kept": true
    }
   ]
  },
@@ -451,7 +495,7 @@
   "chars": {
    "pdf": 8130,
    "html": 3277,
-   "html+att": 18994
+   "html+att": 14234
   },
   "attachments": [
    {
@@ -460,7 +504,8 @@
     "file": "E2426119-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 202
+    "chars": 202,
+    "kept": true
    },
    {
     "name": "科技產業園區管理費規費及服務費收費標準對照表（115.03.03）.pdf",
@@ -468,7 +513,8 @@
     "file": "E2426119-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 10667
+    "chars": 10667,
+    "kept": true
    },
    {
     "name": "附表一在區內營業之事業管理費費率及收費標準.pdf",
@@ -476,7 +522,8 @@
     "file": "E2426119-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 3886
+    "chars": 3886,
+    "kept": false
    },
    {
     "name": "附表二科技產業園區停車場停車費收費標準.pdf",
@@ -484,7 +531,8 @@
     "file": "E2426119-att-4.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 812
+    "chars": 812,
+    "kept": false
    }
   ]
  },
@@ -501,7 +549,8 @@
     "file": "E2427268-att-1.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 392
+    "chars": 392,
+    "kept": true
    },
    {
     "name": "科技產業園區區內事業投資管理辦法對照表（113.11.22）.pdf",
@@ -509,7 +558,8 @@
     "file": "E2427268-att-2.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 3752
+    "chars": 3752,
+    "kept": true
    },
    {
     "name": "附表申請設立區內事業實收資本額標準表.pdf",
@@ -517,7 +567,8 @@
     "file": "E2427268-att-3.pdf",
     "ext": ".pdf",
     "available": true,
-    "chars": 232
+    "chars": 232,
+    "kept": true
    }
   ]
  },

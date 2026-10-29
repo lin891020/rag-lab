@@ -136,7 +136,7 @@ def parse_points(text: str) -> list[Article]:
     out: list[Article] = []
     for i, h in enumerate(heads):
         end = heads[i + 1].start() if i + 1 < len(heads) else len(text)
-        raw = text[h.end() : end]
+        raw = text[h.start() : end]  # the marker 一、 stays in the body: quotes start with it
         body = "\n".join(ln.strip() for ln in raw.splitlines() if ln.strip()).strip()
         num = cn_to_int(h.group(1))
         out.append(Article(num, "", "", body, h.start(), end, str(num)))

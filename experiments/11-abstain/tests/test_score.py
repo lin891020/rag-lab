@@ -114,3 +114,29 @@ def test_summarize_separates_the_two_groups_and_excludes_leaks():
     assert d[("unanswerable", "answered", "P1", "P0")]["diff"] == -1.0
     assert d[("answerable", "value_ok", "P1", "P0")]["diff"] == 0.0
     assert ("answerable", "value_ok_f", "filtered", "unfiltered") in d
+
+
+def test_refusal_phrases_are_anchored_and_empty_payloads_count_as_abstention():
+    legit = {"quote": "本規定不適用於未規定事項之情形", "value": 5, "unit": "日"}
+    assert not abstained(
+        legit, "value", "P0"
+    )  # 不適用／未規定 inside statutory text is not a refusal
+    assert abstained({"quote": "依據裡沒有相關規定", "value": 5, "unit": "日"}, "value", "P0")
+    assert abstained({"found": True, "quote": "x", "law": ""}, "which", "P1")
+    assert abstained({"found": True, "quote": "x", "articles": []}, "articles", "P1")
+    assert abstained({"quote": "x", "law": "無"}, "which", "P0")
+    assert abstained({"quote": "x", "law": "N/A"}, "which", "P0")
+
+
+def test_score_rows_drops_unbuilt_windows_and_leak_checks_real_rows():
+    raw = [
+        _raw("P0", "same-doc", "q1", MADE_UP, has_gold=False)
+        | {"done_reason": "not_constructible", "content": ""},
+        _raw("P0", "real", "q1", MADE_UP, has_gold=False, ev_text="每案最高補助 5,000 元整"),
+        _raw("P0", "real", "q1", MADE_UP, has_gold=False, ev_text="別處的字"),
+    ]
+    rows = score_rows(raw, Q)
+    assert len(rows) == 2 and rows[0]["leak"] is True and rows[1]["leak"] is False
+    summary, _ = summarize(rows)
+    assert all(r["n"] == 1 for r in summary if r["group"] == "unanswerable")
+    assert any(r["metric"] == "parse_ok" for r in summary)
