@@ -1,0 +1,548 @@
+{
+ "E2418689": {
+  "chars": {
+   "pdf": 1723,
+   "html": 1479,
+   "html+att": 1479
+  },
+  "attachments": []
+ },
+ "E2418690": {
+  "chars": {
+   "pdf": 1968,
+   "html": 3742,
+   "html+att": 3742
+  },
+  "attachments": []
+ },
+ "E2421778": {
+  "chars": {
+   "pdf": 5683,
+   "html": 140,
+   "html+att": 6303
+  },
+  "attachments": [
+   {
+    "name": "1130909各級學校健康中心設施及設備基準.pdf",
+    "url": "https://edu.law.moe.gov.tw/Download.ashx?FileID=225946&id=FL046130&type=LAW",
+    "file": "E2421778-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 6130
+   }
+  ]
+ },
+ "E2421751": {
+  "chars": {
+   "pdf": 9089,
+   "html": 1434,
+   "html+att": 19425
+  },
+  "attachments": [
+   {
+    "name": "中央補助地方政府推動學校午餐採用國產可溯源食材經費支用要點.odt",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=41425&id=GL001104&type=LAW",
+    "file": "E2421751-att-1.odt",
+    "ext": ".odt",
+    "available": true,
+    "chars": 1293
+   },
+   {
+    "name": "行政院公報電子檔.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42056&id=GL001104&type=LAW",
+    "file": "E2421751-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 9089
+   },
+   {
+    "name": "第六點附件一及第十一點附件二修正規定.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42057&id=GL001104&type=LAW",
+    "file": "E2421751-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 7521
+   }
+  ]
+ },
+ "E2423169": {
+  "chars": {
+   "pdf": 6074,
+   "html": 2022,
+   "html+att": 12721
+  },
+  "attachments": [
+   {
+    "name": "1130927行政院公報.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42154&id=GL001535&type=LAW",
+    "file": "E2423169-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 6074
+   },
+   {
+    "name": "1130927遠洋漁船經營者提供船員通訊設備使用補助作業要點修正規定_含附件.odt",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42155&id=GL001535&type=LAW",
+    "file": "E2423169-att-2.odt",
+    "ext": ".odt",
+    "available": true,
+    "chars": 4553
+   }
+  ]
+ },
+ "E2428884": {
+  "chars": {
+   "pdf": 3101,
+   "html": 193,
+   "html+att": 27383
+  },
+  "attachments": [
+   {
+    "name": "1131211修正_實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表修正總說明及對照表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42463&id=GL001940&type=LAW",
+    "file": "E2428884-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 5515
+   },
+   {
+    "name": "行政院公報電子檔.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42441&id=GL001940&type=LAW",
+    "file": "E2428884-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 3101
+   },
+   {
+    "name": "1131211實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42464&id=GL001940&type=LAW",
+    "file": "E2428884-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2512
+   },
+   {
+    "name": "112.10.16-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42406&id=GL001940&type=LAW",
+    "file": "E2428884-att-4.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2471
+   },
+   {
+    "name": "112.3.31-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42397&id=GL001940&type=LAW",
+    "file": "E2428884-att-5.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2681
+   },
+   {
+    "name": "111.08.10-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=28981&id=GL001940&type=LAW",
+    "file": "E2428884-att-6.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2877
+   },
+   {
+    "name": "110.12.24-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=28973&id=GL001940&type=LAW",
+    "file": "E2428884-att-7.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2537
+   },
+   {
+    "name": "110.07.16-修正-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=16691&id=GL001940&type=LAW",
+    "file": "E2428884-att-8.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2643
+   },
+   {
+    "name": "109.12.28-訂定-實施農產品產銷履歷驗證制度之特定農產品類別及品項一覽表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=28977&id=GL001940&type=LAW",
+    "file": "E2428884-att-9.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2427
+   }
+  ]
+ },
+ "E2423850": {
+  "chars": {
+   "pdf": 1081,
+   "html": 2554,
+   "html+att": 4712
+  },
+  "attachments": [
+   {
+    "name": "1131014修正總說明.pdf",
+    "url": "https://law-out.mof.gov.tw/Download.ashx?FileID=51897&id=FL047059&type=LAW",
+    "file": "E2423850-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 221
+   },
+   {
+    "name": "1131014修正對照表.pdf",
+    "url": "https://law-out.mof.gov.tw/Download.ashx?FileID=51898&id=FL047059&type=LAW",
+    "file": "E2423850-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 1891
+   }
+  ]
+ },
+ "E2425151": {
+  "chars": {
+   "pdf": 2036,
+   "html": 1912,
+   "html+att": 1912
+  },
+  "attachments": []
+ },
+ "E2416980": {
+  "chars": {
+   "pdf": 3358,
+   "html": 924,
+   "html+att": 4427
+  },
+  "attachments": [
+   {
+    "name": "附件一、輔助服務費率計算公式.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=189463&id=GL000402&type=LAW",
+    "file": "E2416980-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 473
+   },
+   {
+    "name": "附件二、電力調度費率計算公式.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=189464&id=GL000402&type=LAW",
+    "file": "E2416980-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 888
+   },
+   {
+    "name": "附件三、轉供輸電費率計算公式.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=189465&id=GL000402&type=LAW",
+    "file": "E2416980-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 687
+   },
+   {
+    "name": "附件四、轉供配電費率計算公式.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=189466&id=GL000402&type=LAW",
+    "file": "E2416980-att-4.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 681
+   },
+   {
+    "name": "附件五輸配電業各項費率計算公式各項科目說明.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=43336&id=GL000402&type=LAW",
+    "file": "E2416980-att-5.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 642
+   }
+  ]
+ },
+ "E2420688": {
+  "chars": {
+   "pdf": 2906,
+   "html": 3518,
+   "html+att": 14121
+  },
+  "attachments": [
+   {
+    "name": "1130822-修正總說明.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42025&id=FL032062&type=LAW",
+    "file": "E2420688-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 496
+   },
+   {
+    "name": "1130822-條文對照表.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=42026&id=FL032062&type=LAW",
+    "file": "E2420688-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 6177
+   },
+   {
+    "name": "109.08.26修正總對.pdf",
+    "url": "https://law.moa.gov.tw/Download.ashx?FileID=14837&id=FL032062&type=LAW",
+    "file": "E2420688-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 3858
+   }
+  ]
+ },
+ "E2418038": {
+  "chars": {
+   "pdf": 5519,
+   "html": 27303,
+   "html+att": 55244
+  },
+  "attachments": [
+   {
+    "name": "公共危險物品及可燃性高壓氣體製造儲存處理場所設置標準暨安全管理辦法部分條文及第十五條之一附表一之一、第二十八條附表二修正總說明及對照表(113.07.16).pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=23630&id=FL005037&type=LAW",
+    "file": "E2418038-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 12353
+   },
+   {
+    "name": "第15-1附表1之1.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=23628&id=FL005037&type=LAW",
+    "file": "E2418038-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 1721
+   },
+   {
+    "name": "第28條附表2.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=23629&id=FL005037&type=LAW",
+    "file": "E2418038-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 706
+   },
+   {
+    "name": "附表一.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=7914&id=FL005037&type=LAW",
+    "file": "E2418038-att-4.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 2844
+   },
+   {
+    "name": "附表三.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=7916&id=FL005037&type=LAW",
+    "file": "E2418038-att-5.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 315
+   },
+   {
+    "name": "附表四.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=7917&id=FL005037&type=LAW",
+    "file": "E2418038-att-6.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 599
+   },
+   {
+    "name": "附表五.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=21690&id=FL005037&type=LAW",
+    "file": "E2418038-att-7.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 6317
+   },
+   {
+    "name": "第15-1條完整條文.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20780&id=FL005037&type=LAW",
+    "file": "E2418038-att-8.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 1146
+   },
+   {
+    "name": "第21條第2款_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20781&id=FL005037&type=LAW",
+    "file": "E2418038-att-9.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 19
+   },
+   {
+    "name": "第25條第2款_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=21691&id=FL005037&type=LAW",
+    "file": "E2418038-att-10.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 226
+   },
+   {
+    "name": "第30條第4款及第5款_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20783&id=FL005037&type=LAW",
+    "file": "E2418038-att-11.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 25
+   },
+   {
+    "name": "第30條第8款_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20784&id=FL005037&type=LAW",
+    "file": "E2418038-att-12.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 19
+   },
+   {
+    "name": "第31條完整條文.PDF",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20786&id=FL005037&type=LAW",
+    "file": "E2418038-att-13.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 330
+   },
+   {
+    "name": "第32條完整條文.PDF",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20787&id=FL005037&type=LAW",
+    "file": "E2418038-att-14.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 359
+   },
+   {
+    "name": "第39條第2款_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20788&id=FL005037&type=LAW",
+    "file": "E2418038-att-15.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 19
+   },
+   {
+    "name": "第66條_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20789&id=FL005037&type=LAW",
+    "file": "E2418038-att-16.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 14
+   },
+   {
+    "name": "第67條第1項_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=20790&id=FL005037&type=LAW",
+    "file": "E2418038-att-17.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 19
+   },
+   {
+    "name": "第67條第2項_表.pdf",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=21692&id=FL005037&type=LAW",
+    "file": "E2418038-att-18.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 17
+   },
+   {
+    "name": "第68條完整條文.PDF",
+    "url": "https://glrs.moi.gov.tw/Download.ashx?FileID=21693&id=FL005037&type=LAW",
+    "file": "E2418038-att-19.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 470
+   }
+  ]
+ },
+ "E2426119": {
+  "chars": {
+   "pdf": 8130,
+   "html": 3277,
+   "html+att": 18994
+  },
+  "attachments": [
+   {
+    "name": "科技產業園區管理費規費及服務費收費標準總說明（115.03.03）.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=192515&id=FL011232&type=LAW",
+    "file": "E2426119-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 202
+   },
+   {
+    "name": "科技產業園區管理費規費及服務費收費標準對照表（115.03.03）.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=192516&id=FL011232&type=LAW",
+    "file": "E2426119-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 10667
+   },
+   {
+    "name": "附表一在區內營業之事業管理費費率及收費標準.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=192517&id=FL011232&type=LAW",
+    "file": "E2426119-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 3886
+   },
+   {
+    "name": "附表二科技產業園區停車場停車費收費標準.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=192518&id=FL011232&type=LAW",
+    "file": "E2426119-att-4.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 812
+   }
+  ]
+ },
+ "E2427268": {
+  "chars": {
+   "pdf": 1766,
+   "html": 1138,
+   "html+att": 5625
+  },
+  "attachments": [
+   {
+    "name": "科技產業園區區內事業投資管理辦法總說明（113.11.22）.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=190042&id=FL011214&type=LAW",
+    "file": "E2427268-att-1.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 392
+   },
+   {
+    "name": "科技產業園區區內事業投資管理辦法對照表（113.11.22）.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=190043&id=FL011214&type=LAW",
+    "file": "E2427268-att-2.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 3752
+   },
+   {
+    "name": "附表申請設立區內事業實收資本額標準表.pdf",
+    "url": "https://law.moea.gov.tw/Download.ashx?FileID=190044&id=FL011214&type=LAW",
+    "file": "E2427268-att-3.pdf",
+    "ext": ".pdf",
+    "available": true,
+    "chars": 232
+   }
+  ]
+ },
+ "E2417271": {
+  "chars": {
+   "pdf": 4244,
+   "html": 7383,
+   "html+att": 7383
+  },
+  "attachments": []
+ },
+ "E2419634": {
+  "chars": {
+   "pdf": 1695,
+   "html": 6363,
+   "html+att": 6363
+  },
+  "attachments": []
+ },
+ "E2419637": {
+  "chars": {
+   "pdf": 2323,
+   "html": 7217,
+   "html+att": 7217
+  },
+  "attachments": []
+ }
+}

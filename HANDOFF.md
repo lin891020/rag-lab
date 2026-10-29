@@ -1,6 +1,6 @@
 # HANDOFF
 
-最後更新：2026-10-29 17:20（mini）。
+最後更新：2026-10-29 18:00（mini）。
 
 ## 現在在哪一步
 
@@ -9,11 +9,13 @@
 11-abstain（找不到要說找不到）程式寫完、煙霧測試過，`scratchpad/chain11.sh` 會在 10 跑完後自動開跑 3,200 次（約 4.5 小時，到隔天凌晨）；掛了就手動 `uv run python experiments/11-abstain/run_read.py`（可續跑）。
 12-rerank（重排序）程式也寫完、煙霧測試過，`scratchpad/chain12.sh` 在 11 跑完後接著跑 `run_rerank.py`（兩格 × 五重排器，需 `uv sync --group rerank`）再 `run_read.py`（1,280 次），估到隔天上午；掛了手動跑，都可續跑。
 13-points-tables（沒有「條」的文件怎麼切）語料 30 份、169 題、程式、README 1–2 節都好了；`scratchpad/chain13.sh` 在 12 跑完後接著跑 OCR（1 份 2 頁）→ `run_retrieval.py` → `attribute.py` → `run_read.py`（1,690 次 ≈ 2.5 小時）。掛了手動照這順序跑。
-`docs/2026-10-29-real-data-playbook.md`（01–10 整理成一條流程）初稿已推，10–13 的數字跑完補。
+14-native-source（公報 PDF vs 法規系統 HTML／附件）語料 16 份、87 題（13／09 原題）、三路線文字、程式、README 1–2 節都好了；`scratchpad/chain14.sh` 在 13 跑完後接著跑 `run_retrieval.py` → `attribute.py` → `run_read.py`（1,044 次 ≈ 1.5 小時）。要重跑抽字用 `uv run --group office python experiments/14-native-source/extract.py`。
+`docs/2026-10-29-real-data-playbook.md`（01–10 整理成一條流程）初稿已推，10–14 的數字跑完補。
 **Mike 的要求（2026-10-29）：實驗都要完整跑、機器不要空著、不要反覆上下模型**——跑的時候不要再叫 ollama 做別的事（13 的 OCR 與向量因此排在 12 之後）。
 
 ## 已驗證
 
+- 14：16 份原生頁抓到（14 份版本跟公報同日、1 份用法規資料庫歷史版、2 份只有現行版標記）、66 個附件（pdf 64、odt 2）；三路線文字抽完，quote 覆蓋 pdf 87/87、html 55/87、html+att 81/87；13 個測試綠；切塊乾跑三路線 × 三切法都有塊。
 - 13：語料 30 份（要點 20／附表 10）體檢過；169 題 quote 全驗到（E2422248 掃描待 OCR）；15 題獨立 agent 抽查 15/15 對；17+ 測試綠；rows 路線 10 份找到 8 份的表。
 - 12：11 個測試綠；煙霧測試 3 題 × 5 重排器（bge／Qwen3-Reranker 在 MPS 上跑得動、listwise 走 ollama）、漂移 6/6；新依賴 optional group `rerank` 裝好（torch 2.15 MPS）。
 - 11：14 個測試綠（P0 逐字同 09、leak 抓中文／阿拉伯數字、濾網去空白比對）；煙霧測試 2 題 × 2 提示 × 5 依據 20 次 OK（P1 在沒答案的依據上 6/6 棄答）。
@@ -38,5 +40,6 @@
 1. 等 10 的閱讀軌跑完（`results/read/raw.jsonl` 4,160 列）→ score、report、README 3–5 節、根 README、playbook 補數字。
 2. 等 11 跑完（3,200 列）→ 同上，playbook 第 5 節加「找不到要說找不到」。
 3. 等 12 跑完（rerank 1,600 列、read 1,280 列）→ 同上，playbook 第 4 節加重排。
-4. 等 13 跑完（retrieval 72 格、read 1,690 列）→ 同上，playbook 第 3 節加「沒有條的文件」。之後候選：非 PDF 來源、文件改版、真人問法。
-5. hit@1000 跟 1,000 字塊的耦合要解（切 900 或預算 1,200），之後的實驗都受影響。
+4. 等 13 跑完（retrieval 72 格、read 1,690 列）→ 同上，playbook 第 3 節加「沒有條的文件」。
+5. 等 14 跑完（retrieval 54 格、read 1,044 列）→ 同上，playbook 第 2 節加「拿得到原始格式就不要用 PDF」。之後候選：文件改版（法規系統的歷史法規是現成來源）、真人問法。
+6. hit@1000 跟 1,000 字塊的耦合要解（切 900 或預算 1,200），之後的實驗都受影響。

@@ -38,6 +38,7 @@ LOCAL = {
     "render",
     "rerankers",
     "run_rerank",
+    "fetch_native",
 }
 
 
