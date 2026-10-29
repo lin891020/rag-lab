@@ -101,3 +101,11 @@ def test_table_flat_fixed_labels_tables_by_span(tables):
     chunks = table_flat_fixed_chunks(tables, size=1000, overlap=200, separators=SEPS)
     assert {lab for c in chunks for lab in c.labels} == set(tables)
     assert all(isinstance(c, Chunk) and c.labels for c in chunks)
+
+
+def test_table_row_chunks_accept_values_with_a_suffix():
+    from chunkers import table_row_chunks
+
+    text = "表九二 線徑\n導線 線徑\n銅線 25以下\n鋁線 l0以下\n註：略\n"
+    rows = table_row_chunks({"表九二": text})
+    assert [c.text.splitlines()[-1] for c in rows] == ["銅線 25以下", "鋁線 l0以下"]

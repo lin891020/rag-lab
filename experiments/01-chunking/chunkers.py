@@ -139,9 +139,15 @@ def table_whole_chunks(tables: dict[str, str]) -> list[Chunk]:
     return [Chunk(text, [tid], meta={"table": tid}) for tid, text in tables.items()]
 
 
+_HAS_DIGIT = re.compile(r"[0-9]")
+
+
 def _is_row(line: str) -> bool:
+    """A data row: two or more tokens and a number somewhere in the last one. The 2026-10-29
+    audit found 7 tables with no row under the old rule (last token had to be purely numeric:
+    值 like 25以下 or the OCR'd l0以下 never qualified), among them t15's gold 表九二."""
     toks = line.split()
-    return len(toks) >= 2 and bool(_NUMERIC.match(toks[-1]))
+    return len(toks) >= 2 and bool(_HAS_DIGIT.search(toks[-1]))
 
 
 def table_row_chunks(tables: dict[str, str]) -> list[Chunk]:
