@@ -6,8 +6,8 @@
 10's judge (strict value_ok, lenient value_lenient) plus, per reply:
   answered    the model gave an answer (not abstained):
                 P1  found is true
-                P0  value not 0 / null, articles not empty, law not empty, and the quote does
-                    not say 無／沒有／未／找不到 (the only ways to refuse without a flag)
+                P0  value not 0 / null, articles not empty, law not empty, and the quote is
+                    not a refusal phrase (無明確規定、找不到…; a lone 無 is not one)
   grounded    the model's quote (≥ 4 chars, whitespace removed, NFKC) occurs in the evidence
   answered_f / value_ok_f   after the program filter: an answer whose quote is not grounded
                             is turned into an abstention
@@ -46,7 +46,11 @@ GROUP_METRICS = {
     "unanswerable": ["answered", "answered_f", "lucky", "grounded"],
     "answerable": ["answered", "value_ok", "value_lenient", "value_ok_f", "grounded"],
 }
-_REFUSE = re.compile(r"無|沒有|未(?:提|載|規定|說明)|找不到|不適用|無法")
+# whole refusal phrases only: a lone 無／未 is everywhere in legal text (無工作能力, 未滿四十歲)
+_REFUSE = re.compile(
+    r"無明確|無相關|無資料|無此|無規定|沒有(?:提|規定|說明|相關|答案|資料|明確)|未(?:提及|載明|規定|說明)"
+    r"|找不到|不適用|無法(?:判斷|確定|找到|回答|得知)|資料不足|依據(?:中|裡)?(?:沒有|無)"
+)
 
 UNIT_ALIASES: dict[str, list[str]] = {
     "": ["", "無", "none", "無單位", "係數", "factor", "-", "倍", "x", "×", "ratio"],

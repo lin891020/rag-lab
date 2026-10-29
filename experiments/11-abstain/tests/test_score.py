@@ -12,6 +12,11 @@ def test_p0_abstention_is_inferred_from_empty_or_refusing_answers():
     assert abstained({"quote": "x", "value": 0, "unit": "元"}, "value", "P0")  # value 0
     assert abstained({"quote": "依據裡找不到相關條文", "value": 5, "unit": "日"}, "value", "P0")
     assert not abstained({"quote": "每案補助 5,000 元", "value": 5000, "unit": "元"}, "value", "P0")
+    legit = "辦理工作能力評估結果為無工作能力者達百分之九十四以上"  # a lone 無 is not a refusal
+    assert not abstained({"quote": legit, "value": 94, "unit": "%"}, "value", "P0")
+    assert not abstained(
+        {"quote": "未滿四十歲者，得每二年實施一次。", "value": 2, "unit": "年"}, "value", "P0"
+    )
     assert abstained({"quote": "x", "articles": []}, "articles", "P0")
     assert abstained({"quote": "x", "law": ""}, "which", "P0")
     assert not abstained({"quote": "x", "law": "臺北市A辦法"}, "which", "P0")
