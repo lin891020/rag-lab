@@ -14,6 +14,7 @@
 | [06-ocr-source](experiments/06-ocr-source/README.md) | 同一張表從 300 dpi 頁圖 OCR 回來，模型讀表掉多少？哪條本地 OCR 能用？ | glm-ocr（0.9B，提示尾加換行）跟文字層分不出（.73 vs .79、.88 vs .93）；提示照抄就掉 .10；Apple Vision 掉 .35–.43、tesseract chi_tra 等於閉卷 |
 | [07-chunking-2](experiments/07-chunking-2/README.md) | 標題鏈前綴、LLM 脈絡句、頁級、父子、混合檢索，哪個讓條文找得更準？ | 一條一塊之後全都動不了：前綴 0、脈絡句 +.03、父子 0、混合 −.05～+.03（區間含 0）；頁級 −.28 分得出，輸在塞不進預算 |
 | [08-messy](experiments/08-messy/README.md) | 把乾淨法規故意弄亂六種（頁首頁尾、兩欄、串接、手機拍、影印三代、無框線表），哪種弄壞哪一步、掉幾分？ | 只有兩種分得出：兩欄用 pdfplumber 抽把條號黏掉（一條一塊 −.80，固定切只 −.10）、表格沒框線用 text 策略欄黏成一格（gpt-oss −.11，攤平反而只 −.07）；頁首頁尾、串接、兩級掃描都在 ±.06 內分不出；附資料體檢工具 `doc_health.py` |
+| [09-messy-real](experiments/09-messy-real/README.md) | 30 份天生就亂的公報法規修正案（對照表、掃描、亂碼、橫式附表），01–08 的 pipeline 不改直接上，08 的對照表準不準？ | 症狀中了三列、原因沒一列一樣（公報條號是中文數字同行，01 的切條 160/160 切不出）；沒預測到 cid 亂碼、前言被丟、要點沒條、塊撞預算四種；三個修法把檢索 .00 → .89、閱讀閉卷 → .71／.64，上限 .84／.82；rows 路線檢索看不出差、閱讀救回「抄到現行欄」 |
 
 ## 怎麼跑
 
@@ -25,4 +26,5 @@ uv run python experiments/02-json-output/run.py  # 需要 qwen3:8b、gpt-oss:20b
 uv run python experiments/03-table-format/run.py # 同上；語料已在 corpus/，重建要 01 的附件 PDF
 uv run python experiments/04-table-lookup/run.py # 同上；讀 corpus/tables.json，不需要 PDF
 uv run python experiments/08-messy/build_corpus.py  # 弄亂語料（要 01 的 law.pdf 與 glm-ocr）；之後 run_text.py、run_table.py、doc_health.py <資料夾>
+uv run python experiments/09-messy-real/build_corpus.py  # 從國圖 gov.xml 抽 30 份（PDF 已在 corpus/）；之後 extract.py（掃描頁要 glm-ocr）、run_retrieval.py、attribute.py、run_read.py、score.py、report.py
 ```

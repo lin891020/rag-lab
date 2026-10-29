@@ -12,6 +12,7 @@ from extract import compare_rows, law_name, ocr_pages, records_to_text
 def _n(s: str) -> str:
     return s.replace("\n", "")
 
+
 FONT = pymupdf.Font("cjk")
 W, H = 595, 842
 
