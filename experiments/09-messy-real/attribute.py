@@ -68,8 +68,8 @@ def classify(
             if health.get("rotated_pages", 0) > 0:
                 return "rotated"
             return "extract_other"
-        if chunking.startswith("article") and quote_before_first_article:
-            return "preamble_dropped"
+        if chunking in ("article", "article-cn") and quote_before_first_article:
+            return "preamble_dropped"  # +pre keeps the preamble, so there it is a chunk_cut
         return "chunk_cut"
     if hit5:
         return "over_budget"
@@ -85,7 +85,7 @@ def quote_position(text: str, quote: str, chunking: str) -> tuple[bool, bool]:
     parser = parse_articles if chunking == "article" else parse_articles_cn
     arts = parser(text)
     if not arts:
-        return True, True
+        return True, False  # no article at all: nothing was dropped, the text was just not cut
     head = norm(text[: arts[0].start])
     return True, norm(quote) in head
 

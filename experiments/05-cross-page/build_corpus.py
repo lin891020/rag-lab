@@ -30,7 +30,11 @@ TABLES: dict[str, str] = {
 }
 # 03's header rule (last of the first four rows with a colspan) misreads the two 危險場所 tables:
 # their first column is a two-level label whose spans sit in every row. One header row each.
-HEADER_ROWS: dict[str, int] = {"表五八七～一": 1, "表五八七～三": 1}
+HEADER_ROWS: dict[str, int] = {
+    "表五八七～一": 1,
+    "表五八七～三": 1,
+    "表五六": 2,
+}  # 表五六: 2 since the 2026-10-29 audit (page 0 fell back to 1, merged guessed 2)
 
 
 def main() -> int:

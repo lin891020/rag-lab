@@ -278,7 +278,7 @@ class Evidence:
 
     def for_question(self, kind: str, q: dict) -> dict:
         """{text, label, has_gold, leak, source}; text None = no evidence / not constructible."""
-        law = self.laws[q["doc"]]
+        law = self.laws[q["doc"]]  # only used by leak(): the label never carries it
         gold = {"doc": q["doc"], "quote": q["quote"]}
         out = {"text": None, "label": "", "has_gold": False, "leak": False, "source": ""}
         if kind == "none":
@@ -305,7 +305,7 @@ class Evidence:
             return out
         if kind == "gold":
             win = oracle_window(src, q["quote"])
-            return out | {"text": win, "label": f"《{law}》公告原文節錄", "has_gold": True}
+            return out | {"text": win, "label": "公告原文節錄", "has_gold": True}  # no law name
         win = same_doc_window(src, q["quote"])  # same-doc
         if win is None:
             return out

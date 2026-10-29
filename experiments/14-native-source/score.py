@@ -144,7 +144,10 @@ def normalize_unit(unit: str) -> str:
 
 
 def _unit_matches(got: str, want: str) -> bool:
-    return _fold(got) in {_fold(a) for a in [want, *UNIT_ALIASES.get(want, [])]}
+    """Both sides canonicalised, so 名 vs 人 matches whichever one the question expects."""
+    if _fold(got) in {_fold(a) for a in [want, *UNIT_ALIASES.get(want, [])]}:
+        return True
+    return normalize_unit(got) == normalize_unit(want)
 
 
 _FENCE = re.compile(r"^\s*```[a-zA-Z]*\s*\n?(.*?)\n?\s*```\s*$", re.S)

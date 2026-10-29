@@ -181,7 +181,11 @@ class Evidence:
             for route in ("base", "ocr"):
                 win = oracle_window(self.texts[route][q["doc"]], q["quote"])
                 if win is not None:
-                    return win, f"《{self.laws[q['doc']]}》公告原文節錄", True
+                    return (
+                        win,
+                        "公告原文節錄",
+                        True,
+                    )  # no law name: it answers every `which` question
             return None, "", False
         text, has_gold = budget_evidence(self.ranked[cond][q["id"]], gold)
         return text, "檢索到的段落，可能來自不同法規", has_gold
