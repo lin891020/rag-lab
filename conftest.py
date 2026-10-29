@@ -30,6 +30,12 @@ LOCAL = {
     "run_text",
     "run_table",
     "structure",
+    "extract",
+    "attribute",
+    "run_retrieval",
+    "run_read",
+    "ocr",
+    "render",
 }
 
 

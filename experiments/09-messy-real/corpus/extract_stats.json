@@ -1,0 +1,320 @@
+{
+ "E2418500": {
+  "ocr_pages": [],
+  "records": 56,
+  "chars": {
+   "base": 22915,
+   "ocr": 22915,
+   "rows": 18363
+  }
+ },
+ "E2419845": {
+  "ocr_pages": [],
+  "records": 2,
+  "chars": {
+   "base": 3319,
+   "ocr": 3319,
+   "rows": 2838
+  }
+ },
+ "E2421536": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 2188,
+   "ocr": 2188,
+   "rows": 2188
+  }
+ },
+ "E2421709": {
+  "ocr_pages": [],
+  "records": 39,
+  "chars": {
+   "base": 19559,
+   "ocr": 19559,
+   "rows": 17638
+  }
+ },
+ "E2421710": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 8191,
+   "ocr": 8191,
+   "rows": 8191
+  }
+ },
+ "E2421820": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 8773,
+   "ocr": 8773,
+   "rows": 8773
+  }
+ },
+ "E2422212": {
+  "ocr_pages": [],
+  "records": 3,
+  "chars": {
+   "base": 2555,
+   "ocr": 2555,
+   "rows": 2406
+  }
+ },
+ "E2422448": {
+  "ocr_pages": [
+   2,
+   3
+  ],
+  "records": 0,
+  "chars": {
+   "base": 3755,
+   "ocr": 4906,
+   "rows": 3755
+  }
+ },
+ "E2423536": {
+  "ocr_pages": [],
+  "records": 7,
+  "chars": {
+   "base": 16698,
+   "ocr": 16698,
+   "rows": 15791
+  }
+ },
+ "E2423739": {
+  "ocr_pages": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "records": 0,
+  "chars": {
+   "base": 35038,
+   "ocr": 25690,
+   "rows": 35038
+  }
+ },
+ "E2426224": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 7863,
+   "ocr": 7863,
+   "rows": 7863
+  }
+ },
+ "E2426379": {
+  "ocr_pages": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "records": 0,
+  "chars": {
+   "base": 446,
+   "ocr": 4864,
+   "rows": 446
+  }
+ },
+ "E2426541": {
+  "ocr_pages": [],
+  "records": 3,
+  "chars": {
+   "base": 3074,
+   "ocr": 3074,
+   "rows": 2873
+  }
+ },
+ "E2430659": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 7133,
+   "ocr": 7133,
+   "rows": 7133
+  }
+ },
+ "E2430903": {
+  "ocr_pages": [],
+  "records": 1,
+  "chars": {
+   "base": 2285,
+   "ocr": 2285,
+   "rows": 2022
+  }
+ },
+ "E2417271": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 4244,
+   "ocr": 4244,
+   "rows": 4244
+  }
+ },
+ "E2418038": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 5519,
+   "ocr": 5519,
+   "rows": 5519
+  }
+ },
+ "E2419634": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 1695,
+   "ocr": 1695,
+   "rows": 1695
+  }
+ },
+ "E2419637": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 2323,
+   "ocr": 2323,
+   "rows": 2323
+  }
+ },
+ "E2419989": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 1592,
+   "ocr": 1592,
+   "rows": 1592
+  }
+ },
+ "E2420688": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 2906,
+   "ocr": 2906,
+   "rows": 2906
+  }
+ },
+ "E2420852": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 1975,
+   "ocr": 1975,
+   "rows": 1975
+  }
+ },
+ "E2423385": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 3609,
+   "ocr": 3609,
+   "rows": 3609
+  }
+ },
+ "E2426119": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 8130,
+   "ocr": 8130,
+   "rows": 8130
+  }
+ },
+ "E2427268": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 1766,
+   "ocr": 1766,
+   "rows": 1766
+  }
+ },
+ "E2428764": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 1929,
+   "ocr": 1929,
+   "rows": 1929
+  }
+ },
+ "E2428802": {
+  "ocr_pages": [
+   1,
+   2
+  ],
+  "records": 0,
+  "chars": {
+   "base": 247,
+   "ocr": 1470,
+   "rows": 247
+  }
+ },
+ "E2429662": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 4291,
+   "ocr": 4291,
+   "rows": 4291
+  }
+ },
+ "E2430372": {
+  "ocr_pages": [
+   1,
+   2
+  ],
+  "records": 0,
+  "chars": {
+   "base": 183,
+   "ocr": 821,
+   "rows": 183
+  }
+ },
+ "E2500286": {
+  "ocr_pages": [],
+  "records": 0,
+  "chars": {
+   "base": 4376,
+   "ocr": 4376,
+   "rows": 4376
+  }
+ }
+}

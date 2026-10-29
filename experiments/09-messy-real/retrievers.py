@@ -1,0 +1,124 @@
+"""Three retrievers over a list of Chunk: dense (bge-m3 cosine), BM25 (char bigrams), random."""
+
+from __future__ import annotations
+
+import hashlib
+import logging
+import math
+import random
+import re
+from collections import Counter
+from collections.abc import Callable
+from pathlib import Path
+
+import numpy as np
+
+from chunkers import Chunk
+
+logger = logging.getLogger(__name__)
+
+EmbedFn = Callable[[list[str]], list[list[float]]]
+
+
+class EmbedCache:
+    """sha256(text) -> vector, persisted as one .npz. Keyed per model by using one file per digest."""
+
+    def __init__(self, path: Path):
+        self.path = path
+        self.vecs: dict[str, np.ndarray] = {}
+        if path.exists():
+            z = np.load(path, allow_pickle=False)
+            self.vecs = dict(zip(z["keys"].tolist(), z["vecs"]))
+        self._dirty = False
+
+    @staticmethod
+    def key(text: str) -> str:
+        return hashlib.sha256(text.encode()).hexdigest()
+
+    def fetch(
+        self, texts: list[str], embed: EmbedFn, batch: int = 64, max_chars: int = 24000
+    ) -> np.ndarray:
+        """Batches are capped by count and by characters: a gazette chunk can run to several
+        thousand characters and 64 of them exceed ollama's request limit (HTTP 413)."""
+        missing = sorted({t for t in texts if self.key(t) not in self.vecs})
+        part: list[str] = []
+        chars = 0
+        for t in [*missing, None]:
+            if t is None or (part and (len(part) >= batch or chars + len(t) > max_chars)):
+                for u, v in zip(part, embed(part), strict=True):
+                    self.vecs[self.key(u)] = np.asarray(v, dtype=np.float32)
+                part, chars = [], 0
+            if t is not None:
+                part.append(t)
+                chars += len(t)
+        if missing:
+            self._dirty = True
+        logger.info("embeddings", extra={"ctx": {"n": len(texts), "computed": len(missing)}})
+        return np.stack([self.vecs[self.key(t)] for t in texts])
+
+    def save(self) -> None:
+        if not self._dirty:
+            return
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        keys = list(self.vecs)
+        np.savez(self.path, keys=np.array(keys), vecs=np.stack([self.vecs[k] for k in keys]))
+        self._dirty = False
+
+
+class DenseIndex:
+    def __init__(self, matrix: np.ndarray, embed: EmbedFn, cache: EmbedCache):
+        norms = np.linalg.norm(matrix, axis=1, keepdims=True)
+        self.matrix = matrix / np.where(norms == 0, 1, norms)
+        self.embed = embed
+        self.cache = cache
+
+    @classmethod
+    def build(cls, chunks: list[Chunk], embed: EmbedFn, cache: EmbedCache) -> DenseIndex:
+        return cls(cache.fetch([c.text for c in chunks], embed), embed, cache)
+
+    def search(self, query: str, k: int) -> list[int]:
+        q = self.cache.fetch([query], self.embed)[0]
+        q = q / (np.linalg.norm(q) or 1)
+        scores = self.matrix @ q
+        return [int(i) for i in np.argsort(-scores, kind="stable")[:k]]
+
+
+_STRIP = re.compile(r"\s+")
+
+
+def bigrams(text: str) -> list[str]:
+    s = _STRIP.sub("", text)
+    return [s[i : i + 2] for i in range(len(s) - 1)] or [s]
+
+
+class BM25Index:
+    """Okapi BM25 over character bigrams; no dictionary, so it works on any Chinese text."""
+
+    def __init__(self, chunks: list[Chunk], *, k1: float = 1.5, b: float = 0.75):
+        self.k1, self.b = k1, b
+        self.docs = [Counter(bigrams(c.text)) for c in chunks]
+        self.lens = np.array([sum(d.values()) for d in self.docs], dtype=np.float32)
+        self.avg = float(self.lens.mean()) if len(self.lens) else 0.0
+        df: Counter[str] = Counter()
+        for d in self.docs:
+            df.update(d.keys())
+        n = len(self.docs)
+        self.idf = {t: math.log(1 + (n - f + 0.5) / (f + 0.5)) for t, f in df.items()}
+
+    def search(self, query: str, k: int) -> list[int]:
+        scores = np.zeros(len(self.docs), dtype=np.float32)
+        for t in set(bigrams(query)):
+            idf = self.idf.get(t)
+            if idf is None:
+                continue
+            for i, d in enumerate(self.docs):
+                tf = d.get(t, 0)
+                if tf:
+                    denom = tf + self.k1 * (1 - self.b + self.b * self.lens[i] / self.avg)
+                    scores[i] += idf * tf * (self.k1 + 1) / denom
+        return [int(i) for i in np.argsort(-scores, kind="stable")[:k]]
+
+
+def random_rankings(*, n_chunks: int, k: int, draws: int, seed: int) -> list[list[int]]:
+    rng = random.Random(seed)
+    return [rng.sample(range(n_chunks), k) for _ in range(draws)]
