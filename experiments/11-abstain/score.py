@@ -31,6 +31,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent))
 from chunkers import cn_to_int  # noqa: E402
+from run_read import leak  # noqa: E402  (bound at import: the test runner swaps experiments)
 
 logger = logging.getLogger(__name__)
 
@@ -334,8 +335,6 @@ def score_rows(raw: list[dict], questions: dict[str, dict]) -> list[dict]:
     """Rows whose window could not be built are dropped (no model call was made); `real` rows
     without the gold get the same leak check as the distractor windows (recomputed here from
     the stored evidence text, so a better `leak` applies to finished runs)."""
-    from run_read import leak
-
     out = []
     for r in raw:
         if r.get("done_reason") == "not_constructible":
