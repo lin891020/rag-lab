@@ -1,16 +1,18 @@
 # HANDOFF
 
-最後更新：2026-10-29 15:55（mini）。
+最後更新：2026-10-29 16:30（mini）。
 
 ## 現在在哪一步
 
 10-fix-ablation 跑到一半：把 09 的三個修法拆開量（加一個／關一個，13 條件 × 2 模型 × 160 題 = 4,160 次），評分尺補了公報單位、加寬鬆分、數字按寫法分組；09 用新尺重算完（oracle .87／.83，寬鬆 .87／.93）。閱讀軌 2026-10-29 15:01 在 mini 背景啟動，約 21:00 跑完，可續跑（`uv run python experiments/10-fix-ablation/run_read.py`）。計畫經 Mike 核准（`~/.claude/plans/jazzy-riding-harbor.md`）。
 跑完：`score.py`、`report.py`，填 README 第 3 節閱讀軌、第 4、5 節，根 README 加 10 那列。09 做完（README 五節齊）。
 11-abstain（找不到要說找不到）程式寫完、煙霧測試過，`scratchpad/chain11.sh` 會在 10 跑完後自動開跑 3,200 次（約 4.5 小時，到隔天凌晨）；掛了就手動 `uv run python experiments/11-abstain/run_read.py`（可續跑）。
-`docs/2026-10-29-real-data-playbook.md`（01–10 整理成一條流程）初稿已推，10、11 的數字跑完補。
+12-rerank（重排序）程式也寫完、煙霧測試過，`scratchpad/chain12.sh` 在 11 跑完後接著跑 `run_rerank.py`（兩格 × 五重排器，需 `uv sync --group rerank`）再 `run_read.py`（1,280 次），估到隔天上午；掛了手動跑，都可續跑。
+`docs/2026-10-29-real-data-playbook.md`（01–10 整理成一條流程）初稿已推，10、11、12 的數字跑完補。
 
 ## 已驗證
 
+- 12：11 個測試綠；煙霧測試 3 題 × 5 重排器（bge／Qwen3-Reranker 在 MPS 上跑得動、listwise 走 ollama）、漂移 6/6；新依賴 optional group `rerank` 裝好（torch 2.15 MPS）。
 - 11：14 個測試綠（P0 逐字同 09、leak 抓中文／阿拉伯數字、濾網去空白比對）；煙霧測試 2 題 × 2 提示 × 5 依據 20 次 OK（P1 在沒答案的依據上 6/6 棄答）。
 - 10 `extract.py` ocrrows 30 份；`score.py` 用新尺重算 09（`results/09-rescored/`）；`tests/test_run_read` 證明 10 組的依據跟 09 餵模型的字數相同；煙霧測試 2 題 × 3 條件 OK。
 - 09 語料：`build_corpus.py` seed 0 掃 233 筆湊齊 30 份（草案 15／令 15、地方 14、掃描 4、亂碼 1、旋轉附表 7），`corpus/manifest.json`、`corpus/health.csv`。
@@ -31,5 +33,6 @@
 ## 下一步
 
 1. 等 10 的閱讀軌跑完（`results/read/raw.jsonl` 4,160 列）→ score、report、README 3–5 節、根 README、playbook 補數字。
-2. 等 11 跑完（3,200 列）→ 同上，playbook 第 5 節加「找不到要說找不到」。之後候選：reranker、要點／附表切法、非 PDF 來源。
-3. hit@1000 跟 1,000 字塊的耦合要解（切 900 或預算 1,200），之後的實驗都受影響。
+2. 等 11 跑完（3,200 列）→ 同上，playbook 第 5 節加「找不到要說找不到」。
+3. 等 12 跑完（rerank 1,600 列、read 1,280 列）→ 同上，playbook 第 4 節加重排。之後候選：要點／附表切法、非 PDF 來源、文件改版。
+4. hit@1000 跟 1,000 字塊的耦合要解（切 900 或預算 1,200），之後的實驗都受影響。
