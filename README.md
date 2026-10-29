@@ -1,6 +1,6 @@
 # rag-lab
 
-個人的 RAG 實驗室：把文件餵給本機模型，量它答得準不準、吐得出固定格式嗎。產出是每個實驗一頁的紀錄，程式只是算數字的工具。設計文件在 `docs/superpowers/specs/`。
+個人的 RAG 實驗室：把文件餵給本機模型，量它答得準不準、吐得出固定格式嗎。產出是每個實驗一頁的紀錄，程式只是算數字的工具。設計文件在 `docs/superpowers/specs/`；01–10 的結論整理成一條流程在 [docs/2026-10-29-real-data-playbook.md](docs/2026-10-29-real-data-playbook.md)。
 
 ## 實驗
 
