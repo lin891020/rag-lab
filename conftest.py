@@ -36,6 +36,8 @@ LOCAL = {
     "run_read",
     "ocr",
     "render",
+    "rerankers",
+    "run_rerank",
 }
 
 
