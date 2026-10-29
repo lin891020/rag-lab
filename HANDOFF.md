@@ -1,12 +1,11 @@
 # HANDOFF
 
-最後更新：2026-10-29 22:40（mini）。
+最後更新：2026-10-30 03:35（mini）。
 
 ## 現在在哪一步
 
-10-fix-ablation **做完**（README 五節齊，根 README 有列，playbook 的「（10 補）」四格填了）：4,160 次 0 錯誤、漂移 47/52（5 次全在 gpt-oss）。oracle 列跑時標籤還帶法規名，排在 `chain_fix.sh` 重跑後再改那一列。11 的閱讀軌 2026-10-29 22:16 自動接棒開跑（`scratchpad/read11.log`）。
-11-abstain（找不到要說找不到）**跑著**：3,200 次約 4.5 小時，估 2026-10-30 03:00 跑完；掛了就手動 `uv run python experiments/11-abstain/run_read.py`（可續跑）。
-12-rerank（重排序）程式也寫完、煙霧測試過，`scratchpad/chain12.sh` 在 11 跑完後接著跑 `run_rerank.py`（兩格 × 五重排器，需 `uv sync --group rerank`）再 `run_read.py`（1,280 次），估到隔天上午；掛了手動跑，都可續跑。
+10-fix-ablation **做完**（README 五節齊，根 README 有列，playbook 的「（10 補）」四格填了）：4,160 次 0 錯誤、漂移 47/52（5 次全在 gpt-oss）。oracle 列跑時標籤還帶法規名，排在 `chain_fix.sh` 重跑後再改那一列。11-abstain **做完**（README 五節齊、根 README 有列、playbook 第 5 節加了一條）：3,200 次 0 錯誤、漂移 37/40。12 的 `run_rerank.py` 2026-10-30 03:21 自動接棒開跑（`scratchpad/rerank12.log`）。
+12-rerank（重排序）**跑著**： `run_rerank.py`（兩格 × 五重排器，需 `uv sync --group rerank`）再 `run_read.py`（1,280 次），估到隔天上午；掛了手動跑，都可續跑。
 13-points-tables（沒有「條」的文件怎麼切）語料 30 份、169 題、程式、README 1–2 節都好了；`scratchpad/chain13.sh` 在 12 跑完後接著跑 OCR（1 份 2 頁）→ `run_retrieval.py` → `attribute.py` → `run_read.py`（1,690 次 ≈ 2.5 小時）。掛了手動照這順序跑。
 14-native-source（公報 PDF vs 法規系統 HTML／附件）語料 16 份、87 題（13／09 原題）、三路線文字、程式、README 1–2 節都好了；`scratchpad/chain14.sh` 在 13 跑完後接著跑 `run_retrieval.py` → `attribute.py` → `run_read.py`（1,044 次 ≈ 1.5 小時）。要重跑抽字用 `uv run --group office python experiments/14-native-source/extract.py`。
 `docs/2026-10-29-real-data-playbook.md`（01–10 整理成一條流程）初稿已推，10–14 的數字跑完補。
@@ -14,6 +13,7 @@
 
 ## 已驗證
 
+- 2026-10-30 03:21 11 閱讀軌 3,200 次跑完算分：P0 硬答 .91／.86，P1（schema 加 `found`）有依據可看時 .11／.13、有答案的題不掉；沒依據時照答 .66／.94；引句濾網擋三到九成、誤擋 .04–.05。報表 `_f` 把 .997 印成「.00」的 bug 修了（14 個 report.py）。
 - 2026-10-29 22:18 10 閱讀軌 4,160 次跑完算分：值錢的是前綴（+.17／+.16，幾乎全是哪一份題）與令文留塊（關掉 −.21／−.17，條號題 .56 → .17）；OCR +.07；一條一塊比 fixed-1000 只 +.05 區間含 0；對照表 ±0；全開 .82／.72，寬鬆 .82／.82；加一個與關一個排序一致。數字在 `experiments/10-fix-ablation/results/report.md`。
 - 2026-10-29 19:20 三個獨立 agent 審了 01–10 的量尺程式（Mike：「前面的會不會也有這種問題 你找找」）。要動數字的：**09 的 oracle 標籤帶法規名**，「哪一份」題 31/33 等於看標籤答，oracle .84／.82 偏高（估掉到 .7 左右，與 all 持平）——09、10 的 oracle 重跑排在 `scratchpad/chain_fix.sh`（14 之後；drop oracle 列再續跑）；**07 頁級 −.28** 大半是「超過 1,000 字的頁就算排第一也判沒放進預算」（18% 的頁），改「第一塊一定讀」約 −.10，要重算；**01 fixed269 bm25 .83** 是標籤灌水（塊沾到條文一個字就算命中，兩成命中塊裡沒答案），要求塊含條文一半以上 → .70，dense 不變，要重算；**01 表格逐列切丟了 7 張表**（含 t15 正解），列偵測已修，chain_fix 重跑 01；**05 表五六第 0 頁表頭少一層**，qwen3「每頁一塊並排 −.13 分得出」扣掉那 6 題變分不出，chain_fix 重跑 48 次。不動數字的：09 attribute 的 over_budget 混了三種原因（無前綴格多半是預算用完，不是標頭）、preamble_dropped 誤標 1 題（已修）、article-cn 塊丟掉「第N條」行害 q061／q067 永遠不命中（.01）；09 README「base 是整份前 1,000 字」錯，其實是空依據；02／03／05／06 幾句措辭跟資料不符。**README 的數字與措辭等 chain_fix 跑完一次改，舊數字留著對照。**
 - 2026-10-29 18:30 獨立 agent 審了 11／12／13／14 的量尺程式（Mike 問「需不需要另一個模型驗證」）：跑前修掉 4 個依據組法的 bug——11 的 same-doc 窗組不出來時原本會送閉卷提示（14 題）、same-doc 標籤帶法規名把哪一份題答案送上（15 題）；13 的 points 切塊把「一、」丟掉害 5 題永遠不算命中；14 的附件把公報 PDF 再附一次（去重後附件 43/51，仍有 34 題的 quote 出現 ≥2 次，來自總說明與對照表，README 要報每題 gold 塊數）。評分那邊也修了：拒答片語錨定、空單位／空法規名算棄答、parse_ok 進報表、real 列也做 leak。10 與 12 的 `article_chunks` 同樣丟掉「第N條」行（2 題），10 已在跑，不改，README 註記。

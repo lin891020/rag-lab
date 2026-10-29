@@ -1,0 +1,324 @@
+{
+  "date": "2026-10-30",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "budget": 1000,
+  "skip": 1500,
+  "real_cell": [
+    "ocrrows",
+    "article-cn+pre",
+    true
+  ],
+  "prompts": [
+    "P0",
+    "P1"
+  ],
+  "evidence": [
+    "gold",
+    "same-doc",
+    "other-doc",
+    "none",
+    "real"
+  ],
+  "n_questions": 160,
+  "drift": {
+    "same": 37,
+    "n": 40,
+    "rows": [
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "gold",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "gold",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "same-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "same-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "other-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "other-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "none",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "none",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "real",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P0",
+        "evidence": "real",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "gold",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "gold",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "same-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "same-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "other-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "other-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "none",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "none",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "real",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "prompt": "P1",
+        "evidence": "real",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "gold",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "gold",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "same-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "same-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "other-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "other-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "none",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "none",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "real",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P0",
+        "evidence": "real",
+        "qid": "q002",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "gold",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "gold",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "same-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "same-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "other-doc",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "other-doc",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "none",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "none",
+        "qid": "q002",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "real",
+        "qid": "q001",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "prompt": "P1",
+        "evidence": "real",
+        "qid": "q002",
+        "same": true
+      }
+    ]
+  }
+}

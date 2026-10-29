@@ -16,8 +16,8 @@ METRICS = ["parse_ok", "schema_ok", "value_ok", "value_only_ok"]
 
 
 def _f(x: str | float) -> str:
-    v = float(x)
-    return "1.0" if v >= 1 else f"{v:.2f}"[1:]
+    v = round(float(x), 2)
+    return "1.0" if v >= 1 else f"{v:.2f}"[1:]  # .997 would otherwise print as ".00"
 
 
 def _signed(x: str | float) -> str:
