@@ -27,7 +27,7 @@
 
 每種 × 《法規名》前綴有無。
 
-**題庫**（`questions.jsonl`）：169 題（數字 121、「這次修正哪幾點」11、哪一份 37；要點類 116、附表類 53），我出、我核，每份 4–7 題；每題帶 quote，`tests/test_questions.py` 驗 quote 在 base 或 ocr 文字裡（掃描那份等 OCR 跑完才驗）。15 題（seed 9）交給沒看過題目的 agent 從頁面截圖獨立作答再比對，結果在第 5 節。
+**題庫**（`questions.jsonl`）：169 題（數字 121、「這次修正哪幾點」11、哪一份 37；要點類 116、附表類 53），我出、我核，每份 4–7 題；每題帶 quote，`tests/test_questions.py` 驗 quote 在 base 或 ocr 文字裡（掃描那份等 OCR 跑完才驗）。15 題（seed 9：q002、q011、q021、q036、q048、q069、q086、q087、q096、q119、q129、q142、q155、q157、q158）交給沒看過題目的 agent 從頁面截圖獨立作答再比對：**15/15 答案對、0 錯**；它另指出 q086 的 quote 用「㏄」而頁面印「cc」（NFKC 摺疊後相同，不改）。
 
 **檢索軌**（`run_retrieval.py`）：3 路線 × 4 切法 × 2 前綴 × dense／bm25／random；hit@5、hit@1000、hit@2000、**預算內有正解**（12 的指標：照 09 閱讀的塞法）；每格對 ocr／fixed-1000／無前綴的配對差距，另對「同路線 fixed-1000」「無前綴」「ocr 路線」各一組；按文件類（要點／附表）分開報；錯因歸類沿用 09（`attribute.py`，`preamble_dropped` 改看 points）。
 
