@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from extract import attachment_text, html_text, is_novel
+from extract import _shingles, attachment_text, html_text, is_novel
 
 PAGE = """<html><head><title>教育部主管法規共用系統-法規內容</title></head><body>
 <div id="header">跳到主要內容區塊 法規功能按鈕區 法規內容 條文檢索 法規沿革 歷史法規</div>
@@ -77,9 +77,6 @@ def test_unknown_attachment_types_are_unavailable(tmp_path: Path, ext: str):
 
 def test_is_novel_rejects_an_attachment_that_repeats_the_body():
     body = "一、目的：" + "甲乙丙丁" * 60 + "\n二、對象：" + "戊己庚辛" * 60
-    seen = set()
-    from extract import _shingles
-
-    seen |= _shingles(body)
+    seen = _shingles(body)
     assert not is_novel(body + "\n（請參見附件）", seen)  # the gazette PDF attached again
     assert is_novel("附表一 收費基準\n" + "項目：禮廳｜收費：五千元\n" * 30, seen)

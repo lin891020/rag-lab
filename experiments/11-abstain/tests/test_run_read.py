@@ -1,5 +1,5 @@
 from chunkers import Chunk
-from run_read import leak, other_doc_chunk, same_doc_window
+from run_read import ask, leak, other_doc_chunk, same_doc_window
 
 
 def _c(text, doc):
@@ -61,8 +61,6 @@ def test_leak_does_not_fire_on_dates_that_merely_end_with_the_number():
 
 
 def test_ask_skips_the_model_when_a_window_cannot_be_built():
-    from run_read import ask
-
     class _Ev:
         def for_question(self, kind, q):
             return {"text": None, "label": "", "has_gold": False, "leak": False, "source": ""}

@@ -6,6 +6,7 @@ from pathlib import Path
 import pymupdf
 import pytest
 
+from chunkers import parse_articles_cn
 from extract import compare_rows, law_name, ocr_pages, records_to_text
 
 
@@ -116,8 +117,6 @@ def test_compare_rows_maps_a_split_column_back_to_three(tmp_path):
 
 
 def test_records_to_text_is_parseable_by_the_cn_parser():
-    from chunkers import parse_articles_cn
-
     recs = [
         {"label": "1", "amended": "甲。", "current": "乙。", "note": "改。", "pages": [0]},
         {"label": "14-1", "amended": "丙。", "current": "", "note": "新增。", "pages": [1]},
