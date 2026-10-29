@@ -9,6 +9,7 @@
 | [本地 OCR](2026-10-29-local-ocr-options.md) | 今晚可行的排序：glm-ocr（ollama、表格 TEDS 93.9）> Apple Vision（零安裝、0.8 秒/頁）> tesseract chi_tra；PaddleOCR 在 Mac 要起服務，先不碰 | 06 |
 | [解析工具鏈](2026-10-29-parsing-toolchains.md) | 三條路：Docling 當骨架／格式分流各用最會的／VLM 統一吃頁圖；中介表示表格用 HTML（能表達 span）、文字用 Markdown、留無損 JSON | 06、之後的「混合來源」 |
 | [切分策略](2026-10-29-chunking-survey.md) | 遞迴 200–400 tokens 無重疊＋標題鏈前綴最便宜；版面元素切分整體最強；表＋caption＋註要綁一起（Evidence Units：Recall@1 .15→.51）；語意切分、late chunking、agentic 先跳過 | 之後的「切分」實驗（01 的續集） |
+| [天生就亂的繁中來源](2026-10-29-messy-zhtw-sources.md) | 有標註的繁中亂文件評測集不存在（OmniDocBench 只有 13 頁繁中、JVZY 是合成）；最合用的是**行政院公報法規修正案**（對照表三欄跨頁、開放資料 XML 給 10,438 個 PDF 連結、半年 1,210 筆修正公告）；立法院公報、考選部試題當備用 | 09 |
 
 ## 跨四份筆記的共同點
 

@@ -26,5 +26,5 @@
 ## 下一步
 
 1. Mike 看 08 README 第 4 節的對照表，決定真資料來之前要不要先修哪一列（最便宜的是無框線「x 位置當欄線」，一步接 pdfplumber `explicit_vertical_lines`）。
-2. Mike 的第 ③ 項：找天生就亂的繁中公開資料，先用 `doc_health.py` 體檢再決定開哪個實驗。
+2. Mike 的第 ③ 項已查完：`docs/research/2026-10-29-messy-zhtw-sources.md`，第一候選是行政院公報的法規修正對照表（開放資料 XML 整批抓）；等 Mike 決定領域範圍再開 09 的計畫。
 3. 題庫擴到 150 題（01、07、08 都卡在 ±.09 分不出）。
