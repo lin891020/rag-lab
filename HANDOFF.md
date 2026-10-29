@@ -1,30 +1,30 @@
 # HANDOFF
 
-最後更新：2026-10-29 03:00（mini，深夜自主實驗收工）。
+最後更新：2026-10-29 09:30（mini）。
 
 ## 現在在哪一步
 
-Mike 2026-10-28 23:24 交代「自己去做更多實驗：混合來源、跨頁沒表頭、不同格式怎麼切與傳遞，先查別人怎麼做」，早上驗收。
-做了：四份調查筆記（`docs/research/`）、05 跨頁表格、06 掃描來源、07 切分續集，都做完、README 五節寫滿、推了。早上給 Mike 的一頁在 `docs/2026-10-29-morning-report.md`。
-GitHub：`lin891020/rag-lab`（公開）。這兩個實驗**沒有先經 Mike 核准計畫**（他授權了「看你去怎麼設計」），README 第 2 節各有「別人怎麼解的」。
+08-messy 做完：把 01 的乾淨法規故意弄亂六種（頁首頁尾、兩欄、串接另一份法規、手機拍、影印三代、無框線表），兩軌跑完、README 五節寫滿、第 4 節有「亂 → 壞在哪一步 → 掉幾分 → 體檢抓得到？ → 修法」對照表，根 README 加了 08 那列。計畫經 Mike 核准（`~/.claude/plans/jazzy-riding-harbor.md`）。
+附帶一個資料體檢工具 `experiments/08-messy/doc_health.py <資料夾>`，真資料來了先丟給它。
+下一步看第四節；打開 `experiments/08-messy/README.md` 第 4 節。
 
 ## 已驗證
 
-- `uv run pytest tests experiments/01-chunking … experiments/06-ocr-source`：全綠（2026-10-29 01:45 mini）；`pre-commit run --all-files` 綠。04／05 兩個測試原本在整套一起跑時會拿到別實驗的模組（函式內 import），改成頂層 import。
-- 05 `detect.py`：112 對，4/4 真跨頁接上、108 鄰表負例 0 誤接。
-- 05 `run.py` 304 次 22 分鐘、漂移 14/16；數字在 05 README 第 3 節：page .87/.92、pages .74/.79、merged .79/.87；pages − page −.13 兩個模型都分得出。
-- 06 `structure.py`：格子召回 glm2 .87、glm .57、vision .71、tesseract .15。06 `run.py` 984 次（820 + glm2 164）69 分鐘、漂移 18/24（差的全是 gpt-oss t01／t02a）；數字在 06 README 第 3 節：clean − glm2 分不出（+.06／+.05）、glm2 − glm +.10／+.11 分得出、vision 掉 .35–.43、tesseract 等於閉卷。
-- 07 `context.py` 1050 句 60 分鐘；`run.py` 5 切法 × 4 檢索 × 40 題，漂移 cosine 1.0000；數字在 07 README 第 3 節：article .80、+context .82、noprefix .80、small-to-big .80、page .53（dense hit@1000）。
-- 01–04 見各自 README；HANDOFF-2026-10-28 的「已驗證」照舊。
+- 08 `run_text.py`：40 題 × 5 抽字組合 × 2 切法 × 3 檢索器，漂移 cosine 1.0000；頁首頁尾、兩欄／pypdf、串接 article 都 .78–.80 分不出；兩欄／pdfplumber 解析到 1 條、article .00（−.80 分得出）、fixed-1000 −.08／−.10；串接 fixed／dense −.10 分得出。
+- 08 `run_table.py`：82 題 × 7 條件 × 2 模型 = 1,148 次 69 分鐘 0 錯誤、漂移 23/28（差的全是 gpt-oss t01）；clean .79／.93；三級掃描 −.05～−.06 分不出；無框線 text 策略 −.09／−.11（gpt-oss 分得出）、攤平 −.02／−.07。
+- 08 `structure.py`：格子召回 scan-clean .87、phone .90、copy3 .95（表九二／表四○ 退化後翻成 HTML）、borderless-text .55、flat 0。
+- 08 `doc_health.py` 在 23 個 PDF（`results/health.csv`）：乾淨法規 0 誤報、頁首頁尾抓到 2 行、兩欄 156/157 頁、掃描 0 文字層頁、無框線 13/17 標對齊文字。
+- `uv run pytest tests experiments/0*/tests` 全綠、`pre-commit run --all-files` 綠（2026-10-29 09:30 mini，數字見 commit）。
+- 01–07 見各自 README；HANDOFF-2026-10-28 的「已驗證」照舊。
 
 ## 只是寫了、還沒驗證
 
-- 05 題庫 38 題：25 題新出（c01–c25、k07–k13），正解對 PDF 原圖標，**Mike 沒抽查**；名單 c11、c16、c19、c23、k08。
-- 03 的 n03、n17、n39、n44、n53 與 04 的 row 標記 t01、n54、n17、n28、n26 也還沒抽查。
-- 07 的 10 題保留題（01 的 `questions-reserve.jsonl`）第一次用，Mike 沒抽查過。
-- 06 的 glm2 路線是跑完 glm 後才加的（提示尾加換行），同晚同機補跑；表九二、表四○ 兩個提示都只回純文字，沒試第三種。
+- 08 的對照表「修它要什麼」那欄是推論，沒有一條真的修過再量（無框線用 x 位置當欄線、頁首頁尾清掉）。
+- 08 兩級掃描是人工退化（Pillow），對 glm-ocr 不夠髒；真手機照沒拍。
+- 05 題庫 25 題新出、03／04 標記、07 保留 10 題：Mike 都還沒抽查（名單在 HANDOFF-2026-10-28 與 05 README）。
 
 ## 下一步
 
-1. Mike 看 `docs/2026-10-29-morning-report.md`，抽查 05 的 5 題（c11、c16、c19、c23、k08）與 03／04 的名單。
-2. 下一個：（a）06 續集「退化掃描 + 欄重建」；（b）混合格式來源（DOCX／XLSX 同一份法規，`parsing-toolchains` 筆記路 B）；（c）04 續集「表註移出 + 選欄」；（d）題庫擴到 150 題，讓 ±.05 分得出（01、07 都卡在這）。
+1. Mike 看 08 README 第 4 節的對照表，決定真資料來之前要不要先修哪一列（最便宜的是無框線「x 位置當欄線」，一步接 pdfplumber `explicit_vertical_lines`）。
+2. Mike 的第 ③ 項：找天生就亂的繁中公開資料，先用 `doc_health.py` 體檢再決定開哪個實驗。
+3. 題庫擴到 150 題（01、07、08 都卡在 ±.09 分不出）。

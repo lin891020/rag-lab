@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-29",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "pdfplumber": "0.11.10",
+  "conditions": {
+    "closed-book": null,
+    "clean": "clean",
+    "scan-clean": "scan-clean",
+    "scan-phone": "scan-phone",
+    "scan-copy3": "scan-copy3",
+    "borderless-text": "borderless-text",
+    "borderless-flat": "borderless-flat"
+  },
+  "mean_chars_per_table": {
+    "clean": 568,
+    "scan-clean": 539,
+    "scan-phone": 544,
+    "scan-copy3": 556,
+    "borderless-text": 616,
+    "borderless-flat": 400
+  },
+  "n_questions": {
+    "total": 82,
+    "tables": 17
+  },
+  "drift": {
+    "same": 23,
+    "n": 28,
+    "rows": [
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "clean",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "clean",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "scan-clean",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "scan-clean",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "scan-phone",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "scan-phone",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "scan-copy3",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "scan-copy3",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "borderless-text",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "borderless-text",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "borderless-flat",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "borderless-flat",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "clean",
+        "qid": "t01",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "clean",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "scan-clean",
+        "qid": "t01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "scan-clean",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "scan-phone",
+        "qid": "t01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "scan-phone",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "scan-copy3",
+        "qid": "t01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "scan-copy3",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "borderless-text",
+        "qid": "t01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "borderless-text",
+        "qid": "t02a",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "borderless-flat",
+        "qid": "t01",
+        "same": false
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "borderless-flat",
+        "qid": "t02a",
+        "same": true
+      }
+    ]
+  }
+}

@@ -13,14 +13,16 @@
 | [05-cross-page](experiments/05-cross-page/README.md) | 跨頁表格續頁沒表頭：逐頁讀、每頁一塊並排、規則接回，差多少？ | 損失只在「要靠欄名定位」的 6 題出現，接回表頭也沒救（那是 04 的範圍列問題）；分得出的是「每頁一塊並排」比只餵續頁差 −.13；偵測規則 4/4 真跨頁、108 鄰表 0 誤接 |
 | [06-ocr-source](experiments/06-ocr-source/README.md) | 同一張表從 300 dpi 頁圖 OCR 回來，模型讀表掉多少？哪條本地 OCR 能用？ | glm-ocr（0.9B，提示尾加換行）跟文字層分不出（.73 vs .79、.88 vs .93）；提示照抄就掉 .10；Apple Vision 掉 .35–.43、tesseract chi_tra 等於閉卷 |
 | [07-chunking-2](experiments/07-chunking-2/README.md) | 標題鏈前綴、LLM 脈絡句、頁級、父子、混合檢索，哪個讓條文找得更準？ | 一條一塊之後全都動不了：前綴 0、脈絡句 +.03、父子 0、混合 −.05～+.03（區間含 0）；頁級 −.28 分得出，輸在塞不進預算 |
+| [08-messy](experiments/08-messy/README.md) | 把乾淨法規故意弄亂六種（頁首頁尾、兩欄、串接、手機拍、影印三代、無框線表），哪種弄壞哪一步、掉幾分？ | 只有兩種分得出：兩欄用 pdfplumber 抽把條號黏掉（一條一塊 −.80，固定切只 −.10）、表格沒框線用 text 策略欄黏成一格（gpt-oss −.11，攤平反而只 −.07）；頁首頁尾、串接、兩級掃描都在 ±.06 內分不出；附資料體檢工具 `doc_health.py` |
 
 ## 怎麼跑
 
 ```bash
 uv sync
-uv run pytest tests experiments/01-chunking experiments/02-json-output experiments/03-table-format experiments/04-table-lookup
+uv run pytest tests experiments/0*/tests                       # 全部實驗
 uv run python experiments/01-chunking/run.py     # 需要本機 ollama 有 bge-m3
 uv run python experiments/02-json-output/run.py  # 需要 qwen3:8b、gpt-oss:20b；之後 score.py、report.py
 uv run python experiments/03-table-format/run.py # 同上；語料已在 corpus/，重建要 01 的附件 PDF
 uv run python experiments/04-table-lookup/run.py # 同上；讀 corpus/tables.json，不需要 PDF
+uv run python experiments/08-messy/build_corpus.py  # 弄亂語料（要 01 的 law.pdf 與 glm-ocr）；之後 run_text.py、run_table.py、doc_health.py <資料夾>
 ```
