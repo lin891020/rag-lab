@@ -13,6 +13,9 @@ ROOT = Path(__file__).parent
 EXPERIMENTS = ROOT / "experiments"
 LOCAL = {
     "run",
+    "power",
+    "merge",
+    "questions_check",
     "report",
     "score",
     "prompts",

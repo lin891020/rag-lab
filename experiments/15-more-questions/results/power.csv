@@ -1,0 +1,26 @@
+exp,model,pair,n_old,diff,p_disc,mde_old,n_new,mde_new,half_width_new,n_for_observed,n_for_05,prediction
+10,gpt-oss:20b,+cnpre − fixed,160,0.056,0.206,0.1,320,0.071,0.049,509,645,不會
+10,gpt-oss:20b,+rows − fixed,160,-0.019,0.069,0.058,320,0.041,0.029,1533,213,收斂
+10,gpt-oss:20b,full − -cnpre,160,0.05,0.175,0.092,320,0.065,0.046,547,547,不會
+10,gpt-oss:20b,full − -rows,160,-0.025,0.037,0.043,320,0.03,0.021,469,115,收斂
+10,gpt-oss:20b,oracle − full,160,0.113,0.163,0.089,320,0.063,0.042,98,508,會
+10,qwen3:8b,+cnpre − fixed,160,0.044,0.219,0.103,320,0.073,0.051,895,684,不會
+10,qwen3:8b,+rows − fixed,160,0.0,0.037,0.043,320,0.03,0.021,,115,收斂
+10,qwen3:8b,full − -cnpre,160,0.05,0.15,0.085,320,0.06,0.042,469,469,不會
+10,qwen3:8b,full − -rows,160,-0.013,0.013,0.025,320,0.017,0.012,626,37,收斂
+10,qwen3:8b,oracle − full,160,0.056,0.119,0.076,320,0.054,0.037,292,370,會
+01,bge-m3,dense/article − dense/fixed269,30,0.0,0.2,0.22,90,0.13,0.092,,626,不會
+01,bge-m3,bm25/article − bm25/fixed1000,30,0.133,0.333,0.284,90,0.168,0.116,145,1044,不會
+01,bge-m3,bm25/article − bm25/fixed269,30,-0.067,0.133,0.18,90,0.106,0.074,233,416,不會
+01,bge-m3,dense/article − bm25/article,30,0.033,0.233,0.237,90,0.141,0.1,1646,730,不會
+01,bge-m3,dense/table-flat-fixed − dense/table-row,15,-0.2,0.467,0.456,30,0.336,0.234,89,1463,不會
+01,bge-m3,dense/table-row − dense/table-whole,15,-0.067,0.2,0.299,30,0.22,0.158,351,626,不會
+01,bge-m3,bm25/table-flat-fixed − bm25/table-row,15,-0.2,0.333,0.386,30,0.284,0.194,63,1044,不會
+01,bge-m3,bm25/table-flat-fixed − bm25/table-whole,15,-0.2,0.2,0.299,30,0.22,0.143,37,626,不會
+01,bge-m3,bm25/table-row − bm25/table-whole,15,0.0,0.133,0.244,30,0.18,0.131,,416,不會
+07,bge-m3,dense/article+context − dense/article,40,0.025,0.025,0.068,90,0.046,0.032,312,76,不會
+07,bge-m3,dense/article − dense/article-noprefix,40,0.0,0.0,0,90,0,0.0,,,收斂
+07,bge-m3,dense/article − dense/small-to-big,40,0.0,0.05,0.096,90,0.065,0.046,,155,不會
+07,bge-m3,hybrid/article − dense/article,40,-0.05,0.1,0.136,90,0.092,0.065,312,312,不會
+07,bge-m3,dense/article − bm25/article,40,0.025,0.175,0.18,90,0.122,0.086,2195,547,不會
+07,bge-m3,hybrid/small-to-big − bm25/small-to-big,40,0.025,0.075,0.118,90,0.08,0.056,940,233,不會
