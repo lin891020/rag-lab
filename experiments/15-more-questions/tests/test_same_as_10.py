@@ -2,8 +2,13 @@
 if both were fed and scored the same way. Byte-identical files, or identical top-level blocks
 where 15 added a flag around them."""
 
+import importlib.util
 import re
+import sys
 from pathlib import Path
+
+import chunkers  # 15's copy, byte-identical to 10's (first test); 10's score.py imports it
+import score
 
 HERE = Path(__file__).parents[1]
 TEN = HERE.parent / "10-fix-ablation"
@@ -55,13 +60,13 @@ def test_evidence_and_ruler_blocks_are_identical_to_10():
         assert _block(mine, name) == _block(theirs, name), name
 
 
-def test_units_may_only_be_added():
-    import importlib.util
-
+def test_units_may_only_be_added(monkeypatch):
+    # Imports at module level: by the time a test body runs, the full suite has collected later
+    # experiments and their same-named modules are the cached ones (root conftest.py).
+    monkeypatch.setitem(sys.modules, "chunkers", chunkers)
     spec = importlib.util.spec_from_file_location("ten_score", TEN / "score.py")
     ten = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(ten)
-    import score
 
     for unit, aliases in ten.UNIT_ALIASES.items():
         assert score.UNIT_ALIASES.get(unit) == aliases, unit

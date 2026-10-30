@@ -15,6 +15,7 @@ LOCAL = {
     "run",
     "power",
     "merge",
+    "reasks",
     "build_questions",
     "rules",
     "build_tables",

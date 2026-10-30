@@ -1,0 +1,265 @@
+{
+  "pairs": [
+    {
+      "exp": "10",
+      "model": "gpt-oss:20b",
+      "pair": "+cnpre − fixed",
+      "n": 240,
+      "d": 0.029,
+      "lo": -0.029,
+      "hi": 0.083,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "gpt-oss:20b",
+      "pair": "+rows − fixed",
+      "n": 240,
+      "d": -0.025,
+      "lo": -0.058,
+      "hi": 0.008,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "gpt-oss:20b",
+      "pair": "full − -cnpre",
+      "n": 240,
+      "d": 0.046,
+      "lo": -0.004,
+      "hi": 0.096,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "gpt-oss:20b",
+      "pair": "full − -rows",
+      "n": 240,
+      "d": -0.033,
+      "lo": -0.062,
+      "hi": -0.008,
+      "v": "分得出"
+    },
+    {
+      "exp": "10",
+      "model": "gpt-oss:20b",
+      "pair": "oracle − full",
+      "n": 240,
+      "d": -0.05,
+      "lo": -0.117,
+      "hi": 0.017,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "qwen3:8b",
+      "pair": "+cnpre − fixed",
+      "n": 240,
+      "d": 0.021,
+      "lo": -0.037,
+      "hi": 0.079,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "qwen3:8b",
+      "pair": "+rows − fixed",
+      "n": 240,
+      "d": -0.013,
+      "lo": -0.037,
+      "hi": 0.013,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "qwen3:8b",
+      "pair": "full − -cnpre",
+      "n": 240,
+      "d": 0.037,
+      "lo": -0.013,
+      "hi": 0.083,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "qwen3:8b",
+      "pair": "full − -rows",
+      "n": 240,
+      "d": -0.021,
+      "lo": -0.042,
+      "hi": 0.0,
+      "v": "分不出"
+    },
+    {
+      "exp": "10",
+      "model": "qwen3:8b",
+      "pair": "oracle − full",
+      "n": 240,
+      "d": -0.079,
+      "lo": -0.142,
+      "hi": -0.021,
+      "v": "分得出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "dense/article − dense/fixed269",
+      "n": 47,
+      "d": 0.043,
+      "lo": -0.064,
+      "hi": 0.149,
+      "v": "分不出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "bm25/article − bm25/fixed1000",
+      "n": 47,
+      "d": 0.17,
+      "lo": 0.043,
+      "hi": 0.298,
+      "v": "分得出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "bm25/article − bm25/fixed269",
+      "n": 47,
+      "d": 0.106,
+      "lo": -0.021,
+      "hi": 0.234,
+      "v": "分不出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "dense/article − bm25/article",
+      "n": 47,
+      "d": -0.021,
+      "lo": -0.149,
+      "hi": 0.106,
+      "v": "分不出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "dense/table-flat-fixed − dense/table-row",
+      "n": 22,
+      "d": -0.318,
+      "lo": -0.545,
+      "hi": -0.091,
+      "v": "分得出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "dense/table-row − dense/table-whole",
+      "n": 22,
+      "d": 0.045,
+      "lo": -0.091,
+      "hi": 0.182,
+      "v": "分不出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "bm25/table-flat-fixed − bm25/table-row",
+      "n": 22,
+      "d": -0.182,
+      "lo": -0.409,
+      "hi": 0.0,
+      "v": "分不出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "bm25/table-flat-fixed − bm25/table-whole",
+      "n": 22,
+      "d": -0.136,
+      "lo": -0.318,
+      "hi": 0.045,
+      "v": "分不出"
+    },
+    {
+      "exp": "01",
+      "model": "bge-m3",
+      "pair": "bm25/table-row − bm25/table-whole",
+      "n": 22,
+      "d": 0.045,
+      "lo": 0.0,
+      "hi": 0.136,
+      "v": "分不出"
+    },
+    {
+      "exp": "07",
+      "model": "bge-m3",
+      "pair": "dense/article+context − dense/article",
+      "n": 57,
+      "d": 0.035,
+      "lo": 0.0,
+      "hi": 0.088,
+      "v": "分不出"
+    },
+    {
+      "exp": "07",
+      "model": "bge-m3",
+      "pair": "dense/article − dense/article-noprefix",
+      "n": 57,
+      "d": 0.0,
+      "lo": -0.053,
+      "hi": 0.053,
+      "v": "分不出"
+    },
+    {
+      "exp": "07",
+      "model": "bge-m3",
+      "pair": "dense/article − dense/small-to-big",
+      "n": 57,
+      "d": 0.0,
+      "lo": -0.053,
+      "hi": 0.053,
+      "v": "分不出"
+    },
+    {
+      "exp": "07",
+      "model": "bge-m3",
+      "pair": "hybrid/article − dense/article",
+      "n": 57,
+      "d": 0.0,
+      "lo": -0.088,
+      "hi": 0.088,
+      "v": "分不出"
+    },
+    {
+      "exp": "07",
+      "model": "bge-m3",
+      "pair": "dense/article − bm25/article",
+      "n": 57,
+      "d": -0.018,
+      "lo": -0.123,
+      "hi": 0.088,
+      "v": "分不出"
+    },
+    {
+      "exp": "07",
+      "model": "bge-m3",
+      "pair": "hybrid/small-to-big − bm25/small-to-big",
+      "n": 57,
+      "d": 0.0,
+      "lo": -0.07,
+      "hi": 0.07,
+      "v": "分不出"
+    }
+  ],
+  "gazette": {
+    "reasks": 80,
+    "of": 160,
+    "agree": 0.918,
+    "agree_random_old": 0.584,
+    "pairs_compared": 1120
+  },
+  "law": {
+    "reasks": 56,
+    "of": 80
+  }
+}

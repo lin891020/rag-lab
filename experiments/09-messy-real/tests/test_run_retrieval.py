@@ -1,6 +1,7 @@
 """Chunk building per cell, the quote-based hit, and the summary shape (no ollama)."""
 
 from chunkers import Chunk
+from retrievers import EmbedCache
 from run_retrieval import (
     CHUNKINGS,
     build_cell,
@@ -110,8 +111,6 @@ def test_summarize_pairs_every_cell_against_the_untouched_pipeline():
 
 
 def test_embed_cache_batches_by_characters_too():
-    from retrievers import EmbedCache
-
     calls = []
 
     def embed(texts):

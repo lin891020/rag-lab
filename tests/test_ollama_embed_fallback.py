@@ -13,7 +13,7 @@ def _http413():
         "http://x/api/embed",
         413,
         "Request Entity Too Large",
-        {},
+        Message(),
         io.BytesIO(b'{"error":"the input length exceeds the context length"}'),
     )
 
