@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-30",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "embed": {
+    "bge-m3": "sha256:7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab"
+  },
+  "listwise_model": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+  },
+  "bge": "BAAI/bge-reranker-v2-m3",
+  "qwen3_reranker": "Qwen/Qwen3-Reranker-0.6B",
+  "depth": 50,
+  "cells": {
+    "full": [
+      "ocrrows",
+      "article-cn+pre",
+      true
+    ],
+    "fixed": [
+      "ocrrows",
+      "fixed-1000",
+      true
+    ]
+  },
+  "n_questions": 160,
+  "drift": {
+    "same": 12,
+    "n": 12,
+    "rows": [
+      {
+        "cell": "full",
+        "reranker": "bge",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "cell": "full",
+        "reranker": "bge",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "cell": "full",
+        "reranker": "qwen3-rr",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "cell": "full",
+        "reranker": "qwen3-rr",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "cell": "full",
+        "reranker": "listwise",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "cell": "full",
+        "reranker": "listwise",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "cell": "fixed",
+        "reranker": "bge",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "cell": "fixed",
+        "reranker": "bge",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "cell": "fixed",
+        "reranker": "qwen3-rr",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "cell": "fixed",
+        "reranker": "qwen3-rr",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "cell": "fixed",
+        "reranker": "listwise",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "cell": "fixed",
+        "reranker": "listwise",
+        "qid": "q002",
+        "same": true
+      }
+    ]
+  }
+}
