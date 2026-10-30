@@ -1,0 +1,107 @@
+{
+ "embed_model": "bge-m3",
+ "embed_digest": "sha256:7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+ "ollama": "0.40.2",
+ "n_questions": 87,
+ "n_docs": 16,
+ "depth": 50,
+ "k": 5,
+ "budgets": [
+  1000,
+  2000
+ ],
+ "random_draws": 20,
+ "drift_min_cosine": 1.0,
+ "cells": {
+  "pdf/fixed-1000/noprefix": {
+   "chunks": 70,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 86
+  },
+  "pdf/fixed-1000/prefix": {
+   "chunks": 70,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 86
+  },
+  "pdf/fixed-300/noprefix": {
+   "chunks": 219,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 84
+  },
+  "pdf/fixed-300/prefix": {
+   "chunks": 219,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 84
+  },
+  "pdf/points/noprefix": {
+   "chunks": 201,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 86
+  },
+  "pdf/points/prefix": {
+   "chunks": 201,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 86
+  },
+  "html/fixed-1000/noprefix": {
+   "chunks": 80,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 55
+  },
+  "html/fixed-1000/prefix": {
+   "chunks": 80,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 55
+  },
+  "html/fixed-300/noprefix": {
+   "chunks": 259,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 54
+  },
+  "html/fixed-300/prefix": {
+   "chunks": 259,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 54
+  },
+  "html/points/noprefix": {
+   "chunks": 640,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 55
+  },
+  "html/points/prefix": {
+   "chunks": 640,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 55
+  },
+  "html+att/fixed-1000/noprefix": {
+   "chunks": 177,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 80
+  },
+  "html+att/fixed-1000/prefix": {
+   "chunks": 177,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 80
+  },
+  "html+att/fixed-300/noprefix": {
+   "chunks": 591,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 79
+  },
+  "html+att/fixed-300/prefix": {
+   "chunks": 591,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 79
+  },
+  "html+att/points/noprefix": {
+   "chunks": 1226,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 80
+  },
+  "html+att/points/prefix": {
+   "chunks": 1226,
+   "docs_with_chunks": 16,
+   "questions_with_gold_chunk": 80
+  }
+ }
+}
