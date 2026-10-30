@@ -40,15 +40,47 @@ def version() -> str:
         return json.load(resp)["version"]
 
 
+MIN_EMBED_CHARS = 256
+
+
 def embed(texts: list[str], *, model: str, batch: int = 64) -> list[list[float]]:
-    """One vector per input text, in order. Batched so long lists do not time out."""
+    """One vector per input text, in order. Batched so long lists do not time out.
+
+    ollama answers HTTP 413 "the input length exceeds the context length" for a text whose
+    tokens overrun the model's context even with truncate on (seen 2026-10-30 on a 3,772-char
+    chunk dense with chemical names: far more tokens than characters). Such a batch is redone
+    one text at a time, and a text that still fails is halved until it embeds; the cut is logged
+    with the text's length so the experiment README can report it."""
     out: list[list[float]] = []
     for i in range(0, len(texts), batch):
-        out.extend(
-            _post("/api/embed", {"model": model, "input": texts[i : i + batch]})["embeddings"]
-        )
+        part = texts[i : i + batch]
+        try:
+            out.extend(
+                _post("/api/embed", {"model": model, "input": part, "truncate": True})["embeddings"]
+            )
+        except urllib.error.HTTPError as exc:
+            if exc.code != 413:
+                raise
+            out.extend(_embed_one(t, model=model) for t in part)
     logger.debug("embedded", extra={"ctx": {"model": model, "n": len(texts)}})
     return out
+
+
+def _embed_one(text: str, *, model: str) -> list[float]:
+    cut = text
+    while True:
+        try:
+            return _post("/api/embed", {"model": model, "input": [cut], "truncate": True})[
+                "embeddings"
+            ][0]
+        except urllib.error.HTTPError as exc:
+            if exc.code != 413 or len(cut) <= MIN_EMBED_CHARS:
+                raise
+            cut = cut[: len(cut) // 2]
+            logger.warning(
+                "embed input cut: exceeds the context length",
+                extra={"ctx": {"model": model, "chars": len(text), "kept": len(cut)}},
+            )
 
 
 def model_digest(model: str) -> str:
