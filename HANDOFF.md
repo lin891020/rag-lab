@@ -1,13 +1,16 @@
 # HANDOFF
 
-最後更新：2026-10-30 09:15（mini）。
+最後更新：2026-10-30 13:45（mini）。
 
 ## 現在在哪一步
 
+**排程出過一次事（2026-10-30 13:20–13:37）**：13 的 `run_retrieval.py` 對 ollama 嵌入一塊 3,772 字、滿是化學名的文字，ollama 回 HTTP 413「input length exceeds the context length」（truncate 沒救到），13 死、14／重跑／15／16 全卡在等 13。修在 `src/rag_lab/ollama.embed`：413 時改一筆一筆送、還不行就對半砍到能嵌（記 warning），有離線測試；13 從 13:37 重跑（`scratchpad/chain13b.sh`，寫同一份 `read13.log`，後面的 chain14 照舊等它的 drift）。時程全部往後推約 20 分鐘再加 13 重跑的時間。
+12-rerank **做完**（README 五節齊、根 README、playbook 第 4 節）：重排漂移 12/12、閱讀 1,280 次 0 錯誤、漂移 15/16。
+16-rule-lookup-compute（規則查表接計算，L0／L1／L2）**程式、表、題庫、事前宣告、跑前審查都好了**，`scratchpad/chain16.sh` 在背景等 `chain15.log` 的 CHAIN15 DONE。計畫 `docs/superpowers/plans/2026-10-30-16-rule-lookup-compute.md`（Mike 核准；監察員計畫審 14 條、跑前審 5 條都修了）。22 張乾淨表（5 張新的獨立 agent 逐格核 5/5 全對）、160 題（改寫 agent 160/160、核題 agent 20/20）、26 個測試。跑完：score → attribute → report → README 3–5、根 README、playbook 新增「查表接計算」一節。
 15-more-questions（題數要多少才分得出）**程式、題庫、事前宣告都好了，等跑**：Mike 2026-10-30 核准計畫（`~/.claude/plans/jazzy-riding-harbor.md`，監察員 agent 審過 13 條、必改 6 條都併了）。`scratchpad/chain15.sh` 已在背景候著，等 `fix.log` 出現 FIXCHAIN DONE 才碰 ollama：07 run → 01 run（新舊三個題庫、新標籤規則）→ 15 `run_read.py`（8 條件 × 2 模型 × 160 = 2,560 次，每格前 3 題會 log 秒數）→ score（新）→ score（10 的舊 160 列用 15 的尺重算到 `results/rescored-old/`）→ power → merge → report；結束寫 CHAIN15 DONE 到 `scratchpad/chain15.log`。掛了手動照這順序跑（run_read 可續跑）。跑完：README 3–5 節（事前宣告表對照合併表；題庫統計：退件率 0、ocr 覆蓋 160/160、base 141、重複 39、條號開頭 0、法規題抽查 10/10、公報題抽查 20 題的結果）、根 README 一列、playbook 第 0 節題數那句、01／07／10 README 各加「15 加倍後」一句。
 **跑的時候跑測試一律 `uv run pytest tests experiments/*/tests --deselect tests/test_ollama.py --deselect experiments/12-rerank/tests/test_rerankers.py`**（那兩檔會打 bge-m3／載重排器，把跑著的聊天模型踢掉）。
 10-fix-ablation **做完**（README 五節齊，根 README 有列，playbook 的「（10 補）」四格填了）：4,160 次 0 錯誤、漂移 47/52（5 次全在 gpt-oss）。oracle 列跑時標籤還帶法規名，排在 `chain_fix.sh` 重跑後再改那一列。11-abstain **做完**（README 五節齊、根 README 有列、playbook 第 5 節加了一條）：3,200 次 0 錯誤、漂移 37/40。12 的 `run_rerank.py` 2026-10-30 03:21 自動接棒開跑（`scratchpad/rerank12.log`）。
-12-rerank（重排序）**跑著**： `run_rerank.py`（兩格 × 五重排器，需 `uv sync --group rerank`）再 `run_read.py`（1,280 次），估到隔天上午；掛了手動跑，都可續跑。
+12-rerank（已做完，見上；原文留著）： `run_rerank.py`（兩格 × 五重排器，需 `uv sync --group rerank`）再 `run_read.py`（1,280 次），估到隔天上午；掛了手動跑，都可續跑。
 13-points-tables（沒有「條」的文件怎麼切）語料 30 份、169 題、程式、README 1–2 節都好了；`scratchpad/chain13.sh` 在 12 跑完後接著跑 OCR（1 份 2 頁）→ `run_retrieval.py` → `attribute.py` → `run_read.py`（1,690 次 ≈ 2.5 小時）。掛了手動照這順序跑。
 14-native-source（公報 PDF vs 法規系統 HTML／附件）語料 16 份、87 題（13／09 原題）、三路線文字、程式、README 1–2 節都好了；`scratchpad/chain14.sh` 在 13 跑完後接著跑 `run_retrieval.py` → `attribute.py` → `run_read.py`（1,044 次 ≈ 1.5 小時）。要重跑抽字用 `uv run --group office python experiments/14-native-source/extract.py`。
 `docs/2026-10-29-real-data-playbook.md`（01–10 整理成一條流程）初稿已推，10–14 的數字跑完補。
@@ -15,6 +18,7 @@
 
 ## 已驗證
 
+- 2026-10-30 13:16 12 跑完算分：bge-reranker-v2-m3 預算內有正解 +.11／+.21、答對 +.05／+.06 分得出、3 秒一題；RRF ±.03；Qwen3 重排 +.05 但 37 秒；listwise ±0～−.14 且 31–40 秒。13:37 ollama 413 修好、13 重跑中。
 - 2026-10-30 09:00 01／07 審查決議實作並 commit（469fd21，趕在 chain_fix 跑 01 之前）：固定切標籤 ≥ min(100, 一半)、頁級標籤看本文、第一塊一定讀、run.py 旗標；01＋07 測試 33 個過。15 scaffold（35114ea）：全套測試（上面那條 deselect）exit 0；power.py 的 MDE 與監察員手算一致（+cnpre − fixed MDE@320 = .07）。
 - 2026-10-30 03:21 11 閱讀軌 3,200 次跑完算分：P0 硬答 .91／.86，P1（schema 加 `found`）有依據可看時 .09／.11、有答案的題不掉；沒依據時照答 .66／.94；引句濾網兩層（在依據裡、含答的數字，2026-10-30 07:15 Mike 核准加的，重算不叫模型）：gpt-oss 編引句第一層擋九成、qwen3 抄真句答假數要第二層（.66 → .23）；誤擋 .04–.08。報表 `_f` 把 .997 印成「.00」的 bug 修了（14 個 report.py）。
 - 2026-10-29 22:18 10 閱讀軌 4,160 次跑完算分：值錢的是前綴（+.17／+.16，幾乎全是哪一份題）與令文留塊（關掉 −.21／−.17，條號題 .56 → .17）；OCR +.07；一條一塊比 fixed-1000 只 +.05 區間含 0；對照表 ±0；全開 .82／.72，寬鬆 .82／.82；加一個與關一個排序一致。數字在 `experiments/10-fix-ablation/results/report.md`。
