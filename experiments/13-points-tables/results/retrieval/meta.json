@@ -1,0 +1,137 @@
+{
+ "embed_model": "bge-m3",
+ "embed_digest": "sha256:7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+ "ollama": "0.40.2",
+ "n_questions": 169,
+ "n_docs": 30,
+ "depth": 50,
+ "k": 5,
+ "budgets": [
+  1000,
+  2000
+ ],
+ "random_draws": 20,
+ "drift_min_cosine": 1.0,
+ "cells": {
+  "base/fixed-1000/noprefix": {
+   "chunks": 153,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 164
+  },
+  "base/fixed-1000/prefix": {
+   "chunks": 153,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 164
+  },
+  "base/fixed-300/noprefix": {
+   "chunks": 487,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 160
+  },
+  "base/fixed-300/prefix": {
+   "chunks": 487,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 160
+  },
+  "base/points/noprefix": {
+   "chunks": 502,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 165
+  },
+  "base/points/prefix": {
+   "chunks": 502,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 165
+  },
+  "base/rows/noprefix": {
+   "chunks": 464,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 163
+  },
+  "base/rows/prefix": {
+   "chunks": 464,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 163
+  },
+  "ocr/fixed-1000/noprefix": {
+   "chunks": 154,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 168
+  },
+  "ocr/fixed-1000/prefix": {
+   "chunks": 154,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 168
+  },
+  "ocr/fixed-300/noprefix": {
+   "chunks": 491,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 164
+  },
+  "ocr/fixed-300/prefix": {
+   "chunks": 491,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 164
+  },
+  "ocr/points/noprefix": {
+   "chunks": 511,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 169
+  },
+  "ocr/points/prefix": {
+   "chunks": 511,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 169
+  },
+  "ocr/rows/noprefix": {
+   "chunks": 473,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 167
+  },
+  "ocr/rows/prefix": {
+   "chunks": 473,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 167
+  },
+  "rows/fixed-1000/noprefix": {
+   "chunks": 236,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 158
+  },
+  "rows/fixed-1000/prefix": {
+   "chunks": 236,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 158
+  },
+  "rows/fixed-300/noprefix": {
+   "chunks": 733,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 154
+  },
+  "rows/fixed-300/prefix": {
+   "chunks": 733,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 154
+  },
+  "rows/points/noprefix": {
+   "chunks": 472,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 158
+  },
+  "rows/points/prefix": {
+   "chunks": 472,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 158
+  },
+  "rows/rows/noprefix": {
+   "chunks": 544,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 157
+  },
+  "rows/rows/prefix": {
+   "chunks": 544,
+   "docs_with_chunks": 30,
+   "questions_with_gold_chunk": 157
+  }
+ }
+}

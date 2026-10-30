@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-30",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "budget": 1000,
+  "conditions": {
+    "closed-book": null,
+    "oracle": "oracle",
+    "fixed-1000": [
+      "ocr",
+      "fixed-1000",
+      false
+    ],
+    "fixed-300": [
+      "ocr",
+      "fixed-300",
+      false
+    ],
+    "struct": [
+      "rows",
+      "rows",
+      true
+    ]
+  },
+  "n_questions": 169,
+  "drift": {
+    "same": 19,
+    "n": 20,
+    "rows": [
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "closed-book",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "oracle",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "oracle",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "fixed-1000",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "fixed-1000",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "fixed-300",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "fixed-300",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "struct",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "qwen3:8b",
+        "condition": "struct",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "closed-book",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "oracle",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "oracle",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "fixed-1000",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "fixed-1000",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "fixed-300",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "fixed-300",
+        "qid": "q002",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "struct",
+        "qid": "q001",
+        "same": true
+      },
+      {
+        "model": "gpt-oss:20b",
+        "condition": "struct",
+        "qid": "q002",
+        "same": false
+      }
+    ]
+  }
+}
