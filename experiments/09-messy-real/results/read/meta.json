@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "machine": "mini.local",
   "ollama": "0.40.2",
   "models": {
@@ -38,7 +38,7 @@
   },
   "n_questions": 160,
   "drift": {
-    "same": 19,
+    "same": 20,
     "n": 20,
     "rows": [
       {
@@ -153,7 +153,7 @@
         "model": "gpt-oss:20b",
         "condition": "all",
         "qid": "q001",
-        "same": false
+        "same": true
       },
       {
         "model": "gpt-oss:20b",

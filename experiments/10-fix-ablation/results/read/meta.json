@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "machine": "mini.local",
   "ollama": "0.40.2",
   "models": {
@@ -78,7 +78,7 @@
   },
   "n_questions": 160,
   "drift": {
-    "same": 47,
+    "same": 44,
     "n": 52,
     "rows": [
       {
@@ -295,7 +295,7 @@
         "model": "gpt-oss:20b",
         "condition": "+rows",
         "qid": "q002",
-        "same": true
+        "same": false
       },
       {
         "model": "gpt-oss:20b",
@@ -355,7 +355,7 @@
         "model": "gpt-oss:20b",
         "condition": "-rows",
         "qid": "q002",
-        "same": true
+        "same": false
       },
       {
         "model": "gpt-oss:20b",
@@ -385,7 +385,7 @@
         "model": "gpt-oss:20b",
         "condition": "-cnpre",
         "qid": "q001",
-        "same": true
+        "same": false
       },
       {
         "model": "gpt-oss:20b",

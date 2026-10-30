@@ -9,9 +9,9 @@ cont,qwen3:8b,page,value_ok,0.84,0.68,0.96,25
 cont,qwen3:8b,pages,value_ok,0.72,0.52,0.88,25
 ctrl,gpt-oss:20b,closed-book,value_ok,0.07692307692307693,0.0,0.23076923076923078,13
 ctrl,gpt-oss:20b,merged,value_ok,1.0,1.0,1.0,13
-ctrl,gpt-oss:20b,page,value_ok,0.9230769230769231,0.7692307692307693,1.0,13
-ctrl,gpt-oss:20b,pages,value_ok,0.8461538461538461,0.6153846153846154,1.0,13
+ctrl,gpt-oss:20b,page,value_ok,1.0,1.0,1.0,13
+ctrl,gpt-oss:20b,pages,value_ok,1.0,1.0,1.0,13
 ctrl,qwen3:8b,closed-book,value_ok,0.0,0.0,0.0,13
 ctrl,qwen3:8b,merged,value_ok,0.8461538461538461,0.6153846153846154,1.0,13
 ctrl,qwen3:8b,page,value_ok,0.9230769230769231,0.7692307692307693,1.0,13
-ctrl,qwen3:8b,pages,value_ok,0.7692307692307693,0.5384615384615384,1.0,13
+ctrl,qwen3:8b,pages,value_ok,0.8461538461538461,0.6153846153846154,1.0,13

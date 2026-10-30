@@ -21,8 +21,8 @@ gpt-oss:20b,anchor,value_ok,fixed,closed-book,0.4,0.325,0.475,True
 gpt-oss:20b,anchor,value_lenient,fixed,closed-book,0.46875,0.3875,0.54375,True
 gpt-oss:20b,anchor,value_ok,full,fixed,0.28125,0.2,0.36890624999999916,True
 gpt-oss:20b,anchor,value_lenient,full,fixed,0.3,0.2125,0.3875,True
-gpt-oss:20b,anchor,value_ok,oracle,full,0.1125,0.05625,0.175,True
-gpt-oss:20b,anchor,value_lenient,oracle,full,0.10625,0.05625,0.1625,True
+gpt-oss:20b,anchor,value_ok,oracle,full,-0.04375,-0.125,0.0375,False
+gpt-oss:20b,anchor,value_lenient,oracle,full,-0.05,-0.13125,0.03125,False
 qwen3:8b,add,value_ok,+ocr,fixed,0.075,0.0375,0.11265624999999915,True
 qwen3:8b,add,value_lenient,+ocr,fixed,0.075,0.0375,0.11265624999999915,True
 qwen3:8b,add,value_ok,+rows,fixed,0.0,-0.03125,0.03125,False
@@ -45,5 +45,5 @@ qwen3:8b,anchor,value_ok,fixed,closed-book,0.44375,0.36875,0.525,True
 qwen3:8b,anchor,value_lenient,fixed,closed-book,0.44375,0.36875,0.525,True
 qwen3:8b,anchor,value_ok,full,fixed,0.31875,0.24375,0.40625,True
 qwen3:8b,anchor,value_lenient,full,fixed,0.31875,0.24375,0.40625,True
-qwen3:8b,anchor,value_ok,oracle,full,0.05625,0.0,0.10625,False
-qwen3:8b,anchor,value_lenient,oracle,full,0.05625,0.0,0.10625,False
+qwen3:8b,anchor,value_ok,oracle,full,-0.0625,-0.1375,0.0125,False
+qwen3:8b,anchor,value_lenient,oracle,full,-0.0625,-0.1375,0.0125,False

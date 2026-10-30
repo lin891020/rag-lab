@@ -1,0 +1,45 @@
+{"qid": "a01", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "導線的安培容量至少要抓到電動機額定電流的1.25倍，絞線最小能用3.5平方毫米。", "natural": 5, "copied_wording": false, "comment": "", "why": "1.25 倍；絞線 3.5 mm²、單線 2.0 mm"}
+{"qid": "a02", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "導線的安培容量下限要計算連續負載的1.25倍加上非連續負載總和。", "natural": 5, "copied_wording": false, "comment": "", "why": "連續負載 1.25 倍加非連續負載"}
+{"qid": "a03", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "同一導線管或多芯電纜內有十條以上載流導線，其導線安培容量應以「三以下」之數值再乘以表二五～六規定之修正係數。", "natural": 5, "copied_wording": true, "comment": "", "why": "十條以上：用三以下的數值乘表二五～六的係數"}
+{"qid": "a06", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "每條導線最小要五十平方毫米以上。", "natural": 5, "copied_wording": false, "comment": "", "why": "50 mm² 以上"}
+{"qid": "a07", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "不可以，銅線與鋁線不得在同一端子上直接連接，除非使用經檢驗通過的專用銅鋁合金接頭。", "natural": 5, "copied_wording": false, "comment": "", "why": "不得混接，除非用專用銅鋁合金接頭"}
+{"qid": "a08", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "電氣爐、乾燥室、電動起重機所用之滑接導線或類似性質之低壓線路可以用裸銅線。", "natural": 5, "copied_wording": false, "comment": "", "why": "電氣爐、乾燥室、起重機滑接導線"}
+{"qid": "a10", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "中性線（被接地導線）應以明顯之白色或淺灰色標示。", "natural": 5, "copied_wording": false, "comment": "", "why": "白色或淺灰色"}
+{"qid": "a11", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "白色的線不可以拿來當相線用，除非符合第32條的例外規定。", "natural": 5, "copied_wording": false, "comment": "", "why": "原則不行；出線口處永久改色才可"}
+{"qid": "a13", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "住宅客廳的照明和插座電路，對地電壓最高可以到三百伏特以下。", "natural": 5, "copied_wording": false, "comment": "", "why": "150 V 以下；特定條件可到 300 V"}
+{"qid": "a14", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "樓地板面積應自建築物、住宅場所或其他所含區域之內緣起算，不包括陽台、車庫，或未使用、未裝修且未預計改裝作為日後使用之空間。", "natural": 5, "copied_wording": false, "comment": "", "why": "自內緣起算；陽台、車庫不計"}
+{"qid": "a15", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "每一框架上之雙連插座出線口，應以至少一百八十伏安計算。", "natural": 5, "copied_wording": false, "comment": "", "why": "至少 180 VA"}
+{"qid": "a16", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "分路的額定是看斷路器，而非導線。", "natural": 5, "copied_wording": false, "comment": "", "why": "由過電流保護裝置的安培額定決定"}
+{"qid": "a17", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "廚房、餐廳或類似區域應分別設有一個以上二十安培小型用電器具插座專用分路供電。", "natural": 5, "copied_wording": true, "comment": "", "why": "一個以上 20 A 專用分路"}
+{"qid": "a18", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "入口門任一側沿牆壁水平量測一‧八米以內應裝設一個插座出線口，其餘牆壁距離（含轉角）應再裝設插座出線口之數量以三‧六米計算。", "natural": 5, "copied_wording": true, "comment": "", "why": "入口 1.8 m 內一個，其餘每 3.6 m"}
+{"qid": "a20", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "住宅用乾衣機的負載應以二千瓦特計算。", "natural": 5, "copied_wording": false, "comment": "", "why": "每具 2 kW，銘牌較大者依銘牌"}
+{"qid": "a22", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "進屋線為電纜者，其伸出壁外長度應為四百毫米以上。", "natural": 5, "copied_wording": false, "comment": "", "why": "400 mm 以上"}
+{"qid": "a23", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "進屋線路與燃氣供給管路間應保持一米以上之間隔。", "natural": 5, "copied_wording": true, "comment": "", "why": "1 m 以上"}
+{"qid": "a24", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "住宅 20 安培以下分路的斷路器應為反時限保護。", "natural": 5, "copied_wording": true, "comment": "", "why": "反時限"}
+{"qid": "a25", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "可以往上選一級，但所選用之高一級不大於八百安培。", "natural": 5, "copied_wording": false, "comment": "", "why": "可選高一級，800 A 以下"}
+{"qid": "a26", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "2.0 mm 的導線，過電流保護裝置最大可以裝十五安培。", "natural": 5, "copied_wording": true, "comment": "", "why": "15 A"}
+{"qid": "a27", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "幹線分接導線長度不超過八米，安培容量不小於幹線過電流保護裝置安培額定三分之一，且終端所裝之一具斷路器或一組熔線之安培額定不大於該分接導線之安培容量，並有防護使其不易遭受外力損傷者，在分接點得免裝過電流保護裝置。", "natural": 5, "copied_wording": true, "comment": "", "why": "容量不小於幹線保護額定 1/3，終端一具斷路器，且有防護"}
+{"qid": "a28", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "短路電流之功率因數大於表八六～一規定值，或感抗與阻抗比值（X/R）小於其相對應值者，得逕依對稱短路電流計算值選用。", "natural": 5, "copied_wording": true, "comment": "", "why": "功率因數大於表八六～一或 X/R 小於對應值"}
+{"qid": "a29", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "辦公處所之飲水機分路應裝設漏電斷路器，但飲水機內部已裝設漏電斷路器者不在此限。", "natural": 5, "copied_wording": false, "comment": "", "why": "要，除非飲水機內部已裝"}
+{"qid": "a30", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "靈敏度應為六毫安培以下，動作時間應為一秒以下。", "natural": 5, "copied_wording": false, "comment": "", "why": "6 mA 以下、0.1 秒以下"}
+{"qid": "a31", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "變壓器 30 kVA 的第二種接地，接地電極導線應採用二十二平方毫米以上絕緣導線。", "natural": 5, "copied_wording": false, "comment": "", "why": "超過 20 kVA：22 mm² 以上"}
+{"qid": "a32", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "內線系統接地應接在總開關箱的電源側。", "natural": 5, "copied_wording": false, "comment": "", "why": "電源側"}
+{"qid": "a34", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "棒狀接地電極最少要長2.4米以上，外徑為19毫米以上。", "natural": 5, "copied_wording": false, "comment": "", "why": "2.4 m 以上；管狀外徑 19 mm、鋼心包銅 15 mm"}
+{"qid": "a35", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "兩支接地棒之間應距離一‧八米以上。", "natural": 5, "copied_wording": false, "comment": "", "why": "1.8 m 以上"}
+{"qid": "a38", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "SPD 裝在幹線端時，應接在建築物第一個過電流保護裝置之負載側。", "natural": 5, "copied_wording": false, "comment": "", "why": "過電流保護裝置的負載側"}
+{"qid": "a39", "type": "article", "model": "qwen3:8b", "answerable": true, "answer": "SPD 不能裝在超過六百伏特之電路、非接地系統或阻抗接地系統（經設計者確認適用者除外）及突波保護裝置額定電壓低於其裝設位置之最大相對地電壓之電路。", "natural": 5, "copied_wording": false, "comment": "", "why": "超過 600 V、非接地系統、額定電壓低於相對地電壓"}
+{"qid": "t01", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "22平方的安培容量是65A。", "natural": 5, "copied_wording": false, "comment": "", "why": "65 A"}
+{"qid": "t02", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "4條載流導線可載117安培。", "natural": 5, "copied_wording": false, "comment": "", "why": "117 A"}
+{"qid": "t03", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "安培容量為50A。", "natural": 5, "copied_wording": false, "comment": "", "why": "50 A"}
+{"qid": "t04", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "安培容量的修正係數是 50%。", "natural": 5, "copied_wording": false, "comment": "", "why": "50%"}
+{"qid": "t05", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "安培容量要乘 0.77。", "natural": 5, "copied_wording": false, "comment": "", "why": "0.87"}
+{"qid": "t07", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "辦公廳的一般照明單位負載是每平方米 30 VA。", "natural": 5, "copied_wording": false, "comment": "", "why": "30 VA"}
+{"qid": "t08", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "絞線最小要8平方毫米，燈座要用重責務型。", "natural": 5, "copied_wording": false, "comment": "", "why": "8 mm²；重責務型"}
+{"qid": "t09", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "幹線需量因數為35%", "natural": 5, "copied_wording": false, "comment": "", "why": "35%"}
+{"qid": "t10", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "8台乾衣機的幹線需量因數為60%", "natural": 5, "copied_wording": false, "comment": "", "why": "60%"}
+{"qid": "t11", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "幹線最大需量為27 kW。", "natural": 5, "copied_wording": false, "comment": "", "why": "27 kW（A 行）"}
+{"qid": "t12", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "集合住宅 20 戶的進屋線負載需量因數為 50%。", "natural": 5, "copied_wording": false, "comment": "", "why": "50%"}
+{"qid": "t13", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "斷路器Icu最低要25kA。", "natural": 5, "copied_wording": false, "comment": "", "why": "20 kA"}
+{"qid": "t14", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "接地電阻最大為 250 歐姆。", "natural": 5, "copied_wording": false, "comment": "", "why": "250 Ω"}
+{"qid": "t15", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "第三種接地，接地電阻應為10歐姆以下。", "natural": 5, "copied_wording": false, "comment": "", "why": "50 Ω 以下"}
+{"qid": "t17", "type": "table", "model": "qwen3:8b", "answerable": true, "answer": "接地電極導線線徑為 8 平方毫米。", "natural": 5, "copied_wording": false, "comment": "", "why": "30 mm²"}

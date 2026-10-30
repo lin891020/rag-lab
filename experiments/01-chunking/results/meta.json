@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-30",
   "host": "mini.local",
   "python": "3.12.15",
   "ollama": "0.40.2",
@@ -36,8 +36,8 @@
       "mean_len": 336
     },
     "table-row": {
-      "n": 927,
-      "mean_len": 102
+      "n": 1022,
+      "mean_len": 100
     },
     "table-flat-fixed": {
       "n": 49,
