@@ -1,10 +1,11 @@
 # HANDOFF
 
-最後更新：2026-10-30 13:45（mini）。
+最後更新：2026-10-30 16:35（mini）。
 
 ## 現在在哪一步
 
 **排程出過一次事（2026-10-30 13:20–13:37）**：13 的 `run_retrieval.py` 對 ollama 嵌入一塊 3,772 字、滿是化學名的文字，ollama 回 HTTP 413「input length exceeds the context length」（truncate 沒救到），13 死、14／重跑／15／16 全卡在等 13。修在 `src/rag_lab/ollama.embed`：413 時改一筆一筆送、還不行就對半砍到能嵌（記 warning），有離線測試；13 從 13:37 重跑（`scratchpad/chain13b.sh`，寫同一份 `read13.log`，後面的 chain14 照舊等它的 drift）。時程全部往後推約 20 分鐘再加 13 重跑的時間。
+13-points-tables **做完**（2026-10-30 16:19 跑完；README 五節、根 README、playbook §3）：固定切 300 字就夠、按點切分不出、答對率分得出的只有前綴。14 自動接棒。
 12-rerank **做完**（README 五節齊、根 README、playbook 第 4 節）：重排漂移 12/12、閱讀 1,280 次 0 錯誤、漂移 15/16。
 16-rule-lookup-compute（規則查表接計算，L0／L1／L2）**程式、表、題庫、事前宣告、跑前審查都好了**，`scratchpad/chain16.sh` 在背景等 `chain15.log` 的 CHAIN15 DONE。計畫 `docs/superpowers/plans/2026-10-30-16-rule-lookup-compute.md`（Mike 核准；監察員計畫審 14 條、跑前審 5 條都修了）。22 張乾淨表（5 張新的獨立 agent 逐格核 5/5 全對）、160 題（改寫 agent 160/160、核題 agent 20/20）、26 個測試。跑完：score → attribute → report → README 3–5、根 README、playbook 新增「查表接計算」一節。
 15-more-questions（題數要多少才分得出）**程式、題庫、事前宣告都好了，等跑**：Mike 2026-10-30 核准計畫（`~/.claude/plans/jazzy-riding-harbor.md`，監察員 agent 審過 13 條、必改 6 條都併了）。`scratchpad/chain15.sh` 已在背景候著，等 `fix.log` 出現 FIXCHAIN DONE 才碰 ollama：07 run → 01 run（新舊三個題庫、新標籤規則）→ 15 `run_read.py`（8 條件 × 2 模型 × 160 = 2,560 次，每格前 3 題會 log 秒數）→ score（新）→ score（10 的舊 160 列用 15 的尺重算到 `results/rescored-old/`）→ power → merge → report；結束寫 CHAIN15 DONE 到 `scratchpad/chain15.log`。掛了手動照這順序跑（run_read 可續跑）。跑完：README 3–5 節（事前宣告表對照合併表；題庫統計：退件率 0、ocr 覆蓋 160/160、base 141、重複 39、條號開頭 0、法規題抽查 10/10、公報題抽查 20 題的結果）、根 README 一列、playbook 第 0 節題數那句、01／07／10 README 各加「15 加倍後」一句。
