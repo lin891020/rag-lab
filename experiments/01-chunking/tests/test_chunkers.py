@@ -3,6 +3,7 @@ from pathlib import Path
 import pytest
 
 from chunkers import (
+    span_labels,
     Chunk,
     article_chunks,
     fixed_chunks,
@@ -104,8 +105,16 @@ def test_table_flat_fixed_labels_tables_by_span(tables):
 
 
 def test_table_row_chunks_accept_values_with_a_suffix():
-    from chunkers import table_row_chunks
-
     text = "表九二 線徑\n導線 線徑\n銅線 25以下\n鋁線 l0以下\n註：略\n"
     rows = table_row_chunks({"表九二": text})
     assert [c.text.splitlines()[-1] for c in rows] == ["銅線 25以下", "鋁線 l0以下"]
+
+
+def test_span_labels_need_the_chunk_to_hold_a_real_piece_of_the_span():
+    # a chunk is labelled with a span only when it holds >= min(100 chars, half the span) of it
+    spans = [(0, 500, "A"), (500, 540, "B"), (540, 1040, "C")]
+    assert span_labels(0, 500, spans) == ["A"]
+    assert span_labels(470, 560, spans) == ["B"]  # 30 of A and 20 of C are not enough
+    assert span_labels(400, 560, spans) == ["A", "B"]  # exactly 100 of A
+    assert span_labels(520, 560, spans) == ["B"]  # 20 of the 40-char B: half is enough
+    assert span_labels(525, 560, spans) == []  # 15 of B is not

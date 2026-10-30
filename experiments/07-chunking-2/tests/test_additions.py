@@ -33,10 +33,18 @@ def test_with_context_prepends_by_article_and_index():
     assert with_context(cs, {})[0].text == cs[0].text
 
 
-def test_page_chunks_carry_the_running_article_over_the_page_break():
-    pages = ["第 1 條\n甲", "乙（第一條續）\n第 2 條\n丙", "", "丁（第二條續）"]
-    ps = page_chunks(pages, _arts())
-    assert [p.labels for p in ps] == [["1"], ["1", "2"], ["2"]]
+def test_page_chunks_label_an_article_only_when_the_page_holds_a_real_piece_of_it():
+    body1 = "甲" * 30
+    body2 = "丙" * 30
+    arts = [Article(1, "", "", body1, 0, 40), Article(2, "", "", body2, 40, 80)]
+    pages = [
+        "第 1 條\n" + body1[:20],  # 20 of 30: more than half
+        body1[20:] + "\n第 2 條\n" + body2[:3],  # 10 of 1 is not enough; header + 3 of 2 is not
+        "",
+        body2[3:],  # 27 of 30
+    ]
+    ps = page_chunks(pages, arts)
+    assert [p.labels for p in ps] == [["1"], [], ["2"]]
     assert ps[2].meta["page"] == 3
 
 

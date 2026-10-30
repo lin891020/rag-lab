@@ -13,11 +13,13 @@ def hit_at_k(ranked: list[Chunk], gold: list[str], *, k: int) -> bool:
 
 
 def hit_at_budget(ranked: list[Chunk], gold: list[str], *, budget: int) -> bool:
-    """Walk the ranking, keep every chunk that still fits whole within `budget` characters."""
+    """Walk the ranking, keep every chunk that still fits whole within `budget` characters.
+    The first chunk is always read (a reader cuts it to the budget rather than reading nothing;
+    10's budget_evidence does the same), so a long top-1 chunk can still be a hit."""
     g = set(gold)
     used = 0
-    for c in ranked:
-        if used + len(c.text) > budget:
+    for i, c in enumerate(ranked):
+        if i and used + len(c.text) > budget:
             break
         used += len(c.text)
         if g & set(c.labels):

@@ -4,6 +4,8 @@
 
 01 的結論是「小塊贏，不是照條贏」（一條一塊 .80 vs 固定 1000 字 .57，hit@1000）。切分調查（`docs/research/2026-10-29-chunking-survey.md`）列出幾個便宜的招：標題鏈前綴（零成本的 contextual retrieval）、LLM 寫脈絡句（Anthropic 的 contextual retrieval，−35%～−49% 失敗率）、頁級切塊（NVIDIA 說最穩）、父子（小塊找、整條回）、dense + BM25 混合。在同一份法規、同一組題、本地模型上，這些招各加多少？
 
+> **2026-10-30 規則改了，本頁數字還是舊規則的**（審查決議，實驗 15 開工前實作）：頁級的標籤從「頁上有條號＋上一頁延續」改成「頁上有該條本文的前或後 min(100 字, 一半)」（`chunkers.page_chunks`）；預算規則改成第一塊一定讀（`metrics.hit_at_budget`，審查估頁級 −.28 會變約 −.10）；`run.py` 加 `--questions`／`--out`。重跑後的數字寫在「重算」段，舊數字留著對照。
+
 ## 2. 怎麼做
 
 **別人怎麼解的**：Chroma（2024）——遞迴 200 tokens 無重疊最穩，重疊只拖累 precision；Anthropic（2024）——每 chunk 由 LLM 寫 50–100 token 脈絡句再 embed，top-20 失敗率 5.7%→3.7%，加 BM25 2.9%；2608.00824——標題鏈前綴 MRR@5 +24%；NVIDIA（2025）——頁級切塊 RAGAS 0.648 最穩；2603.06976（36 策略 × 5 embedding，含 bge-m3）——結構感知切分整體最強、bge-m3 是最好的 embedding；LlamaIndex／LangChain 的父子只有教學沒數字。**沒找到**本地 8B 模型寫脈絡句的量測。

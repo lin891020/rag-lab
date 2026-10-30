@@ -14,6 +14,9 @@ def test_hit_at_budget_counts_only_chunks_that_fit_whole():
     assert hit_at_budget(RANKED, ["3"], budget=600) is True
     assert hit_at_budget(RANKED, ["7"], budget=1000) is False  # second chunk would end at 1200
     assert hit_at_budget(RANKED, ["7"], budget=1200) is True
+    # the first chunk is always read (cut to the budget), as 10's budget_evidence does
+    assert hit_at_budget(RANKED, ["3"], budget=100) is True
+    assert hit_at_budget(RANKED, ["7"], budget=100) is False
 
 
 def test_bootstrap_ci_degenerate_and_ordered():

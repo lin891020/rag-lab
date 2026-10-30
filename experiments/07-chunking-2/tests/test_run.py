@@ -36,3 +36,14 @@ def test_conditions_on_the_real_pdf():
 def test_questions_are_01s_article_questions_plus_reserve():
     qs = load_questions()
     assert len(qs) == 40 and all(q["type"] == "article" for q in qs)
+
+
+def test_load_questions_takes_extra_files_and_still_keeps_only_article_questions(tmp_path):
+    extra = tmp_path / "more.jsonl"
+    extra.write_text(
+        '{"id": "a41", "type": "article", "gold": ["20"]}\n'
+        '{"id": "t18", "type": "table", "gold": ["表一"]}\n',
+        "utf-8",
+    )
+    qs = load_questions([ONE / "questions.jsonl", extra])
+    assert qs[-1]["id"] == "a41" and all(q["type"] == "article" for q in qs)

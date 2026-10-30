@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
+import unicodedata
 from dataclasses import dataclass, field
 
 logger = logging.getLogger(__name__)
@@ -208,18 +209,27 @@ def with_context(chunks: list[Chunk], contexts: dict[str, str]) -> list[Chunk]:
     return out
 
 
+def _norm(s: str) -> str:
+    return re.sub(r"\s+", "", unicodedata.normalize("NFKC", s))
+
+
 def page_chunks(pages: list[str], articles: list[Article]) -> list[Chunk]:
     """One chunk per PDF page (NVIDIA's page-level chunking). A page's labels are the articles
-    whose header is on it plus the article that was still running when the page began."""
+    it holds a real piece of: the first or the last min(100 chars, half) of the article's body
+    occurs in the page text (whitespace removed). A page that only carries an article's header
+    line, or three characters of its tail, is not labelled with it (the 2026-10-29 audit)."""
     out = []
-    current: str | None = None
+    keys = []
+    for a in articles:
+        body = _norm(a.body)
+        k = max(1, min(100, len(body) // 2))
+        keys.append((str(a.num), body[:k], body[-k:]))
     for i, page in enumerate(pages):
-        heads = [m.group(1) for m in _HEAD.finditer(page)]
-        labels = ([current] if current and page.strip() else []) + heads
-        if heads:
-            current = heads[-1]
-        if page.strip():
-            out.append(Chunk(page.strip(), labels, 0, 0, {"page": i}))
+        if not page.strip():
+            continue
+        folded = _norm(page)
+        labels = [lab for lab, head, tail in keys if head in folded or tail in folded]
+        out.append(Chunk(page.strip(), labels, 0, 0, {"page": i}))
     return out
 
 

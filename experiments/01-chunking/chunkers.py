@@ -100,12 +100,28 @@ def _pieces(text: str, s: int, e: int, size: int, seps: list[str]) -> list[tuple
     return [(s, e)]
 
 
+MIN_SPAN_CHARS = 100  # a chunk carries a span's label only when it holds this much of it ...
+
+
+def span_labels(s: int, e: int, spans: list[tuple[int, int, str]]) -> list[str]:
+    """Labels of the spans the chunk [s, e) really holds: at least min(100 chars, half the
+    span). Touching a span by a few characters used to count (the 2026-10-29 audit: a fifth of
+    bm25's fixed269 "hits" held no answer); half of a short span is the floor so that a 40-char
+    article cut in two still labels both halves."""
+    out = []
+    for a, b, lab in spans:
+        held = min(b, e) - max(a, s)
+        if held > 0 and held >= min(MIN_SPAN_CHARS, -(-(b - a) // 2)):
+            out.append(lab)
+    return out
+
+
 def fixed_chunks(
     text: str, *, size: int, overlap: int, separators: list[str], spans: list[tuple[int, int, str]]
 ) -> list[Chunk]:
     """RecursiveCharacterTextSplitter-style: split on the first separator present, recurse on
     pieces still too long, then merge greedily up to `size` keeping `overlap` chars of tail.
-    Labels = every span that intersects the chunk."""
+    Labels = every span the chunk holds a real piece of (span_labels)."""
     pieces = _pieces(text, 0, len(text), size, separators)
     bounds: list[tuple[int, int]] = []
     buf: list[tuple[int, int]] = []
@@ -129,8 +145,7 @@ def fixed_chunks(
             continue
         s2 = s + (len(raw) - len(raw.lstrip()))
         e2 = s2 + len(stripped)
-        labels = [lab for a, b, lab in spans if a < e2 and b > s2]
-        out.append(Chunk(stripped, labels, s2, e2))
+        out.append(Chunk(stripped, span_labels(s2, e2, spans), s2, e2))
     logger.debug("fixed chunks", extra={"ctx": {"size": size, "overlap": overlap, "n": len(out)}})
     return out
 

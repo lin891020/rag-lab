@@ -10,6 +10,7 @@ Each condition is searched by dense (bge-m3), bm25 (char bigrams) and random (no
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -180,20 +181,28 @@ def summarize(raw: list[dict], metrics: list[str]) -> tuple[list[dict], list[dic
     return summary, diffs
 
 
-def main() -> int:
+def load_questions(paths: list[Path]) -> list[dict]:
+    """Every question in every file given, in file order (15 appends its own banks)."""
+    out: list[dict] = []
+    for path in paths:
+        out += [json.loads(ln) for ln in path.read_text("utf-8").splitlines() if ln.strip()]
+    return out
+
+
+def main(argv: list[str]) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--questions", nargs="+", type=Path, default=[HERE / "questions.jsonl"])
+    ap.add_argument("--out", type=Path, default=RESULTS)
+    args = ap.parse_args(argv)
     setup_logging("rag_lab")
-    RESULTS.mkdir(exist_ok=True)
+    args.out.mkdir(parents=True, exist_ok=True)
     law_pdf = HERE / "corpus/law.pdf"
     text = extract_text(law_pdf)
     tables = {
         p.stem: p.read_text(encoding="utf-8")
         for p in sorted((HERE / "corpus/tables").glob("*.txt"))
     }
-    questions = [
-        json.loads(ln)
-        for ln in (HERE / "questions.jsonl").read_text(encoding="utf-8").splitlines()
-        if ln.strip()
-    ]
+    questions = load_questions(args.questions)
     conditions, stats, extra = build_conditions(text, tables)
     logger.info("conditions built", extra={"ctx": {k: v["n"] for k, v in stats.items()}})
 
@@ -253,15 +262,15 @@ def main() -> int:
         "drift_probe_pass": min_cos >= 0.9999,
         **extra,
     }
-    (RESULTS / "raw.jsonl").write_text(
+    (args.out / "raw.jsonl").write_text(
         "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in raw), encoding="utf-8"
     )
     for name, rows in (("summary.csv", summary), ("diffs.csv", diffs)):
-        with (RESULTS / name).open("w", newline="", encoding="utf-8") as f:
+        with (args.out / name).open("w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(rows[0]))
             w.writeheader()
             w.writerows(rows)
-    (RESULTS / "meta.json").write_text(
+    (args.out / "meta.json").write_text(
         json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     logger.info(
@@ -279,4 +288,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

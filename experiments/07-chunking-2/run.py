@@ -14,6 +14,7 @@ Retrievers: dense (bge-m3), bm25 (char bigrams), hybrid (RRF of both), random (n
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -109,10 +110,14 @@ def evaluate_random(
     return rows
 
 
-def load_questions() -> list[dict]:
+DEFAULT_QUESTIONS = [ONE / "questions.jsonl", ONE / "questions-reserve.jsonl"]
+
+
+def load_questions(paths: list[Path] | None = None) -> list[dict]:
+    """The article questions of every file given (01's two banks by default; 15 adds its own)."""
     qs = []
-    for name in ("questions.jsonl", "questions-reserve.jsonl"):
-        qs += [json.loads(ln) for ln in (ONE / name).read_text("utf-8").splitlines() if ln.strip()]
+    for path in paths or DEFAULT_QUESTIONS:
+        qs += [json.loads(ln) for ln in path.read_text("utf-8").splitlines() if ln.strip()]
     return [q for q in qs if q["type"] == "article"]
 
 
@@ -225,15 +230,19 @@ def summarize(raw: list[dict], metrics: list[str]) -> tuple[list[dict], list[dic
     return summary, diffs
 
 
-def main() -> int:
+def main(argv: list[str]) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--questions", nargs="+", type=Path, default=DEFAULT_QUESTIONS)
+    ap.add_argument("--out", type=Path, default=RESULTS)
+    args = ap.parse_args(argv)
     setup_logging("rag_lab")
-    RESULTS.mkdir(exist_ok=True)
+    args.out.mkdir(parents=True, exist_ok=True)
     law_pdf = ONE / "corpus/law.pdf"
     text = extract_text(law_pdf)
     pages = [p.extract_text() or "" for p in PdfReader(str(law_pdf)).pages]
     tables = {p.stem: p.read_text("utf-8") for p in sorted((ONE / "corpus/tables").glob("*.txt"))}
     contexts = load_contexts()
-    questions = load_questions()
+    questions = load_questions(args.questions)
     conds, stats = build_conditions(text, pages, tables, contexts)
     logger.info(
         "conditions built",
@@ -299,18 +308,18 @@ def main() -> int:
         "drift_probe_min_cosine": min_cos,
         "drift_probe_pass": min_cos >= 0.9999,
     }
-    (RESULTS / "raw.jsonl").write_text(
+    (args.out / "raw.jsonl").write_text(
         "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in raw), encoding="utf-8"
     )
     for fname, rows in (("summary.csv", summary), ("diffs.csv", diffs)):
-        with (RESULTS / fname).open("w", newline="", encoding="utf-8") as f:
+        with (args.out / fname).open("w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(rows[0]))
             w.writeheader()
             w.writerows(rows)
-    (RESULTS / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), "utf-8")
+    (args.out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), "utf-8")
     logger.info("done", extra={"ctx": {"rows": len(raw), "drift_min_cos": min_cos}})
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
