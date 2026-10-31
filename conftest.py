@@ -46,6 +46,10 @@ LOCAL = {
     "rerankers",
     "run_rerank",
     "fetch_native",
+    "evidence",
+    "decompose",
+    "calc",
+    "posthoc",
 }
 
 

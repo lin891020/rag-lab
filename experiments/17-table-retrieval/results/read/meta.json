@@ -1,0 +1,542 @@
+{
+  "date": "2026-10-31",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "models_16": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "same_digest_as_16": true,
+  "ollama_16": "0.40.2",
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "budgets": {
+    "struct@3000-nosub": 3000,
+    "struct@3000": 3000,
+    "cards": 3000,
+    "decomp": 3000,
+    "decomp@4000": 4000
+  },
+  "cells": [
+    "struct@3000-nosub",
+    "struct@3000",
+    "cards",
+    "decomp",
+    "decomp@4000"
+  ],
+  "reused": {
+    "L1-struct": "struct@1500",
+    "L1-oracle": "oracle"
+  },
+  "n_questions": 160,
+  "drift": {
+    "gpt-oss:20b cards": "2/2",
+    "gpt-oss:20b decomp": "2/2",
+    "gpt-oss:20b decomp@4000": "2/2",
+    "gpt-oss:20b oracle": "8/10",
+    "gpt-oss:20b struct@1500": "6/10",
+    "gpt-oss:20b struct@3000": "2/2",
+    "gpt-oss:20b struct@3000-nosub": "2/2",
+    "qwen3:8b cards": "2/2",
+    "qwen3:8b decomp": "2/2",
+    "qwen3:8b decomp@4000": "2/2",
+    "qwen3:8b oracle": "10/10",
+    "qwen3:8b struct@1500": "10/10",
+    "qwen3:8b struct@3000": "2/2",
+    "qwen3:8b struct@3000-nosub": "2/2"
+  },
+  "drift_rows": [
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c1-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\", \"expression\": \"查表\", \"value\": 328, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\", \"expression\": \"查表\", \"value\": 328, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c2-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c2-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\", \"expression\": \"567 × (35 - 12) / (35 - 35) + 1\", \"value\": 0, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\", \"expression\": \"567 × (35 - 12) / (35 - 35) + 1\", \"value\": 0, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c3-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘絞線 50 19/1.8 170 209 192 236\", \"expression\": \"50\", \"value\": 50, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘絞線 50 19/1.8 170 209 192 236\", \"expression\": \"50\", \"value\": 50, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘單線 2.0 27 30 34 37\", \"expression\": \"27\", \"value\": 2.0, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘單線 2.0 27 30 34 37\", \"expression\": \"27\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c4-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表六○ 獨棟住宅場所負載之需量因數\\n負載=所有其他負載之首10 kW；需量因數(%)=100\", \"expression\": \"40 × 100 ÷ 100\", \"value\": 40, \"unit\": \"kW\"}",
+      "first": "{\"found\": true, \"quote\": \"表六○ 獨棟住宅場所負載之需量因數\\n負載=所有其他負載之首10 kW；需量因數(%)=100\", \"expression\": \"40 × 100 ÷ 100\", \"value\": 40, \"unit\": \"kW\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c4-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表五二 照明負載之幹線需量因數\\n場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40\", \"expression\": \"120000 × 0.4\", \"value\": 48000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"表五二 照明負載之幹線需量因數\\n場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40\", \"expression\": \"120000 × 0.4\", \"value\": 48000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c5-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=800以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=50\", \"expression\": \"60 × 0.77\", \"value\": 46.2, \"unit\": \"mm\"}",
+      "first": "{\"found\": true, \"quote\": \"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=800以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=50\", \"expression\": \"60 × 0.77\", \"value\": 46.2, \"unit\": \"mm\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@1500",
+      "qid": "c5-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=600以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=38\", \"expression\": \"38\", \"value\": 38, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=600以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=38\", \"expression\": \"38\", \"value\": 38, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五～二 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²)=325；導線線徑／根數/直徑（mm）=61/2.6；同一導線管或電纜內之載流導線數／3以下／安培容量（A）=330；同一導線管或電纜內之載流導線數／4／安培、容量（A）=297\", \"expression\": \"297\", \"value\": 297, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五～二 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²)=325；導線線徑／根數/直徑（mm）=61/2.6；同一導線管或電纜內之載流導線數／3以下／安培容量（A）=330；同一導線管或電纜內之載流導線數／4／安培、容量（A）=297\", \"expression\": \"297\", \"value\": 297, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c1-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五～三 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²）=125；導線線徑／根數/直徑（mm）=19/2.9；同一導線管或電纜內之載流導線數／5-6／安培容量（A）=191\", \"expression\": \"191\", \"value\": 191, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五～三 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²）=125；導線線徑／根數/直徑（mm）=19/2.9；同一導線管或電纜內之載流導線數／5-6／安培容量（A）=191\", \"expression\": \"191\", \"value\": 191, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c2-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五～五 PVC 管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積(mm²)=50；導線線徑／根數/直徑（mm）=19/1.8；同一導線管內或電纜內之載流導線數／3以下／安培容量（A）=100\", \"expression\": \"100 × 0.35\", \"value\": 35, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五～五 PVC 管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積(mm²)=50；導線線徑／根數/直徑（mm）=19/1.8；同一導線管內或電纜內之載流導線數／3以下／安培容量（A）=100\", \"expression\": \"100 × 0.35\", \"value\": 35, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c2-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五～三 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²）=400；導線線徑／根數/直徑（mm）=61/2.9；同一導線管或電纜內之載流導線數／3以下／安培容量（A）=461\", \"expression\": \"461 × 1.22\", \"value\": 561.42, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五～三 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²）=400；導線線徑／根數/直徑（mm）=61/2.9；同一導線管或電纜內之載流導線數／3以下／安培容量（A）=461\", \"expression\": \"461 × 1.22\", \"value\": 561.42, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c3-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五八～三 交流三相電動機滿載電流】馬力(hp)=100；鼠籠型及繞線型感應電動機註1(4極)／115=－；鼠籠型及繞線型感應電動機註1(4極)／200=261.8；鼠籠型及繞線型感應電動機註1(4極)／208=251.7；鼠籠型及繞線型感應電動機註1(4極)／220=238；鼠籠型及繞線型感應電動機註1(4極)／380=137.8；鼠籠型及繞線型感應電動機註1(4極)／440=119.0；功率因數為1註2之同步型電動機／230=202；功率因數為1註2之同步型電動機／380=122；功率因數為1註2之同步型電動機／460=101\", \"expression\": \"100\", \"value\": 100, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五八～三 交流三相電動機滿載電流】馬力(hp)=100；鼠籠型及繞線型感應電動機註1(4極)／115=－；鼠籠型及繞線型感應電動機註1(4極)／200=261.8；鼠籠型及繞線型感應電動機註1(4極)／208=251.7；鼠籠型及繞線型感應電動機註1(4極)／220=238；鼠籠型及繞線型感應電動機註1(4極)／380=137.8；鼠籠型及繞線型感應電動機註1(4極)／440=119.0；功率因數為1註2之同步型電動機／230=202；功率因數為1註2之同步型電動機／380=122；功率因數為1註2之同步型電動機／460=101\", \"expression\": \"100\", \"value\": 100, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五八～三 交流三相電動機滿載電流】馬力(hp)=10；鼠籠型及繞線型感應電動機註1(4極)／440=14.0\", \"expression\": \"14.0 × 1.25\", \"value\": 17.5, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五八～三 交流三相電動機滿載電流】馬力(hp)=10；鼠籠型及繞線型感應電動機註1(4極)／440=14.0\", \"expression\": \"14.0 × 1.25\", \"value\": 17.5, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c4-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表六○ 獨棟住宅場所負載之需量因數】負載=所有其他負載之首10 kW；需量因數(%)=100\", \"expression\": \"40\", \"value\": 40, \"unit\": \"kW\"}",
+      "first": "{\"found\": true, \"quote\": \"【表六○ 獨棟住宅場所負載之需量因數】負載=所有其他負載之首10 kW；需量因數(%)=100\", \"expression\": \"40\", \"value\": 40, \"unit\": \"kW\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c4-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"【表五二 照明負載之幹線需量因數】 場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\", \"expression\": \"120000 × 20%\", \"value\": 24000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"【表五二 照明負載之幹線需量因數】 場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\", \"expression\": \"120000 × 20%\", \"value\": 24000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c5-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"過電流保護裝置之安培額定(A)=800以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=50\", \"expression\": \"50\", \"value\": 50, \"unit\": \"mm\"}",
+      "first": "{\"found\": true, \"quote\": \"過電流保護裝置之安培額定(A)=800以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=50\", \"expression\": \"50\", \"value\": 50, \"unit\": \"mm\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c5-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"過電流保護裝置之安培額定(A)=600以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=38\", \"expression\": \"38\", \"value\": 38, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"過電流保護裝置之安培額定(A)=600以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=38\", \"expression\": \"38\", \"value\": 38, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c1-17",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c2-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c2-17",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c3-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c3-17",
+      "same": false,
+      "content": "{\"found\":true,\"quote\":\"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量 (周圍溫度 35℃) ... 1.6 23 24 29 30\",\"expression\":\"9.8 ≤ 23\",\"value\":1.6,\"unit\":\"mm²\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c4-01",
+      "same": false,
+      "content": "{\"found\":true,\"quote\":\"【段 5】表六○ 獨棟住宅場所負載之需量因數 負載=其他負載之剩餘部分；需量因數(%)=40\",\"expression\":\"40 × 0.40\",\"value\":16,\"unit\":\"kW\"}",
+      "first": "{\"found\":true,\"quote\":\"【段 5】表六○ 獨棟住宅場所負載之需量因數\\n負載=其他負載之剩餘部分；需量因數(%)=40\",\"expression\":\"40 × 0.40\",\"value\":16,\"unit\":\"kW\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c4-17",
+      "same": false,
+      "content": "{\"found\":true,\"quote\":\"表五二 照明負載之幹線需量因數\\n場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40\\n表五二 照明負載之幹線需量因數\\n場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\",\"expression\":\"50,000 × 0.40 + (120,000-50,000) × 0.20\",\"value\":34000,\"unit\":\"W\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c5-01",
+      "same": false,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\":true,\"quote\":\"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=800以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=50\",\"expression\":\"50\",\"value\":50,\"unit\":\"mm2\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@1500",
+      "qid": "c5-17",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=600以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=38\",\"expression\":\"38\",\"value\":38,\"unit\":\"mm2\"}",
+      "first": "{\"found\":true,\"quote\":\"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備\\n過電流保護裝置之安培額定(A)=600以下；銅導線線徑／單線(mm)=-；銅導線線徑／絞線(mm2)=38\",\"expression\":\"38\",\"value\":38,\"unit\":\"mm2\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"同一導線管或電纜內之載流導線數／4／安培容量（A）=297\",\"expression\":\"297\",\"value\":297,\"unit\":\"A\"}",
+      "first": "{\"found\":true,\"quote\":\"同一導線管或電纜內之載流導線數／4／安培容量（A）=297\",\"expression\":\"297\",\"value\":297,\"unit\":\"A\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c1-17",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"同一導線管或電纜內之載流導線數／5-6／安培容量（A）=191\",\"expression\":\"191\",\"value\":191,\"unit\":\"A\"}",
+      "first": "{\"found\":true,\"quote\":\"同一導線管或電纜內之載流導線數／5-6／安培容量（A）=191\",\"expression\":\"191\",\"value\":191,\"unit\":\"A\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c2-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c2-17",
+      "same": false,
+      "content": "{\"found\":true,\"quote\":\"同一導線管或多芯電纜內有十條以上載流導線，其導線安培容量應以「三以下」之數值再乘以表二五～六規定之修正係數。\",\"expression\":\"461 × 1.22\",\"value\":562.42,\"unit\":\"A\"}",
+      "first": "{\"found\":true,\"quote\":\"同一導線管或電纜內之載流導線數／3以下／安培容量（A）=461\",\"expression\":\"461 × 1.22\",\"value\":562.42,\"unit\":\"A\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c3-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"【第 214 條】連續責務之單具電動機分路（W2）之導線安培容量，不得小於表二五八～一至表二五八～三電動機滿載電流一‧二五倍或下列規定值。\",\"expression\":\"14.0 × 1.25\",\"value\":5.5,\"unit\":\"mm²\"}",
+      "first": "{\"found\":true,\"quote\":\"【第 214 條】連續責務之單具電動機分路（W2）之導線安培容量，不得小於表二五八～一至表二五八～三電動機滿載電流一‧二五倍或下列規定值。\",\"expression\":\"14.0 × 1.25\",\"value\":5.5,\"unit\":\"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c4-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c4-17",
+      "same": false,
+      "content": "{\"found\":true,\"quote\":\"【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}",
+      "first": "{\"found\":true,\"quote\":\"【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40\\n【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c5-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c5-17",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"【表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備】過電流保護裝置之安培額定(A)=600以下；銅導線線徑／絞線(mm2)=38\",\"expression\":\"38\",\"value\":38,\"unit\":\"mm²\"}",
+      "first": "{\"found\":true,\"quote\":\"【表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備】過電流保護裝置之安培額定(A)=600以下；銅導線線徑／絞線(mm2)=38\",\"expression\":\"38\",\"value\":38,\"unit\":\"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@3000-nosub",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@3000-nosub",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘單線 2.0 27 30 34 37\", \"expression\": \"27\", \"value\": 2.0, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘單線 2.0 27 30 34 37\", \"expression\": \"27\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@3000",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "struct@3000",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘單線 2.0 27 30 34 37\", \"expression\": \"27\", \"value\": 2.0, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量(周圍溫度 35℃)導線線徑 管槽或電纜內4條以下載流導線註1導線絕緣物最高容許溫度(°C)標稱截面積線別 根數/直徑（mm） 75 90（mm2）60分鐘 30分鐘 60分鐘 30分鐘單線 2.0 27 30 34 37\", \"expression\": \"27\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／4／安培容量（A） | ...絞線 | 60 | 19/2.0 | 115 | 105 | 90 | 75\", \"expression\": \"115\", \"value\": 115, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／4／安培容量（A） | ...絞線 | 60 | 19/2.0 | 115 | 105 | 90 | 75\", \"expression\": \"115\", \"value\": 115, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "decomp",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 68\", \"expression\": \"68\", \"value\": 68, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 68\", \"expression\": \"68\", \"value\": 68, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "decomp",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量(周圍溫度 35℃)\\n導線線徑 管槽或電纜內4條以下載流導線註1\\n導線絕緣物最高容許溫度(°C)\\n標稱截面積\\n線別 根數/直徑（mm） 75 90\\n（mm2）\\n60分鐘 30分鐘 60分鐘 30分鐘\\n1.6 23 24 29 30\\n單線 2.0 27 30 34 37\\n2.6 38 41 47 50\\n3.5 7/0.8 29 32 36 39\\n5.5 7/1.0 39 41 48 51\\n8 7/1.2 50 55 59 64\\n14 7/1.6 75 84 83 94\\n22 7/2.0 96 112 108 127\\n30 7/2.3 120 140 132 154\\n38 7/2.6 126 154 142 172\\n絞線 50 19/1.8 170 209 192 236\\n60 19/2.0 197 237 221 265\\n80 19/2.3 254 310 281 343\\n100 19/2.6 274 338 296 371\\n125 19/2.9 341 394 381 439\\n150 37/2.3 431 552 478 612\\n200 37/2.6 499 638 558 716\\n250 61/2.3 623 799 696 876\\n註：1.管槽或電纜內有 5 - 8 條載流導線者，每條導線之安培容量於本表規定值\\n應再減至80 %。\\n2.管槽或電纜內有 4 - 6條最高運轉溫度為 125°C之交流導線者，每條載流導\\n線之安培容量於本表規定值應再減至 80 %。\", \"expression\": \"80\", \"value\": 80, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量(周圍溫度 35℃)\\n導線線徑 管槽或電纜內4條以下載流導線註1\\n導線絕緣物最高容許溫度(°C)\\n標稱截面積\\n線別 根數/直徑（mm） 75 90\\n（mm2）\\n60分鐘 30分鐘 60分鐘 30分鐘\\n1.6 23 24 29 30\\n單線 2.0 27 30 34 37\\n2.6 38 41 47 50\\n3.5 7/0.8 29 32 36 39\\n5.5 7/1.0 39 41 48 51\\n8 7/1.2 50 55 59 64\\n14 7/1.6 75 84 83 94\\n22 7/2.0 96 112 108 127\\n30 7/2.3 120 140 132 154\\n38 7/2.6 126 154 142 172\\n絞線 50 19/1.8 170 209 192 236\\n60 19/2.0 197 237 221 265\\n80 19/2.3 254 310 281 343\\n100 19/2.6 274 338 296 371\\n125 19/2.9 341 394 381 439\\n150 37/2.3 431 552 478 612\\n200 37/2.6 499 638 558 716\\n250 61/2.3 623 799 696 876\\n註：1.管槽或電纜內有 5 - 8 條載流導線者，每條導線之安培容量於本表規定值\\n應再減至80 %。\\n2.管槽或電纜內有 4 - 6條最高運轉溫度為 125°C之交流導線者，每條載流導\\n線之安培容量於本表規定值應再減至 80 %。\", \"expression\": \"80\", \"value\": 80, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "decomp@4000",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\n  \"found\": true,\n  \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）\\n導線線徑／線別 | 導線線徑／標稱截面積（mm2) | 導線線徑／根數/直徑（mm） | 同一導線管或電纜內之載流導線數／3以下／安培容量（A） | 同一導線管或電纜內之載流導線數／4／安培容量（A） | 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 同一導線管或電纜內之載流導線數／7-9／安培容量（A)\\n絞線 | 325 | 61/2.6 | 173 | 156 | 138 | 121\",\n  \"expression\": \"173\",\n  \"value\": 173,\n  \"unit\": \"A\"\n}",
+      "first": "{\n  \"found\": true,\n  \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）\\n導線線徑／線別 | 導線線徑／標稱截面積（mm2) | 導線線徑／根數/直徑（mm） | 同一導線管或電纜內之載流導線數／3以下／安培容量（A） | 同一導線管或電纜內之載流導線數／4／安培容量（A） | 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 同一導線管或電纜內之載流導線數／7-9／安培容量（A)\\n絞線 | 325 | 61/2.6 | 173 | 156 | 138 | 121\",\n  \"expression\": \"173\",\n  \"value\": 173,\n  \"unit\": \"A\"\n}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "decomp@4000",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\n  \"found\": true,\n  \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）\",\n  \"expression\": \"60\",\n  \"value\": 60,\n  \"unit\": \"mm²\"\n}",
+      "first": "{\n  \"found\": true,\n  \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）\",\n  \"expression\": \"60\",\n  \"value\": 60,\n  \"unit\": \"mm²\"\n}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@3000-nosub",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@3000-nosub",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量 (周圍溫度 35℃) ... 1.6 23 24 29 30\",\"expression\":\"12.26\",\"value\":1.6,\"unit\":\"mm²\"}",
+      "first": "{\"found\":true,\"quote\":\"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量 (周圍溫度 35℃) ... 1.6 23 24 29 30\",\"expression\":\"12.26\",\"value\":1.6,\"unit\":\"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@3000",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "struct@3000",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\":true,\"quote\":\"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量 (周圍溫度 35℃) ... 1.6 23 24 29 30\",\"expression\":\"12.26\",\"value\":1.6,\"unit\":\"mm²\"}",
+      "first": "{\"found\":true,\"quote\":\"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量 (周圍溫度 35℃) ... 1.6 23 24 29 30\",\"expression\":\"12.26\",\"value\":1.6,\"unit\":\"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）…同一導線管內或電纜內之載流導線數／4／安培容量（A）…單線 2.0 16\", \"expression\": \"15.29 ≈ 1.25 × 12.23\", \"value\": 2.0, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）…同一導線管內或電纜內之載流導線數／4／安培容量（A）…單線 2.0 16\", \"expression\": \"15.29 ≈ 1.25 × 12.23\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "decomp",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "decomp",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量\\n(周圍溫度 35℃)\\n導線線徑 管槽或電纜內4條以下載流導線註1\\n導線絕緣物最高容許溫度(°C)\\n標稱截面積\\n線別 根數/直徑（mm） 75 90\\n（mm2）\\n60分鐘 30分鐘 60分鐘 30分鐘\\n1.6 23 24 29 30\\n單線 2.0 27 30 34 37\\n2.6 38 41 47 50\\n3.5 7/0.8 29 32 36 39\\n5.5 7/1.0 39 41 48 51\\n8 7/1.2 50 55 59 64\\n14 7/1.6 75 84 83 94\\n22 7/2.0 96 112 108 127\\n30 7/2.3 120 140 132 154\\n38 7/2.6 126 154 142 172\\n絞線 50 19/1.8 170 209 192 236\\n60 19/2.0 197 237 221 265\\n80 19/2.3 254 310 281 343\\n100 19/2.6 274 338 296 371\\n125 19/2.9 341 394 381 439\\n150 37/2.3 431 552 478 612\\n200 37/2.6 499 638 558 716\\n250 61/2.3 623 799 696 876\", \"expression\": \"14.0\", \"value\": 1.6, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表七二八～一 短時間額定功率電動起重機、吊車之電動機絕緣導線安培容量\\n(周圍溫度 35℃)\\n導線線徑 管槽或電纜內4條以下載流導線註1\\n導線絕緣物最高容許溫度(°C)\\n標稱截面積\\n線別 根數/直徑（mm） 75 90\\n（mm2）\\n60分鐘 30分鐘 60分鐘 30分鐘\\n1.6 23 24 29 30\\n單線 2.0 27 30 34 37\\n2.6 38 41 47 50\\n3.5 7/0.8 29 32 36 39\\n5.5 7/1.0 39 41 48 51\\n8 7/1.2 50 55 59 64\\n14 7/1.6 75 84 83 94\\n22 7/2.0 96 112 108 127\\n30 7/2.3 120 140 132 154\\n38 7/2.6 126 154 142 172\\n絞線 50 19/1.8 170 209 192 236\\n60 19/2.0 197 237 221 265\\n80 19/2.3 254 310 281 343\\n100 19/2.6 274 338 296 371\\n125 19/2.9 341 394 381 439\\n150 37/2.3 431 552 478 612\\n200 37/2.6 499 638 558 716\\n250 61/2.3 623 799 696 876\", \"expression\": \"14.0\", \"value\": 1.6, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "decomp@4000",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "decomp@4000",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"同一導線管內或電纜內之載流導線數／4／安培容量（A）\", \"expression\": \"14.0 ≤ 18\", \"value\": 2.0, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"同一導線管內或電纜內之載流導線數／4／安培容量（A）\", \"expression\": \"14.0 ≤ 18\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    }
+  ]
+}
