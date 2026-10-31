@@ -50,6 +50,7 @@ LOCAL = {
     "decompose",
     "calc",
     "posthoc",
+    "lookup",
 }
 
 

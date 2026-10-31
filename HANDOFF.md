@@ -1,16 +1,17 @@
 # HANDOFF
 
-最後更新：2026-11-01 00:40（mini）。
+最後更新：2026-11-01 03:05（mini）。
 
 ## 現在在哪一步
 
-**18-table-kv 做完，機器空著**：README 五節齊、根 README 一列、playbook §7 改寫「整張表帶欄名」那條（17 的建議被 18 推翻）、17 README 第 5 節指到 18。下一步是「規則寫成程式」（原訂 11/2 之後），18 的第 5 節也指向它：小模型的查表交給程式，不要靠換格式。
-**跑的時候跑測試一律 `uv run pytest tests experiments/*/tests --deselect tests/test_ollama.py --deselect experiments/12-rerank/tests/test_rerankers.py`**（那兩檔會打 bge-m3／載重排器，把跑著的聊天模型踢掉）。
-17 的 `results/read/raw.jsonl` 15 MB 不進 git，放 `raw.jsonl.gz`；18 從那份 gz 讀 qwen3 的 cards。
+**19-lookup-tool 第一次跑完、還沒寫結論**：查表交給程式，qwen3 +.00、gpt-oss −.12，都分不出——但一大塊錯是我造成的：第一步提示的例子「800以下」被 qwen3 照抄（10 題）、gpt-oss 欄名多打 `}` 工具不收（15 題）。README 第 3 節寫了「第一次跑」；第 4、5 節等 Mike 決定要不要修掉這兩個再跑一次（修法：拿掉提示裡的列名例子；比對時忽略括號字元）。
+**跑的時候跑測試一律 `uv run pytest tests experiments/*/tests --deselect tests/test_ollama.py --deselect experiments/12-rerank/tests/test_rerankers.py`**。
+17 的 `results/read/raw.jsonl` 15 MB 不進 git，放 `raw.jsonl.gz`；19 從那份 gz 讀 oracle、從 18 的 raw 讀 cards。
 10–14 與更早的交接細節在 `HANDOFF-2026-10-30.md`。
 
 ## 已驗證
 
+- 2026-11-01 02:51 19 第一次跑完：新跑 288 題次（兩步）＋照抄 384 列，0 失敗；digest 同 18；正解格都查到時答對 .88／.98；照抄的 384 列重算跟 17／18 逐題相同（審查）。
 - 2026-11-01 00:18 18 跑完：閱讀軌新跑 480 次＋沿用 17 的 160 列，0 失敗；digest 與 17 相同；qwen3 沿用格探針 12/12 一字不差。cards-kv − cards qwen3 −.02 [−.08, +.05]、gpt-oss +.00 [−.06, +.06]，都分不出；qwen3 讀錯欄 8 → 3、讀錯列 7 → 10、別的數字 5 → 10。
 - 2026-11-01 00:18 gpt-oss cards 重跑（17 → 18）：答案 149/160 相同、8 題翻面、答對 −.03 [−.07, +.01]；17 的 cards − struct@3000 用新的一份是 +.08 [+.02, +.14]（原 +.11），仍分得出。
 - 2026-10-31 18 檢索軌：cards-kv 正解列命中逐題＝cards（測試）；cards-kv@3000 正解列全進 .57（cards .60）。
@@ -26,6 +27,6 @@
 
 ## 下一步
 
-1. 19「查表工具」（2026-11-01 跟 Mike 談定，11/2 之後開工，先 plan mode）：一個通用查表工具（表、列、欄 → 那一格；「以下」範圍表同一套比法），讀 `tables_clean.json`，不逐條手寫規則（怕照題庫調）；先只跑 C1、C4、C5。要量的是錯誤從「查錯格」搬到「讀錯條件」後總數有沒有變少，對照 16 的 oracle .88／.68。做完換題目（30B 模型或換文件）。
-2. 要比 gpt-oss 的小差距前，先把「同格重跑」當雜訊底線（差距要 > .05）。
+1. 跟 Mike 決定 19 要不要修提示例子與括號比對後重跑（約 70 分）；要的話先 plan mode。
+2. 寫 19 的第 4、5 節，根 README、playbook §7、18 README 指到 19。
 3. hit@1000 跟 1,000 字塊的耦合要解（切 900 或預算 1,200）。
