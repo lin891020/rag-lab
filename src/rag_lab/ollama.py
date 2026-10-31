@@ -106,7 +106,8 @@ def chat(
     timeout: float = 300,
 ) -> dict:
     """One-turn /api/chat. Returns the raw reply, not parsed:
-    {"content", "thinking", "eval_count", "duration", "done_reason"} (duration in seconds).
+    {"content", "thinking", "eval_count", "prompt_eval_count", "duration", "done_reason"}
+    (duration in seconds; prompt_eval_count is the prompt tokens read, 0 when the server omits it).
 
     `format`: None (free text), "json" (JSON mode) or a JSON-schema dict (constrained decoding).
     `think`: False/True, or a level string ("low") for models whose thinking cannot be turned off
@@ -132,6 +133,7 @@ def chat(
         "content": msg.get("content", "") or "",
         "thinking": msg.get("thinking", "") or "",
         "eval_count": int(resp.get("eval_count", 0)),
+        "prompt_eval_count": int(resp.get("prompt_eval_count", 0)),
         "duration": float(resp.get("total_duration", 0)) / 1e9,
         "done_reason": resp.get("done_reason", ""),
     }

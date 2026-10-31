@@ -1,0 +1,193 @@
+{
+  "date": "2026-11-01",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "models_17": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "same_digest_as_17": true,
+  "ollama_17": "0.40.2",
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "budgets": {
+    "cards-kv": 3000,
+    "cards": 3000
+  },
+  "cells": [
+    "cards-kv",
+    "cards"
+  ],
+  "reused": [
+    [
+      "qwen3:8b",
+      "cards"
+    ]
+  ],
+  "reused_redone": [],
+  "n_questions": 160,
+  "drift": {
+    "gpt-oss:20b cards": "0/2",
+    "gpt-oss:20b cards-kv": "0/2",
+    "qwen3:8b cards": "12/12",
+    "qwen3:8b cards-kv": "2/2"
+  },
+  "drift_rows": [
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c1-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\\n導線線徑／線別 | 導線線徑／標稱截面積（mm2） | 導線線徑／根數/直徑（mm） | 同一導線管或電纜內之載流導線數／3以下／安培容量（A） | 同一導線管或電纜內之載流導線數／4／安培容量（A） | 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 同一導線管或電纜內之載流導線數／7-9／安培容量（A)\\n絞線 | 125 | 19/2.9 | 239 | 215 | 191 | 167\", \"expression\": \"239\", \"value\": 239, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\\n導線線徑／線別 | 導線線徑／標稱截面積（mm2） | 導線線徑／根數/直徑（mm） | 同一導線管或電纜內之載流導線數／3以下／安培容量（A） | 同一導線管或電纜內之載流導線數／4／安培容量（A） | 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 同一導線管或電纜內之載流導線數／7-9／安培容量（A)\\n絞線 | 125 | 19/2.9 | 239 | 215 | 191 | 167\", \"expression\": \"239\", \"value\": 239, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c2-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）\", \"expression\": \"60 × (35 / 68)\", \"value\": 29.4117647059, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）\", \"expression\": \"60 × (35 / 68)\", \"value\": 29.4117647059, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c2-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\", \"expression\": \"1.13 × 46\", \"value\": 51.78, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～三 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度75℃，周圍溫度35℃）\", \"expression\": \"1.13 × 46\", \"value\": 51.78, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c3-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／3以下／安培容量（A）\", \"expression\": \"60\", \"value\": 60, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／3以下／安培容量（A）\", \"expression\": \"60\", \"value\": 60, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／4／安培容量（A） | ...絞線 | 60 | 19/2.0 | 115 | 105 | 90 | 75\", \"expression\": \"115\", \"value\": 115, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／4／安培容量（A） | ...絞線 | 60 | 19/2.0 | 115 | 105 | 90 | 75\", \"expression\": \"115\", \"value\": 115, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c4-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"所有其他負載之首10 kW | 100\\n其他負載之剩餘部分 | 40\", \"expression\": \"40 - 10 + (40 - 10) × 40%\", \"value\": 46, \"unit\": \"kW\"}",
+      "first": "{\"found\": true, \"quote\": \"所有其他負載之首10 kW | 100\\n其他負載之剩餘部分 | 40\", \"expression\": \"40 - 10 + (40 - 10) × 40%\", \"value\": 46, \"unit\": \"kW\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c4-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"醫院註 | 3,000以下 | 100\\n醫院註 | 3,001至120,000 | 35\\n醫院註 | 超過120,000 | 25\", \"expression\": \"120000 × 0.35\", \"value\": 42000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"醫院註 | 3,000以下 | 100\\n醫院註 | 3,001至120,000 | 35\\n醫院註 | 超過120,000 | 25\", \"expression\": \"120000 × 0.35\", \"value\": 42000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c5-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"200以下 | - | 14\", \"expression\": \"700 ÷ 5\", \"value\": 140, \"unit\": \"mm\"}",
+      "first": "{\"found\": true, \"quote\": \"200以下 | - | 14\", \"expression\": \"700 ÷ 5\", \"value\": 140, \"unit\": \"mm\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c5-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備 過電流保護裝置之安培額定(A) | 銅導線線徑／單線(mm) | 銅導線線徑／絞線(mm2)\\n60以下 | - | 5.5\\n100以下 | - | 8\\n200以下 | - | 14\\n400以下 | - | 22\\n600以下 | - | 38\", \"expression\": \"查表\", \"value\": 38, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表九三～二 用電設備單獨接地或用電設備與內線系統共同接地之設備 過電流保護裝置之安培額定(A) | 銅導線線徑／單線(mm) | 銅導線線徑／絞線(mm2)\\n60以下 | - | 5.5\\n100以下 | - | 8\\n200以下 | - | 14\\n400以下 | - | 22\\n600以下 | - | 38\", \"expression\": \"查表\", \"value\": 38, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards-kv",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"線別=絞線；標稱截面積（mm2)=325；根數/直徑（mm）=61/2.6；3以下=330；4=297\", \"expression\": \"330\", \"value\": 330, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"線別=絞線；標稱截面積（mm2)=325；根數/直徑（mm）=61/2.6；3以下=330；4=297\", \"expression\": \"330\", \"value\": 330, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards-kv",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"線別=絞線；標稱截面積（mm2)=30；根數/直徑（mm）=7/2.3；3以下=81；4=73；5-6=65；7-9=57\", \"expression\": \"81\", \"value\": 81, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"線別=絞線；標稱截面積（mm2)=30；根數/直徑（mm）=7/2.3；3以下=81；4=73；5-6=65；7-9=57\", \"expression\": \"81\", \"value\": 81, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c3-17",
+      "same": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／4／安培容量（A） | ...絞線 | 60 | 19/2.0 | 115 | 105 | 90 | 75\", \"expression\": \"115\", \"value\": 115, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）...同一導線管內或電纜內之載流導線數／4／安培容量（A） | ...絞線 | 60 | 19/2.0 | 115 | 105 | 90 | 75\", \"expression\": \"115\", \"value\": 115, \"unit\": \"A\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards-kv",
+      "qid": "c1-01",
+      "same": false,
+      "content": "",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards-kv",
+      "qid": "c3-17",
+      "same": false,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）…線別=單線；根數/直徑（mm）=2.6；3以下=24；4=22；5-6=19；7-9=16\", \"expression\": \"12.25A 需要 ≥ 12A，2.0mm 12A <12.25A，2.6mm 19A ≥12.25A\", \"value\": 2.6, \"unit\": \"mm\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）…線別=單線；根數/直徑（mm）=2.0；3以下=18；4=16；5-6=14；7-9=12\", \"expression\": \"12.25\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": false,
+      "content": "{\"found\":true,\"quote\":\"絞線 | 325 | 7/2.6 | 330 | 297 |  |  \",\"expression\":\"297\",\"value\":297,\"unit\":\"A\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards",
+      "qid": "c3-17",
+      "same": false,
+      "content": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）…同一導線管內或電纜內之載流導線數／4／安培容量（A）…單線 2.0 18\", \"expression\": \"7460/(1.732*440*0.8)=12.23 A, 1.25×12.23=15.29 A, 15.29≤18 A\", \"value\": 2.0, \"unit\": \"mm²\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～五 PVC 管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）…同一導線管內或電纜內之載流導線數／4／安培容量（A）…單線 2.0 16\", \"expression\": \"15.29 ≈ 1.25 × 12.23\", \"value\": 2.0, \"unit\": \"mm²\"}"
+    }
+  ]
+}
