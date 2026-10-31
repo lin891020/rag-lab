@@ -1,0 +1,172 @@
+{
+  "date": "2026-11-01",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "same_digest_as_18": true,
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "runs": {
+    "qwen3:8b": [
+      "lookup"
+    ],
+    "gpt-oss:20b": [
+      "lookup",
+      "lookup-2"
+    ]
+  },
+  "reused": {
+    "cards": "18",
+    "oracle": "17"
+  },
+  "n_questions": 96,
+  "catalog_chars": 4183,
+  "drift": {
+    "gpt-oss:20b cards": "1/2",
+    "gpt-oss:20b lookup": "1/2",
+    "gpt-oss:20b lookup-2": "2/2",
+    "gpt-oss:20b oracle": "0/2",
+    "qwen3:8b cards": "2/2",
+    "qwen3:8b lookup": "2/2",
+    "qwen3:8b oracle": "2/2"
+  },
+  "drift_rows": [
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二 金屬導線管配線之導線安培容量（導線絕緣物最高容許溫度60℃，周圍溫度35℃）| 同一導線管或電纜內之載流導線數／5-6／安培容量（A） | 121\", \"expression\": \"121\", \"value\": 121, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "cards",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"醫院註 | 3,000以下 | 100\\n醫院註 | 3,001至120,000 | 35\\n醫院註 | 超過120,000 | 25\", \"expression\": \"120000 × 0.35\", \"value\": 42000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"醫院註 | 3,000以下 | 100\\n醫院註 | 3,001至120,000 | 35\\n醫院註 | 超過120,000 | 25\", \"expression\": \"120000 × 0.35\", \"value\": 42000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"【表二五～二 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²)=325；導線線徑／根數/直徑（mm）=61/2.6；同一導線管或電纜內之載流導線數／3以下／安培容量（A）=330；同一導線管或電纜內之載流導線數／4／安培、容量（A）=297\", \"expression\": \"297\", \"value\": 297, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"【表二五～二 金屬導線管配線之導線安培容量】導線線徑／線別=絞線；導線線徑／標稱截面積（mm²)=325；導線線徑／根數/直徑（mm）=61/2.6；同一導線管或電纜內之載流導線數／3以下／安培容量（A）=330；同一導線管或電纜內之載流導線數／4／安培、容量（A）=297\", \"expression\": \"297\", \"value\": 297, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "oracle",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"【表五二 照明負載之幹線需量因數】 場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\", \"expression\": \"120000 × 20%\", \"value\": 24000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"【表五二 照明負載之幹線需量因數】 場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\", \"expression\": \"120000 × 20%\", \"value\": 24000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards",
+      "qid": "c1-01",
+      "same": false,
+      "same_answer": false,
+      "content": "{\"found\":true,\"quote\":\"絞線 | 325 | 7/2.6 | 330 | 297 |  |  \",\"expression\":\"297\",\"value\":297,\"unit\":\"A\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "cards",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":true,\"quote\":\"醫院註 | 50,000以下 | 40\\n醫院註 | 超過50,000 | 20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}",
+      "first": "{\"found\":true,\"quote\":\"醫院註 | 50,000以下 | 40\\n醫院註 | 超過50,000 | 20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c1-01",
+      "same": false,
+      "same_answer": false,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":true,\"quote\":\"同一導線管或電纜內之載流導線數／4／安培容量（A）=297\",\"expression\":\"297\",\"value\":297,\"unit\":\"A\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "oracle",
+      "qid": "c4-17",
+      "same": false,
+      "same_answer": true,
+      "content": "{\"found\":true,\"quote\":\"【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}",
+      "first": "{\"found\":true,\"quote\":\"【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40\\n【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "lookup",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二｜絞線 325｜同一導線管或電纜內之載流導線數／5-6／安培容量（A） = （空白）\", \"expression\": \"60\", \"value\": 60, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二｜絞線 325｜同一導線管或電纜內之載流導線數／5-6／安培容量（A） = （空白）\", \"expression\": \"60\", \"value\": 60, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "lookup",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表五二｜住宅 3,001至120,000｜需量因數（%） = 35\", \"expression\": \"120000 × 35 ÷ 100\", \"value\": 42000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"表五二｜住宅 3,001至120,000｜需量因數（%） = 35\", \"expression\": \"120000 × 35 ÷ 100\", \"value\": 42000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "lookup",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "lookup",
+      "qid": "c4-17",
+      "same": false,
+      "same_answer": false,
+      "content": "{\"found\": true, \"quote\": \"表五二｜醫院註 50,000以下｜需量因數（%） = 40\\n表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"50,000 × 0.4 + 70,000 × 0.2\", \"value\": 34000, \"unit\": \"W\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "lookup-2",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "lookup-2",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    }
+  ]
+}

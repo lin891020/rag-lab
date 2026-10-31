@@ -113,16 +113,21 @@ def classes(rows: list[dict], questions: dict[str, dict]) -> list[str]:
 def by_chain_class(rows: list[dict], questions: dict[str, dict]) -> list[str]:
     out = ["| 模型 | 鏈 | " + " | ".join(CLASS_NAME[c] for c in CLASSES) + " |"]
     out.append("|---|---|" + "---|" * len(CLASSES))
-    for m in MODELS:
-        for ch in ("C1", "C4", "C5"):
-            x = [
-                r
-                for r in rows
-                if (r["model"], r["condition"], r["chain"]) == (m, "lookup", ch)
-                and r["kind"] != "abstain"
-            ]
-            got = Counter(step1_class(r, questions[r["qid"]]) for r in x)
-            out.append(f"| {m} | {ch} | " + " | ".join(str(got[c]) for c in CLASSES) + " |")
+    for cell in ("lookup", "fix"):
+        for m in MODELS:
+            for ch in ("C1", "C4", "C5"):
+                x = [
+                    r
+                    for r in rows
+                    if (r["model"], r["condition"], r["chain"]) == (m, cell, ch)
+                    and r["kind"] != "abstain"
+                ]
+                if not x:
+                    continue
+                got = Counter(step1_class(r, questions[r["qid"]]) for r in x)
+                out.append(
+                    f"| {m} {cell} | {ch} | " + " | ".join(str(got[c]) for c in CLASSES) + " |"
+                )
     return out
 
 
@@ -147,9 +152,11 @@ def statuses(raw: list[dict]) -> list[str]:
     return out
 
 
-def twice(raw: list[dict], questions: dict[str, dict], model: str) -> list[str]:
-    a = {r["qid"]: r for r in raw if (r["model"], r["condition"]) == (model, "lookup")}
-    b = {r["qid"]: r for r in raw if (r["model"], r["condition"]) == (model, "lookup-2")}
+def twice(
+    raw: list[dict], questions: dict[str, dict], model: str, cell: str = "lookup"
+) -> list[str]:
+    a = {r["qid"]: r for r in raw if (r["model"], r["condition"]) == (model, cell)}
+    b = {r["qid"]: r for r in raw if (r["model"], r["condition"]) == (model, f"{cell}-2")}
     qids = sorted(set(a) & set(b))
     if not qids:
         return ["（沒有第二次）"]
@@ -170,7 +177,7 @@ def twice(raw: list[dict], questions: dict[str, dict], model: str) -> list[str]:
         "| 模型 | 第一步一字不差 | 第二步一字不差 | 答案（found, value）相同 "
         f"| 答對 第二次 − 第一次 [95%]（{len(ids)}） | 對錯翻面 |",
         "|---|---|---|---|---|---|",
-        f"| {model} | {same1}/{len(qids)} | {same}/{len(qids)} | {same_ans}/{len(qids)} "
+        f"| {model} {cell} | {same1}/{len(qids)} | {same}/{len(qids)} | {same_ans}/{len(qids)} "
         f"| {_f(d)} [{_f(lo)}, {_f(hi)}] | {flips} |",
     ]
 
@@ -234,7 +241,7 @@ def main() -> int:
             "",
             *classes(rows, questions),
             "",
-            "### 按鏈（lookup 第一次）",
+            "### 按鏈（lookup、fix 各第一次）",
             "",
             *by_chain_class(rows, questions),
             "",
@@ -246,9 +253,10 @@ def main() -> int:
             "",
             *statuses(raw),
             "",
-            "## gpt-oss 的 lookup 跑兩次",
+            "## gpt-oss 的 lookup、fix 各跑兩次",
             "",
             *twice(raw, questions, "gpt-oss:20b"),
+            *twice(raw, questions, "gpt-oss:20b", "fix")[2:],
             "",
             "## 提示 token（看有沒有被截）",
             "",

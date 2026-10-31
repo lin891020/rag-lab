@@ -91,7 +91,7 @@ LOOKUP_SCHEMA: dict = {
     "required": ["lookups"],
 }
 
-_LOOKUP = """下面是《用戶用電設備裝置規則》附表的目錄：每張表列出表號與表名、欄名、列名（不含表內數值）。
+_LOOKUP_V1 = """下面是《用戶用電設備裝置規則》附表的目錄：每張表列出表號與表名、欄名、列名（不含表內數值）。
 要回答問題，你需要查哪幾格？每一格寫：
 - table：表號，例如「表九三～二」；
 - row：列名，照目錄抄；範圍列（例如「800以下」）可以直接寫題目裡的數字，程式會找它落在哪一列；
@@ -106,8 +106,26 @@ _LOOKUP = """下面是《用戶用電設備裝置規則》附表的目錄：每�
 
 問題：{question}"""
 
+_LOOKUP = """下面是《用戶用電設備裝置規則》附表的目錄：每張表列出表號與表名、欄名、列名（不含表內數值）。
+要回答問題，你需要查哪幾格？每一格寫：
+- table：表號，照目錄抄；
+- row：列名，照目錄抄；範圍列可以直接寫題目裡的數字，程式會找它落在哪一列；
+- column：欄名，照目錄抄，或只寫能分辨的那一段；範圍欄也可以直接寫數字。
+需要幾格就列幾格，最多 {n} 格。程式會把查到的格子交給你作答。只回一個 JSON 物件：
+{{"lookups": [{{"table": "...", "row": "...", "column": "..."}}]}}
+
+目錄：
+<<<
+{catalog}
+>>>
+
+問題：{question}"""
+# The fix cells' text: _LOOKUP_V1 with its three examples taken out (qwen3 copied 「800以下」 into
+# 10 C5 lookups in the first run); the table line says 「照目錄抄」 instead. Nothing else changed.
+
 LOOKUP_LABEL = "查表結果：程式依你指定的表、列、欄查到的格子"
 
 
-def lookup_prompt(question: str, *, catalog: str) -> str:
-    return _LOOKUP.format(n=MAX_LOOKUPS, catalog=catalog, question=question)
+def lookup_prompt(question: str, *, catalog: str, fix: bool) -> str:
+    text = _LOOKUP if fix else _LOOKUP_V1
+    return text.format(n=MAX_LOOKUPS, catalog=catalog, question=question)

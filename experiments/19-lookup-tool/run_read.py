@@ -49,7 +49,11 @@ CHAINS = ("C1", "C4", "C5")
 MODELS = ["qwen3:8b", "gpt-oss:20b"]
 THINK: dict[str, bool | str] = {"qwen3:8b": False, "gpt-oss:20b": "low"}  # see 02 README
 OPTIONS = {"temperature": 0, "seed": 0, "num_ctx": 8192, "num_predict": 1024}
-RUNS = {"qwen3:8b": ["lookup"], "gpt-oss:20b": ["lookup", "lookup-2"]}
+RUNS = {  # first run (lookup*: 2026-11-01 01:56) and the fix run (fix*: example-free prompt,
+    # brackets ignored in names), agreed with Mike after the first run
+    "qwen3:8b": ["lookup", "fix"],
+    "gpt-oss:20b": ["lookup", "lookup-2", "fix", "fix-2"],
+}
 REUSED = {"cards": "18", "oracle": "17"}  # cell -> experiment it is copied from
 LABELS = {"cards": "檢索到的段落，可能來自不同條文與附表", "oracle": "規定與附表節錄"}  # 17's
 PROBES = 2
@@ -144,11 +148,12 @@ def parse_lookups(content: str) -> tuple[list[dict], str]:
 
 def ask_lookup(model: str, cell: str, q: dict, cat: str) -> dict:
     row: dict = {"model": model, "condition": cell, "qid": q["id"], "chain": q["chain"]}
-    p1 = lookup_prompt(q["question"], catalog=cat)
+    fix = cell.startswith("fix")
+    p1 = lookup_prompt(q["question"], catalog=cat, fix=fix)
     try:
         r1 = _chat(p1, model, LOOKUP_SCHEMA)
         asked, problem = parse_lookups(r1["content"])
-        results = [resolve(x["table"], x["row"], x["column"]) for x in asked]
+        results = [resolve(x["table"], x["row"], x["column"], strict=not fix) for x in asked]
         text = render(results)
         labels = {r["label"] for r in results if r["status"] in ("ok", "blank")}
         p2 = user_prompt(q["question"], evidence=text, label=LOOKUP_LABEL, tool=False)
@@ -274,23 +279,23 @@ def main(argv: list[str]) -> int:
     if args.retry_only:
         return 0
     first = _last_good(read_raw(raw))
-    for m in models:
-        for c in RUNS[m]:
-            for q in spread(questions, PROBES):
-                again = ask_lookup(m, c, q, cat)
-                ref = first.get((m, c, q["id"]))
-                probes.append(
-                    {
-                        "model": m,
-                        "condition": c,
-                        "qid": q["id"],
-                        "same": ref is not None and again["raw_content"] == ref["raw_content"],
-                        "same_answer": ref is not None
-                        and same_answer(again["raw_content"], ref["raw_content"]),
-                        "content": again["raw_content"],
-                        "first": ref["raw_content"] if ref else None,
-                    }
-                )
+    asked_now = sorted({(m, c) for m, c, _ in todo})
+    for m, c in asked_now:  # probes for the cells asked in this invocation only
+        for q in spread(questions, PROBES):
+            again = ask_lookup(m, c, q, cat)
+            ref = first.get((m, c, q["id"]))
+            probes.append(
+                {
+                    "model": m,
+                    "condition": c,
+                    "qid": q["id"],
+                    "same": ref is not None and again["raw_content"] == ref["raw_content"],
+                    "same_answer": ref is not None
+                    and same_answer(again["raw_content"], ref["raw_content"]),
+                    "content": again["raw_content"],
+                    "first": ref["raw_content"] if ref else None,
+                }
+            )
     by_cell: dict[str, list[int]] = {}
     for p in probes:
         by_cell.setdefault(f"{p['model']} {p['condition']}", []).append(int(p["same"]))
@@ -305,6 +310,7 @@ def main(argv: list[str]) -> int:
         "think": {m: THINK[m] for m in models},
         "options": OPTIONS,
         "runs": {m: RUNS[m] for m in models},
+        "fix": "fix cells: prompts._LOOKUP (no examples), lookup.resolve(strict=False)",
         "reused": REUSED,
         "n_questions": len(questions),
         "catalog_chars": len(cat),

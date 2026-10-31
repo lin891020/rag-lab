@@ -8,7 +8,7 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 RESULTS = HERE / "results"
-CONDITIONS = ["cards", "oracle", "lookup", "lookup-2"]
+CONDITIONS = ["cards", "oracle", "lookup", "lookup-2", "fix", "fix-2"]
 CHAINS = ["C1", "C4", "C5"]
 HEAD = {
     "right": "答對（嚴格）",

@@ -4,6 +4,12 @@ gpt-oss:20b,cards,hard_answer,11
 gpt-oss:20b,cards,no_expression,1
 gpt-oss:20b,cards,retrieval_miss,1
 gpt-oss:20b,cards,value_copy,9
+gpt-oss:20b,fix,hard_answer,3
+gpt-oss:20b,fix,retrieval_miss,24
+gpt-oss:20b,fix,wrong_abstain,3
+gpt-oss:20b,fix-2,hard_answer,3
+gpt-oss:20b,fix-2,retrieval_miss,24
+gpt-oss:20b,fix-2,wrong_abstain,4
 gpt-oss:20b,lookup,formula,1
 gpt-oss:20b,lookup,hard_answer,3
 gpt-oss:20b,lookup,retrieval_miss,24
@@ -19,6 +25,11 @@ qwen3:8b,cards,hard_answer,18
 qwen3:8b,cards,no_expression,2
 qwen3:8b,cards,retrieval_miss,1
 qwen3:8b,cards,value_copy,13
+qwen3:8b,fix,formula,4
+qwen3:8b,fix,hard_answer,8
+qwen3:8b,fix,retrieval_miss,24
+qwen3:8b,fix,value_copy,4
+qwen3:8b,fix,wrong_abstain,1
 qwen3:8b,lookup,arithmetic,1
 qwen3:8b,lookup,formula,2
 qwen3:8b,lookup,hard_answer,8

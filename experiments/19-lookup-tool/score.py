@@ -36,14 +36,18 @@ QUESTIONS = HERE / "questions.jsonl"
 TOLERANCE = 0.01  # relative, number questions (the assignment-style ruler uses 2 %; stricter here)
 ACCEPTABLE_STEPS_ABOVE = 1  # one ladder step above the gold is still acceptable
 CHAINS = ["C1", "C4", "C5"]  # 19 asks only the chains with no lookup that depends on arithmetic
-CONDITIONS = ["cards", "oracle", "lookup", "lookup-2"]
+CONDITIONS = ["cards", "oracle", "lookup", "lookup-2", "fix", "fix-2"]
 PRIMARY: list[tuple[str, str, str]] = [  # (A, B, scope): pre-registered, the only verdicts
     ("lookup", "cards", "all"),  # reading handed to the program vs the whole tables
+    ("fix", "cards", "all"),  # the same after the first run's two faults (declared before the run)
 ]
 SECONDARY: list[tuple[str, str, str]] = [  # described, no verdict
     ("lookup", "oracle", "all"),
+    ("fix", "oracle", "all"),
     ("oracle", "cards", "all"),
+    ("fix", "lookup", "all"),
     ("lookup-2", "lookup", "all"),  # gpt-oss only: the same cell asked twice
+    ("fix-2", "fix", "all"),
 ]
 METRICS = [
     "right",

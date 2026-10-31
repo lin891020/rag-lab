@@ -136,3 +136,32 @@ def test_above_words_are_not_read_as_the_band_below():
         ), row
     assert resolve("表五三", "超過10", "需量因數")["value"] == "50"  # the key itself still works
     assert resolve("表九三～二", "600以下", "絞線")["label"] == "表九三～二|600以下"
+
+
+def test_stray_brackets_do_not_hide_a_name():
+    """gpt-oss wrote 「需量因數（%}」 in the first run (15 questions lost to it); the fix cells read
+    names with brackets ignored, the first run's strict matching is kept for its own rows."""
+    assert resolve("表五二", "住宅 3,000以下", "需量因數（%}")["status"] == "ok"
+    assert resolve("表五二", "住宅 3,000以下", "需量因數（%}", strict=True)["status"] == "no_column"
+    assert (
+        resolve("表二五～二", "絞線 8", "同一導線管或電纜內之載流導線數／7-9／安培容量（A}")[
+            "value"
+        ]
+        == "25"
+    )
+    assert (
+        resolve("表五二", "大賣場倉儲 12,500以下", "需量因數")["label"]
+        == "表五二|大賣場(倉儲) 12,500以下"
+    )
+
+
+def test_names_stay_distinct_without_brackets():
+    from lookup import TABLES, _fold
+    from rules import row_key
+
+    for tid, t in TABLES.items():
+        keys = [_fold(row_key(tid, r)) for r in t["rows"]]
+        raw = [_fold(row_key(tid, r), strict=True) for r in t["rows"]]
+        assert len(set(keys)) == len(set(raw)), tid
+        names = [_fold(n) for n in t["names"]]
+        assert len(set(names)) == len({_fold(n, strict=True) for n in t["names"]}), tid

@@ -19,13 +19,17 @@
   },
   "runs": {
     "qwen3:8b": [
-      "lookup"
+      "lookup",
+      "fix"
     ],
     "gpt-oss:20b": [
       "lookup",
-      "lookup-2"
+      "lookup-2",
+      "fix",
+      "fix-2"
     ]
   },
+  "fix": "fix cells: prompts._LOOKUP (no examples), lookup.resolve(strict=False)",
   "reused": {
     "cards": "18",
     "oracle": "17"
@@ -34,11 +38,11 @@
   "catalog_chars": 4183,
   "drift": {
     "gpt-oss:20b cards": "1/2",
-    "gpt-oss:20b lookup": "1/2",
-    "gpt-oss:20b lookup-2": "2/2",
+    "gpt-oss:20b fix": "1/2",
+    "gpt-oss:20b fix-2": "1/2",
     "gpt-oss:20b oracle": "0/2",
     "qwen3:8b cards": "2/2",
-    "qwen3:8b lookup": "2/2",
+    "qwen3:8b fix": "2/2",
     "qwen3:8b oracle": "2/2"
   },
   "drift_rows": [
@@ -115,8 +119,44 @@
       "first": "{\"found\":true,\"quote\":\"【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=50,000以下；需量因數（%）=40\\n【表五二 照明負載之幹線需量因數】場所=醫院註；適用需量因數之照明負載部分（W）=超過50,000；需量因數（%）=20\",\"expression\":\"50,000×0.4+70,000×0.2\",\"value\":34000,\"unit\":\"W\"}"
     },
     {
+      "model": "gpt-oss:20b",
+      "condition": "fix",
+      "qid": "c1-01",
+      "same": false,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "fix",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "fix-2",
+      "qid": "c1-01",
+      "same": false,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "fix-2",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
       "model": "qwen3:8b",
-      "condition": "lookup",
+      "condition": "fix",
       "qid": "c1-01",
       "same": true,
       "same_answer": true,
@@ -125,48 +165,12 @@
     },
     {
       "model": "qwen3:8b",
-      "condition": "lookup",
+      "condition": "fix",
       "qid": "c4-17",
       "same": true,
       "same_answer": true,
-      "content": "{\"found\": true, \"quote\": \"表五二｜住宅 3,001至120,000｜需量因數（%） = 35\", \"expression\": \"120000 × 35 ÷ 100\", \"value\": 42000, \"unit\": \"W\"}",
-      "first": "{\"found\": true, \"quote\": \"表五二｜住宅 3,001至120,000｜需量因數（%） = 35\", \"expression\": \"120000 × 35 ÷ 100\", \"value\": 42000, \"unit\": \"W\"}"
-    },
-    {
-      "model": "gpt-oss:20b",
-      "condition": "lookup",
-      "qid": "c1-01",
-      "same": true,
-      "same_answer": true,
-      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
-      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
-    },
-    {
-      "model": "gpt-oss:20b",
-      "condition": "lookup",
-      "qid": "c4-17",
-      "same": false,
-      "same_answer": false,
-      "content": "{\"found\": true, \"quote\": \"表五二｜醫院註 50,000以下｜需量因數（%） = 40\\n表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"50,000 × 0.4 + 70,000 × 0.2\", \"value\": 34000, \"unit\": \"W\"}",
-      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
-    },
-    {
-      "model": "gpt-oss:20b",
-      "condition": "lookup-2",
-      "qid": "c1-01",
-      "same": true,
-      "same_answer": true,
-      "content": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}",
-      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
-    },
-    {
-      "model": "gpt-oss:20b",
-      "condition": "lookup-2",
-      "qid": "c4-17",
-      "same": true,
-      "same_answer": true,
-      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
-      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+      "content": "{\"found\": true, \"quote\": \"表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"120000 × 20 ÷ 100\", \"value\": 24000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"120000 × 20 ÷ 100\", \"value\": 24000, \"unit\": \"W\"}"
     }
   ]
 }

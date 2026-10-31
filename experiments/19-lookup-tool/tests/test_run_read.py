@@ -65,3 +65,18 @@ def test_ask_lookup_end_to_end(monkeypatch):
     )
     assert "查表結果" in prompts[1] and "目錄" in prompts[0]
     assert row["duration"] == 1.0
+
+
+def test_fix_prompt_names_no_real_row_or_table():
+    """The first run's example 「800以下」 was copied by qwen3 into 10 C5 lookups; the fix prompt
+    gives no example that is a real table id, row or column."""
+    from lookup import TABLES
+    from prompts import lookup_prompt
+    from rules import row_key
+
+    head = lookup_prompt("Q", catalog="", fix=True).split("目錄")[0]
+    assert "800以下" in lookup_prompt("Q", catalog="", fix=False)
+    for tid, t in TABLES.items():
+        assert tid not in head
+        assert not any(f"「{row_key(tid, r)}」" in head for r in t["rows"])
+        assert not any(f"「{n}」" in head for n in t["names"])

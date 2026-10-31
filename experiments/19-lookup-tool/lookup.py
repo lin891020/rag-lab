@@ -10,6 +10,8 @@ Matching, in order, never a guess (a miss is reported back as such):
           "住宅 70000" -> 住宅 3,001至120,000): the first such row in table order, the row's leading
           words must equal the text's (or the row has none). Ranges are read by rules._in_range
           (shared with the gold: tests pin every range table by hand), plus "超過 a - b".
+  brackets are ignored in every name (the fix cells, after the first run lost 15 gpt-oss
+          questions to 「需量因數（%}」); strict=True keeps the first run's matching.
   column  the full or short name (18's short_names) after folding; else a bare number that a
           range column holds ("8 條" -> 7-9); else the one name containing the text, or the one
           short name starting with it.
@@ -33,19 +35,22 @@ ABOVE_WORDS = ["以上", "超過", "至", "-", "~"]  # only a bare number (or �
 _NUM = re.compile(r"\d+(?:\.\d+)?")
 
 
-def _fold(s: str) -> str:
+def _fold(s: str, strict: bool = False) -> str:
+    """Case, width, spaces, commas and 註 folded away; unless strict (the first run), brackets too."""
     s = unicodedata.normalize("NFKC", str(s)).lower()
+    if not strict:
+        s = re.sub(r"[()\[\]{}<>「」【】]", "", s)
     s = s.replace("〜", "~").replace("‐", "-").replace("–", "-").replace("—", "-")
     return s.replace(" ", "").replace(",", "").replace("註", "")
 
 
-def _fold_table(s: str) -> str:
-    s = _fold(s).replace("-", "~")
+def _fold_table(s: str, strict: bool = False) -> str:
+    s = _fold(s, strict).replace("-", "~")
     return s.replace("〇", "○").replace("0", "○").replace("零", "○")
 
 
-def _words_and_numbers(s: str) -> tuple[str, list[float]]:
-    f = _fold(s)
+def _words_and_numbers(s: str, strict: bool = False) -> tuple[str, list[float]]:
+    f = _fold(s, strict)
     for u in UNITS:
         f = f.replace(u, "")
     return _NUM.sub("", f), [float(x) for x in _NUM.findall(f)]
@@ -69,25 +74,25 @@ def _split_key(key: str) -> tuple[str, str]:
     return (key, "") if m is None else (key[: m.start()], key[m.start() :])
 
 
-def _table(text: str) -> str | None:
-    f = _fold_table(text)
+def _table(text: str, strict: bool) -> str | None:
+    f = _fold_table(text, strict)
     ids = sorted(TABLES, key=len, reverse=True)
     for tid in ids:
-        if _fold_table(tid) == f:
+        if _fold_table(tid, strict) == f:
             return tid
-    return next((tid for tid in ids if _fold_table(tid) in f), None)
+    return next((tid for tid in ids if _fold_table(tid, strict) in f), None)
 
 
-def _row(tid: str, text: str) -> list[str] | None:
+def _row(tid: str, text: str, strict: bool) -> list[str] | None:
     rows = TABLES[tid]["rows"]
     keys = [row_key(tid, r) for r in rows]
-    f = _fold(text)
+    f = _fold(text, strict)
     for r, k in zip(rows, keys):
-        if _fold(k) == f:
+        if _fold(k, strict) == f:
             return r
-    wn = _words_and_numbers(text)
+    wn = _words_and_numbers(text, strict)
     for r, k in zip(rows, keys):
-        if _words_and_numbers(k) == wn:
+        if _words_and_numbers(k, strict) == wn:
             return r
     words, nums = wn
     if len(nums) != 1 or any(w in words for w in ABOVE_WORDS):
@@ -95,36 +100,37 @@ def _row(tid: str, text: str) -> list[str] | None:
     words = words.replace("以下", "")
     for r, k in zip(rows, keys):
         lead, rng = _split_key(k)
-        lead = _words_and_numbers(lead)[0]
+        lead = _words_and_numbers(lead, strict)[0]
         if rng and (lead == words or lead == "") and _holds(rng, nums[0]):
             return r
     return None
 
 
-def _column(tid: str, text: str) -> int | None:
+def _column(tid: str, text: str, strict: bool) -> int | None:
     names = TABLE_NAMES[tid]
     short = short_names(names)
-    f = _fold(text)
+    f = _fold(text, strict)
     for i, (n, s) in enumerate(zip(names, short)):
-        if f in (_fold(n), _fold(s)):
+        if f in (_fold(n, strict), _fold(s, strict)):
             return i
-    words, nums = _words_and_numbers(text)
+    words, nums = _words_and_numbers(text, strict)
     if not words and len(nums) == 1:
         for i, s in enumerate(short):
             if _holds(s, nums[0]):
                 return i
     if not f:
         return None
-    having = [i for i, n in enumerate(names) if f in _fold(n)]
+    having = [i for i, n in enumerate(names) if f in _fold(n, strict)]
     if len(having) == 1:
         return having[0]
-    starting = [i for i, s in enumerate(short) if _fold(s).startswith(f)]
+    starting = [i for i, s in enumerate(short) if _fold(s, strict).startswith(f)]
     return starting[0] if len(starting) == 1 else None
 
 
-def resolve(table: str, row: str, column: str) -> dict:
+def resolve(table: str, row: str, column: str, *, strict: bool = False) -> dict:
     """One lookup -> {asked, table, row, column, status, value, label}; status is ok, blank (the
-    cell is empty), no_table, no_row or no_column. A dash is a value ("-"), not a blank."""
+    cell is empty), no_table, no_row or no_column. A dash is a value ("-"), not a blank.
+    strict: the first run's matching, brackets significant (gpt-oss's 「需量因數（%}」 missed)."""
     out = {
         "asked": [table, row, column],
         "table": None,
@@ -134,14 +140,14 @@ def resolve(table: str, row: str, column: str) -> dict:
         "value": "",
         "label": "",
     }
-    tid = _table(table)
+    tid = _table(table, strict)
     if tid is None:
         return {**out, "status": "no_table"}
-    r = _row(tid, row)
+    r = _row(tid, row, strict)
     if r is None:
         return {**out, "table": tid, "status": "no_row"}
     key = row_key(tid, r)
-    c = _column(tid, column)
+    c = _column(tid, column, strict)
     if c is None:
         return {**out, "table": tid, "row": key, "label": f"{tid}|{key}", "status": "no_column"}
     v = str(r[c]).strip() if c < len(r) else ""
