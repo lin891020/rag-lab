@@ -1,0 +1,7 @@
+model,condition,slip,n
+gpt-oss:20b,cards,other_number,2
+gpt-oss:20b,cards,wrong_row,2
+qwen3:8b,cards,other_number,5
+qwen3:8b,cards,wrong_column,8
+qwen3:8b,cards,wrong_row,6
+qwen3:8b,fix,wrong_column,2

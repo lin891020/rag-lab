@@ -1,0 +1,132 @@
+import json
+
+from score import (
+    GPTOSS,
+    OPUS,
+    cluster_diff_ci,
+    grade_ladder,
+    grade_number,
+    judge,
+    latest_good,
+    score_rows,
+    summarize,
+)
+
+LADDER = [3.5, 5.5, 8.0, 14.0, 22.0]
+Q_NUM = {
+    "id": "q1",
+    "chain": "C1",
+    "cluster": "a",
+    "expect": {"kind": "number", "value": 46.2, "unit": "A", "ladder": None},
+}
+Q_LAD = {
+    "id": "q2",
+    "chain": "C5",
+    "cluster": "b",
+    "expect": {"kind": "ladder", "value": 8.0, "unit": "mm²", "ladder": LADDER},
+}
+Q_ABS = {
+    "id": "q3",
+    "chain": "C4",
+    "cluster": "c",
+    "expect": {"kind": "abstain", "value": None, "unit": "mm²", "ladder": LADDER},
+}
+
+
+def _c(found=True, value=0, unit="", expression="", quote="x"):
+    return json.dumps(
+        {"found": found, "quote": quote, "expression": expression, "value": value, "unit": unit}
+    )
+
+
+def test_number_tolerance_and_units():
+    assert grade_number(46.5, 46.2) == "match" and grade_number(47.0, 46.2) == "error"
+    j = judge(_c(value=46.4, unit="安培"), Q_NUM)
+    assert j["right"] and j["unit_ok"]
+    j = judge(_c(value=46.4, unit=""), Q_NUM)
+    assert not j["right"] and j["right_lenient"]
+    j = judge(_c(value=46.4, unit="mm²"), Q_NUM)
+    assert not j["right"] and not j["right_lenient"]
+
+
+def test_ladder_grades_and_critical():
+    assert grade_ladder(8.0, 8.0, LADDER) == "match"
+    assert grade_ladder(14.0, 8.0, LADDER) == "acceptable_alternative"
+    assert grade_ladder(22.0, 8.0, LADDER) == "error"
+    assert grade_ladder(5.5, 8.0, LADDER) == "critical"
+    assert grade_ladder(10.0, 8.0, LADDER) == "nonstandard"
+    j = judge(_c(value=5.5, unit="mm²"), Q_LAD)
+    assert j["critical"] and not j["right"]
+    assert judge(_c(value=14, unit="mm²"), Q_LAD)["grade"] == "acceptable_alternative"
+
+
+def test_abstain_questions_and_abstentions():
+    assert (
+        judge(_c(found=False), Q_ABS)["abstain_ok"]
+        and not judge(_c(found=False), Q_ABS)["hard_answer"]
+    )
+    j = judge(_c(value=8, unit="mm²"), Q_ABS)
+    assert j["hard_answer"] and not j["right"]
+    j = judge(_c(found=False), Q_LAD)
+    assert not j["answered"] and not j["right"] and not j["critical"]
+    assert judge("not json", Q_NUM)["parse_ok"] is False
+
+
+def test_summary_and_primary_diffs_across_models():
+    """The two pre-registered tests: opus cards − gpt-oss cards (across models, same questions)
+    and opus fix − opus cards; per chain they are described, not judged."""
+    qs = {"q1": Q_NUM, "q2": Q_LAD, "q3": Q_ABS}
+    raw = []
+    for model, cond, vals in (
+        (OPUS, "cards", (46.2, 8, 0)),
+        (OPUS, "fix", (46.2, 0, 0)),
+        (GPTOSS, "cards", (0, 0, 8)),
+    ):
+        for q, v in zip(("q1", "q2", "q3"), vals, strict=True):
+            raw.append(
+                {
+                    "model": model,
+                    "condition": cond,
+                    "qid": q,
+                    "chain": qs[q]["chain"],
+                    "rows_hit": 1,
+                    "rows_total": 1,
+                    "content": _c(found=v != 0, value=v, unit=qs[q]["expect"]["unit"]),
+                }
+            )
+    summary, diffs = summarize(score_rows(raw, qs))
+    right = {
+        (r["model"], r["condition"]): r["mean"]
+        for r in summary
+        if r["metric"] == "right" and r["chain"] == "all"
+    }
+    assert right[(OPUS, "cards")] == 1.0 and right[(GPTOSS, "cards")] == 0.0
+    prim = {
+        (d["model"], d["a"], d["model_b"], d["b"]): d["diff"]
+        for d in diffs
+        if d["primary"] and d["metric"] == "right"
+    }
+    assert prim == {(OPUS, "cards", GPTOSS, "cards"): 1.0, (OPUS, "fix", OPUS, "cards"): -0.5}
+    assert {d["scope"] for d in diffs if not d["primary"]} >= {"C1", "C5"}
+
+
+def test_cluster_bootstrap_is_stratified_by_chain():
+    diffs = {
+        ("C2", "a"): [1.0] * 5,
+        ("C2", "b"): [0.0] * 5,
+        ("C3", "c"): [1.0] * 5,
+        ("C3", "d"): [1.0] * 5,
+    }
+    d, lo, hi = cluster_diff_ci(diffs, n=300)
+    assert abs(d - 0.75) < 1e-9 and lo <= d <= hi and hi - lo > 0
+
+
+def test_latest_good_drops_errors_and_duplicates():
+    k = {"model": "m", "condition": "c", "qid": "q"}
+    rows = [
+        {**k, "error": "boom"},
+        {**k, "error": "", "content": "a"},
+        {**k, "error": "", "content": "b"},
+    ]
+    rows.append({**k, "qid": "z", "error": "boom"})
+    assert latest_good(rows) == [{**k, "error": "", "content": "b"}]

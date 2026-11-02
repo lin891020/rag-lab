@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-03",
+  "machine": "mini.local",
+  "anthropic": "2.3.0",
+  "models": [
+    "claude-opus-5-5",
+    "claude-haiku-5-5"
+  ],
+  "served_models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "effort": "medium",
+  "max_tokens": 16000,
+  "runs": {
+    "claude-opus-5-5": [
+      "cards",
+      "oracle",
+      "fix",
+      "cards-2",
+      "oracle-2",
+      "fix-2"
+    ],
+    "claude-haiku-5-5": [
+      "cards",
+      "oracle",
+      "fix",
+      "cards-2",
+      "oracle-2",
+      "fix-2"
+    ]
+  },
+  "copied": {
+    "qwen3:8b": [
+      "cards",
+      "oracle",
+      "fix"
+    ],
+    "gpt-oss:20b": [
+      "cards",
+      "oracle",
+      "fix",
+      "fix-2"
+    ]
+  },
+  "source_model": "gpt-oss:20b",
+  "fix": "fix cells: prompts._LOOKUP (no examples), lookup.resolve(strict=False)",
+  "n_questions": 96,
+  "catalog_chars": 4183,
+  "tokens": {
+    "claude-opus-5-5": [
+      2182967,
+      108914
+    ],
+    "claude-haiku-5-5": [
+      2186994,
+      265116
+    ]
+  },
+  "dates": [
+    "2026-11-02",
+    "2026-11-03"
+  ],
+  "failed_calls": 0,
+  "spent_usd": 11.26,
+  "prices_usd_per_mtok": {
+    "claude-opus-5-5": [
+      4.0,
+      20.0
+    ],
+    "claude-haiku-5-5": [
+      0.1,
+      0.5
+    ]
+  }
+}

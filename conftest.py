@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 EXPERIMENTS = ROOT / "experiments"
 LOCAL = {
+    "claude",
     "run",
     "power",
     "merge",
