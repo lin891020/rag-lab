@@ -8,3 +8,6 @@ data/
 # 17: over the 10 MB per-file limit; raw.jsonl.gz is committed, scored.jsonl is rebuilt by score.py
 experiments/17-table-retrieval/results/read/raw.jsonl
 experiments/17-table-retrieval/results/read/scored.jsonl
+
+# secrets
+.env
