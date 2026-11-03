@@ -1,9 +1,25 @@
 """posthoc counts reply formats per route, files identical between two corpora, per-table
 answers and the questions that flip between two conditions, and what the opus pages cost."""
 
+import importlib.util
 import json
+from pathlib import Path
 
-from posthoc import by_table, flips, formats, opus_cost, same_files
+# loaded under its own name: 20 and 21 also have a posthoc module, and 21's tests import theirs
+# inside a test, so a plain `import posthoc` here would hand them this one
+_spec = importlib.util.spec_from_file_location(
+    "posthoc22", Path(__file__).parents[1] / "posthoc.py"
+)
+assert _spec and _spec.loader
+_mod = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+by_table, flips, formats, opus_cost, same_files = (
+    _mod.by_table,
+    _mod.flips,
+    _mod.formats,
+    _mod.opus_cost,
+    _mod.same_files,
+)
 
 
 def test_formats_count_pages_per_route():

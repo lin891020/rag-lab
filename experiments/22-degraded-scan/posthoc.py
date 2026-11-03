@@ -71,7 +71,9 @@ def opus_cost(ledger: Path) -> tuple[int, int, float]:
 def main() -> int:
     setup_logging("rag_lab")
     stats = json.loads((CORPUS / "stats.json").read_text("utf-8"))
-    questions = [json.loads(ln) for ln in (HERE / "questions.jsonl").read_text("utf-8").splitlines()]
+    questions = [
+        json.loads(ln) for ln in (HERE / "questions.jsonl").read_text("utf-8").splitlines()
+    ]
     rows = [json.loads(ln) for ln in (RESULTS / "scored.jsonl").read_text("utf-8").splitlines()]
     struct = list(csv.DictReader((RESULTS / "structure.csv").open(encoding="utf-8")))
     out = ["# 22 posthoc", "", "## 回傳格式（頁數）", ""]
@@ -80,8 +82,16 @@ def main() -> int:
     out += ["", "## glm2 逐字相同的表", ""]
     for a, b in [("glm2-06", "glm2-L0"), ("glm2-L0", "glm2-L1"), ("glm2-L0", "glm2-L2")]:
         same, diff = same_files(CORPUS / a, CORPUS / b)
-        out.append(f"- {a} vs {b}：{len(same)}/{len(same) + len(diff)} 相同；不同：{'、'.join(f.removesuffix('.txt') for f in diff) or '無'}")
-    out += ["", "## 格子召回（按表，<1 的才列）", "", "| 路線 | 表 | 格子 | 數字格 | 列 |", "|---|---|---|---|---|"]
+        out.append(
+            f"- {a} vs {b}：{len(same)}/{len(same) + len(diff)} 相同；不同：{'、'.join(f.removesuffix('.txt') for f in diff) or '無'}"
+        )
+    out += [
+        "",
+        "## 格子召回（按表，<1 的才列）",
+        "",
+        "| 路線 | 表 | 格子 | 數字格 | 列 |",
+        "|---|---|---|---|---|",
+    ]
     for r in struct:
         if r["route"] != "clean" and float(r["cell_recall"]) < 1:
             out.append(
@@ -98,7 +108,9 @@ def main() -> int:
     for m in MODELS:
         for b in GLM[1:]:
             f = flips(rows, m, "glm2-L0", b)
-            out.append(f"- {m} L0→{b}：掉 {len(f['lost'])}（{'、'.join(f['lost']) or '—'}）；得 {len(f['gained'])}（{'、'.join(f['gained']) or '—'}）")
+            out.append(
+                f"- {m} L0→{b}：掉 {len(f['lost'])}（{'、'.join(f['lost']) or '—'}）；得 {len(f['gained'])}（{'、'.join(f['gained']) or '—'}）"
+            )
     ti, to, usd = opus_cost(CORPUS / "opus-ledger.jsonl")
     out += ["", "## opus 讀圖花費", "", f"- 36 頁，輸入 {ti:,}、輸出 {to:,} token，US${usd:.2f}"]
     (RESULTS / "posthoc.md").write_text("\n".join(out) + "\n", "utf-8")
