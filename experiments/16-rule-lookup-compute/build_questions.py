@@ -218,19 +218,20 @@ def gen_c4(rng: random.Random) -> list[dict]:
         out.append(_q("", "C4", "receptacle", text, {"kva": kva}, a))
     for kw in (4, 6, 8, 10, 12, 14, 18, 20, 25, 30, 32, 40, 45, 55, 60):
         a = dwelling_other_demand(kw=kw)
-        text = f"一戶獨棟住宅，單相三線 120/240 V 供電，進屋線計算負載 100 A 以上。空調、電暖以外的其他負載合計 {kw} kW，適用獨棟住宅負載需量因數後，這部分的計算負載是多少 kW？"
+        text = f"一戶獨棟住宅，110/220 V 單相三線供電，進屋線導線安培容量 100 A 以上。空調、電暖以外的其他負載合計 {kw} kW，適用獨棟住宅負載需量因數後，這部分的計算負載是多少 kW？"
+        # 2026-11-03: wording follows 第60條 (110/220 V, conductor ampacity); 16-20 used 120/240 V
         out.append(_q("", "C4", "dwelling", text, {"kw": kw}, a))
     for kw, why in (
         (25, "三相四線 220/380 V 供電"),
-        (32, "進屋線計算負載只有 60 A"),
+        (32, "110/220 V 單相三線供電，進屋線導線安培容量只有 60 A"),
         (18, "三相 220 V 供電"),
-        (40, "進屋線計算負載 80 A"),
+        (40, "110/220 V 單相三線供電，進屋線導線安培容量 80 A"),
     ):
         a = dwelling_other_demand(kw=kw)
         a.kind, a.value, a.reason = (
             "abstain",
             None,
-            f"表六○ 的需量因數只適用於單相三線、計算負載 ≥ 100 A 的獨棟住宅（第 60 條）；本題{why}，不適用",
+            f"表六○ 的需量因數只適用於 110/220 V 單相三線、進屋線導線安培容量 ≥ 100 A 的單一住宅（第 60 條）；本題{why}，不適用",
         )
         a.gold_rows = [
             ("表六○", "所有其他負載之首10 kW")

@@ -145,6 +145,7 @@ def main() -> int:
     questions = {
         q["id"]: q for q in map(json.loads, QUESTIONS.read_text("utf-8").splitlines()) if q
     }
+    questions = {k: q for k, q in questions.items() if not q.get("defect")}  # 2026-11-03
     text = "\n".join(
         [
             "# 17 跑完才算的（描述，不下判定）",
@@ -163,7 +164,7 @@ def main() -> int:
             "",
             "## 沿用格整格重跑（探針沒過的那格）",
             "",
-            *rerun(read_raw(RAW), questions),
+            *rerun([r for r in read_raw(RAW) if r["qid"] in questions], questions),
             "",
         ]
     )

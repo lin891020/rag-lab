@@ -233,6 +233,8 @@ def main() -> int:
     questions = {
         q["id"]: q for q in map(json.loads, QUESTIONS.read_text("utf-8").splitlines()) if q
     }
+    questions = {k: q for k, q in questions.items() if not q.get("defect")}  # 2026-11-03
+    raw = [r for r in raw if r["qid"] in questions]
     text = "\n".join(
         [
             "# 19 跑完才算的（描述，不下判定）",

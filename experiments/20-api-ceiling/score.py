@@ -289,6 +289,8 @@ def score_rows(raw: list[dict], questions: dict[str, dict]) -> list[dict]:
     out = []
     for r in latest_good(raw):
         q = questions[r["qid"]]
+        if q.get("defect"):
+            continue  # a question whose wording contradicts the regulation (2026-11-03)
         flags = judge(r.get("content", "") or "", q)
         out.append(
             {

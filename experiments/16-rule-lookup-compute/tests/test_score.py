@@ -110,3 +110,21 @@ def test_cluster_bootstrap_is_stratified_by_chain():
     }
     d, lo, hi = cluster_diff_ci(diffs, n=300)
     assert abs(d - 0.75) < 1e-9 and lo <= d <= hi and hi - lo > 0
+
+
+def test_a_defect_question_is_not_scored():
+    """2026-11-03: c4-10/24/32 wrote 120/240 V where article 60 says 110/220 V; such questions
+    carry `defect` and leave scoring entirely (their gold is not rewritten after the fact)."""
+    bad = {**Q_NUM, "id": "q9", "defect": "wording contradicts the article"}
+    qs = {"q1": Q_NUM, "q9": bad}
+    raw = [
+        {
+            "model": "m",
+            "condition": "c",
+            "qid": q,
+            "chain": "C1",
+            "content": _c(value=46.2, unit="A"),
+        }
+        for q in qs
+    ]
+    assert [r["qid"] for r in score_rows(raw, qs)] == ["q1"]

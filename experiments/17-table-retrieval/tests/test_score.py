@@ -131,3 +131,21 @@ def test_latest_good_drops_errors_and_duplicates():
     ]
     rows.append({**k, "qid": "z", "error": "boom"})
     assert latest_good(rows) == [{**k, "error": "", "content": "b"}]
+
+
+def test_a_defect_question_is_not_scored():
+    """2026-11-03: c4-10/24/32 wrote 120/240 V where article 60 says 110/220 V; such questions
+    carry `defect` and leave scoring entirely (their gold is not rewritten after the fact)."""
+    bad = {**Q_NUM, "id": "q9", "defect": "wording contradicts the article"}
+    qs = {"q1": Q_NUM, "q9": bad}
+    raw = [
+        {
+            "model": "m",
+            "condition": "c",
+            "qid": q,
+            "chain": "C1",
+            "content": _c(value=46.2, unit="A"),
+        }
+        for q in qs
+    ]
+    assert [r["qid"] for r in score_rows(raw, qs)] == ["q1"]
