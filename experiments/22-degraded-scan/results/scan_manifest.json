@@ -1,0 +1,308 @@
+{
+ "levels": {
+  "L1": {
+   "dpi": 200,
+   "angle": 0.5,
+   "blur": 0.0,
+   "noise": 0.0,
+   "quality": 50
+  },
+  "L2": {
+   "dpi": 150,
+   "angle": 1.5,
+   "blur": 0.8,
+   "noise": 8.0,
+   "quality": 30
+  }
+ },
+ "images": {
+  "L1/表二五～一-p0.jpg": {
+   "sha256": "690c6c4f22b246fa21755b2ba4e167cd13312837373f57e92d55398165a909c4",
+   "bytes": 139243,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表二五～一-p0.jpg": {
+   "sha256": "f93dc3fef6440c2191ea2e93ba0789c5fdc26d042c13d07e821ceeae1a971da2",
+   "bytes": 74038,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表二五～二-p0.jpg": {
+   "sha256": "9f88f9049d54017d8cdea8845900590a6e1df48808464843c23bb96cd4238af2",
+   "bytes": 173588,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表二五～二-p0.jpg": {
+   "sha256": "779628dd03405383671b499c5fcfdcec45100cecf27a667d04dce7ba13c71aa3",
+   "bytes": 89032,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表二五～四-p0.jpg": {
+   "sha256": "8f8149946385e66b9a1416c599528e898e781a6e0de5dc66b040581e1dfdd336",
+   "bytes": 160657,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表二五～四-p0.jpg": {
+   "sha256": "fabf86418da20d6a2e6bf13b952b7dafa4ccc31c92cf3813c0696506845afe67",
+   "bytes": 84275,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表二五～五-p0.jpg": {
+   "sha256": "0d9d6d84436efbe7f587a39872a056154e4319a8db487c98afc87276ed95cd23",
+   "bytes": 162273,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表二五～五-p0.jpg": {
+   "sha256": "a9cef5dff5d0180f371fd6d12b6e896fa37187a9162827fc77619628ca025320",
+   "bytes": 84881,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表二五～六-p0.jpg": {
+   "sha256": "d04b6d2b3da171e62af85a04bff94d8033f7fe25dd9b89bfbb79047e8804de41",
+   "bytes": 109751,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表二五～六-p0.jpg": {
+   "sha256": "5792712ddabaedfdacf1eceb4790275078fb24334cbdad0ae4c5af9856fb2f22",
+   "bytes": 63183,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表二五～七-p0.jpg": {
+   "sha256": "aacb71572032c4c96047bcead95607ecbdf0d66ff6d1fbd1b67dd8965204e874",
+   "bytes": 140464,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表二五～七-p0.jpg": {
+   "sha256": "5711c93f47e2bba3f4173392f7b94921e74e01e95d62e5fffda5047fb526b479",
+   "bytes": 78700,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表三六-p0.jpg": {
+   "sha256": "87ebaf1429d9d161c244c3b62456e554572b5cce3581fb2e26bdc5f0484de4e7",
+   "bytes": 95993,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表三六-p0.jpg": {
+   "sha256": "783ec3a6f7c281a154c9ecb4780770266db4a502bff6d9e422261d26828b5f54",
+   "bytes": 56878,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表四○-p0.jpg": {
+   "sha256": "630a4c9850b5524749dfca746726b4e3e2272126482748ceaee9784d6af97d34",
+   "bytes": 122825,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表四○-p0.jpg": {
+   "sha256": "f61d3ce1e0ba35d930af1ec36cc2dd7eb573effa88e2708c23bacb2e958d2ca9",
+   "bytes": 69291,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表五二-p0.jpg": {
+   "sha256": "e20c677eaad6cad8a9401b5339ed5743231c4629de668238f49d5da96b1e44b0",
+   "bytes": 140437,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表五二-p0.jpg": {
+   "sha256": "a8e11238d29b99c96e59f5a742bc8351df27e8d5e84d62676665586d5dabff81",
+   "bytes": 75610,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表五五-p0.jpg": {
+   "sha256": "663d568f1dac85cc580aa14ff5519f873d462dd54e6d6d1ea75e92dfbbf318c4",
+   "bytes": 108401,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表五五-p0.jpg": {
+   "sha256": "77cef3513de6109cf9cc420098f2e7edc5f788509cc56e0b0793b458ccb119d9",
+   "bytes": 64867,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表五六-p0.jpg": {
+   "sha256": "e34aad2e584179049b7d9ad96e74cc36f5dc1724243a2c11421b3d849869333a",
+   "bytes": 183119,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表五六-p0.jpg": {
+   "sha256": "39ebe31acfc227e85455551ae2e16fd307afe720d03bfa7ba989b50c63552e78",
+   "bytes": 96989,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表五六-p1.jpg": {
+   "sha256": "5533d1f5a738834f469c326072b09ea8a43ed43a463dffc5817116a5337468c4",
+   "bytes": 150254,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表五六-p1.jpg": {
+   "sha256": "0ff1fcd3298394dfdea6ef4ae1b6bb3f3efe511d85248cf4cf73d4069ca3a00d",
+   "bytes": 77153,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表六一-p0.jpg": {
+   "sha256": "f37dd859a10475d6fd25be633414a00e79fa384fb5a57efaf075c904412f75f5",
+   "bytes": 85506,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表六一-p0.jpg": {
+   "sha256": "e833bdd8fceea58a3b2f500857e76bc561ffb8ae2d928d62e68deb2f5559e04d",
+   "bytes": 54305,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表八六～三-p0.jpg": {
+   "sha256": "8037489892b852b2fa0a0b525ccfe7efeaa5263f09fbfb5fe28a473e874db0bb",
+   "bytes": 142609,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表八六～三-p0.jpg": {
+   "sha256": "f4cb182217edd77ac7274c3714f131778188f99f7371ec65723fa85e1dcc6956",
+   "bytes": 75212,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表八八～二-p0.jpg": {
+   "sha256": "0a2ba26a553e40f9f386ea5981b7c9a562a1ef507f7f2a1817b77a5809ef2d51",
+   "bytes": 102725,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表八八～二-p0.jpg": {
+   "sha256": "81f619f0db51b912a3cc05db757bb0a41c40be1e6badca7e2ea2540a9ca70d3f",
+   "bytes": 61671,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表九二-p0.jpg": {
+   "sha256": "480057f63ade422be33c3393d54bdd9bfcf100b9720a14ec00127ebdbf1f062f",
+   "bytes": 141855,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表九二-p0.jpg": {
+   "sha256": "9d6fa5cd85dc7edc968bc77022645c0ab3a709982759aa8c6988ed6c8be6b489",
+   "bytes": 73663,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表九三～一-p0.jpg": {
+   "sha256": "654d6d70027983daf0113f9ed1d5f4e3282ea23ea0ac9cd6c981736d8a7d1e96",
+   "bytes": 136231,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表九三～一-p0.jpg": {
+   "sha256": "84661c526195bdd06ac6a9b4325e4ead6a96df661404e8b7aba1610e84249848",
+   "bytes": 71863,
+   "size": [
+    1287,
+    1786
+   ]
+  },
+  "L1/表九三～二-p0.jpg": {
+   "sha256": "56b53b91405f93ff613d5bc6c78bdd903bc425ca8235d534d398302319ed9e2d",
+   "bytes": 168207,
+   "size": [
+    1676,
+    2355
+   ]
+  },
+  "L2/表九三～二-p0.jpg": {
+   "sha256": "7ef079cc5a791154cebf7850a6a4c4d7aec622654b36fdc6cb876b268c441d83",
+   "bytes": 87963,
+   "size": [
+    1287,
+    1786
+   ]
+  }
+ }
+}
