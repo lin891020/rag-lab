@@ -50,7 +50,7 @@
 - `questions-gazette.jsonl`：160 題，q161–q320，09 的 30 份公報每份 5–6 題，三個 agent 各 10 份。規則照 09 §2，加一條**數字題的正解數字必須在 quote 裡**（任何寫法：5,000／五千／五○○○／三萬零六百／百分之三十）。不要求 quote 在文件裡唯一（舊題三分之一本來就重複；`is_gold` 任一塊含 quote 就算），只計數。配額：含「萬」≥ 10、阿拉伯數字 ≥ 15。
 - `questions-law.jsonl`：01 語料第二章（第 16–110 條）條文題 50（a41–a90）、該章引用的 24 張表表格題 30（t18–t47），一個 agent。
 - 檢查：`tests/test_questions_gazette.py`、`tests/test_questions_law.py`（退件率記下面）；抽查：沒看過題目的 agent 從頁面截圖獨立作答，公報 20 題（seed 15）、法規 10 題。
-- 寫手簡報裡的三件提醒：草案的現行欄是誘餌、問修正後；一筆夾多部法規的只出第一部；quote 不要從條號那一行抄起（article-cn 的塊文沒有條號行，HANDOFF 的 q061／q067）。
+- 寫手簡報裡的三件提醒：草案的現行欄是誘餌、問修正後；一筆夾多部法規的只出第一部；quote 不要從條號那一行抄起（article-cn 的塊文沒有條號行，q061／q067）。
 
 **跑**（`chain15.sh`，等 chain_fix 結束才碰 ollama）：
 - 公報閱讀軌 `run_read.py`：closed-book、oracle、fixed、+cnpre、+rows、full、−cnpre、−rows（8）× qwen3:8b、gpt-oss:20b × 160 = 2,560 次；依據組法、提示、schema、預算逐位元同 10（`tests/test_same_as_10.py`）。舊 160 題（含 chain_fix 重跑的 oracle）用 15 的 `score.py` 重算（`results/rescored-old/`），單位別名只准增不准改。
