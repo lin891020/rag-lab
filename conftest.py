@@ -1,7 +1,9 @@
 """Experiments deliberately do not share code, so two of them may both have run.py, report.py…
 When pytest collects more than one experiment in one process, the first import wins and the
 other experiment's tests load the wrong module. Before each test module is imported, put its own
-experiment directory first on sys.path and drop the cached experiment-local modules.
+experiment directory first on sys.path and drop the cached experiment-local modules. Imports
+inside a test function run after all collection, so the same is done again before a test whose
+experiment differs from the previous test's.
 """
 
 from __future__ import annotations
@@ -52,15 +54,34 @@ LOCAL = {
     "calc",
     "posthoc",
     "lookup",
+    "cells",
+    "claude_ocr",
+    "read_sizes",
+    "shrink",
+    "posthoc23",
 }
 
 
+_current: list[str] = [""]  # the experiment whose modules are cached now
+
+
+def _switch_to(path: Path) -> None:
+    if EXPERIMENTS not in path.parents:
+        return
+    exp = path.relative_to(EXPERIMENTS).parts[0]
+    exp_dir = str(EXPERIMENTS / exp)
+    sys.path = [exp_dir] + [x for x in sys.path if x != exp_dir]
+    for name in LOCAL:
+        sys.modules.pop(name, None)
+    _current[0] = exp
+
+
 def pytest_pycollect_makemodule(module_path, parent):  # noqa: ANN001
-    p = Path(module_path)
-    if EXPERIMENTS in p.parents:
-        exp = p.relative_to(EXPERIMENTS).parts[0]
-        exp_dir = str(EXPERIMENTS / exp)
-        sys.path = [exp_dir] + [x for x in sys.path if x != exp_dir]
-        for name in LOCAL:
-            sys.modules.pop(name, None)
+    _switch_to(Path(module_path))
     return None
+
+
+def pytest_runtest_setup(item):  # noqa: ANN001
+    p = Path(item.path)
+    if EXPERIMENTS in p.parents and p.relative_to(EXPERIMENTS).parts[0] != _current[0]:
+        _switch_to(p)
