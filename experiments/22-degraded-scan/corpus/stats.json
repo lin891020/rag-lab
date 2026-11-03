@@ -1,0 +1,1929 @@
+{
+ "glm2-L0": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 20.973750114440918,
+   "per_page": {
+    "表三六-p0": {
+     "done_reason": "stop",
+     "eval_count": 229,
+     "sha256": "ae04e54b8645fce866a44015a3f62fa117b8da7df08e38c77586cd223b90b307",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 180
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 22.70340394973755,
+   "per_page": {
+    "表九三～一-p0": {
+     "done_reason": "stop",
+     "eval_count": 356,
+     "sha256": "d3cfab7447dce08049351bc30c3df798fe29ff0cec13bd3e5b7b9ec335b1071f",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 292
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 26.87632918357849,
+   "per_page": {
+    "表九三～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 637,
+     "sha256": "e9beb9b99549f0a6d38ffbc308f206b80444278693bcd5f725b454989ab8552a",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 521
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 22.84942603111267,
+   "per_page": {
+    "表九二-p0": {
+     "done_reason": "stop",
+     "eval_count": 319,
+     "sha256": "2c083bb79bab47f72b6d467794194db9d1178decf99a00b5e6974a4bb1904522",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "plain"
+    }
+   },
+   "chars": 342
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 24.511304140090942,
+   "per_page": {
+    "表二五～一-p0": {
+     "done_reason": "stop",
+     "eval_count": 430,
+     "sha256": "75701e2d2e7396d40eebfcc9531e5cbcc98ca6e20ba7d2f23146449370b0f377",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 475
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 28.38513207435608,
+   "per_page": {
+    "表二五～七-p0": {
+     "done_reason": "stop",
+     "eval_count": 714,
+     "sha256": "53e8564731da63128829921978e8de11ec9b07bdabae52cabbc9ab1feb807fe7",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 596
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 35.51516103744507,
+   "per_page": {
+    "表二五～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 1204,
+     "sha256": "6889ef98aab75aae955311c519b7c8ac547fbf482c5638ad844ab68ccfd020b7",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1101
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 35.31886625289917,
+   "per_page": {
+    "表二五～五-p0": {
+     "done_reason": "stop",
+     "eval_count": 1204,
+     "sha256": "c569be24c90afca7c2245ac248d54d15abcb067dbd60f6fa73f1ff378d18975c",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1099
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 22.53733515739441,
+   "per_page": {
+    "表二五～六-p0": {
+     "done_reason": "stop",
+     "eval_count": 279,
+     "sha256": "0ecf8ce10737a7309008de10094a71e8810ee4dc61d2a631813d082e899847fd",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 214
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 35.334047079086304,
+   "per_page": {
+    "表二五～四-p0": {
+     "done_reason": "stop",
+     "eval_count": 1214,
+     "sha256": "a959d0b99daec9a842ab112769aece4491eaa44854153531802047d4cb0bf453",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1111
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 6.9481360912323,
+   "per_page": {
+    "表五二-p0": {
+     "done_reason": "stop",
+     "eval_count": 504,
+     "sha256": "d48db605863ca84b51ece13007eb0028a637b023957df020674ad99a5c206117",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 505
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 23.171902894973755,
+   "per_page": {
+    "表五五-p0": {
+     "done_reason": "stop",
+     "eval_count": 326,
+     "sha256": "50d5b8e53420a2f337e1dff327b621b514d4ad63b451cebfb472c7cfd1081d3e",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 233
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 57.62281918525696,
+   "per_page": {
+    "表五六-p0": {
+     "done_reason": "stop",
+     "eval_count": 937,
+     "sha256": "81ac56f135fba7491b2a14d9917be6b0217e62517a71ceace2e4669b1e2b9f4d",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    },
+    "表五六-p1": {
+     "done_reason": "stop",
+     "eval_count": 542,
+     "sha256": "057f7cd703357c3054a963148da435a16aee2d6630134c2623fc2754958bac0e",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1237
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 23.326542139053345,
+   "per_page": {
+    "表八八～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 332,
+     "sha256": "f994f9c7708a2b48b86ace6ada7538dfc03c2e4429c50925173694d4c5ddfe82",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 268
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 26.151300191879272,
+   "per_page": {
+    "表八六～三-p0": {
+     "done_reason": "stop",
+     "eval_count": 541,
+     "sha256": "1653dde9d2c8ee7c0cc0922fa5920c8c23cee184ee12ebb655cafd56ae29e913",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 584
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 21.532371997833252,
+   "per_page": {
+    "表六一-p0": {
+     "done_reason": "stop",
+     "eval_count": 195,
+     "sha256": "1b31093af5284727339018513dad0f2065d8b7dcb721c254c461732e160697b5",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 144
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 22.175261974334717,
+   "per_page": {
+    "表四○-p0": {
+     "done_reason": "stop",
+     "eval_count": 241,
+     "sha256": "4726f4d696fbe0b7aef1c654cbddc41e2e3790b2d2a9b124341ba23dc7f2e838",
+     "size": [
+      2481,
+      3508
+     ],
+     "format": "plain"
+    }
+   },
+   "chars": 254
+  }
+ },
+ "glm2-L1": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 20.621976852416992,
+   "per_page": {
+    "表三六-p0": {
+     "done_reason": "stop",
+     "eval_count": 156,
+     "sha256": "87ebaf1429d9d161c244c3b62456e554572b5cce3581fb2e26bdc5f0484de4e7",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "plain"
+    }
+   },
+   "chars": 152
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 23.23483681678772,
+   "per_page": {
+    "表九三～一-p0": {
+     "done_reason": "stop",
+     "eval_count": 349,
+     "sha256": "654d6d70027983daf0113f9ed1d5f4e3282ea23ea0ac9cd6c981736d8a7d1e96",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 291
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 27.211506843566895,
+   "per_page": {
+    "表九三～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 637,
+     "sha256": "56b53b91405f93ff613d5bc6c78bdd903bc425ca8235d534d398302319ed9e2d",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 521
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 22.602620124816895,
+   "per_page": {
+    "表九二-p0": {
+     "done_reason": "stop",
+     "eval_count": 305,
+     "sha256": "480057f63ade422be33c3393d54bdd9bfcf100b9720a14ec00127ebdbf1f062f",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "plain"
+    }
+   },
+   "chars": 336
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 24.361518144607544,
+   "per_page": {
+    "表二五～一-p0": {
+     "done_reason": "stop",
+     "eval_count": 430,
+     "sha256": "690c6c4f22b246fa21755b2ba4e167cd13312837373f57e92d55398165a909c4",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 477
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 28.110305786132812,
+   "per_page": {
+    "表二五～七-p0": {
+     "done_reason": "stop",
+     "eval_count": 714,
+     "sha256": "aacb71572032c4c96047bcead95607ecbdf0d66ff6d1fbd1b67dd8965204e874",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 596
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 34.80588889122009,
+   "per_page": {
+    "表二五～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 1204,
+     "sha256": "9f88f9049d54017d8cdea8845900590a6e1df48808464843c23bb96cd4238af2",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1101
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 34.775344133377075,
+   "per_page": {
+    "表二五～五-p0": {
+     "done_reason": "stop",
+     "eval_count": 1204,
+     "sha256": "0d9d6d84436efbe7f587a39872a056154e4319a8db487c98afc87276ed95cd23",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1103
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 22.261810779571533,
+   "per_page": {
+    "表二五～六-p0": {
+     "done_reason": "stop",
+     "eval_count": 279,
+     "sha256": "d04b6d2b3da171e62af85a04bff94d8033f7fe25dd9b89bfbb79047e8804de41",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 214
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 34.93981695175171,
+   "per_page": {
+    "表二五～四-p0": {
+     "done_reason": "stop",
+     "eval_count": 1214,
+     "sha256": "8f8149946385e66b9a1416c599528e898e781a6e0de5dc66b040581e1dfdd336",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1107
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 7.012652635574341,
+   "per_page": {
+    "表五二-p0": {
+     "done_reason": "stop",
+     "eval_count": 504,
+     "sha256": "e20c677eaad6cad8a9401b5339ed5743231c4629de668238f49d5da96b1e44b0",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 505
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 22.803468227386475,
+   "per_page": {
+    "表五五-p0": {
+     "done_reason": "stop",
+     "eval_count": 326,
+     "sha256": "663d568f1dac85cc580aa14ff5519f873d462dd54e6d6d1ea75e92dfbbf318c4",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 233
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 56.870699882507324,
+   "per_page": {
+    "表五六-p0": {
+     "done_reason": "stop",
+     "eval_count": 932,
+     "sha256": "e34aad2e584179049b7d9ad96e74cc36f5dc1724243a2c11421b3d849869333a",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    },
+    "表五六-p1": {
+     "done_reason": "stop",
+     "eval_count": 542,
+     "sha256": "5533d1f5a738834f469c326072b09ea8a43ed43a463dffc5817116a5337468c4",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1235
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 23.048791885375977,
+   "per_page": {
+    "表八八～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 333,
+     "sha256": "0a2ba26a553e40f9f386ea5981b7c9a562a1ef507f7f2a1817b77a5809ef2d51",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 268
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 25.818905115127563,
+   "per_page": {
+    "表八六～三-p0": {
+     "done_reason": "stop",
+     "eval_count": 541,
+     "sha256": "8037489892b852b2fa0a0b525ccfe7efeaa5263f09fbfb5fe28a473e874db0bb",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 584
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 21.179446697235107,
+   "per_page": {
+    "表六一-p0": {
+     "done_reason": "stop",
+     "eval_count": 195,
+     "sha256": "f37dd859a10475d6fd25be633414a00e79fa384fb5a57efaf075c904412f75f5",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 144
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 21.826133012771606,
+   "per_page": {
+    "表四○-p0": {
+     "done_reason": "stop",
+     "eval_count": 242,
+     "sha256": "630a4c9850b5524749dfca746726b4e3e2272126482748ceaee9784d6af97d34",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "plain"
+    }
+   },
+   "chars": 261
+  }
+ },
+ "glm2-L2": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 14.233054876327515,
+   "per_page": {
+    "表三六-p0": {
+     "done_reason": "stop",
+     "eval_count": 229,
+     "sha256": "783ec3a6f7c281a154c9ecb4780770266db4a502bff6d9e422261d26828b5f54",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 180
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 15.871366739273071,
+   "per_page": {
+    "表九三～一-p0": {
+     "done_reason": "stop",
+     "eval_count": 355,
+     "sha256": "84661c526195bdd06ac6a9b4325e4ead6a96df661404e8b7aba1610e84249848",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 292
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 19.57092308998108,
+   "per_page": {
+    "表九三～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 637,
+     "sha256": "7ef079cc5a791154cebf7850a6a4c4d7aec622654b36fdc6cb876b268c441d83",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 521
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 16.902597188949585,
+   "per_page": {
+    "表九二-p0": {
+     "done_reason": "stop",
+     "eval_count": 431,
+     "sha256": "9d6fa5cd85dc7edc968bc77022645c0ab3a709982759aa8c6988ed6c8be6b489",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 386
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 16.764150857925415,
+   "per_page": {
+    "表二五～一-p0": {
+     "done_reason": "stop",
+     "eval_count": 427,
+     "sha256": "f93dc3fef6440c2191ea2e93ba0789c5fdc26d042c13d07e821ceeae1a971da2",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 475
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 20.248687028884888,
+   "per_page": {
+    "表二五～七-p0": {
+     "done_reason": "stop",
+     "eval_count": 695,
+     "sha256": "5711c93f47e2bba3f4173392f7b94921e74e01e95d62e5fffda5047fb526b479",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 566
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 26.991579055786133,
+   "per_page": {
+    "表二五～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 1204,
+     "sha256": "779628dd03405383671b499c5fcfdcec45100cecf27a667d04dce7ba13c71aa3",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1097
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 26.98285412788391,
+   "per_page": {
+    "表二五～五-p0": {
+     "done_reason": "stop",
+     "eval_count": 1204,
+     "sha256": "a9cef5dff5d0180f371fd6d12b6e896fa37187a9162827fc77619628ca025320",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1099
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 14.847697973251343,
+   "per_page": {
+    "表二五～六-p0": {
+     "done_reason": "stop",
+     "eval_count": 279,
+     "sha256": "5792712ddabaedfdacf1eceb4790275078fb24334cbdad0ae4c5af9856fb2f22",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 214
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 27.20740294456482,
+   "per_page": {
+    "表二五～四-p0": {
+     "done_reason": "stop",
+     "eval_count": 1214,
+     "sha256": "fabf86418da20d6a2e6bf13b952b7dafa4ccc31c92cf3813c0696506845afe67",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1107
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 6.792939901351929,
+   "per_page": {
+    "表五二-p0": {
+     "done_reason": "stop",
+     "eval_count": 506,
+     "sha256": "a8e11238d29b99c96e59f5a742bc8351df27e8d5e84d62676665586d5dabff81",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 510
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 15.420387983322144,
+   "per_page": {
+    "表五五-p0": {
+     "done_reason": "stop",
+     "eval_count": 326,
+     "sha256": "77cef3513de6109cf9cc420098f2e7edc5f788509cc56e0b0793b458ccb119d9",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 233
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 41.694242000579834,
+   "per_page": {
+    "表五六-p0": {
+     "done_reason": "stop",
+     "eval_count": 939,
+     "sha256": "39ebe31acfc227e85455551ae2e16fd307afe720d03bfa7ba989b50c63552e78",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    },
+    "表五六-p1": {
+     "done_reason": "stop",
+     "eval_count": 541,
+     "sha256": "0ff1fcd3298394dfdea6ef4ae1b6bb3f3efe511d85248cf4cf73d4069ca3a00d",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1235
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 15.496076107025146,
+   "per_page": {
+    "表八八～二-p0": {
+     "done_reason": "stop",
+     "eval_count": 332,
+     "sha256": "81f619f0db51b912a3cc05db757bb0a41c40be1e6badca7e2ea2540a9ca70d3f",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 268
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 18.257745027542114,
+   "per_page": {
+    "表八六～三-p0": {
+     "done_reason": "stop",
+     "eval_count": 538,
+     "sha256": "f4cb182217edd77ac7274c3714f131778188f99f7371ec65723fa85e1dcc6956",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 586
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 13.747354745864868,
+   "per_page": {
+    "表六一-p0": {
+     "done_reason": "stop",
+     "eval_count": 195,
+     "sha256": "e833bdd8fceea58a3b2f500857e76bc561ffb8ae2d928d62e68deb2f5559e04d",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 144
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 18.176681995391846,
+   "per_page": {
+    "表四○-p0": {
+     "done_reason": "stop",
+     "eval_count": 525,
+     "sha256": "f61d3ce1e0ba35d930af1ec36cc2dd7eb573effa88e2708c23bacb2e958d2ca9",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 525
+  }
+ },
+ "vision-L1": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 0.7482659816741943,
+   "per_page": {
+    "表三六-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 202
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 0.2131798267364502,
+   "per_page": {
+    "表九三～一-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 350
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 0.2516160011291504,
+   "per_page": {
+    "表九三～二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 530
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 0.22723793983459473,
+   "per_page": {
+    "表九二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 447
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 0.19449806213378906,
+   "per_page": {
+    "表二五～一-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 488
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 0.19208407402038574,
+   "per_page": {
+    "表二五～七-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 490
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 0.25969719886779785,
+   "per_page": {
+    "表二五～二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 545
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 0.26438403129577637,
+   "per_page": {
+    "表二五～五-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 519
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 0.16165804862976074,
+   "per_page": {
+    "表二五～六-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 248
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 0.2593050003051758,
+   "per_page": {
+    "表二五～四-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 661
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 0.22198987007141113,
+   "per_page": {
+    "表五二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 425
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 0.11104297637939453,
+   "per_page": {
+    "表五五-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 81
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 0.5212318897247314,
+   "per_page": {
+    "表五六-p0": {
+     "format": "rows"
+    },
+    "表五六-p1": {
+     "format": "rows"
+    }
+   },
+   "chars": 1142
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 0.10718107223510742,
+   "per_page": {
+    "表八八～二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 107
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 0.24769902229309082,
+   "per_page": {
+    "表八六～三-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 525
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 0.11005687713623047,
+   "per_page": {
+    "表六一-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 134
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 0.2124958038330078,
+   "per_page": {
+    "表四○-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 412
+  }
+ },
+ "vision-L2": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 0.15941572189331055,
+   "per_page": {
+    "表三六-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 205
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 0.21867895126342773,
+   "per_page": {
+    "表九三～一-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 346
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 0.25178074836730957,
+   "per_page": {
+    "表九三～二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 530
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 0.2512478828430176,
+   "per_page": {
+    "表九二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 452
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 0.21557402610778809,
+   "per_page": {
+    "表二五～一-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 492
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 0.2206742763519287,
+   "per_page": {
+    "表二五～七-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 528
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 0.23686003684997559,
+   "per_page": {
+    "表二五～二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 321
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 0.19653916358947754,
+   "per_page": {
+    "表二五～五-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 251
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 0.1893150806427002,
+   "per_page": {
+    "表二五～六-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 248
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 0.2062392234802246,
+   "per_page": {
+    "表二五～四-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 370
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 0.23321986198425293,
+   "per_page": {
+    "表五二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 424
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 0.16197991371154785,
+   "per_page": {
+    "表五五-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 252
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 0.5607390403747559,
+   "per_page": {
+    "表五六-p0": {
+     "format": "rows"
+    },
+    "表五六-p1": {
+     "format": "rows"
+    }
+   },
+   "chars": 1185
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 0.12671613693237305,
+   "per_page": {
+    "表八八～二-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 172
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 0.26235294342041016,
+   "per_page": {
+    "表八六～三-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 528
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 0.12408804893493652,
+   "per_page": {
+    "表六一-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 160
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 0.19756388664245605,
+   "per_page": {
+    "表四○-p0": {
+     "format": "rows"
+    }
+   },
+   "chars": 415
+  }
+ },
+ "opus-L1": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 4.120100021362305,
+   "per_page": {
+    "表三六-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 284,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUFitvXgNRpuaMWtdLz",
+     "sha256": "87ebaf1429d9d161c244c3b62456e554572b5cce3581fb2e26bdc5f0484de4e7",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 193
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 4.537167072296143,
+   "per_page": {
+    "表九三～一-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 572,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUG1rei8XAjfiGe1tQp",
+     "sha256": "654d6d70027983daf0113f9ed1d5f4e3282ea23ea0ac9cd6c981736d8a7d1e96",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 357
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 6.312374114990234,
+   "per_page": {
+    "表九三～二-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 839,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUGMGCNjDiuQoBFXZwb",
+     "sha256": "56b53b91405f93ff613d5bc6c78bdd903bc425ca8235d534d398302319ed9e2d",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 582
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 4.481697082519531,
+   "per_page": {
+    "表九二-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 555,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUGpK9HfeCRZoq8AYV6",
+     "sha256": "480057f63ade422be33c3393d54bdd9bfcf100b9720a14ec00127ebdbf1f062f",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 396
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 6.127242088317871,
+   "per_page": {
+    "表二五～一-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 712,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUH9R6Gdc1cb44ASPQT",
+     "sha256": "690c6c4f22b246fa21755b2ba4e167cd13312837373f57e92d55398165a909c4",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 482
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 6.882535934448242,
+   "per_page": {
+    "表二五～七-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 769,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUHbdv4PUmYgMTTE5FQ",
+     "sha256": "aacb71572032c4c96047bcead95607ecbdf0d66ff6d1fbd1b67dd8965204e874",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 625
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 15.30239987373352,
+   "per_page": {
+    "表二五～二-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 2097,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUJ7QaHEveMH9TDfriB",
+     "sha256": "9f88f9049d54017d8cdea8845900590a6e1df48808464843c23bb96cd4238af2",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1239
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 16.069970846176147,
+   "per_page": {
+    "表二五～五-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 2099,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUKEXitepRtxZvgbmSq",
+     "sha256": "0d9d6d84436efbe7f587a39872a056154e4319a8db487c98afc87276ed95cd23",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1198
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 4.36735200881958,
+   "per_page": {
+    "表二五～六-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 449,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfULRCTTtd3NFu1FLjBi",
+     "sha256": "d04b6d2b3da171e62af85a04bff94d8033f7fe25dd9b89bfbb79047e8804de41",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 253
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 16.97457790374756,
+   "per_page": {
+    "表二五～四-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 2183,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfULjrMtLxqYp9xgZakd",
+     "sha256": "8f8149946385e66b9a1416c599528e898e781a6e0de5dc66b040581e1dfdd336",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1202
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 6.506459951400757,
+   "per_page": {
+    "表五二-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 709,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUMzQjxBvTii92CHHJa",
+     "sha256": "e20c677eaad6cad8a9401b5339ed5743231c4629de668238f49d5da96b1e44b0",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 504
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 5.361639022827148,
+   "per_page": {
+    "表五五-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 416,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUNUL2ici4Fyt89gtq2",
+     "sha256": "663d568f1dac85cc580aa14ff5519f873d462dd54e6d6d1ea75e92dfbbf318c4",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 255
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 17.856003284454346,
+   "per_page": {
+    "表五六-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 1386,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUNsCgdMgpAY2tX8YLD",
+     "sha256": "e34aad2e584179049b7d9ad96e74cc36f5dc1724243a2c11421b3d849869333a",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    },
+    "表五六-p1": {
+     "tokens_in": 4864,
+     "tokens_out": 836,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUPgDB94xJhFmJ779kN",
+     "sha256": "5533d1f5a738834f469c326072b09ea8a43ed43a463dffc5817116a5337468c4",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1266
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 5.109521865844727,
+   "per_page": {
+    "表八八～二-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 549,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUQBWJNYhKgQ9evm24s",
+     "sha256": "0a2ba26a553e40f9f386ea5981b7c9a562a1ef507f7f2a1817b77a5809ef2d51",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 289
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 8.39296579360962,
+   "per_page": {
+    "表八六～三-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 1043,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUQZkWrXSFBRLPN8Q8u",
+     "sha256": "8037489892b852b2fa0a0b525ccfe7efeaa5263f09fbfb5fe28a473e874db0bb",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 642
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 4.099713087081909,
+   "per_page": {
+    "表六一-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 320,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfURBaHsj1dqqbRECSvQ",
+     "sha256": "f37dd859a10475d6fd25be633414a00e79fa384fb5a57efaf075c904412f75f5",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 164
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 12.77442479133606,
+   "per_page": {
+    "表四○-p0": {
+     "tokens_in": 4864,
+     "tokens_out": 1410,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfURUkAWsSp9g3joWBqf",
+     "sha256": "630a4c9850b5524749dfca746726b4e3e2272126482748ceaee9784d6af97d34",
+     "size": [
+      1676,
+      2355
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 566
+  }
+ },
+ "opus-L2": {
+  "表三六": {
+   "pages": 1,
+   "seconds": 3.0379602909088135,
+   "per_page": {
+    "表三六-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 334,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUSRRWRS3LAnJA19pnT",
+     "sha256": "783ec3a6f7c281a154c9ecb4780770266db4a502bff6d9e422261d26828b5f54",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 193
+  },
+  "表九三～一": {
+   "pages": 1,
+   "seconds": 4.55454421043396,
+   "per_page": {
+    "表九三～一-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 573,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUSekTCmRBVUMdxotWX",
+     "sha256": "84661c526195bdd06ac6a9b4325e4ead6a96df661404e8b7aba1610e84249848",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 357
+  },
+  "表九三～二": {
+   "pages": 1,
+   "seconds": 7.484713315963745,
+   "per_page": {
+    "表九三～二-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 816,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUSystnNQtoGobDrset",
+     "sha256": "7ef079cc5a791154cebf7850a6a4c4d7aec622654b36fdc6cb876b268c441d83",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 582
+  },
+  "表九二": {
+   "pages": 1,
+   "seconds": 4.839632749557495,
+   "per_page": {
+    "表九二-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 573,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUTXwDFN4FcMAYXsWWH",
+     "sha256": "9d6fa5cd85dc7edc968bc77022645c0ab3a709982759aa8c6988ed6c8be6b489",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 396
+  },
+  "表二五～一": {
+   "pages": 1,
+   "seconds": 9.288216829299927,
+   "per_page": {
+    "表二五～一-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 1099,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUTtcAcnHMcmNQvB7rD",
+     "sha256": "f93dc3fef6440c2191ea2e93ba0789c5fdc26d042c13d07e821ceeae1a971da2",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 515
+  },
+  "表二五～七": {
+   "pages": 1,
+   "seconds": 7.3790998458862305,
+   "per_page": {
+    "表二五～七-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 1045,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUUaE9bcbHrYEExrJVa",
+     "sha256": "5711c93f47e2bba3f4173392f7b94921e74e01e95d62e5fffda5047fb526b479",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 625
+  },
+  "表二五～二": {
+   "pages": 1,
+   "seconds": 17.122614860534668,
+   "per_page": {
+    "表二五～二-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 2393,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUV7uPKyvowByFNhn9p",
+     "sha256": "779628dd03405383671b499c5fcfdcec45100cecf27a667d04dce7ba13c71aa3",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1264
+  },
+  "表二五～五": {
+   "pages": 1,
+   "seconds": 15.619564056396484,
+   "per_page": {
+    "表二五～五-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 2127,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUWP8xKMa1Tteifk4E5",
+     "sha256": "a9cef5dff5d0180f371fd6d12b6e896fa37187a9162827fc77619628ca025320",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1209
+  },
+  "表二五～六": {
+   "pages": 1,
+   "seconds": 4.789198160171509,
+   "per_page": {
+    "表二五～六-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 449,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUXXmtKxSrZGtgFnzFe",
+     "sha256": "5792712ddabaedfdacf1eceb4790275078fb24334cbdad0ae4c5af9856fb2f22",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 253
+  },
+  "表二五～四": {
+   "pages": 1,
+   "seconds": 14.760709047317505,
+   "per_page": {
+    "表二五～四-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 2034,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUXtGvfABhkTyC4VJy9",
+     "sha256": "fabf86418da20d6a2e6bf13b952b7dafa4ccc31c92cf3813c0696506845afe67",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1190
+  },
+  "表五二": {
+   "pages": 1,
+   "seconds": 5.571492910385132,
+   "per_page": {
+    "表五二-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 732,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUYyQ31bHWaEwzWeAei",
+     "sha256": "a8e11238d29b99c96e59f5a742bc8351df27e8d5e84d62676665586d5dabff81",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 504
+  },
+  "表五五": {
+   "pages": 1,
+   "seconds": 4.104925870895386,
+   "per_page": {
+    "表五五-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 392,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUZPFz42cSietJQwvdE",
+     "sha256": "77cef3513de6109cf9cc420098f2e7edc5f788509cc56e0b0793b458ccb119d9",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 255
+  },
+  "表五六": {
+   "pages": 2,
+   "seconds": 22.561301231384277,
+   "per_page": {
+    "表五六-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 1374,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUZgpfhqvwfMMsHHhB8",
+     "sha256": "39ebe31acfc227e85455551ae2e16fd307afe720d03bfa7ba989b50c63552e78",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    },
+    "表五六-p1": {
+     "tokens_in": 3052,
+     "tokens_out": 1264,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUaThQGVFTbu9b9FA6r",
+     "sha256": "0ff1fcd3298394dfdea6ef4ae1b6bb3f3efe511d85248cf4cf73d4069ca3a00d",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 1259
+  },
+  "表八八～二": {
+   "pages": 1,
+   "seconds": 4.317489862442017,
+   "per_page": {
+    "表八八～二-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 424,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUbMDm2BDL6xFBc571o",
+     "sha256": "81f619f0db51b912a3cc05db757bb0a41c40be1e6badca7e2ea2540a9ca70d3f",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 289
+  },
+  "表八六～三": {
+   "pages": 1,
+   "seconds": 6.3209547996521,
+   "per_page": {
+    "表八六～三-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 737,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUbfkUwoRc1CFgkX3Mv",
+     "sha256": "f4cb182217edd77ac7274c3714f131778188f99f7371ec65723fa85e1dcc6956",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 613
+  },
+  "表六一": {
+   "pages": 1,
+   "seconds": 2.8158488273620605,
+   "per_page": {
+    "表六一-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 320,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUc8hDELjXibMp4H8DD",
+     "sha256": "e833bdd8fceea58a3b2f500857e76bc561ffb8ae2d928d62e68deb2f5559e04d",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 164
+  },
+  "表四○": {
+   "pages": 1,
+   "seconds": 11.060935258865356,
+   "per_page": {
+    "表四○-p0": {
+     "tokens_in": 3052,
+     "tokens_out": 1306,
+     "served_model": "claude-opus-5-5",
+     "request_id": "req_011CgfUcLnEs4dS1epSBAZR7",
+     "sha256": "f61d3ce1e0ba35d930af1ec36cc2dd7eb573effa88e2708c23bacb2e958d2ca9",
+     "size": [
+      1287,
+      1786
+     ],
+     "format": "html"
+    }
+   },
+   "chars": 555
+  }
+ }
+}
