@@ -173,7 +173,9 @@ def main() -> int:
         parts.append(f"## 其他差距與按鏈（描述，不下判定）\n\n{diffs_table(d, primary=False)}\n")
     present = {r["model"] for r in s}
     for model in [m for m in MODELS if m in present]:
-        parts.append(f"## {model}\n\n### C1／C4／C5 全部 96 題\n\n{overview(s, model)}\n")
+        parts.append(
+            f"## {model}\n\n### C1／C4／C5 全部 91 題（5 題 defect 不計）\n\n{overview(s, model)}\n"
+        )
         parts.append(f"### 按鏈，答對（嚴格）\n\n{by_chain(s, model, 'right')}\n")
         parts.append(f"### 按鏈，選小率（選型鏈）\n\n{by_chain(s, model, 'critical')}\n")
         if a:

@@ -1,0 +1,6 @@
+model,condition,slip,n
+gpt-oss:20b,seg,wrong_column,1
+gpt-oss:20b,seg-2,wrong_column,1
+qwen3:8b,fix,wrong_column,2
+qwen3:8b,seg,other_number,1
+qwen3:8b,seg,wrong_row,5

@@ -149,7 +149,9 @@ def main() -> int:
     a = _read(RESULTS / "attribution.csv") if (RESULTS / "attribution.csv").exists() else []
     parts = []
     for model in sorted({r["model"] for r in s}):
-        parts.append(f"## {model}\n\n### C1／C4／C5 全部 96 題\n\n{overview(s, model)}\n")
+        parts.append(
+            f"## {model}\n\n### C1／C4／C5 全部 91 題（5 題 defect 不計）\n\n{overview(s, model)}\n"
+        )
         parts.append(f"### 按鏈，答對（嚴格）\n\n{by_chain(s, model, 'right')}\n")
         parts.append(f"### 按鏈，選小率（選型鏈）\n\n{by_chain(s, model, 'critical')}\n")
         if d:

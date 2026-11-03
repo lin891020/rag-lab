@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-03",
+  "machine": "mini.local",
+  "ollama": "0.40.2",
+  "models": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "gpt-oss:20b": "sha256:f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe"
+  },
+  "same_digest_as_19": true,
+  "think": {
+    "qwen3:8b": false,
+    "gpt-oss:20b": "low"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "runs": {
+    "qwen3:8b": [
+      "seg"
+    ],
+    "gpt-oss:20b": [
+      "seg",
+      "seg-2"
+    ]
+  },
+  "source": {
+    "seg": "fix",
+    "seg-2": "fix-2"
+  },
+  "copied": {
+    "qwen3:8b": [
+      "fix"
+    ],
+    "gpt-oss:20b": [
+      "fix",
+      "fix-2"
+    ]
+  },
+  "n_questions": 96,
+  "drift": {
+    "gpt-oss:20b fix": "1/2",
+    "gpt-oss:20b seg": "2/2",
+    "gpt-oss:20b seg-2": "1/2",
+    "qwen3:8b fix": "2/2",
+    "qwen3:8b seg": "2/2"
+  },
+  "drift_rows": [
+    {
+      "model": "qwen3:8b",
+      "condition": "fix",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二｜絞線 325｜同一導線管或電纜內之載流導線數／5-6／安培容量（A） = （空白）\", \"expression\": \"60\", \"value\": 60, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二｜絞線 325｜同一導線管或電纜內之載流導線數／5-6／安培容量（A） = （空白）\", \"expression\": \"60\", \"value\": 60, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "fix",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"120000 × 20 ÷ 100\", \"value\": 24000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"120000 × 20 ÷ 100\", \"value\": 24000, \"unit\": \"W\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "fix",
+      "qid": "c1-01",
+      "same": false,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\": false, \"quote\": \"\", \"expression\": \"\", \"value\": 0, \"unit\": \"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "fix",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "seg",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "seg",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":true,\"quote\":\"表五二｜醫院註 50,000以下｜需量因數（%） = 40\\n表五二｜醫院註 超過50,000｜需量因數（%） = 20\",\"expression\":\"50,000 × 0.40 + (120,000-50,000) × 0.20\",\"value\":34000,\"unit\":\"W\"}",
+      "first": "{\"found\":true,\"quote\":\"表五二｜醫院註 50,000以下｜需量因數（%） = 40\\n表五二｜醫院註 超過50,000｜需量因數（%） = 20\",\"expression\":\"50,000 × 0.40 + (120,000-50,000) × 0.20\",\"value\":34000,\"unit\":\"W\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "seg-2",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}",
+      "first": "{\"found\":false,\"quote\":\"\",\"expression\":\"\",\"value\":0,\"unit\":\"\"}"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "condition": "seg-2",
+      "qid": "c4-17",
+      "same": false,
+      "same_answer": true,
+      "content": "{\"found\":true,\"quote\":\"表五二｜醫院註 50,000以下｜需量因數（%） = 40\\n表五二｜醫院註 超過50,000｜需量因數（%） = 20\",\"expression\":\"50,000 × 0.40 + (120,000-50,000) × 0.20\",\"value\":34000,\"unit\":\"W\"}",
+      "first": "{\"found\":true,\"quote\":\"表五二｜醫院註 50,000以下｜需量因數（%） = 40\\n表五二｜醫院註 超過50,000｜需量因數（%） = 20\",\"expression\":\"50000×0.40+70000×0.20\",\"value\":34000,\"unit\":\"W\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "seg",
+      "qid": "c1-01",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表二五～二｜絞線 325｜同一導線管或電纜內之載流導線數／5-6／安培容量（A） = （空白） ← 你查的\", \"expression\": \"325\", \"value\": 325, \"unit\": \"A\"}",
+      "first": "{\"found\": true, \"quote\": \"表二五～二｜絞線 325｜同一導線管或電纜內之載流導線數／5-6／安培容量（A） = （空白） ← 你查的\", \"expression\": \"325\", \"value\": 325, \"unit\": \"A\"}"
+    },
+    {
+      "model": "qwen3:8b",
+      "condition": "seg",
+      "qid": "c4-17",
+      "same": true,
+      "same_answer": true,
+      "content": "{\"found\": true, \"quote\": \"表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"120000 × 20 ÷ 100\", \"value\": 24000, \"unit\": \"W\"}",
+      "first": "{\"found\": true, \"quote\": \"表五二｜醫院註 超過50,000｜需量因數（%） = 20\", \"expression\": \"120000 × 20 ÷ 100\", \"value\": 24000, \"unit\": \"W\"}"
+    }
+  ]
+}
