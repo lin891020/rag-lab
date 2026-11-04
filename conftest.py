@@ -61,6 +61,7 @@ LOCAL = {
     "posthoc23",
     "posthoc24",
     "posthoc25",
+    "posthoc26",
 }
 
 
