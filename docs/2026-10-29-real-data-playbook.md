@@ -2,6 +2,7 @@
 
 寫給拿到一批新文件、要讓本機模型回答問題的人。每一步只寫「做什麼、為什麼、數字在哪」；數字全部來自 `experiments/` 各 README 第 3 節，區間是 bootstrap 95%。目前所有資料都是 PDF；非 PDF（Word／Excel）還沒量過。
 整理日期 2026-10-29；10 的數字跑完補。
+答題改用雲端模型（Claude API）時，看 [2026-11-04-hosted-model-playbook.md](2026-11-04-hosted-model-playbook.md)：哪些步驟不用做、哪些要另外擋。
 
 ## 0. 先想清楚要量什麼，再動手
 
