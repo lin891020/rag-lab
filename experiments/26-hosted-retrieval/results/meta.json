@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-04",
+  "machine": "mini.local",
+  "anthropic": "2.3.0",
+  "models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "runs": {
+    "claude-haiku-5-5": [
+      "closed",
+      "struct@1500",
+      "cards",
+      "decomp@4000",
+      "oracle",
+      "closed-2",
+      "struct@1500-2",
+      "cards-2",
+      "decomp@4000-2",
+      "oracle-2"
+    ],
+    "claude-opus-5-5": [
+      "closed",
+      "struct@1500",
+      "cards",
+      "decomp@4000",
+      "oracle"
+    ]
+  },
+  "served_models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "effort": "medium",
+  "max_tokens": 16000,
+  "evidence_from": "17 gpt-oss:20b rows",
+  "n_questions": 160,
+  "tokens": {
+    "claude-haiku-5-5": [
+      4436810,
+      541001
+    ],
+    "claude-opus-5-5": [
+      2218405,
+      210868
+    ]
+  },
+  "calls": 2400,
+  "failed_calls": 0,
+  "failed_left": 0,
+  "stopped": 0,
+  "spent_usd": 13.8052,
+  "prices_usd_per_mtok": {
+    "claude-haiku-5-5": [
+      0.1,
+      0.5
+    ],
+    "claude-opus-5-5": [
+      4.0,
+      20.0
+    ]
+  }
+}

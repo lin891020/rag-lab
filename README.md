@@ -31,6 +31,7 @@
 | [23-ocr-size](experiments/23-ocr-size/README.md) | 送 glm-ocr 前先把乾淨頁縮小，「整張表回純文字」會不會消失？ | 不會穩定消失：縮到一半救回 表九二、救不回 表四○，答對 +.02／+.01 分不出；縮到 1/3 有 6 張回純文字、答對掉 .10。ollama 自己會把大圖縮到上限，進模型一樣大的三級仍有一張表時有時無——回不回表格是個不穩的決定，不是圖太大 |
 | [24-ocr-header](experiments/24-ocr-header/README.md) | glm-ocr 讀回的表，把多層表頭照文字層攤成一列，小模型答對率會不會追上文字層？ | 不會：qwen3 −.01、gpt-oss +.00，分不出。qwen3 在攤平後跟文字層一字不差的寬表救回 3 題取錯欄，別的表卻少對 4 題（2 題單位寫錯）；跟文字層的 .06 差距還在，剩下主要是表回純文字和 OCR 少了表的標題 |
 | [25-hosted-tables](experiments/25-hosted-tables/README.md) | 換成雲端模型（Claude Haiku／Opus 5.5），表格頁給文字層、OCR 文字、乾淨頁圖、爛掃描，各答對多少、花多少？ | 全部到頂、分不出：Opus 四種都 82/82，Haiku .99–1.00；22–24 的 OCR 問題在雲端模型上消失。直接給頁圖不必 OCR，每題貴 3～4 倍（Haiku US$0.0007、Opus US$0.024）。這批題對雲端模型太簡單，要更難的題才分得出 |
+| [26-hosted-retrieval](experiments/26-hosted-retrieval/README.md) | 換成雲端模型做「查規則再計算」160 題，依據給閉卷、三種檢索、正解列，檢索還是不是最大的損失？ | 是：oracle − cards Opus +.32、Haiku +.24，分得出；答對率幾乎等於檢索撈全率——正解列撈全時 Opus 221/223 對、沒撈全 3/158，有依據時答出口的 342 次全對，錯的都變成「找不到」。Haiku 在 cards 跟 Opus 同分、便宜 36 倍；Opus 閉卷憑記憶 .40，但答錯的也很有自信 |
 
 ## 怎麼跑
 
