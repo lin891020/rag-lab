@@ -60,6 +60,7 @@ LOCAL = {
     "shrink",
     "posthoc23",
     "posthoc24",
+    "posthoc25",
 }
 
 
