@@ -69,6 +69,24 @@ def quote_in(quote: str, texts: list[str]) -> bool:
     return bool(q) and any(q in _squash(t) for t in texts)
 
 
+_NUM = re.compile(r"\d+(?:\.\d+)?")
+_THOUSANDS = re.compile(r"(?<=\d),(?=\d{3})")
+
+
+def _numbers(s: str) -> set[str]:
+    """The numbers in a text, width folded and thousands commas dropped (20,000 -> 20000);
+    spaces are kept as separators, so a column name and its value stay two numbers."""
+    return set(_NUM.findall(_THOUSANDS.sub("", unicodedata.normalize("NFKC", s))))
+
+
+def numbers_in(quote: str, texts: list[str]) -> bool:
+    """Every number in the quote is a number in what the searches returned: the models rewrite a
+    table row into one line (header: values), so the word-for-word check undercounts; this one
+    asks whether a number came from nowhere. Added after 27's run, description only."""
+    nums = _numbers(quote)
+    return bool(nums) and nums <= _numbers("\n".join(texts))
+
+
 def by_hit(scored: list[dict], model: str, cond: str) -> dict[str, tuple[int, int]]:
     out = {"hit": [0, 0], "miss": [0, 0]}
     for r in scored:
@@ -214,8 +232,9 @@ def main() -> int:
     out += ["", "## 怎麼查的（agent，計分的題）", ""]
     out += [
         "| 模型 | 條件 | 平均查幾次 | 次數分布 0／1／2／3／4／5 | 被擋的查詢 | 平均輪數 "
-        "| 被停 | 沒查就答（對／答） | 引句在查到的文字裡（答出口的） |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| 被停 | 沒查就答（對／答） | 引句在查到的文字裡（答出口的） "
+        "| 引句裡的數字都在查到的文字裡（跑完後加的） |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for m in MODELS:
         for c in RUNS[m]:
@@ -223,9 +242,9 @@ def main() -> int:
             n = Counter(r["n_searches"] for r in rs)
             nosearch = [r for r in rs if r["n_searches"] == 0 and r["answered"]]
             given = [r for r in rs if r["answered"]]
-            inq = sum(
-                quote_in(r["quote"], [searcher.search(x)[0] for x in r["queries"]]) for r in given
-            )
+            got = {r["qid"]: [searcher.search(x)[0] for x in r["queries"]] for r in given}
+            inq = sum(quote_in(r["quote"], got[r["qid"]]) for r in given)
+            nums = sum(numbers_in(r["quote"], got[r["qid"]]) for r in given)
             out.append(
                 f"| {m} | {c} | {statistics.mean(r['n_searches'] for r in rs):.2f} "
                 f"| {'／'.join(str(n.get(i, 0)) for i in range(6))} "
@@ -233,7 +252,7 @@ def main() -> int:
                 f"| {statistics.mean(r.get('turns', 0) for r in rs):.2f} "
                 f"| {sum(bool(r.get('stopped')) for r in rs)} "
                 f"| {sum(bool(r['right']) for r in nosearch)}／{len(nosearch)} "
-                f"| {inq}/{len(given)} |"
+                f"| {inq}/{len(given)} | {nums}/{len(given)} |"
             )
 
     out += ["", "## 該棄答的題、選小一級（critical）", ""]

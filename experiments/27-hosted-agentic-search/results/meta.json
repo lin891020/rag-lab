@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-04",
+  "machine": "mini.local",
+  "anthropic": "2.3.0",
+  "models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "runs": {
+    "claude-haiku-5-5": [
+      "agent",
+      "agent-2"
+    ],
+    "claude-opus-5-5": [
+      "agent"
+    ]
+  },
+  "served_models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "effort": "medium",
+  "max_tokens_per_turn": 16000,
+  "max_searches": 5,
+  "max_turns": 8,
+  "n_questions": 160,
+  "tokens": {
+    "claude-haiku-5-5": {
+      "input_tokens": 2140,
+      "cache_write_tokens": 2274326,
+      "cache_read_tokens": 1222550,
+      "output_tokens": 218036,
+      "api_calls": 750
+    },
+    "claude-opus-5-5": {
+      "input_tokens": 1044,
+      "cache_write_tokens": 985582,
+      "cache_read_tokens": 481446,
+      "output_tokens": 51576,
+      "api_calls": 362
+    }
+  },
+  "questions_asked": 480,
+  "api_calls": 1112,
+  "failed_questions": 0,
+  "failed_left": 0,
+  "stopped": 0,
+  "spent_usd": 6.4656,
+  "prices_usd_per_mtok": {
+    "claude-haiku-5-5": [
+      0.1,
+      0.5
+    ],
+    "claude-opus-5-5": [
+      4.0,
+      20.0
+    ]
+  },
+  "cache_multipliers": {
+    "write": 1.25,
+    "read": {
+      "claude-opus-5-5": 0.05,
+      "claude-haiku-5-5": 0.1
+    }
+  }
+}

@@ -54,3 +54,14 @@ def test_chain_offline(tmp_path, monkeypatch):
     meta = json.loads((tmp_path / "meta.json").read_text("utf-8"))
     assert meta["questions_asked"] == 160 * 3 and meta["failed_questions"] == 0
     assert meta["api_calls"] == 160 * (2 + 2 + 3)
+
+
+def test_numbers_in_folds_spacing_and_needs_every_number():
+    from posthoc27 import numbers_in
+
+    assert numbers_in("表九三～二：100以下 | - | 8", ["過電流 100以下 | - | 8 | 3.2"])
+    assert numbers_in("3以下 130 | 4 117", ["3以下 | 4 | 130 | 117"])  # spaces separate numbers
+    assert numbers_in("20,000以下 | 50", ["20000以下 | 50"])
+    assert not numbers_in("100以下 | 14", ["100以下 | 8"])
+    assert not numbers_in("4117", ["4 117"])
+    assert not numbers_in("沒有數字", ["8"])
