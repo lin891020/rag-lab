@@ -30,6 +30,7 @@
 | [22-degraded-scan](experiments/22-degraded-scan/README.md) | 06 的表做成品質差的掃描（兩級），glm-ocr 讀回來，小模型答對率掉多少？ | 沒掉：最差一級（150 dpi、歪 1.5°、模糊、雜訊、JPEG q30）L0 − L2 qwen3 −.02、gpt-oss +.01，分不出；表格裡的格子一格都沒多讀錯，掉分仍是「整張表回純文字」，L2 反而少了。Apple Vision 一樣差（格子 .54–.59）；Opus 讀圖格子 1.00，花 US$1.3 |
 | [23-ocr-size](experiments/23-ocr-size/README.md) | 送 glm-ocr 前先把乾淨頁縮小，「整張表回純文字」會不會消失？ | 不會穩定消失：縮到一半救回 表九二、救不回 表四○，答對 +.02／+.01 分不出；縮到 1/3 有 6 張回純文字、答對掉 .10。ollama 自己會把大圖縮到上限，進模型一樣大的三級仍有一張表時有時無——回不回表格是個不穩的決定，不是圖太大 |
 | [24-ocr-header](experiments/24-ocr-header/README.md) | glm-ocr 讀回的表，把多層表頭照文字層攤成一列，小模型答對率會不會追上文字層？ | 不會：qwen3 −.01、gpt-oss +.00，分不出。qwen3 在攤平後跟文字層一字不差的寬表救回 3 題取錯欄，別的表卻少對 4 題（2 題單位寫錯）；跟文字層的 .06 差距還在，剩下主要是表回純文字和 OCR 少了表的標題 |
+| [25-hosted-tables](experiments/25-hosted-tables/README.md) | 換成雲端模型（Claude Haiku／Opus 5.5），表格頁給文字層、OCR 文字、乾淨頁圖、爛掃描，各答對多少、花多少？ | 全部到頂、分不出：Opus 四種都 82/82，Haiku .99–1.00；22–24 的 OCR 問題在雲端模型上消失。直接給頁圖不必 OCR，每題貴 3～4 倍（Haiku US$0.0007、Opus US$0.024）。這批題對雲端模型太簡單，要更難的題才分得出 |
 
 ## 怎麼跑
 

@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-04",
+  "machine": "mini.local",
+  "anthropic": "2.3.0",
+  "models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "served_models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "effort": "medium",
+  "max_tokens": 16000,
+  "conditions": [
+    "clean",
+    "glm2",
+    "image",
+    "image-L2",
+    "clean-2",
+    "glm2-2",
+    "image-2",
+    "image-L2-2"
+  ],
+  "n_questions": {
+    "total": 82
+  },
+  "images_sha256": {
+    "image/表三六-p0.png": "ae04e54b8645fce866a44015a3f62fa117b8da7df08e38c77586cd223b90b307",
+    "image-L2/表三六-p0.jpg": "783ec3a6f7c281a154c9ecb4780770266db4a502bff6d9e422261d26828b5f54",
+    "image/表九三～一-p0.png": "d3cfab7447dce08049351bc30c3df798fe29ff0cec13bd3e5b7b9ec335b1071f",
+    "image-L2/表九三～一-p0.jpg": "84661c526195bdd06ac6a9b4325e4ead6a96df661404e8b7aba1610e84249848",
+    "image/表九三～二-p0.png": "e9beb9b99549f0a6d38ffbc308f206b80444278693bcd5f725b454989ab8552a",
+    "image-L2/表九三～二-p0.jpg": "7ef079cc5a791154cebf7850a6a4c4d7aec622654b36fdc6cb876b268c441d83",
+    "image/表九二-p0.png": "2c083bb79bab47f72b6d467794194db9d1178decf99a00b5e6974a4bb1904522",
+    "image-L2/表九二-p0.jpg": "9d6fa5cd85dc7edc968bc77022645c0ab3a709982759aa8c6988ed6c8be6b489",
+    "image/表二五～一-p0.png": "75701e2d2e7396d40eebfcc9531e5cbcc98ca6e20ba7d2f23146449370b0f377",
+    "image-L2/表二五～一-p0.jpg": "f93dc3fef6440c2191ea2e93ba0789c5fdc26d042c13d07e821ceeae1a971da2",
+    "image/表二五～七-p0.png": "53e8564731da63128829921978e8de11ec9b07bdabae52cabbc9ab1feb807fe7",
+    "image-L2/表二五～七-p0.jpg": "5711c93f47e2bba3f4173392f7b94921e74e01e95d62e5fffda5047fb526b479",
+    "image/表二五～二-p0.png": "6889ef98aab75aae955311c519b7c8ac547fbf482c5638ad844ab68ccfd020b7",
+    "image-L2/表二五～二-p0.jpg": "779628dd03405383671b499c5fcfdcec45100cecf27a667d04dce7ba13c71aa3",
+    "image/表二五～五-p0.png": "c569be24c90afca7c2245ac248d54d15abcb067dbd60f6fa73f1ff378d18975c",
+    "image-L2/表二五～五-p0.jpg": "a9cef5dff5d0180f371fd6d12b6e896fa37187a9162827fc77619628ca025320",
+    "image/表二五～六-p0.png": "0ecf8ce10737a7309008de10094a71e8810ee4dc61d2a631813d082e899847fd",
+    "image-L2/表二五～六-p0.jpg": "5792712ddabaedfdacf1eceb4790275078fb24334cbdad0ae4c5af9856fb2f22",
+    "image/表二五～四-p0.png": "a959d0b99daec9a842ab112769aece4491eaa44854153531802047d4cb0bf453",
+    "image-L2/表二五～四-p0.jpg": "fabf86418da20d6a2e6bf13b952b7dafa4ccc31c92cf3813c0696506845afe67",
+    "image/表五二-p0.png": "d48db605863ca84b51ece13007eb0028a637b023957df020674ad99a5c206117",
+    "image-L2/表五二-p0.jpg": "a8e11238d29b99c96e59f5a742bc8351df27e8d5e84d62676665586d5dabff81",
+    "image/表五五-p0.png": "50d5b8e53420a2f337e1dff327b621b514d4ad63b451cebfb472c7cfd1081d3e",
+    "image-L2/表五五-p0.jpg": "77cef3513de6109cf9cc420098f2e7edc5f788509cc56e0b0793b458ccb119d9",
+    "image/表五六-p0.png": "81ac56f135fba7491b2a14d9917be6b0217e62517a71ceace2e4669b1e2b9f4d",
+    "image/表五六-p1.png": "057f7cd703357c3054a963148da435a16aee2d6630134c2623fc2754958bac0e",
+    "image-L2/表五六-p0.jpg": "39ebe31acfc227e85455551ae2e16fd307afe720d03bfa7ba989b50c63552e78",
+    "image-L2/表五六-p1.jpg": "0ff1fcd3298394dfdea6ef4ae1b6bb3f3efe511d85248cf4cf73d4069ca3a00d",
+    "image/表八八～二-p0.png": "f994f9c7708a2b48b86ace6ada7538dfc03c2e4429c50925173694d4c5ddfe82",
+    "image-L2/表八八～二-p0.jpg": "81f619f0db51b912a3cc05db757bb0a41c40be1e6badca7e2ea2540a9ca70d3f",
+    "image/表八六～三-p0.png": "1653dde9d2c8ee7c0cc0922fa5920c8c23cee184ee12ebb655cafd56ae29e913",
+    "image-L2/表八六～三-p0.jpg": "f4cb182217edd77ac7274c3714f131778188f99f7371ec65723fa85e1dcc6956",
+    "image/表六一-p0.png": "1b31093af5284727339018513dad0f2065d8b7dcb721c254c461732e160697b5",
+    "image-L2/表六一-p0.jpg": "e833bdd8fceea58a3b2f500857e76bc561ffb8ae2d928d62e68deb2f5559e04d",
+    "image/表四○-p0.png": "4726f4d696fbe0b7aef1c654cbddc41e2e3790b2d2a9b124341ba23dc7f2e838",
+    "image-L2/表四○-p0.jpg": "f61d3ce1e0ba35d930af1ec36cc2dd7eb573effa88e2708c23bacb2e958d2ca9"
+  },
+  "tokens": {
+    "claude-haiku-5-5": [
+      1937752,
+      129710
+    ],
+    "claude-opus-5-5": [
+      1937752,
+      45143
+    ]
+  },
+  "calls": 1312,
+  "failed_calls": 0,
+  "failed_left": 0,
+  "stopped": 0,
+  "spent_usd": 8.9125,
+  "prices_usd_per_mtok": {
+    "claude-haiku-5-5": [
+      0.1,
+      0.5
+    ],
+    "claude-opus-5-5": [
+      4.0,
+      20.0
+    ]
+  }
+}
