@@ -59,6 +59,7 @@ LOCAL = {
     "read_sizes",
     "shrink",
     "posthoc23",
+    "posthoc24",
 }
 
 
