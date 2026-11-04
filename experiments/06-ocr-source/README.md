@@ -2,7 +2,7 @@
 
 ## 1. 想回答的問題
 
-01–05 的表都從 PDF 文字層讀，是乾淨的來源。客戶給的常是掃描檔或照片。把 03 的 17 張表轉成 300 dpi 影像，再用三條不花錢、不起服務的本地 OCR 讀回 markdown，餵同一組 82 題：值答對率比乾淨的 markdown 掉多少？三條路線——Apple Vision（macOS 內建）、tesseract chi_tra、glm-ocr（0.9B 視覺模型，ollama）——哪條能用？
+01–05 的表都從 PDF 文字層讀，是乾淨的來源。實際拿到的文件常是掃描檔或照片。把 03 的 17 張表轉成 300 dpi 影像，再用三條不花錢、不起服務的本地 OCR 讀回 markdown，餵同一組 82 題：值答對率比乾淨的 markdown 掉多少？三條路線——Apple Vision（macOS 內建）、tesseract chi_tra、glm-ocr（0.9B 視覺模型，ollama）——哪條能用？
 
 ## 2. 怎麼做
 

@@ -43,7 +43,7 @@
 
 **預期**（跑前寫）：opus cards .85–.95、oracle ≥ .95；opus fix − cards −.05～+.05 分不出；opus 在 fix 的「選錯列」比 19 兩模型少一半以上，但 C4 分段漏段仍有幾題；haiku 介於 gpt-oss 與 opus 之間。
 
-**正式跑**：2026-11-02 試跑後接著跑，2026-11-03 00:39 跑完，mini；Claude 新跑 1,152 題次（兩模型 × 六格 × 96 題）、1,536 次呼叫（fix 一題兩次），0 失敗、全是 end_turn；回應的 `model` 跟送出的 id 相同。花費 US$11.26（Opus 10.91、Haiku 0.35；程式用 `usage` 加總，Console 還沒對）。`anthropic` 套件版本、token 明細在 `results/read/meta.json`。
+**正式跑**：2026-11-02 試跑後接著跑，2026-11-03 00:39 跑完，mini；Claude 新跑 1,152 題次（兩模型 × 六格 × 96 題）、1,536 次呼叫（fix 一題兩次），0 失敗、全是 end_turn；回應的 `model` 跟送出的 id 相同。花費 US$11.26（Opus 10.91、Haiku 0.35；程式用 `usage` 加總；2026-11-04 對過 Console，見 25 第 5 節）。`anthropic` 套件版本、token 明細在 `results/read/meta.json`。
 
 ## 3. 數字
 
@@ -107,5 +107,5 @@ Haiku 的 6 題都在 C4：4 題照明表列名寫成目錄裡沒有的字、2 �
 - **設定跟小模型不同**：Opus／Haiku 的 thinking 關不掉（effort medium），小模型是 qwen3 think 關、gpt-oss think low；API 不收 temperature。所以「大 vs 小」混了「有沒有想」。要分開就得讓 gpt-oss think high 或 qwen3 think 開，再跑一次。
 - **依據沿用 19**：cards／oracle 用的是 19 存的 `evidence_text`，不是重新檢索。
 - **fix 看不到適用條件**：工具只回格子，條文的適用條件不在第二步裡；被拿掉的題裡 Opus 因此照表硬算。19 第 5 節的「工具回整段」接著在 21 做。
-- Console 的花費還沒跟程式加總對（計畫寫 ±5%）。
+- ~~Console 的花費還沒跟程式加總對~~ 2026-11-04 對過 Console，見 25 第 5 節：差 1% 內（計畫寫 ±5%）。
 - 30B 本地模型在中間哪裡，沒量。
