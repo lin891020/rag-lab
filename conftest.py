@@ -64,6 +64,8 @@ LOCAL = {
     "posthoc26",
     "posthoc27",
     "search",
+    "posthoc28",
+    "laws",
 }
 
 
