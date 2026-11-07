@@ -111,17 +111,12 @@ def _diff_lines(diffs: list[dict], metric: str, scopes: tuple[str, ...]) -> list
 
 
 def drift_probe() -> list[str]:
-    """27's 20 questions re-asked with 27's own run.py (Haiku agent): same answers as 27's rows."""
+    """27's 20 questions re-asked with 27's own run.py: per model, the same answers as 27's agent
+    rows (Haiku and Opus share qids, so the model is part of the key); 27's own two Haiku runs on
+    the same questions are the noise reference."""
     raw = DRIFT / "raw.jsonl"
     if not raw.exists() or not RAW27.exists():
         return ["（沒跑）"]
-    now = {r["qid"]: r for r in read_raw(raw) if r["condition"] == "agent" and not r.get("error")}
-    then = {
-        r["qid"]: r
-        for r in read_raw(RAW27)
-        if r["condition"] == "agent" and r["model"] == HAIKU and not r.get("error")
-    }
-    common = sorted(q for q in now if q in then)
 
     def key(r):
         obj, ok, _ = _parse(r.get("content") or "")
@@ -129,10 +124,35 @@ def drift_probe() -> list[str]:
             return None
         return (obj.get("found") is True, _num(obj.get("value")))
 
-    same = sum(key(now[q]) == key(then[q]) for q in common)
-    return [
-        f"Haiku 用 27 的設定重跑 27 的 {len(common)} 題：同答 {same}/{len(common)}（比 found 與 value）。"
-    ]
+    def cell(rows, model, cond):
+        return {
+            r["qid"]: key(r)
+            for r in rows
+            if r["model"] == model and r["condition"] == cond and not r.get("error")
+        }
+
+    now_rows, then_rows = read_raw(raw), read_raw(RAW27)
+    out = []
+    for model, name in ((HAIKU, "Haiku"), (OPUS, "Opus")):
+        now, then = cell(now_rows, model, "agent"), cell(then_rows, model, "agent")
+        common = sorted(q for q in now if q in then)
+        if not common:
+            continue
+        same = sum(now[q] == then[q] for q in common)
+        out.append(
+            f"{name} 用 27 的設定重跑 27 的 {len(common)} 題：同答 {same}/{len(common)}"
+            "（比 found 與 value）。"
+        )
+        if model == HAIKU:
+            again = cell(then_rows, model, "agent-2")
+            both = [q for q in common if q in again]
+            if both:
+                j = sum(then[q] == again[q] for q in both)
+                out.append(
+                    f"27 自己兩次（agent 對 agent-2）在同這 {len(both)} 題同答 {j}/{len(both)}，"
+                    "是雜訊的參考。"
+                )
+    return out or ["（沒有可比的列）"]
 
 
 def main() -> int:
