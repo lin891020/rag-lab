@@ -1,0 +1,16 @@
+{
+  "article_rows": 1324,
+  "one_to_one": 687,
+  "added": 247,
+  "t2_same": 20,
+  "t2_changed": 664,
+  "t2_ambiguous_text_differs_note_silent": 3,
+  "t3_candidates": 136,
+  "questions": {
+    "T1": 60,
+    "T2": 40,
+    "T3": 12
+  },
+  "t1_added": 10,
+  "seed": 0
+}

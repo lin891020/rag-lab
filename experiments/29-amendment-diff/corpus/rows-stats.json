@@ -1,0 +1,57 @@
+{
+  "rows": 1493,
+  "article_rows": 1324,
+  "structure_rows": 168,
+  "other_rows": 1,
+  "new_nums": 1014,
+  "old_nums": 1136,
+  "one_to_one": 716,
+  "added": 248,
+  "deleted": 310,
+  "old_in_several_rows": 36,
+  "many_old_in_one_row": 50,
+  "old_part_rows": 51,
+  "pages_spanned": [
+    [
+      1,
+      735
+    ],
+    [
+      2,
+      443
+    ],
+    [
+      3,
+      88
+    ],
+    [
+      4,
+      33
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      18,
+      1
+    ],
+    [
+      11,
+      1
+    ]
+  ],
+  "alignment": {
+    "compared": 997,
+    "aligned": 957,
+    "rate": 0.9599
+  }
+}

@@ -1,0 +1,98 @@
+[
+ {
+  "new_num": "135",
+  "old_num": "101-25",
+  "quantity": "配電盤或配電箱採用鋼板時，箱體的最小厚度",
+  "unit": "毫米（公厘）",
+  "old_value": 1.2,
+  "new_value": 1.6
+ },
+ {
+  "new_num": "252",
+  "old_num": "163-1",
+  "quantity": "電動機或操作器須將帶電部分裝設於規定位置（並提供絕緣墊或絕緣平台）的對地電壓門檻",
+  "unit": "伏特",
+  "old_value": 150,
+  "new_value": 50
+ },
+ {
+  "new_num": "102",
+  "old_num": "29-4",
+  "quantity": "分接（搭接）導線得連接之銅匯流排最小尺寸中，較長那一邊的長度",
+  "unit": "毫米（公厘）",
+  "old_value": 50,
+  "new_value": 60
+ },
+ {
+  "new_num": "316",
+  "old_num": "196-7",
+  "quantity": "箱盒內未裝有配線器材（配電裝置）或用電設備時，內部深度的最小值",
+  "unit": "毫米（公厘）",
+  "old_value": 12.5,
+  "new_value": 25
+ },
+ {
+  "new_num": "908",
+  "old_num": "17",
+  "quantity": "高壓電力電纜於空氣中裝設時，安培容量須乘修正係數的周圍溫度門檻",
+  "unit": "攝氏度",
+  "old_value": 40,
+  "new_value": 35
+ },
+ {
+  "new_num": "89",
+  "old_num": "62-1",
+  "quantity": "規定處所的插座應裝設之漏電啟斷裝置的額定靈敏度電流上限",
+  "unit": "毫安培",
+  "old_value": 15,
+  "new_value": 6
+ },
+ {
+  "new_num": "36",
+  "old_num": "29-9",
+  "quantity": "招牌（廣告）燈及造型照明出線口的最低計算負載",
+  "unit": "伏安",
+  "old_value": 1200,
+  "new_value": 600
+ },
+ {
+  "new_num": "101",
+  "old_num": "29-3",
+  "quantity": "板狀接地電極埋設於地面下的最小深度",
+  "unit": "毫米（公厘）",
+  "old_value": 1500,
+  "new_value": 750
+ },
+ {
+  "new_num": "903",
+  "old_num": "397",
+  "quantity": "高壓與特高壓的分界電壓（高壓的電壓上限）",
+  "unit": "伏特",
+  "old_value": 25000,
+  "new_value": 35000
+ },
+ {
+  "new_num": "922",
+  "old_num": "416",
+  "quantity": "無遮蔽電纜採用導線管裝設於地下時，導線管外包混凝土的最小厚度",
+  "unit": "毫米（公厘）",
+  "old_value": 7.5,
+  "new_value": 75
+ },
+ {
+  "new_num": "922",
+  "old_num": "416",
+  "quantity": "導線由地下引出裝設於電桿時，保護導線管由地面起算的最小高度",
+  "unit": "米（公尺）",
+  "old_value": 2.4,
+  "new_value": 2.5
+ },
+ {
+  "new_num": "55",
+  "old_num": "29-28",
+  "quantity": "廚房、餐廳小型用電器具分路負載以 1,500 伏安計算時，該分路規定的供電電壓值",
+  "unit": "伏特",
+  "old_value": 110,
+  "new_value": 150
+ }
+]

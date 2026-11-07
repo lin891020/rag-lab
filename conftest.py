@@ -66,6 +66,12 @@ LOCAL = {
     "search",
     "posthoc28",
     "laws",
+    "posthoc29",
+    "articles",
+    "textnorm",
+    "fetch_versions",
+    "compare_table",
+    "make_questions",
 }
 
 
