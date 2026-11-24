@@ -11,3 +11,4 @@ experiments/17-table-retrieval/results/read/scored.jsonl
 
 # secrets
 .env
+.vscode/
